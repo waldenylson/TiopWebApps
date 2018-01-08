@@ -1,4 +1,4 @@
-<?php namespace TIOp\Units\Home\Routes;
+<?php namespace TIOp\Units\Radars\Routes;
 
 use Codecasts\Support\Http\Routing\RouteFile;
 
@@ -16,8 +16,8 @@ class Api extends RouteFile
      */
     public function routes()
     {
-        $this->router->get('/home', function () {
-          return 'Home API Router';
+        $this->router->get('/radars', function () {
+          return 'Radars API Router';
         });
         //})->middleware('auth:api');
     }

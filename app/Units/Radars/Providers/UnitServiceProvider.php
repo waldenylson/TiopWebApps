@@ -1,10 +1,10 @@
-<?php namespace TIOp\Units\Home\Providers;
+<?php namespace TIOp\Units\Radars\Providers;
 
 use Codecasts\Support\Units\ServiceProvider;
 
 class UnitServiceProvider extends ServiceProvider
 {
-    protected $alias = 'home';
+    protected $alias = 'radars';
 
     protected $hasViews = true;
 

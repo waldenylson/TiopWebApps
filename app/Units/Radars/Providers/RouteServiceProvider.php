@@ -1,8 +1,8 @@
-<?php namespace TIOp\Units\Home\Providers;
+<?php namespace TIOp\Units\Radars\Providers;
 
-use TIOp\Units\Home\Routes\Api;
-use TIOp\Units\Home\Routes\Console;
-use TIOp\Units\Home\Routes\Web;
+use TIOp\Units\Radars\Routes\Api;
+use TIOp\Units\Radars\Routes\Console;
+use TIOp\Units\Radars\Routes\Web;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'TIOp\Units\Home\Controllers';
+    protected $namespace = 'TIOp\Units\Radars\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

@@ -1,19 +1,17 @@
-<?php namespace TIOp\Domains\Users\Transformers;
+<?php namespace TIOp\Domains\Radars\Transformers;
 
-use TIOp\Domains\Users\User;
+use TIOp\Domains\Radars\Radar;
 use League\Fractal\TransformerAbstract as Transformer;
 
 /**
  * Class UserTransformer.
  */
-class UserTransformer extends Transformer
+class RadarTransformer extends Transformer
 {
-    public function transform(User $user)
+    public function transform(Radar $radar)
     {
         return [
-            'id'    => $user->id,
-            'name'  => $user->name,
-            'email' => $user->email,
+
         ];
     }
 }
