@@ -24,4 +24,14 @@ class RadarController extends Controller
     {
         return view('radars::index');
     }
+
+    /**
+     *  Carrega o formulário de cadastro de radar
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function create()
+    {
+        return view('radars::create');
+    }
 }
