@@ -1,0 +1,186 @@
+#info {
+    position: absolute;
+    left:2px;
+    bottom: -20px;
+}
+
+#comentario {
+    position:absolute;
+
+    padding:2px;
+    background:#333;
+    color:#fff;
+    width:950px;
+    opacity: 0;
+}
+
+#info:hover  #comentario{
+    opacity: 1;
+}
+
+
+
+
+/*PROJECT SORT*/
+ul.filter_project{
+    margin-left: 0px;
+    background:#d3d3d3;
+    border-top:solid 1px #f6f6f6;
+
+}
+ul.filter_project li{
+    font-size: 14px;
+    padding:8px 15px;
+    display:inline-block;
+    list-style:none;
+}
+ul.filter_project li a{
+    color:#6c6c6c;
+
+    font-weight:bold;
+    text-shadow: 0px 1px 0px  #fff;
+}
+ul.filter_project li span.count a{
+    line-height:100%;
+    color:#fff;
+    text-shadow: 0px 1px 0px  #353535;
+    padding:2px 2px 2px;
+    background:#707070;
+    border-radius:2px;
+    margin-left:8px;
+    min-width:16px;
+    text-align:center;
+    display:inline-block;
+    box-shadow:0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:0px 1px 0px 0px #ffffff;
+}
+ul.filter_project li.selected{
+    background:#ffffff;
+    box-shadow:inset 0px 10px 8px #eaeaea;
+    -webkit-box-shadow:inset 0px 10px 8px #eaeaea;
+    border:solid 1px #fff;
+    border-width:0px 1px;
+}
+ul.filter_project li.selected a{
+    color:#4a4a4a;
+}
+ul.filter_project li.selected span.count{
+    background:#4a4a4a;
+}
+
+.project_sort ul.project_list{
+    margin:0px;
+    padding:18px 0px 0px 18px;
+}
+.project_sort ul.project_list li{
+    padding:12px;
+    width:150px;
+    height:100px;
+    position:relative;
+    border:solid 1px #c4c4c4;
+    border-radius:10px;
+    list-style:none;
+    display:inline-block;
+    margin-right:16px;
+    margin-bottom:16px;
+    background:url(../images/project_bg.png) repeat-x bottom center #ededed;
+}
+.project_sort ul.project_list .project_badge{
+    width:36px;
+    height:36px;
+    position:absolute;
+    right:-1px;
+    top:-1px;
+    background:url(../images/project_badge.png) no-repeat center;
+    color:#fff;
+    font-size:15px;
+    text-align:right;
+    line-height:17px;
+}
+.project_sort ul.project_list .project_badge.ino{
+    background-position:-148px 0px;
+}
+.project_sort ul.project_list .project_badge.ope{
+    background-position:-299px 0px;
+}
+.project_sort ul.project_list .project_badge.deg{
+    background-position:-1px 0px;
+}
+.project_sort ul.project_list a.project_title{
+    font-size:14px;
+
+    color:#5c5c5c;
+    text-shadow: 0px 1px 0px  #fff;
+    display:inline-block;
+    line-height:18px;
+    #font-family: 'Helvetica, Arial, sans-serif';
+    font-family:  Helvetica, Arial, sans-serif;;
+    text-decoration:none;
+}
+.project_sort ul.project_list a.project_body{
+    font-size:11.5px;
+    color:#5c5c5c;
+    text-shadow: 0px 1px 0px  #fff;
+    display:inline-block;
+    line-height:40px;
+    #font-family: 'CorbelBold';
+    font-family:  cursive;
+    text-decoration:none;
+}
+.project_sort ul.project_list a.assigned_user{
+    font-size:12px;
+    color:#6c6c6c;
+    text-shadow: 0px 1px 0px  #fff;
+    position:absolute;
+    bottom:11px;
+    left:10px;
+    text-decoration:none;
+}
+.project_sort ul.project_list a.assigned_user span{
+    font-size:19px;
+    float:left;
+    margin-top:-7px;
+    margin-right:2px;
+}
+
+#alert{
+    position: absolute;
+    right:10px;
+    bottom: 2px;
+}
+#mci_alert{
+    position: absolute;
+    right:40px;
+    bottom: -1px;
+}
+#prazo{
+    position: absolute;
+    right:35px;
+    top:1px;
+    font-weight: bold;
+}
+
+.col-md-2 {width: 19%} /* Override boostrap class for date input type text */
+.col-md-4 {width: 95%} /* Override boostrap class for date input type textarea */
+
+.center{ text-align: center}
+.font-print-request{font-size: 14px}
+.text-color-priv{color: #84878b}
+.tracejado{border-top:1px dashed #ccc}
+.firstColumn{width: 15%}
+.secondColumn{width: 30%}
+.thirdColumn{width: 30%}
+.fourthColumn{width: 25%}
+.tableHeader{background-color: #e7eaee}
+.box-assinatura{
+    width: 200px;
+    height: 100px;
+    border: 1px solid silver;
+}
+.box-assinatura-legenda{
+    margin-top: 55px;
+}
+
+.form-disable{
+    disabled: disabled;
+}

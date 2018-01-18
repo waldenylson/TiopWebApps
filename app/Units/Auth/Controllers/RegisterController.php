@@ -1,7 +1,7 @@
-<?php namespace TIOp\Units\Auth;
+<?php namespace TIOp\Units\Auth\Controllers;
 
 use TIOp\Domains\Users\User;
-use TIOp\Support\Http\Controllers\Controller;
+use Codecasts\Support\Http\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 

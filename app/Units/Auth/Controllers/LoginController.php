@@ -1,6 +1,6 @@
-<?php namespace TIOp\Units\Auth;
+<?php namespace TIOp\Units\Auth\Controllers;
 
-use TIOp\Support\Http\Controllers\Controller;
+use Codecasts\Support\Http\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
