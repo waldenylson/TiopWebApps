@@ -44,4 +44,6 @@ elixir(function (mix) {
         '/../../../app/Support/Resources/Views/css/generic.css',
         '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
     ], 'public/css/app.css');
+
+    mix.copy('/../../../node_modules/font-awesome/fonts/', 'public');
 });

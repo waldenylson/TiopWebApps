@@ -22,17 +22,10 @@
                     <ul class="dropdown-menu">
                         <li><a href="javascript;"><h7><i class="fa fa-podcast">&nbsp;&nbsp;RADARES</i></h7></a>
                             <ul class="dropdown-menu">
-                                <li><a class="fancybox" href="{{ route('radars.create') }}">&nbsp;&nbsp;<i class="fa fa-save">&nbsp;&nbsp;Cadastrar</i></a></li>
+                                <li><a class="fancybox" href="">&nbsp;&nbsp;<i class="fa fa-save">&nbsp;&nbsp;Cadastrar</i></a></li>
                                 {{--<li><a class="fancybox" href="{{ route('viaturas.index') }}">&nbsp;&nbsp;<i class="fa fa-search">&nbsp;&nbsp;Localisar</i></a></li>--}}
                             </ul>
                         </li>
-                        {{--<li><a href="javascript;"><h7><i class="fa fa-tree">&nbsp;&nbsp;NATUREZAS</i></h7></a>--}}
-                            {{--<ul class="dropdown-menu">--}}
-                                {{--<li><a class="fancybox" href="{{ route('naturezas.create') }}">&nbsp;&nbsp;<i class="fa fa-save">&nbsp;&nbsp;Cadastrar</i></a></li>--}}
-                                {{--<li><a class="fancybox" href="{{ route('naturezas.index') }}">&nbsp;&nbsp;<i class="fa fa-search">&nbsp;&nbsp;Localisar</i></a></li>--}}
-                            {{--</ul>--}}
-                        {{--</li>--}}
-
                         <li class="divider"></li>
 
                         <li><a href="javascript;"><h7><i class="fa fa-user">&nbsp;&nbsp;USUÁRIOS&nbsp;&nbsp;</i></h7></a>
@@ -40,14 +33,6 @@
                                 <li><a class="fancybox" href="">&nbsp;&nbsp;<i class="fa fa-save">&nbsp;&nbsp;Criar / Excluir Relacionamento</i></a></li>
                             </ul>
                         </li>
-                    </ul>
-                </li>
-                <li class="dropdown" role="menu">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="true" href="javascript:;">
-                        <i class="fa fa-building">&nbsp;&nbsp;SISTEMAS&nbsp;</i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="fancybox" href="{{ route('radars.index') }}">&nbsp;&nbsp;<i class="fa fa-podcast">&nbsp;&nbsp;Status Radares</i></a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,7 +43,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('logout') }}">
+                    <a href="">
                         <i class="fa fa-sign-out"> SAIR&nbsp;&nbsp;</i>
                     </a>
                 </li>
