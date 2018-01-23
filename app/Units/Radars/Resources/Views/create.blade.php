@@ -6,7 +6,7 @@
     </h2>
     <hr />
     {!! Form::open(['route' => 'radars.store']) !!}
-    @include('partials.form')
+    @include('radars::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar
     </button>
