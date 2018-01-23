@@ -1,5 +1,6 @@
 <?php namespace TIOp\Domains\Radars\Repositories;
 
+use Artesaos\Warehouse\Traits\ImplementsFractal;
 use TIOp\Domains\Radars\Contracts\RadarRepository as RadarRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\Radars\Transformers\RadarTransformer;

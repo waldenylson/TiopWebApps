@@ -11,13 +11,13 @@ class DomainServiceProvider extends ServiceProvider
     /**
      * @var string
      */
-    protected $alias = 'users';
+    protected $alias = 'radars';
 
     /**
      * @var array
      */
     protected $bindings = [
-        Contracts\RadarsRepository::class => Repositories\RadarsRepository::class,
+        Contracts\RadarRepository::class => Repositories\RadarRepository::class,
     ];
 
     protected $migrations = [

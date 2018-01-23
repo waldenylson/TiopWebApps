@@ -9,6 +9,12 @@ class Web extends RouteFile
      */
     public function routes()
     {
-        $this->router->get('/radars', ['as' => 'radars.index', 'uses' => 'RadarController@index']);
+        $this->router->group(['prefix' => 'radares'], function(){
+            $this->router->get('', ['as' => 'radars.index', 'uses' => 'RadarController@index']);
+            $this->router->get('novo',   ['as' => 'radars.create', 'uses' => 'RadarController@create']);
+            $this->router->get('salvar', ['as' => 'radars.store',  'uses' => 'RadarController@store']);
+        });
+
+
     }
 }

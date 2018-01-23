@@ -1,6 +1,8 @@
 <?php namespace TIOp\Units\Radars\Controllers;
 
 use Codecasts\Support\Http\Controller;
+use TIOp\Domains\Radars\Contracts\RadarRepository;
+use TIOp\Units\Radars\Requests\StoreRadarsPostRequest;
 
 /**
  * Class HomeController.
@@ -8,11 +10,18 @@ use Codecasts\Support\Http\Controller;
 class RadarController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * @var RadarRepository
      */
-    public function __construct()
+    protected $radarRepository;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param RadarRepository $repository
+     */
+    public function __construct(RadarRepository $repository)
     {
-        //$this->middleware('auth');
+        $this->radarRepository = $repository;
     }
 
     /**
@@ -33,5 +42,23 @@ class RadarController extends Controller
     public function create()
     {
         return view('radars::create');
+    }
+
+    /**
+     * Persiste os dados no Banco
+     *
+     * @param StoreRadarsPostRequest $request
+     * @return Response
+     */
+    public function store(StoreRadarsPostRequest $request)
+    {
+        $result = $this->radarRepository->store($request);
+
+        if ($result)
+        {
+            return redirect()->back()->with('message', 'Registro Inserido com Sucesso!');
+        }
+
+        return redirect()->back()->with('error', 'Erro ao Tentar Inserir o Registro!');
     }
 }
