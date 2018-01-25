@@ -197,6 +197,7 @@ return [
         TIOp\Units\Radars\Providers\UnitServiceProvider::class,
         TIOp\Units\Users\Providers\UnitServiceProvider::class,
         TIOp\Units\Home\Providers\UnitServiceProvider::class,
+        TIOp\Units\Dashboard\Providers\UnitServiceProvider::class,
 
 
 

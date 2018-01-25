@@ -36,7 +36,7 @@ class MakeDDDStructureDirectories extends Command
         'Providers',
         'Resources/Views/js',
         'Resources/Views/css',
-        'Resources/Views/Partials',
+        'Resources/Views/partials',
         'Routes',
         'VueComponents',
     ];

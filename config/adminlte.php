@@ -32,7 +32,7 @@ return [
 
     'logo' => '<b>CINDACTA III</b> - TIOp',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<b>TIO</b>p',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,19 +108,31 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'Dashboard',
         [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'Resumo',
+            'url'  => '/dashboard',
+            'icon'        => 'refresh',
         ],
+
+        'SISTEMA',
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text'    => 'Radar',
+            'icon'    => 'podcast',
+            'submenu' => [
+                [
+                    'text' => 'Listar Todos',
+                    'url'  => '/radares',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => '/radares/novo',
+                    'icon' => 'plus-circle',
+                ],
+            ],
         ],
+
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',

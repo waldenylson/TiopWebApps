@@ -1,11 +1,11 @@
-<?php namespace TIOp\Units\Home\Controllers;
+<?php namespace TIOp\Units\Dashboard\Controllers;
 
 use Codecasts\Support\Http\Controller;
 
 /**
  * Class DashboardController.
  */
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -22,6 +22,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home::index');
+        return view('dashboard::index');
     }
 }
