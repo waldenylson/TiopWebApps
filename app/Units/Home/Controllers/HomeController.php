@@ -3,7 +3,7 @@
 use Codecasts\Support\Http\Controller;
 
 /**
- * Class HomeController.
+ * Class DashboardController.
  */
 class HomeController extends Controller
 {
