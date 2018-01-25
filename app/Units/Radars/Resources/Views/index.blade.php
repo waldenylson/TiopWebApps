@@ -3,7 +3,12 @@
 @section('title', 'Radares')
 
 @section('content_header')
-    <h1>Radares Cadastrados</h1>
+    <div class="icon">
+        <h1>
+            <i class="ion ion-radio-waves"></i>
+            Radares Cadastrados
+        </h1>
+    </div>
 @stop
 
 @section('content')
