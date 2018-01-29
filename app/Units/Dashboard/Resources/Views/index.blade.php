@@ -21,3 +21,12 @@
         </a>
     </div>
 @stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/app.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+    <script src="/js/app.js"></script>
+@stop

@@ -85,15 +85,15 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/dashboard',
 
     'logout_url' => 'logout',
 
-    'logout_method' => null,
+    'logout_method' => 'get',
 
     'login_url' => 'login',
 
-    'register_url' => 'register',
+    'register_url' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -129,6 +129,7 @@ return [
                     'text' => 'Cadastrar',
                     'url'  => '/radares/novo',
                     'icon' => 'plus-circle',
+                    'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
                 ],
             ],
         ],

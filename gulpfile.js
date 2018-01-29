@@ -46,4 +46,5 @@ elixir(function (mix) {
     ], 'public/css/app.css');
 
     mix.copy('node_modules/font-awesome/fonts', 'public/fonts');
+    mix.copy('node_modules/fancybox/dist/img', 'public/img');
 });
