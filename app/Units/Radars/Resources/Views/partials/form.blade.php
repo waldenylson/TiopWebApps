@@ -25,7 +25,7 @@
     </div><br>
     <div class="row">
         <div class="col-md-3">
-            {!! Form::label('canalizacao', 'Canalizacao', ['class' => 'control-label']) !!}
+            {!! Form::label('canalizacao', 'Canalização', ['class' => 'control-label']) !!}
             {!! Form::text('canalizacao', null, ['class' => 'form-control', 'id' => 'canalizacao']) !!}
         </div>
         <div class="col-md-3">

@@ -26,49 +26,19 @@ $(document).ready(function()
         e.preventDefault();
         var link = $(this).attr('href');
 
-        swal(
-            {
-                title: "Deseja Mesmo Remover o Registro?",
-                text: "Esta operação não poderá ser desfeita!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sim, Remova-o!",
-                cancelButtonText: "Cancelar",
-                closeOnConfirm: false
-            },
-            function(isConfirm)
-            {
-                if (isConfirm)
-                {
-                    window.location = link;
-                }
-            });
-    });
-
-    $("a.btn-finalizar").click(function(e)
-    {
-        e.preventDefault();
-        var link = $(this).attr('href');
-
-        swal(
-            {
-                title: "Deseja Mesmo Finalizar?",
-                text: "Esta operação não poderá ser desfeita!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sim, Finalize!",
-                cancelButtonText: "Cancelar",
-                closeOnConfirm: false
-            },
-            function(isConfirm)
-            {
-                if (isConfirm)
-                {
-                    window.location = link;
-                }
-            });
+        swal({
+            title: "Deseja Mesmo Remover o Registro?",
+            text: "Esta operação não poderá ser desfeita!",
+            icon: "warning",
+            buttons: ["Cancelar", "Sim, Remova-o!"],
+            dangerMode: true,
+            //confirmButtonText: "Sim, Remova-o!",
+            //cancelButtonText: "Cancelar",
+            //closeOnConfirm: false,
+        }).then((willDelete) => {
+            if (willDelete) {
+                window.location = link;
+            }});
     });
 
     $("#btn-cancelar").click(function()

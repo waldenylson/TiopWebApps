@@ -1,7 +1,9 @@
 <?php namespace TIOp\Domains\Radars\Providers;
 
 use Codecasts\Support\Domain\ServiceProvider;
+use TIOp\Domains\Radars\Database\Migrations\CreateRadaresTable;
 use TIOp\Domains\Radars\Contracts;
+use TIOp\Domains\Radars\Database\Factories\RadarFactory;
 use TIOp\Domains\Radars\Repositories;
 /**
  * Class DomainServiceProvider.
@@ -21,7 +23,7 @@ class DomainServiceProvider extends ServiceProvider
     ];
 
     protected $migrations = [
-
+        CreateRadaresTable::class,
     ];
 
     protected $seeders = [
@@ -29,6 +31,6 @@ class DomainServiceProvider extends ServiceProvider
     ];
 
     protected $factories = [
-
+        RadarFactory::class,
     ];
 }

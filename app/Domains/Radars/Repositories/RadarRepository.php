@@ -16,26 +16,34 @@ class RadarRepository extends AbstractCrudRepository implements RadarRepositoryC
 
     public function listRadars()
     {
-        // TODO: Implement listRadars() method.
+        return $this->modelClass::all();
     }
 
     public function store(StoreRadarsPostRequest $request)
     {
-        // TODO: Implement store() method.
+        $radar = $this->modelClass::create($request->all());
+
+        return $radar;
     }
 
     public function edit($id)
     {
-        // TODO: Implement edit() method.
+        $radar = $this->modelClass::findOrFail($id);
+
+        return $radar;
     }
 
     public function persistUpdate(StoreRadarsPostRequest $request, $id)
     {
-        // TODO: Implement persistUpdate() method.
+        $radar = $this->modelClass::findOrFail($id)->update($request->all());
+
+        return $radar;
     }
 
     public function destroy($id)
     {
-        // TODO: Implement destroy() method.
+        $radar = $this->modelClass::findOrFail($id);
+
+        return $radar->delete();
     }
 }

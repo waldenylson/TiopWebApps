@@ -31,7 +31,9 @@ class RadarController extends Controller
      */
     public function index()
     {
-        return view('radars::index');
+        $radares = $this->radarRepository->listRadars();
+
+        return view('radars::index')->with(compact('radares'));
     }
 
     /**
@@ -60,5 +62,56 @@ class RadarController extends Controller
         }
 
         return redirect()->back()->with('error', 'Erro ao Tentar Inserir o Registro!');
+    }
+
+
+    /**
+     *  Mostra o formulário para edição de um registro.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        $radar = $this->radarRepository->edit($id);
+
+        return view('radars::edit')->with(compact('radar'));
+    }
+
+
+    /**
+     * Persiste os dados alterados no Banco
+     *
+     * @param StoreRadarsPostRequest $request
+     * @return Response
+     */
+    public function update(StoreRadarsPostRequest $request, $id)
+    {
+        $result = $this->radarRepository->persistUpdate($request, $id);
+
+        if ($result)
+        {
+            return redirect()->back()->with('message', 'Registro Alterado com Sucesso!');
+        }
+
+        return redirect()->back()->with('error', 'Erro ao Tentar Alterar o Registro!');
+    }
+
+
+    /**
+     * Remove um registro especifico do Banco.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        $result = $this->radarRepository->destroy($id);
+
+        if ($result) {
+            return redirect()->back()->with('message', 'Registro Removido com Sucesso!');
+        }
+
+        return redirect()->back()->with('error', 'Erro ao Tentar Remover o Registro!');
     }
 }
