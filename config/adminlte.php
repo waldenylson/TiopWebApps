@@ -112,7 +112,13 @@ return [
         [
             'text' => 'Resumo',
             'url'  => '/dashboard',
-            'icon'        => 'refresh',
+            'icon' => 'refresh',
+        ],
+        [
+            'text' => 'Sinoptico',
+            'url'  => '/dashboard/sinoptico',
+            'icon' => 'sitemap',
+            'linkClass' => 'fancybox',
         ],
 
         'SISTEMA',
@@ -231,7 +237,7 @@ return [
     */
 
     'plugins' => [
-        'datatables' => true,
-        'select2'    => true,
+        'datatables' => false,
+        'select2'    => false,
     ],
 ];

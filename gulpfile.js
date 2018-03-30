@@ -21,8 +21,6 @@ elixir(function (mix) {
         '/../../../node_modules/jquery/dist/jquery.min.js',
         '/../../../node_modules/bootstrap/dist/js/bootstrap.min.js',
         '/../../../node_modules/fancybox/dist/js/jquery.fancybox.js',
-        '/../../../node_modules/smartmenus/dist/jquery.smartmenus.js',
-        '/../../../node_modules/smartmenus/dist/addons/bootstrap/jquery.smartmenus.bootstrap.js',
         '/../../../node_modules/sweetalert/dist/sweetalert.min.js',
         '/../../../node_modules/datatables/media/js/jquery.dataTables.min.js',
         '/../../../node_modules/moment/min/moment.min.js',
@@ -37,14 +35,14 @@ elixir(function (mix) {
 
     mix.styles([
         '/../../../node_modules/bootstrap/dist/css/bootstrap.min.css',
-        '/../../../node_modules/smartmenus/dist/addons/bootstrap/jquery.smartmenus.bootstrap.css',
         '/../../../node_modules/fancybox/dist/css/jquery.fancybox.css',
         '/../../../node_modules/font-awesome/css/font-awesome.css',
-        '/../../../node_modules/sweetalert/dist/sweetalert.css',
         '/../../../app/Support/Resources/Views/css/generic.css',
-        '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
+        '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
+        '/../../../app/Units/Dashboard/Resources/css/sinoptico.css'
     ], 'public/css/app.css');
 
     mix.copy('node_modules/font-awesome/fonts', 'public/fonts');
     mix.copy('node_modules/fancybox/dist/img', 'public/img');
+    mix.copy('app/Units/Dashboard/Resources/css/images/', 'public/img');
 });

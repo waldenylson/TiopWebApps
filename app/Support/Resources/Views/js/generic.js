@@ -32,9 +32,6 @@ $(document).ready(function()
             icon: "warning",
             buttons: ["Cancelar", "Sim, Remova-o!"],
             dangerMode: true,
-            //confirmButtonText: "Sim, Remova-o!",
-            //cancelButtonText: "Cancelar",
-            //closeOnConfirm: false,
         }).then((willDelete) => {
             if (willDelete) {
                 window.location = link;

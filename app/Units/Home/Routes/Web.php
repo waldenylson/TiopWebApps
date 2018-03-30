@@ -17,12 +17,12 @@ class Web extends RouteFile
     public function routes()
     {
 
-        // $this->router->get('/radars',             ['as' => 'radars.index',   'uses' => 'RadarController@index']);
-        // $this->router->get('radars/new',          ['as' => 'radars.create',  'uses' => 'RadarController@create']);
-        // $this->router->post('radars/save',        ['as' => 'radars.store',   'uses' => 'RadarController@store']);
-        // $this->router->get('radars/{id}/edit',    ['as' => 'radars.edit',    'uses' => 'RadarController@edit']);
-        // $this->router->post('radars/{id}/update', ['as' => 'radars.update',  'uses' => 'RadarController@update']);
-        // $this->router->get('radars/{id}/remove',  ['as' => 'radars.destroy', 'uses' => 'RadarController@destroy']);
+        // $this->router->get('/radars',             ['as' => 'radars.index',   'uses' => 'SinopticoController@index']);
+        // $this->router->get('radars/new',          ['as' => 'radars.create',  'uses' => 'SinopticoController@create']);
+        // $this->router->post('radars/save',        ['as' => 'radars.store',   'uses' => 'SinopticoController@store']);
+        // $this->router->get('radars/{id}/edit',    ['as' => 'radars.edit',    'uses' => 'SinopticoController@edit']);
+        // $this->router->post('radars/{id}/update', ['as' => 'radars.update',  'uses' => 'SinopticoController@update']);
+        // $this->router->get('radars/{id}/remove',  ['as' => 'radars.destroy', 'uses' => 'SinopticoController@destroy']);
 
         $this->router->get('/home', ['as' => 'home.index', 'uses' => 'DashboardController@index']);
 

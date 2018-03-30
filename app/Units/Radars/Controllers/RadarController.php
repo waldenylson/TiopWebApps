@@ -4,9 +4,6 @@ use Codecasts\Support\Http\Controller;
 use TIOp\Domains\Radars\Contracts\RadarRepository;
 use TIOp\Units\Radars\Requests\StoreRadarsPostRequest;
 
-/**
- * Class DashboardController.
- */
 class RadarController extends Controller
 {
     /**
