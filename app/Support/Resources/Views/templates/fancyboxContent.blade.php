@@ -5,11 +5,13 @@
 	<title>TIOp - Seção de Informática Operacional</title>
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
 </head>
-<body class="container">
-	@yield('content')
+<body>
+	<div class="container">
+		@yield('content')
 
-	<script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
+		<script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
 
-	@include('support::partials.alerts')
+		@include('support::partials.alerts')
+	</div>
 </body>
 </html>
