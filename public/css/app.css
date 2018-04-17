@@ -2625,7 +2625,7 @@ ul.filter_project li.selected span.count{
 }
 .project_sort ul.project_list li{
     padding:12px;
-    width:100px;
+    width:130px;
     height:50px;
     position:relative;
     border:solid 1px #c4c4c4;
@@ -2658,8 +2658,8 @@ ul.filter_project li.selected span.count{
     background-position:-1px 0px;
 }
 .project_sort ul.project_list a.project_title{
-    font-size:14px;
-
+    font-size:30px;
+    text-align: center;
     color:#5c5c5c;
     text-shadow: 0px 1px 0px  #fff;
     display:inline-block;
@@ -2693,4 +2693,5 @@ ul.filter_project li.selected span.count{
     margin-top:-7px;
     margin-right:2px;
 }
+
 /*# sourceMappingURL=app.css.map */

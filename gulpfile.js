@@ -39,11 +39,10 @@ elixir(function (mix) {
         '/../../../node_modules/font-awesome/css/font-awesome.css',
         '/../../../app/Support/Resources/Views/css/generic.css',
         '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
-        '/../../../app/Units/Dashboard/Resources/css/sinoptico.css',
-        '/../../../node_modules/bulma/css/bulma.css'
+        '/../../../app/Units/Dashboard/Resources/css/sinoptico.css'
     ], 'public/css/app.css');
 
-    mix.copy('node_modules/font-awesome/fonts', 'public/fonts');
+    mix.copy('node_modules/font-awesome/fontscd', 'public/fonts');
     mix.copy('node_modules/fancybox/dist/img', 'public/img');
     mix.copy('app/Units/Dashboard/Resources/css/images/', 'public/img');
 });
