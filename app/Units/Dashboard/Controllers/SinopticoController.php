@@ -29,15 +29,24 @@ class SinopticoController extends Controller
         ['nome' => 'SVS', 'status' => 'ope'],
         ['nome' => 'TMA', 'status' => 'ope'],
         ['nome' => 'TRS', 'status' => 'ope'],
-        ['nome' => 'VIT', 'status' => 'ope'],
+        ['nome' => 'VIT', 'status' => 'deg'],
+    ];
+
+    private $efetivoTiop = [
+        ["nome" => "1S MUNIZ",         "motivo" => "CURSO",      "retorno" => "20/07/2018"],
+        ["nome" => "3S EUDES",         "motivo" => "DISPENSADO", "retorno" => "30/05/2018"],
+        ["nome" => "3S WALDENYLSON",   "motivo" => "FÉRIAS",     "retorno" => "25/06/2018"],
+        ["nome" => "3S REHILSON",      "motivo" => "HARF",       "retorno" => "31/12/2018"],
+        ["nome" => "3S RODRIGO SOUZA", "motivo" => "MISSÃO",     "retorno" => "25/05/2018"],
+        ["nome" => "3S VAREJÃO",       "motivo" => "SERVIÇO",    "retorno" => "15/04/2018"],
+        ["nome" => "3S JÉSSICA",       "motivo" => "COMISSÃO",   "retorno" => "22/06/2018"],
     ];
 
     public function index()
     {
-        $radares = $this->radares;
+        $radares     = $this->radares;
+        $efetivoTiop = $this->efetivoTiop;
 
-        return view('dashboard::sinoptico')->with(compact('radares'));;
-
-
+        return view('dashboard::sinoptico')->with(compact('radares'))->with(compact('efetivoTiop'));
     }
 }

@@ -53,7 +53,7 @@ ul.filter_project li.selected span.count{
 .project_sort ul.project_list li{
     padding:12px;
     width:130px;
-    height:50px;
+    height:60px;
     position:relative;
     border:solid 1px #c4c4c4;
     border-radius:10px;
@@ -119,4 +119,109 @@ ul.filter_project li.selected span.count{
     float:left;
     margin-top:-7px;
     margin-right:2px;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    width: 99%;
+    margin: 5px 5px 5px 5px;
+    /*border: 1px solid #000000;*/
+}
+
+.titulo {
+    font-size: xx-large;
+}
+
+.sub-container-left {
+    padding-left: 10px;
+    padding-top: 10px;
+    float: left;
+    width: 30%;
+}
+
+.sub-container-right{
+    float: left;
+    width: 51%;
+}
+
+.sinoptico {
+    float: left;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.sobreaviso {
+    padding-top: 10px;
+    font-size: xx-large;
+}
+
+.center {
+    text-align: center;
+}
+
+.afastamentos {
+    overflow: hidden;
+    height: 100%;
+}
+
+.inf-sistemas {
+    float: left;
+    width: 19%;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.bottom-container {
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    float: left;
+}
+
+.box{
+    background-color: royalblue;
+    height: 50%;
+    width: 99.5%;
+    left: 20%;
+    top: 20%;
+    text-align: left;
+    padding-top: 1px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    font-size: xx-large;
+    padding-left: 5px;
+}
+
+.box-efetivo {
+    background-color: royalblue;
+    height: 50%;
+    width: 99.5%;
+    left: 20%;
+    top: 20%;
+    text-align: left;
+    padding-top: 1px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    font-size: larger;
+    padding-left: 5px;
+}
+
+.table-title {
+    font-size: 25px;
+}
+
+.table-afastamentos-retorno {
+    text-align: center;
+}
+
+.box-title {
+    text-align: center;
+    color:white;
+}
+
+.box-bg-color {
+    background-color: floralwhite;
 }
