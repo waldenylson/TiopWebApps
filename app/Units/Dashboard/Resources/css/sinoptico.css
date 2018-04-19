@@ -149,6 +149,12 @@ ul.filter_project li.selected span.count{
     float: left;
     padding-left: 10px;
     padding-top: 20px;
+    margin-bottom: -10px;
+}
+
+.mnt-programadas {
+    float: left;
+    padding-left: 10px;
 }
 
 .sobreaviso {

@@ -34,8 +34,8 @@
                                 <thead>
                                 <tr class="table-title">
                                     <th><i class="fa fa-user">&nbsp;<b>NOME</b></i></th>
-                                    <th>MOTIVO</th>
-                                    <th class="table-afastamentos-retorno">RETORNO</th>
+                                    <th><i class="fa fa-question-circle">&nbsp;<b>MOTIVO</b></i></th>
+                                    <th class="table-afastamentos-retorno"><i class="fa fa-calendar">&nbsp;<b>RETORNO</b></i></th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -48,6 +48,27 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rpl">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-plane titulo">
+                                <b>&nbsp;RPL</b>
+                            </i>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="box box-bg-color box-efetivo">
+                            <div class="box box-bg-color">
+                                <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>RPL040</i></b></i><br />
+                                <i class="fa fa-calendar">&nbsp;ATLIZ: <b>15/04/2018</b></i>
+                                <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>24/04/2018</b></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -80,6 +101,33 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mnt-programadas">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-cogs titulo">
+                                <b>&nbsp;MANUTENÇÔES PROGRAMADAS</b>
+                            </i>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
+                            <thead>
+                            <tr class="table-title">
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($efetivoTiop as $efetivo)
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
