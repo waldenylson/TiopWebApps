@@ -30,7 +30,8 @@ elixir(function (mix) {
         '/../../../app/Support/Resources/Views/js/VueComponents/main.js',
         '/../../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
         '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
-        '/../../../app/Support/Resources/Views/js/generic.js'
+        '/../../../app/Support/Resources/Views/js/generic.js',
+        '/../../../app/Support/Resources/Views/js/relogio.js'
     ], 'public/js/app.js');
 
     mix.styles([
@@ -38,6 +39,7 @@ elixir(function (mix) {
         '/../../../node_modules/fancybox/dist/css/jquery.fancybox.css',
         '/../../../node_modules/font-awesome/css/font-awesome.css',
         '/../../../app/Support/Resources/Views/css/generic.css',
+        '/../../../app/Support/Resources/Views/css/relogio.css',
         '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
         '/../../../app/Units/Dashboard/Resources/css/sinoptico.css'
     ], 'public/css/app.css');

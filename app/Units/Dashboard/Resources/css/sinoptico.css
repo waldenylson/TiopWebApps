@@ -126,7 +126,7 @@ ul.filter_project li.selected span.count{
     padding: 0;
     width: 99%;
     margin: 5px 5px 5px 5px;
-    /*border: 1px solid #000000;*/
+    overflow: hidden;
 }
 
 .titulo {
@@ -150,16 +150,35 @@ ul.filter_project li.selected span.count{
     padding-left: 10px;
     padding-top: 20px;
     margin-bottom: -10px;
+    width: 100%;
 }
 
 .mnt-programadas {
     float: left;
     padding-left: 10px;
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+.mnt-programadas-height {
+    height: 252px;
+}
+
+.paradas-radar {
+    float: left;
+    padding-left: 10px;
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+.paradas-radar-height {
+    height: 250px;
 }
 
 .sobreaviso {
     padding-top: 10px;
     font-size: xx-large;
+    margin-bottom: -10px;
 }
 
 .center {
@@ -169,6 +188,7 @@ ul.filter_project li.selected span.count{
 .afastamentos {
     overflow: hidden;
     height: 100%;
+    margin-bottom: -10px;
 }
 
 .inf-sistemas {
@@ -176,10 +196,11 @@ ul.filter_project li.selected span.count{
     width: 19%;
     padding-left: 10px;
     padding-top: 20px;
+    margin-bottom: -24px;
 }
 
 .bottom-container {
-    width: 100%;
+    width: 19%;
     padding-left: 10px;
     padding-top: 10px;
     float: left;
@@ -230,4 +251,22 @@ ul.filter_project li.selected span.count{
 
 .box-bg-color {
     background-color: floralwhite;
+}
+
+.bottom-container {
+    position:relative;
+    bottom:0;
+    margin-right: 0;
+    width:19%;
+}
+
+.bottom-container-decoration {
+    border: 1px solid #0d6aad;
+    border-radius:7px;
+    /*background-color: lightslategray;*/
+    height: 60px;
+}
+
+body {
+    overflow: hidden;
 }

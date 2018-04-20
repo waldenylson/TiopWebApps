@@ -75,6 +75,7 @@
             </div>
         </div>
         <div class="sub-container-right">
+
             <div class="sinoptico">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -104,16 +105,45 @@
                     </div>
                 </div>
             </div>
+
             <div class="mnt-programadas">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             <i class="fa fa-cogs titulo">
-                                <b>&nbsp;MANUTENÇÔES PROGRAMADAS</b>
+                                <b>&nbsp;MANUTENÇÕES PROGRAMADAS</b>
                             </i>
                         </h3>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body mnt-programadas-height">
+                        <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
+                            <thead>
+                            <tr class="table-title">
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($efetivoTiop as $efetivo)
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paradas-radar">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-history titulo">
+                                <b>&nbsp;PARADAS RADAR</b>
+                            </i>
+                        </h3>
+                    </div>
+                    <div class="panel-body paradas-radar-height">
                         <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
                             <thead>
                             <tr class="table-title">
@@ -166,7 +196,7 @@
                 <div class="box box-title">COPM3</div>
                 <div class="box box-bg-color">
                     <i class="fa fa-code">&nbsp;STM: <b><i>DACOM</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;VER: <b>4.6.5</b></i><br />
+                    <i class="fa fa-info-circle">&nbsp;VER: <b>4.6.6</b></i><br />
                     <i class="fa fa-database">&nbsp;BDS: <b>COPM3_1</b></i><br />
                     <i class="fa fa-calendar">&nbsp;ATL: <b>03/03/2018</b></i>
                 </div>
@@ -176,8 +206,11 @@
         </div>
         <div class="bottom-container">
             <div class="panel panel-default">
-                <div class="panel-body">
-
+                <div class="panel-body bottom-container-decoration">
+                    <div class="relogio">
+                        <div id="hora"></div><br />
+                        <div id="data"></div>
+                    </div>
                 </div>
             </div>
         </div>

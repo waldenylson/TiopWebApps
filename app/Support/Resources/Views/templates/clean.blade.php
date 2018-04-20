@@ -9,7 +9,7 @@
     <title>  @yield('title') </title>
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
 </head>
-<body>
+<body onload="relogio()">
 @yield('content')
 
 <script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
