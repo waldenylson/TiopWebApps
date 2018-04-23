@@ -206,13 +206,27 @@ ul.filter_project li.selected span.count{
     float: left;
 }
 
-.box{
+.box {
     background-color: royalblue;
     height: 50%;
     width: 99.5%;
     left: 20%;
     top: 20%;
     text-align: left;
+    padding-top: 1px;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    font-size: xx-large;
+    padding-left: 5px;
+}
+
+.box-rpl {
+    height: 50%;
+    width: 99.5%;
+    left: 20%;
+    top: 20%;
+
     padding-top: 1px;
     margin-left: 1px;
     margin-bottom: 1px;
@@ -253,6 +267,10 @@ ul.filter_project li.selected span.count{
     background-color: floralwhite;
 }
 
+.box-bg-color-efetivo {
+    background-color: snow;
+}
+
 .bottom-container {
     position:relative;
     bottom:0;
@@ -268,5 +286,5 @@ ul.filter_project li.selected span.count{
 }
 
 body {
-    overflow: hidden;
+    overflow: auto;
 }

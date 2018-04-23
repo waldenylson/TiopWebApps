@@ -29,7 +29,7 @@
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <div class="box box-bg-color box-efetivo">
+                        <div class="box box-bg-color-efetivo box-efetivo">
                             <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
                                 <thead>
                                 <tr class="table-title">
@@ -63,8 +63,8 @@
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <div class="box box-bg-color box-efetivo">
-                            <div class="box box-bg-color">
+                        <div>
+                            <div class="box-rpl">
                                 <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>RPL040</i></b></i><br />
                                 <i class="fa fa-calendar">&nbsp;ATLIZ: <b>15/04/2018</b></i>
                                 <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>24/04/2018</b></i>
@@ -116,20 +116,20 @@
                         </h3>
                     </div>
                     <div class="panel-body mnt-programadas-height">
-                        <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
-                            <thead>
-                            <tr class="table-title">
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($efetivoTiop as $efetivo)
-                                <tr>
-                                    <td></td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                        {{--<table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">--}}
+                            {{--<thead>--}}
+                            {{--<tr class="table-title">--}}
+                                {{--<th></th>--}}
+                            {{--</tr>--}}
+                            {{--</thead>--}}
+                            {{--<tbody>--}}
+                            {{--@foreach($efetivoTiop as $efetivo)--}}
+                                {{--<tr>--}}
+                                    {{--<td></td>--}}
+                                {{--</tr>--}}
+                            {{--@endforeach--}}
+                            {{--</tbody>--}}
+                        {{--</table>--}}
                     </div>
                 </div>
             </div>
@@ -144,20 +144,20 @@
                         </h3>
                     </div>
                     <div class="panel-body paradas-radar-height">
-                        <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
-                            <thead>
-                            <tr class="table-title">
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($efetivoTiop as $efetivo)
-                                <tr>
-                                    <td></td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
+                        {{--<table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">--}}
+                            {{--<thead>--}}
+                            {{--<tr class="table-title">--}}
+                                {{--<th></th>--}}
+                            {{--</tr>--}}
+                            {{--</thead>--}}
+                            {{--<tbody>--}}
+                            {{--@foreach($efetivoTiop as $efetivo)--}}
+                                {{--<tr>--}}
+                                    {{--<td></td>--}}
+                                {{--</tr>--}}
+                            {{--@endforeach--}}
+                            {{--</tbody>--}}
+                        {{--</table>--}}
                     </div>
                 </div>
             </div>
@@ -175,30 +175,30 @@
                 <div class="box box-title">ACC-RE</div>
                 <div class="box box-bg-color">
                     <i class="fa fa-code">&nbsp;STM: <b><i>SAGITARIO</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;VER: <b>2.2.9.10</b></i><br />
-                    <i class="fa fa-database">&nbsp;BDS: <b>ACCRE50</b></i><br />
-                    <i class="fa fa-calendar">&nbsp;ATL: <b>29/03/2018</b></i>
+                    <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10</b></i><br />
+                    <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>ACCRE50</b></i><br />
+                    <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>29/03/2018</b></i>
                 </div>
                 <div class="box box-title">ACC-AO</div>
                 <div class="box box-bg-color">
                     <i class="fa fa-code">&nbsp;STM: <b><i>SAGITARIO</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;VER: <b>2.2.9.20</b></i><br />
-                    <i class="fa fa-database">&nbsp;BDS: <b>ACCAO14</b></i><br />
-                    <i class="fa fa-calendar">&nbsp;ATL: <b>15/03/2018</b></i>
+                    <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.20</b></i><br />
+                    <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>ACCAO14</b></i><br />
+                    <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>15/03/2018</b></i>
                 </div>
                 <div class="box box-title">APP-RF</div>
                 <div class="box box-bg-color">
                     <i class="fa fa-code">&nbsp;STM: <b><i>SAGITARIO</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;VER: <b>2.2.9.10</b></i><br />
-                    <i class="fa fa-database">&nbsp;BDS: <b>APPRF24</b></i><br />
-                    <i class="fa fa-calendar">&nbsp;ATL: <b>13/02/2018</b></i>
+                    <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10</b></i><br />
+                    <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>APPRF24</b></i><br />
+                    <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>13/02/2018</b></i>
                 </div>
                 <div class="box box-title">COPM3</div>
                 <div class="box box-bg-color">
-                    <i class="fa fa-code">&nbsp;STM: <b><i>DACOM</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;VER: <b>4.6.6</b></i><br />
-                    <i class="fa fa-database">&nbsp;BDS: <b>COPM3_1</b></i><br />
-                    <i class="fa fa-calendar">&nbsp;ATL: <b>03/03/2018</b></i>
+                    <i class="fa fa-code"> STM: <b><i>DACOM</i></b></i><br />
+                    <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>4.6.6</b></i><br />
+                    <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>COPM3_1</b></i><br />
+                    <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>03/03/2018</b></i>
                 </div>
                 <!-- #################### TERMINA AQUI AS BOXES ######################### -->
 
