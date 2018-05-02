@@ -1,7 +1,7 @@
 <?php namespace TIOp\Domains\Sistemas\Contracts;
 
 use Artesaos\Warehouse\Contracts\Segregated\CrudRepository;
-use TIOp\Units\Radars\Requests\StoreSistemasPostRequest;
+use TIOp\Units\Sistemas\Requests\StoreSistemasPostRequest;
 
 /**
  *  User Interface Contracts

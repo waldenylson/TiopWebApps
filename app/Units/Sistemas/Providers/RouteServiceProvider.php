@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'TIOp\Units\Radars\Controllers';
+    protected $namespace = 'TIOp\Units\Sistemas\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

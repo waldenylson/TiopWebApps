@@ -1,4 +1,4 @@
-<?php namespace TIOp\Units\Radars\Requests;
+<?php namespace TIOp\Units\Sistemas\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

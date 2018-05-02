@@ -15,41 +15,14 @@
             {!! Form::text('nome', null, ['class' => 'form-control', 'id' => 'nome', 'autofocus' => '']) !!}
         </div>
         <div class="col-md-3">
-            {!! Form::label('localidade', 'Localidade', ['class' => 'control-label']) !!}
-            {!! Form::text('localidade', null, ['class' => 'form-control', 'id' => 'localidade']) !!}
-        </div>
-        <div class="col-md-2">
-            {!! Form::label('equipamento', 'Equipamento', ['class' => 'control-label']) !!}
-            {!! Form::text('equipamento', null, ['class' => 'form-control', 'id' => 'equipamento']) !!}
+            {!! Form::label('versao', 'Versão', ['class' => 'control-label']) !!}
+            {!! Form::text('versao', null, ['class' => 'form-control', 'id' => 'versao']) !!}
         </div>
     </div><br>
     <div class="row">
-        <div class="col-md-3">
-            {!! Form::label('canalizacao', 'Canalização', ['class' => 'control-label']) !!}
-            {!! Form::text('canalizacao', null, ['class' => 'form-control', 'id' => 'canalizacao']) !!}
-        </div>
-        <div class="col-md-3">
-            {!! Form::label('protocolo', 'Protocolo', ['class' => 'control-label']) !!}
-            {!! Form::text('protocolo', null, ['class' => 'form-control', 'id' => 'protocolo']) !!}
-        </div>
-
-        <div class="col-md-2">
-            {!! Form::label('sic', 'SIC', ['class' => 'control-label']) !!}
-            {!! Form::text('sic', null, ['class' => 'form-control', 'id' => 'sic']) !!}
-        </div>
-    </div><br>
-    <div class="row">
-        <div class="col-md-3">
-            {!! Form::label('tipo', 'Tipo', ['class' => 'control-label']) !!}
-            {!! Form::text('tipo', null, ['class' => 'form-control', 'id' => 'tipo']) !!}
-        </div>
-        <div class="col-md-3">
-            {!! Form::label('lat', 'LAT', ['class' => 'control-label']) !!}
-            {!! Form::text('lat', null, ['class' => 'form-control', 'id' => 'lat']) !!}
-        </div>
-        <div class="col-md-2">
-            {!! Form::label('long', 'LONG', ['class' => 'control-label']) !!}
-            {!! Form::text('long', null, ['class' => 'form-control', 'id' => 'long']) !!}
+        <div class="col-md-7">
+            {!! Form::label('descricao', 'Descrição', ['class' => 'control-label']) !!}
+            {!! Form::textArea('descricao', null, ['class' => 'form-control', 'id' => 'descricao']) !!}
         </div>
     </div>
 </div>

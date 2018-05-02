@@ -2,7 +2,7 @@
 
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\Sistemas\Contracts\SistemasRepository;
-use TIOp\Units\Radars\Requests\StoreSistemasPostRequest;
+use TIOp\Units\Sistemas\Requests\StoreSistemasPostRequest;
 
 class SistemasController extends Controller
 {

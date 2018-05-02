@@ -1,15 +1,15 @@
 
 @extends('support::templates.fancyboxContent')
 <h2>
-    <i class="fa fa-podcast"></i>
+    <i class="fa fa-code"></i>
     Cadastrar Radar
 </h2>
 <hr />
 
 @section('content')
 
-    {!! Form::open(['route' => 'radars.store']) !!}
-    @include('radars::partials.form')
+    {!! Form::open(['route' => 'sistemas.store']) !!}
+    @include('sistemas::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar
     </button>
