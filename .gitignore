@@ -3,6 +3,7 @@
 /public/storage
 /public/fonts
 /public/img
+/public/ckeditor
 /public/adminlte
 /storage/*.key
 /vendor

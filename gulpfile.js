@@ -24,7 +24,6 @@ elixir(function (mix) {
         '/../../../node_modules/sweetalert/dist/sweetalert.min.js',
         '/../../../node_modules/datatables/media/js/jquery.dataTables.min.js',
         '/../../../node_modules/moment/min/moment.min.js',
-        '/../../../node_modules/ckeditor/ckeditor.js',
         '/../../../app/Support/Resources/Views/js/ .js',
         '/../../../app/Support/Resources/Views/js/momentjs.pt-br.js',
         '/../../../app/Support/Resources/Views/js/VueComponents/main.js',

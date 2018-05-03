@@ -13,5 +13,6 @@
 
 		@include('support::partials.alerts')
 	</div>
+	<script src="{!! asset('ckeditor/ckeditor.js') !!}" type="text/javascript"></script>
 </body>
 </html>

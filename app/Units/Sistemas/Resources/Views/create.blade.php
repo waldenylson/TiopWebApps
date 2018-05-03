@@ -1,8 +1,7 @@
-
 @extends('support::templates.fancyboxContent')
 <h2>
     <i class="fa fa-code"></i>
-    Cadastrar Radar
+    Cadastrar Sistema
 </h2>
 <hr />
 
