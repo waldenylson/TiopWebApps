@@ -1,42 +1,39 @@
 @extends('adminlte::page')
 
-@section('title', 'Radares')
+@section('title', 'Sistemas')
 
 @section('content_header')
     <div class="icon">
         <h1>
-            <i class="ion ion-radio-waves"></i>
-            Radares Cadastrados
+            <i class="ion ion-code"></i>
+            Sistemas Cadastrados
         </h1>
     </div>
 @stop
 
 @section('content')
-    @if(count($radares) > 0)
+    @if(count($sistemas) > 0)
         <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
             <thead>
             <tr>
-                <th>RADAR</th>
-                <th>CANALIZAÇÃO</th>
-                <th>PROTOCOLO</th>
-                <th>SIC</th>
-                <th>AÇÕES</th>
+                <th>SISTEMA</th>
+                <th>VERSÃO</th>
+                <th>DATA ATUALIZAÇÃO</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($radares as $radar)
+            @foreach($sistemas as $sistema)
                 <tr>
-                    <td>{!! $radar->nome                                          !!}</td>
-                    <td>{!! $radar->canalizacao                                         !!}</td>
-                    <td>{!! $radar->protocolo                                        !!}</td>
-                    <td>{!! $radar->sic !!}</td>
+                    <td>{!! $sistema->nome               !!}</td>
+                    <td>{!! $sistema->versao             !!}</td>
+                    <td>{!! $sistema->data_atualizacao   !!}</td>
 
                     <td width="1%" nowrap>
-                        <a href="{!! route('radars.edit', $radar->id) !!}" class="btn btn-primary btn-xs fancybox">
+                        <a href="{!! route('sistemas.edit', $sistema->id) !!}" class="btn btn-primary btn-xs fancybox">
                             <i class="fa fa-pencil"></i> editar
                         </a>
 
-                        <a href="{!! route('radars.destroy', $radar->id) !!}" class="btn btn-danger btn-xs btn-remover">
+                        <a href="{!! route('sistemas.destroy', $sistema->id) !!}" class="btn btn-danger btn-xs btn-remover">
                             <i class="fa fa-remove"></i> remover
                         </a>
                     </td>
@@ -45,7 +42,7 @@
             </tbody>
         </table>
     @else
-        <h5 class="well">Nenhum Radar Cadastrada ainda!</h5>
+        <h5 class="well">Nenhum Sistema Cadastrado ainda!</h5>
     @endif
 @stop
 

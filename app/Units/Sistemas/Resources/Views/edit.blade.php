@@ -5,7 +5,7 @@
 </h2>
 <hr />
 @section('content')
-    {!! Form::model($sistema, ['route' => 'sistemas.update', $sistema->id]) !!}
+    {!! Form::model($sistema, ['route' => ['sistemas.update', $sistema->id]]) !!}
     @include('sistemas::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar

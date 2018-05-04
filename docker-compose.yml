@@ -12,28 +12,28 @@ volumes:
 
 services:
   # MySQL (5.7)
-  mysql:
-    image: ambientum/mysql:5.7
-    container_name: laravel-mysql
-    volumes:
-      - laravel-mysql-data:/var/lib/mysql
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=laravel
-      - MYSQL_DATABASE=laravel
-      - MYSQL_USER=laravel
-      - MYSQL_PASSWORD=laravel
+  #mysql:
+  #  image: ambientum/mysql:5.7
+  #  container_name: laravel-mysql
+  #  volumes:
+  #    - laravel-mysql-data:/var/lib/mysql
+  #  ports:
+  #    - "3306:3306"
+  #  environment:
+  #    - MYSQL_ROOT_PASSWORD=laravel
+  #    - MYSQL_DATABASE=laravel
+  #    - MYSQL_USER=laravel
+  #    - MYSQL_PASSWORD=laravel
 
   # Redis
-#  cache:
-#    image: ambientum/redis:3.2
-#    container_name: codecasts-redis
-#    command: --appendonly yes
-#    volumes:
-#      - laravel-redis-data:/data
-#    ports:
-#      - "6379:6379"
+  cache:
+    image: ambientum/redis:3.2
+    container_name: codecasts-redis
+    command: --appendonly yes
+    volumes:
+      - laravel-redis-data:/data
+    ports:
+      - "6379:6379"
 
   # PHP (with Caddy)
   app:
@@ -44,8 +44,8 @@ services:
     ports:
       - "80:8080"
     links:
-      - mysql
-#      - cache
+#      - mysql
+      - cache
 
 # Laravel Queues
 #  queue:

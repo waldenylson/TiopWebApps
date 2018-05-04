@@ -19,29 +19,29 @@ class SistemasRepository extends AbstractCrudRepository implements SistemasRepos
 
     public function store(StoreSistemasPostRequest $request)
     {
-        $radar = $this->modelClass::create($request->all());
+        $sistema = $this->modelClass::create($request->all());
 
-        return $radar;
+        return $sistema;
     }
 
     public function edit($id)
     {
-        $radar = $this->modelClass::findOrFail($id);
+        $sistema = $this->modelClass::findOrFail($id);
 
-        return $radar;
+        return $sistema;
     }
 
     public function persistUpdate(StoreSistemasPostRequest $request, $id)
     {
-        $radar = $this->modelClass::findOrFail($id)->update($request->all());
+        $sistema = $this->modelClass::findOrFail($id)->update($request->all());
 
-        return $radar;
+        return $sistema;
     }
 
     public function destroy($id)
     {
-        $radar = $this->modelClass::findOrFail($id);
+        $sistema = $this->modelClass::findOrFail($id);
 
-        return $radar->delete();
+        return $sistema->delete();
     }
 }

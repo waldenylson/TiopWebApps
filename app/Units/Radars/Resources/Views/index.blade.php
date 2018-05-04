@@ -45,7 +45,7 @@
             </tbody>
         </table>
     @else
-        <h5 class="well">Nenhum Radar Cadastrada ainda!</h5>
+        <h5 class="well">Nenhum Radar Cadastrado ainda!</h5>
     @endif
 @stop
 

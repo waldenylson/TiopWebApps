@@ -121,7 +121,7 @@ return [
             'linkClass' => 'fancybox',
         ],
 
-        'SISTEMA',
+        'STVD',
         [
             'text'    => 'Radar',
             'icon'    => 'podcast',
@@ -134,6 +134,23 @@ return [
                 [
                     'text' => 'Cadastrar',
                     'url'  => '/radares/novo',
+                    'icon' => 'plus-circle',
+                    'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Sistemas',
+            'icon'    => 'code',
+            'submenu' => [
+                [
+                    'text' => 'Listar Todos',
+                    'url'  => '/sistemas',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => '/sistemas/novo',
                     'icon' => 'plus-circle',
                     'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
                 ],
