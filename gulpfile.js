@@ -43,7 +43,8 @@ elixir(function (mix) {
         '/../../../app/Units/Dashboard/Resources/css/sinoptico.css'
     ], 'public/css/app.css');
 
-    mix.copy('node_modules/font-awesome/fontscd', 'public/fonts');
+    mix.copy('node_modules/font-awesome/fonts', 'public/fonts');
+    mix.copy('node_modules/bootstrap/fonts', 'public/fonts');
     mix.copy('node_modules/fancybox/dist/img', 'public/img');
     mix.copy('app/Units/Dashboard/Resources/css/images/', 'public/img');
 });
