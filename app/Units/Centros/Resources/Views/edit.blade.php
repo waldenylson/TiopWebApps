@@ -1,10 +1,12 @@
 @extends('support::templates.fancyboxContent')
-<h2>
-    <i class="fa fa-compress"></i>
-    Cadastrar Centros
-</h2>
-<hr />
+
 @section('content')
+    <h2>
+        <i class="fa fa-compress"></i>
+        Cadastrar Centros
+    </h2>
+    <hr />
+
     {!! Form::model($centro, ['route' => ['centros.update', $centro->id]]) !!}
     @include('centros::partials.form')
     <button class="btn btn-primary" type="submit">

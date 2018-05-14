@@ -1,11 +1,11 @@
 @extends('support::templates.fancyboxContent')
-<h2>
-    <i class="fa fa-code"></i>
-    Cadastrar Sistema
-</h2>
-<hr />
 
 @section('content')
+    <h2>
+        <i class="fa fa-code"></i>
+        Cadastrar Sistema
+    </h2>
+    <hr />
 
     {!! Form::open(['route' => 'sistemas.store']) !!}
     @include('sistemas::partials.form')

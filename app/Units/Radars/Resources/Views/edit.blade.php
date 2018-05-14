@@ -1,12 +1,11 @@
-
 @extends('support::templates.fancyboxContent')
-<h2>
-    <i class="fa fa-compress"></i>
-    Editar Radar
-</h2>
-<hr />
 
 @section('content')
+    <h2>
+        <i class="fa fa-compress"></i>
+        Editar Radar
+    </h2>
+    <hr />
 
     {!! Form::model($centro, ['route' => ['radars.update', $radar->id]]) !!}
     @include('radars::partials.form')

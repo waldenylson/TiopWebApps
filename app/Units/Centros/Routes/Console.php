@@ -1,4 +1,4 @@
-<?php namespace TIOp\Units\Sistemas\Routes;
+<?php namespace TIOp\Units\Centros\Routes;
 
 use Codecasts\Support\Console\Routing\RouteFile;
 

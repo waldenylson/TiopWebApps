@@ -156,6 +156,23 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'Centros',
+            'icon'    => 'compress',
+            'submenu' => [
+                [
+                    'text' => 'Listar Todos',
+                    'url'  => '/centros',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => '/centros/novo',
+                    'icon' => 'plus-circle',
+                    'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
+                ],
+            ],
+        ],
 
         'ACCOUNT SETTINGS',
         [

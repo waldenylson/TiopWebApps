@@ -24,7 +24,7 @@ class Web extends RouteFile
         // $this->router->post('radars/{id}/update', ['as' => 'radars.update',  'uses' => 'SinopticoController@update']);
         // $this->router->get('radars/{id}/remove',  ['as' => 'radars.destroy', 'uses' => 'SinopticoController@destroy']);
 
-        $this->router->get('/home', ['as' => 'home.index', 'uses' => 'DashboardController@index']);
+        //$this->router->get('/home', ['as' => 'home.index', 'uses' => 'DashboardController@index']);
 
 //        $this->router->get('/home', function(){
 //            return 'Home Route';

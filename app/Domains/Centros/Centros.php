@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Centros extends Model
 {
-    protected $table = 'Centros';
+    protected $table = 'centros';
 
     protected $guarded = ['_token'];
 

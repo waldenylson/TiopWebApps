@@ -1,12 +1,11 @@
-
 @extends('support::templates.fancyboxContent')
-<h2>
-    <i class="fa fa-podcast"></i>
-    Cadastrar Radar
-</h2>
-<hr />
 
 @section('content')
+    <h2>
+        <i class="fa fa-podcast"></i>
+        Cadastrar Radar
+    </h2>
+    <hr />
 
     {!! Form::open(['route' => 'radars.store']) !!}
     @include('radars::partials.form')

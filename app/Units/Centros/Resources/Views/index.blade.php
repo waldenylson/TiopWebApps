@@ -5,7 +5,7 @@
 @section('content_header')
     <div class="icon">
         <h1>
-            <i class="ion ion-compress"></i>
+            <i class="fa fa-compress"></i>
             Centros Cadastrados
         </h1>
     </div>
@@ -42,7 +42,7 @@
             </tbody>
         </table>
     @else
-        <h5 class="well">Nenhum Sistema Cadastrado ainda!</h5>
+        <h5 class="well">Nenhum Centro Cadastrado ainda!</h5>
     @endif
 @stop
 

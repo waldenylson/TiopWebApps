@@ -1,10 +1,12 @@
 @extends('support::templates.fancyboxContent')
-<h2>
-    <i class="fa fa-code"></i>
-    Cadastrar Sistema
-</h2>
-<hr />
+
 @section('content')
+    <h2>
+        <i class="fa fa-code"></i>
+        Cadastrar Sistema
+    </h2>
+    <hr />
+
     {!! Form::model($sistema, ['route' => ['sistemas.update', $sistema->id]]) !!}
     @include('sistemas::partials.form')
     <button class="btn btn-primary" type="submit">

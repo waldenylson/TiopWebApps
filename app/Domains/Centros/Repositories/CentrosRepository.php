@@ -1,23 +1,23 @@
-<?php namespace TIOp\Domains\Sistemas\Repositories;
+<?php namespace TIOp\Domains\Centros\Repositories;
 
 use Artesaos\Warehouse\Traits\ImplementsFractal;
-use TIOp\Domains\Sistemas\Contracts\SistemasRepository as SistemasRepositoryContract;
+use TIOp\Domains\Centros\Contracts\CentrosRepository as CentrosRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
-use TIOp\Domains\Sistemas\Sistemas;
-use TIOp\Units\Sistemas\Requests\StoreSistemasPostRequest;
+use TIOp\Domains\Centros\Centros;
+use TIOp\Units\Centros\Requests\StoreCentrosPostRequest;
 
-class SistemasRepository extends AbstractCrudRepository implements SistemasRepositoryContract
+class CentrosRepository extends AbstractCrudRepository implements CentrosRepositoryContract
 {
     use ImplementsFractal;
 
-    protected $modelClass       = Sistemas::class;
+    protected $modelClass       = Centros::class;
 
-    public function listSistemas()
+    public function listCentros()
     {
         return $this->modelClass::all();
     }
 
-    public function store(StoreSistemasPostRequest $request)
+    public function store(StoreCentrosPostRequest $request)
     {
         $sistema = $this->modelClass::create($request->all());
 
@@ -31,7 +31,7 @@ class SistemasRepository extends AbstractCrudRepository implements SistemasRepos
         return $sistema;
     }
 
-    public function persistUpdate(StoreSistemasPostRequest $request, $id)
+    public function persistUpdate(StoreCentrosPostRequest $request, $id)
     {
         $sistema = $this->modelClass::findOrFail($id)->update($request->all());
 

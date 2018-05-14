@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<title>TIOp - Seção de Informática Operacional</title>
     <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
+	<style>
+		.container {
+			padding: 10px 10px 10px 10px;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
