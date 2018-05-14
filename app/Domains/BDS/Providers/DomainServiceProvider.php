@@ -1,8 +1,8 @@
-<?php namespace TIOp\Domains\Centros\Providers;
+<?php namespace TIOp\Domains\BDS\Providers;
 
 use Codecasts\Support\Domain\ServiceProvider;
-use TIOp\Domains\Centros\Contracts;
-use TIOp\Domains\Centros\Repositories;
+use TIOp\Domains\BDS\Contracts;
+use TIOp\Domains\BDS\Repositories;
 /**
  * Class DomainServiceProvider.
  */
@@ -11,13 +11,13 @@ class DomainServiceProvider extends ServiceProvider
     /**
      * @var string
      */
-    protected $alias = 'centros';
+    protected $alias = 'bds';
 
     /**
      * @var array
      */
     protected $bindings = [
-        Contracts\CentrosRepository::class => Repositories\CentrosRepository::class,
+        Contracts\BDSRepository::class => Repositories\BDSRepository::class,
     ];
 
     protected $migrations = [

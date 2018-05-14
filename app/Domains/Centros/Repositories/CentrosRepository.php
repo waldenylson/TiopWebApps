@@ -19,29 +19,29 @@ class CentrosRepository extends AbstractCrudRepository implements CentrosReposit
 
     public function store(StoreCentrosPostRequest $request)
     {
-        $sistema = $this->modelClass::create($request->all());
+        $centro = $this->modelClass::create($request->all());
 
-        return $sistema;
+        return $centro;
     }
 
     public function edit($id)
     {
-        $sistema = $this->modelClass::findOrFail($id);
+        $centro = $this->modelClass::findOrFail($id);
 
-        return $sistema;
+        return $centro;
     }
 
     public function persistUpdate(StoreCentrosPostRequest $request, $id)
     {
-        $sistema = $this->modelClass::findOrFail($id)->update($request->all());
+        $centro = $this->modelClass::findOrFail($id)->update($request->all());
 
-        return $sistema;
+        return $centro;
     }
 
     public function destroy($id)
     {
-        $sistema = $this->modelClass::findOrFail($id);
+        $centro = $this->modelClass::findOrFail($id);
 
-        return $sistema->delete();
+        return $centro->delete();
     }
 }

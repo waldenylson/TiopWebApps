@@ -183,6 +183,7 @@ return [
         TIOp\Domains\Radars\Providers\DomainServiceProvider::class,
         TIOp\Domains\Sistemas\Providers\DomainServiceProvider::class,
         TIOp\Domains\Centros\Providers\DomainServiceProvider::class,
+        TIOp\Domains\BDS\Providers\DomainServiceProvider::class,
 
         /*
          * Units Service Providers...
@@ -199,6 +200,7 @@ return [
         TIOp\Units\Radars\Providers\UnitServiceProvider::class,
         TIOp\Units\Sistemas\Providers\UnitServiceProvider::class,
         TIOp\Units\Centros\Providers\UnitServiceProvider::class,
+        TIOp\Units\BDS\Providers\UnitServiceProvider::class,
 
 
         TIOp\Units\Users\Providers\UnitServiceProvider::class,
