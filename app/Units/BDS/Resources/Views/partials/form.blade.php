@@ -11,7 +11,7 @@
 <div class="form-group well">
     <div class="row">
         <div class="col-md-2">
-            {!! Form::label('nome', 'Nome', ['class' => 'control-label']) !!}
+            {!! Form::label('sistema_centro_ida', 'Nome', ['class' => 'control-label']) !!}
             {!! Form::text('nome', null, ['class' => 'form-control', 'id' => 'nome', 'autofocus' => '']) !!}
         </div>
         <div class="col-md-2">

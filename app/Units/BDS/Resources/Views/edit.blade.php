@@ -3,12 +3,12 @@
 @section('content')
     <h2>
         <i class="fa fa-compress"></i>
-        Cadastrar Centros
+        Cadastrar BDS
     </h2>
     <hr />
 
-    {!! Form::model($centro, ['route' => ['centros.update', $centro->id]]) !!}
-    @include('centros::partials.form')
+    {!! Form::model($bds, ['route' => ['bds.update', $bds->id]]) !!}
+    @include('bds::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar
     </button>
