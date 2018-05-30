@@ -27,9 +27,21 @@
             !!}
         </div>
         <div class="col-md-2">
-            {!! Form::label('producao', 'Produção', ['class' => 'control-label']) !!}
-            <div>{!! Form::radio('producao', 0 ,['class' => 'form-control', 'id' => 'producao', 'checked' => false]) !!}&nbsp;SIM</div>
-            <div>{!! Form::radio('producao', 1, ['class' => 'form-control', 'id' => 'producao', 'checked' => true]) !!}&nbsp;NÃO</div>
+            {!! Form::label(null, 'Produção', ['class' => 'control-label']) !!}
+            <div class="div-producao-container">
+                <div class="div-producao">
+                    {!! Form::radio('producao', 0, true) !!}
+                    &nbsp;SIM
+                    <br>
+                    {!! Form::radio('producao', 1, false) !!}
+                    &nbsp;NÃO
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<style>
+    .div-producao {
+        float: left;
+    }
+</style>

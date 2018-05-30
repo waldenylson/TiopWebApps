@@ -56,6 +56,7 @@ class SistemasCentrosController extends Controller
      */
     public function store(StoreSistemasCentrosPostRequest $request)
     {
+        dd($request->all());
         $result = $this->sistemasCentrosRepository->store($request);
 
         if ($result)
