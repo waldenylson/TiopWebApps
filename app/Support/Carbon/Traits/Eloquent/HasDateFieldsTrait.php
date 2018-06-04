@@ -1,6 +1,6 @@
-<?php namespace App\Support\Traits\Eloquent;
+<?php namespace TIOp\Support\Carbon\Traits\Eloquent;
 
-use App\Support\Helpers\Dates as DateHelper;
+use TIOp\Support\Carbon\Helpers\Dates as DateHelper;
 
 trait HasDateFieldsTrait
 {

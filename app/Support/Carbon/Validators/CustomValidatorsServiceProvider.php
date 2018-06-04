@@ -1,4 +1,4 @@
-<?php namespace App\Support\Validators;
+<?php namespace TIOp\Support\Carbon\Validators;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Factory as ValidatorFactory;
@@ -17,7 +17,7 @@ class CustomValidatorsServiceProvider extends ServiceProvider
     {
         $validator->extend(
             'valid_date_format',
-            'App\Support\Validators\DateField@rule'
+            'TIOp\Support\Validators\DateField@rule'
         );
     }
 

@@ -44,4 +44,17 @@ class CentrosRepository extends AbstractCrudRepository implements CentrosReposit
 
         return $centro->delete();
     }
+
+    public function getAllCentrosForSelect()
+    {
+        $baseArray = $this->modelClass::all();
+        $centros = array();
+
+        foreach($baseArray as $value)
+        {
+            $centros[$value->id] = $value->acronimo;
+        }
+
+        return $centros;
+    }
 }

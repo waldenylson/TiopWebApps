@@ -164,6 +164,11 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        /**
+         *  Helper Para datas
+         */
+        TIOp\Support\Carbon\Validators\CustomValidatorsServiceProvider::class,
+
         /*
          * Package Service Providers...
          */

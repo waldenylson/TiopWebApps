@@ -13,5 +13,5 @@ interface SistemasRepository extends CrudRepository
     public function edit($id);
     public function persistUpdate(StoreSistemasPostRequest $request, $id);
     public function destroy($id);
-
+    public function getAllSistemasForSelect();
 }

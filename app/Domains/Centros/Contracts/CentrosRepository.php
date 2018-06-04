@@ -13,5 +13,5 @@ interface CentrosRepository extends CrudRepository
     public function edit($id);
     public function persistUpdate(StoreCentrosPostRequest $request, $id);
     public function destroy($id);
-
+    public function getAllCentrosForSelect();
 }

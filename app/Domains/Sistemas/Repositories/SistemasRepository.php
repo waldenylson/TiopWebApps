@@ -44,4 +44,17 @@ class SistemasRepository extends AbstractCrudRepository implements SistemasRepos
 
         return $sistema->delete();
     }
+
+    public function getAllSistemasForSelect()
+    {
+        $baseArray = $this->modelClass::all();
+        $sistemas = array();
+
+        foreach($baseArray as $value)
+        {
+            $sistemas[$value->id] = $value->nome;
+        }
+
+        return $sistemas;
+    }
 }

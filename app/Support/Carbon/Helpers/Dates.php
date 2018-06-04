@@ -1,4 +1,4 @@
-<?php namespace App\Support\Helpers;
+<?php namespace TIOp\Support\Carbon\Helpers;
 
 use Carbon\Carbon;
 use DateTime;

@@ -1,6 +1,6 @@
-<?php namespace App\Support\Validators;
+<?php namespace TIOp\Support\Carbon\Validators;
 
-use App\Support\Helpers\Dates as DateHelper;
+use TIOp\Support\Helpers\Dates as DateHelper;
 
 class DateField
 {

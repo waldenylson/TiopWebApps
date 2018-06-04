@@ -14,12 +14,12 @@
             {!! Form::label('sistema_id', 'Sistema', ['class' => 'control-label']) !!}
             {!! !empty($sistemaCentro) ? Form::select('sistema_id', $sistemas, $sistemaCentro->sistema_id,
                                             ['class' => 'form-control', 'id' => 'sistema_id'])
-                                    : Form::select('natureza_missao_id', $sistemas, null,
+                                    : Form::select('sistema_id', $sistemas, null,
                                             ['class' => 'form-control', 'id' => 'sistema_id'])
             !!}
         </div>
         <div class="col-md-2">
-            {!! Form::label('sistema_id', 'Sistema', ['class' => 'control-label']) !!}
+            {!! Form::label('sistema_id', 'Centro', ['class' => 'control-label']) !!}
             {!! !empty($sistemaCentro) ? Form::select('sistema_id', $centros, $sistemaCentro->centro_id,
                                             ['class' => 'form-control', 'id' => 'centro_id'])
                                     : Form::select('centro_id', $centros, null,

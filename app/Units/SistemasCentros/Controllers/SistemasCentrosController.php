@@ -1,26 +1,25 @@
 <?php namespace TIOp\Units\SistemasCentros\Controllers;
 
 use Codecasts\Support\Http\Controller;
-use TIOp\Domains\Centros\Centros;
-use TIOp\Domains\Sistemas\Sistemas;
+use TIOp\Domains\Centros\Contracts\CentrosRepository;
+use TIOp\Domains\Sistemas\Contracts\SistemasRepository;
 use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
 use TIOp\Units\SistemasCentros\Requests\StoreSistemasCentrosPostRequest;
 
 class SistemasCentrosController extends Controller
 {
-    /**
-     * @var RadarRepository
-     */
-    protected $sistemasCentrosRepository;
+   protected $sistemasCentrosRepository;
+   protected $centrosRepository;
+   protected $sistemasRepository;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @param RadarRepository $repository
-     */
-    public function __construct(SistemasCentrosRepository $repository)
+
+    public function __construct(SistemasCentrosRepository $repository,
+                                CentrosRepository $centrosRepository,
+                                SistemasRepository $sistemasRepository)
     {
         $this->sistemasCentrosRepository = $repository;
+        $this->centrosRepository         = $centrosRepository;
+        $this->sistemasRepository        = $sistemasRepository;
     }
 
     /**
@@ -42,8 +41,8 @@ class SistemasCentrosController extends Controller
      */
     public function create()
     {
-        $sistemas = Sistemas::all();
-        $centros  = Centros::all();
+        $sistemas = $this->sistemasRepository->getAllSistemasForSelect();
+        $centros  = $this->centrosRepository->getAllCentrosForSelect();
 
         return view('sc::create')->with(compact('sistemas'))->with(compact('centros'));
     }
@@ -56,7 +55,6 @@ class SistemasCentrosController extends Controller
      */
     public function store(StoreSistemasCentrosPostRequest $request)
     {
-        dd($request->all());
         $result = $this->sistemasCentrosRepository->store($request);
 
         if ($result)
