@@ -7,8 +7,8 @@
     </h2>
     <hr />
 
-    {!! Form::model($centro, ['route' => ['centros.update', $centro->id]]) !!}
-    @include('centros::partials.form')
+    {!! Form::model($sistemaCentro, ['route' => ['sc.update', $sistemaCentro->id]]) !!}
+    @include('sc::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar
     </button>

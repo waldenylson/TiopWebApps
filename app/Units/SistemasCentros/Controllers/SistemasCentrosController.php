@@ -8,9 +8,12 @@ use TIOp\Units\SistemasCentros\Requests\StoreSistemasCentrosPostRequest;
 
 class SistemasCentrosController extends Controller
 {
-   protected $sistemasCentrosRepository;
-   protected $centrosRepository;
-   protected $sistemasRepository;
+    private $true  = 1;
+    private $false = 0;
+
+    protected $sistemasCentrosRepository;
+    protected $centrosRepository;
+    protected $sistemasRepository;
 
 
     public function __construct(SistemasCentrosRepository $repository,
@@ -29,9 +32,9 @@ class SistemasCentrosController extends Controller
      */
     public function index()
     {
-        $sistemasCentros = $this->sistemasCentrosRepository->listSistemasCentros();
+        $sc = $this->sistemasCentrosRepository->listSistemasCentros();
 
-        return view('sc::index')->with(compact('sistemasCentros'));
+        return view('sc::index')->with(compact('sc'));
     }
 
     /**
@@ -74,9 +77,16 @@ class SistemasCentrosController extends Controller
      */
     public function edit($id)
     {
-        $centro = $this->sistemasCentrosRepository->edit($id);
+        $sistemas = $this->sistemasRepository->getAllSistemasForSelect();
+        $centros  = $this->centrosRepository->getAllCentrosForSelect();
 
-        return view('sc::edit')->with(compact('centro'));
+        $sistemaCentro = $this->sistemasCentrosRepository->edit($id);
+
+        //dd($sistemaCentro);
+
+        return view('sc::edit')->with(compact('sistemaCentro'))
+                                     ->with(compact('sistemas'))
+                                     ->with(compact('centros'));
     }
 
 

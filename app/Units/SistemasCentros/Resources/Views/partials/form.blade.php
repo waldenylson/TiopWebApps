@@ -30,10 +30,10 @@
             {!! Form::label(null, 'Produção', ['class' => 'control-label']) !!}
             <div class="div-producao-container">
                 <div class="div-producao">
-                    {!! Form::radio('producao', 0, true) !!}
+                    {!! Form::radio('producao', 1, true) !!}
                     &nbsp;SIM
                     <br>
-                    {!! Form::radio('producao', 1, false) !!}
+                    {!! Form::radio('producao', 0, false) !!}
                     &nbsp;NÃO
                 </div>
             </div>

@@ -6,13 +6,13 @@
     <div class="icon">
         <h1>
             <i class="fa fa-compress"></i>
-            Centros Cadastrados
+            Centros Associados
         </h1>
     </div>
 @stop
 
 @section('content')
-    @if(count($centros) > 0)
+    @if(count($sc) > 0)
         <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
             <thead>
             <tr>
@@ -22,18 +22,18 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($centros as $sistema)
+            @foreach($sc as $sistemaCentro)
                 <tr>
-                    <td>{!! $sistema->nome               !!}</td>
-                    <td>{!! $sistema->versao             !!}</td>
-                    <td>{!! $sistema->data_atualizacao   !!}</td>
+                    <td>{!! $sistemaCentro->nome               !!}</td>
+                    <td>{!! $sistemaCentro->versao             !!}</td>
+                    <td>{!! $sistemaCentro->data_atualizacao   !!}</td>
 
                     <td width="1%" nowrap>
-                        <a href="{!! route('centros.edit', $sistema->id) !!}" class="btn btn-primary btn-xs fancybox">
+                        <a href="{!! route('sc.edit', $sistemaCentro->id) !!}" class="btn btn-primary btn-xs fancybox">
                             <i class="fa fa-pencil"></i> editar
                         </a>
 
-                        <a href="{!! route('centros.destroy', $sistema->id) !!}" class="btn btn-danger btn-xs btn-remover">
+                        <a href="{!! route('sc.destroy', $sistemaCentro->id) !!}" class="btn btn-danger btn-xs btn-remover">
                             <i class="fa fa-remove"></i> remover
                         </a>
                     </td>
