@@ -19,6 +19,7 @@
                 <th>SISTEMA</th>
                 <th>VERSÃO</th>
                 <th>DATA ATUALIZAÇÃO</th>
+                <th>AÇÕES</th>
             </tr>
             </thead>
             <tbody>

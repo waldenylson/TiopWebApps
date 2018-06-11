@@ -24,7 +24,7 @@ class StoreCentrosPostRequest extends FormRequest
         return [
             'nome'      	=> 'required|min:3',
             'acronimo'      => 'required|min:5',
-            'localidade'  	=> 'required|min:10'
+            'localidade'  	=> 'required|min:6'
         ];
     }
 

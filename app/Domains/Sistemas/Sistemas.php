@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use TIOp\Domains\SistemasCentros\SistemasCentros;
 use TIOp\Support\Carbon\Traits\Eloquent\HasDateFieldsTrait;
 
 class Sistemas extends Model
@@ -32,5 +33,10 @@ class Sistemas extends Model
     public function setDataAtualizacaoAttribute($value)
     {
         if(!is_null($value)) $this->attributes['data_atualizacao'] = $this->valueToCarbonObject($value);
+    }
+
+    public function sistemaCentro()
+    {
+        return $this->belongsToMany(SistemasCentros::class, 'sistema_id');
     }
 }

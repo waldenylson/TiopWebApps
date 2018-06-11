@@ -19,21 +19,22 @@
                 <th>NOME</th>
                 <th>ACRÔNIMO</th>
                 <th>LOCALIDADE</th>
+                <th>AÇÕES</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($centros as $sistema)
+            @foreach($centros as $centro)
                 <tr>
-                    <td>{!! $sistema->nome               !!}</td>
-                    <td>{!! $sistema->versao             !!}</td>
-                    <td>{!! $sistema->data_atualizacao   !!}</td>
+                    <td>{!! $centro->nome               !!}</td>
+                    <td>{!! $centro->acronimo             !!}</td>
+                    <td>{!! $centro->localidade   !!}</td>
 
                     <td width="1%" nowrap>
-                        <a href="{!! route('centros.edit', $sistema->id) !!}" class="btn btn-primary btn-xs fancybox">
+                        <a href="{!! route('centros.edit', $centro->id) !!}" class="btn btn-primary btn-xs fancybox">
                             <i class="fa fa-pencil"></i> editar
                         </a>
 
-                        <a href="{!! route('centros.destroy', $sistema->id) !!}" class="btn btn-danger btn-xs btn-remover">
+                        <a href="{!! route('centros.destroy', $centro->id) !!}" class="btn btn-danger btn-xs btn-remover">
                             <i class="fa fa-remove"></i> remover
                         </a>
                     </td>

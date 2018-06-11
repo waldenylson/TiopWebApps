@@ -36,6 +36,7 @@
         "laravel-elixir-browserify": "^0.8.1",
         "laravel-elixir-vue": "^0.1.8",
         "laravel-elixir-webpack": "^1.0.1",
-        "momentjs": "^2.0.0"
+        "momentjs": "^2.0.0",
+        "yarn": "^1.7.0"
     }
 }

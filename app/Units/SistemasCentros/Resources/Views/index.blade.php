@@ -19,14 +19,24 @@
                 <th>NOME</th>
                 <th>ACRÔNIMO</th>
                 <th>LOCALIDADE</th>
+                <th>SISTEMA</th>
+                <th>PRODUÇÃO</th>
+                <th>AÇÕES</th>
             </tr>
             </thead>
             <tbody>
+            {{ dd($sc) }}
             @foreach($sc as $sistemaCentro)
                 <tr>
-                    <td>{!! $sistemaCentro->nome               !!}</td>
-                    <td>{!! $sistemaCentro->versao             !!}</td>
-                    <td>{!! $sistemaCentro->data_atualizacao   !!}</td>
+                    <td>{!! isset($sistemaCentro->centro)  ? $sistemaCentro->centro->nome       : '' !!}</td>
+                    <td>{!! isset($sistemaCentro->centro)  ? $sistemaCentro->centro->acronimo   : '' !!}</td>
+                    <td>{!! isset($sistemaCentro->centro)  ? $sistemaCentro->centro->localidade : '' !!}</td>
+                    <td>{!! isset($sistemaCentro->sistema) ? $sistemaCentro->sistema->nome      : '' !!}</td>
+                    <td>
+                        {!!
+                            isset($sistemaCentro->centro)  ? $sistemaCentro->producao == 1 ? 'SIM' : 'NÃO' : ''
+                        !!}
+                    </td>
 
                     <td width="1%" nowrap>
                         <a href="{!! route('sc.edit', $sistemaCentro->id) !!}" class="btn btn-primary btn-xs fancybox">

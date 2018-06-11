@@ -14,7 +14,7 @@ class SistemasCentrosRepository extends AbstractCrudRepository implements Sistem
 
     public function listSistemasCentros()
     {
-        return $this->modelClass::all();
+        return $this->modelClass::all()->load('sistema', 'centro');
     }
 
     public function store(StoreSistemasCentrosPostRequest $request)

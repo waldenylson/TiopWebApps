@@ -40,6 +40,7 @@ elixir(function (mix) {
         '/../../../app/Support/Resources/Views/css/generic.css',
         '/../../../app/Support/Resources/Views/css/relogio.css',
         '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
+        'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic',
         '/../../../app/Units/Dashboard/Resources/css/sinoptico.css'
     ], 'public/css/app.css');
 
