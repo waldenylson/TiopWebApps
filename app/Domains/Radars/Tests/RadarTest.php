@@ -21,6 +21,8 @@ class RadarTest extends TestCase
         'protocolo' => 'teste',
         'sic' => 'teste',
         'tipo' => 'teste',
+        'canal_a' => '123456',
+        'canal_b' => '123456',
         'lat' => 123,
         'long' => 456,
     ];

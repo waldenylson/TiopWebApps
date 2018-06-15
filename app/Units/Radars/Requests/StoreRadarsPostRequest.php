@@ -29,6 +29,8 @@ class StoreRadarsPostRequest extends FormRequest
             'protocolo'   	=> 'required|min:5',
             'sic'       	=> 'required',
             'tipo'       	=> 'required',
+            'canal_a'       => 'required',
+            'canal_b'       => 'required',
             'lat'       	=> 'required',
             'long'       	=> 'required'
         ];
@@ -48,6 +50,8 @@ class StoreRadarsPostRequest extends FormRequest
             'protocolo.min'         => 'O campo Protocolo deve ter pelo menos :min caracteres!',
             'sic.required'	        => 'Campo SIC é Obrigatório!',
             'tipo.required'	        => 'Campo Tipo é Obrigatório!',
+            'canal_a.required'      => 'Campo Canal-A é obrigatório!',
+            'canal_b.required'      => 'Campo Canal-B é obrigatório!',
             'lat.required'	        => 'Campo LAT é Obrigatório!',
             'long.required'	        => 'Campo LONG é Obrigatório!',
         ];

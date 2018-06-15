@@ -39,17 +39,25 @@
         </div>
     </div><br>
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
             {!! Form::label('tipo', 'Tipo', ['class' => 'control-label']) !!}
             {!! Form::text('tipo', null, ['class' => 'form-control', 'id' => 'tipo']) !!}
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             {!! Form::label('lat', 'LAT', ['class' => 'control-label']) !!}
             {!! Form::text('lat', null, ['class' => 'form-control', 'id' => 'lat']) !!}
         </div>
         <div class="col-md-2">
             {!! Form::label('long', 'LONG', ['class' => 'control-label']) !!}
             {!! Form::text('long', null, ['class' => 'form-control', 'id' => 'long']) !!}
+        </div>
+        <div class="col-md-1">
+            {!! Form::label('canal_a', 'Canal-A', ['class' => 'control-label']) !!}
+            {!! Form::text('canal_a', null, ['class' => 'form-control', 'id' => 'canal_a']) !!}
+        </div>
+        <div class="col-md-1">
+            {!! Form::label('canal_b', 'Canal-B', ['class' => 'control-label']) !!}
+            {!! Form::text('canal_b', null, ['class' => 'form-control', 'id' => 'canal_B']) !!}
         </div>
     </div>
 </div>
