@@ -12,6 +12,12 @@
         <testsuite name="Radars">
             <directory suffix="Test.php">./app/Domains/Radars/Tests</directory>
         </testsuite>
+        <testsuite name="Sistemas">
+            <directory suffix="Test.php">./app/Domains/Sistemas/Tests</directory>
+        </testsuite>
+        <testsuite name="Centros">
+            <directory suffix="Test.php">./app/Domains/Centros/Tests</directory>
+        </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">

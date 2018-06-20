@@ -9,7 +9,11 @@ class ApiRadarRepository extends AbstractCrudRepository implements ApiRadarRepos
 {
     use ImplementsFractal;
 
-    protected $modelClass       = Radar::class;
+    protected $modelClass = Radar::class;
 
 
+    public function updateStatusRadar($radar, $canal_a, $canal_b)
+    {
+        // TODO: Implement updateStatusRadar() method.
+    }
 }
