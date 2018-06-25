@@ -2,15 +2,21 @@
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Http\Request;
 use Tests\TestCase;
+use TIOp\Domains\Radars\Repositories\ApiRadarRepository;
 use TIOp\Domains\Radars\Repositories\RadarRepository;
+use TIOp\Domains\Radars\StatusRadar;
 use TIOp\Units\Radars\Controllers\RadarController;
+use TIOp\Units\Radars\Controllers\StatusRadarController;
 use TIOp\Units\Radars\Requests\StoreRadarsPostRequest;
 
 class RadarTest extends TestCase
 {
     use DatabaseTransactions;
     use WithoutMiddleware;
+
+    private $statusRadar = StatusRadar::class;
 
     private $data = [
         'id' => null,
@@ -80,6 +86,32 @@ class RadarTest extends TestCase
 
         $this->assertDatabaseMissing('radares', [
             'id'   => 1
+        ]);
+    }
+
+    public function test_update_status_radar()
+    {
+        $this->beginDatabaseTransaction();
+
+        $this->data['id']   = 1;
+        $this->data['nome'] = 'TesteRadarUpdateStatusTable';
+
+        $request = new StoreRadarsPostRequest($this->data);
+
+        $controller = new RadarController(new RadarRepository());
+
+        $controller->store($request);
+
+        $controller->update($request, 1);
+
+        $statusRadarcontroller = new StatusRadarController(new ApiRadarRepository());
+
+        $statusRadarcontroller->updateStatus($this->data['sic'], 'w', 'w');
+
+        $this->assertDatabaseHas('status_radar', [
+            'radar_id'   => 1,
+            'canal_a' => 'w',
+            'canal_b' => 'w',
         ]);
     }
 
