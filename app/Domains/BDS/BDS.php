@@ -18,7 +18,7 @@ class BDS extends Model
      *  @param $value
      *  @return Carbon object
      */
-    public function getDataAtualizacaoAttribute($value)
+    public function getLastUpdateAttribute($value)
     {
         if(!is_null($value)) return Carbon::parse($this->valueToCarbonObject($value))->format('d/m/Y');
     }
@@ -29,9 +29,9 @@ class BDS extends Model
      *  @param $value
      *  @return Carbon object
      */
-    public function setDataAtualizacaoAttribute($value)
+    public function setLastUpdateAttribute($value)
     {
-        if(!is_null($value)) $this->attributes['data_atualizacao'] = $this->valueToCarbonObject($value);
+        if(!is_null($value)) $this->attributes['last_update'] = $this->valueToCarbonObject($value);
     }
 
     public function sistemaCentro()
