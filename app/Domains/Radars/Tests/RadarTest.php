@@ -2,7 +2,6 @@
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Http\Request;
 use Tests\TestCase;
 use TIOp\Domains\Radars\Repositories\ApiRadarRepository;
 use TIOp\Domains\Radars\Repositories\RadarRepository;
@@ -28,9 +27,10 @@ class RadarTest extends TestCase
         'sic' => 'teste',
         'tipo' => 'teste',
         'canal_a' => '123456',
-        'canal_b' => '123456',
+        'canal_b' => '123457',
         'lat' => 123,
         'long' => 456,
+        'observacoes' => 'Varejão muito chato!'
     ];
 
     public function test_create_new_radar()
@@ -106,12 +106,13 @@ class RadarTest extends TestCase
 
         $statusRadarcontroller = new StatusRadarController(new ApiRadarRepository());
 
-        $statusRadarcontroller->updateStatus($this->data['sic'], 'w', 'w');
+        $statusRadarcontroller->updateStatus($this->data['sic'], 123456, 1);
+        $statusRadarcontroller->updateStatus($this->data['sic'], 123457, 0);
 
         $this->assertDatabaseHas('status_radar', [
             'radar_id'   => 1,
-            'canal_a' => 'w',
-            'canal_b' => 'w',
+            'canal_a' => 'ope',
+            'canal_b' => 'ino',
         ]);
     }
 

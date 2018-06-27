@@ -8,10 +8,10 @@ use Artesaos\Warehouse\Contracts\Segregated\CrudRepository;
 interface ApiRadarRepository extends CrudRepository
 {
     /**
-     * @param $sic Código SIC radar
-     * @param $canal_a  Status do canal A do radar
-     * @param $canal_b  Status do canal B do radar
+     * @param $sic
+     * @param $porta
+     * @param $status
      * @return mixed
      */
-    public function updateStatusRadar($sic = null, $canal_a = null, $canal_b = null);
+    public function updateStatusRadar($sic, $porta, $status);
 }

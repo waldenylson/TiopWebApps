@@ -9,30 +9,33 @@ class ApiRadarRepository extends AbstractCrudRepository implements ApiRadarRepos
 {
     use ImplementsFractal;
 
-    private $result;
+    private $canais = [
+        'canal_a',
+        'canal_b',
+    ];
 
     /**
-     * @param $sic Código SIC radar
-     * @param $canal_a  Status do canal A do radar
-     * @param $canal_b  Status do canal B do radar
+     * @param $sic
+     * @param $porta
+     * @param $status
      * @return mixed
      */
-    public function updateStatusRadar($sic = null, $canal_a = null, $canal_b = null)
+    public function updateStatusRadar($sic, $porta, $status)
     {
+        $status = ($status == 0 ? 'ino' : 'ope');
+
         if(isset($sic))
         {
             $radar = DB::table('radares')->where('sic', $sic)->first();
 
             if(!empty($radar))
             {
-                $this->result = DB::table('status_radar')->where('radar_id', $radar->id)->update([
-                    'canal_a'    => $canal_a,
-                    'canal_b'    => $canal_b,
-                ]);
+                $radar->canal_a == $porta ? DB::table('status_radar')->where('radar_id', $radar->id)->update(['canal_a' => $status]):
+                                            DB::table('status_radar')->where('radar_id', $radar->id)->update(['canal_b' => $status]);
             }
 
         }
 
-        return $this->result;
+        return null;
     }
 }

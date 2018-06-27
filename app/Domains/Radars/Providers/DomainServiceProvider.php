@@ -20,6 +20,7 @@ class DomainServiceProvider extends ServiceProvider
      */
     protected $bindings = [
         Contracts\RadarRepository::class => Repositories\RadarRepository::class,
+        Contracts\ApiRadarRepository::class => Repositories\ApiRadarRepository::class,
     ];
 
     protected $migrations = [

@@ -12,15 +12,15 @@ class StatusRadarController extends Controller
         $this->statusRadarRepository = $repository;
     }
 
-    public function updateStatus($sic, $canal_a, $canal_b)
+    public function updateStatus($sic, $porta, $status)
     {
-        $result = $this->statusRadarRepository->updateStatusRadar($sic, $canal_a, $canal_b);
+        $result = $this->statusRadarRepository->updateStatusRadar($sic, $porta, $status);
 
         if ($result)
         {
-            return redirect()->back()->with('message', 'Registro Alterado com Sucesso!');
+            return response('ok', 200);
         }
 
-        return redirect()->back()->with('error', 'Erro ao Tentar Alterar o Registro!');
+        return response('teste', 400);
     }
 }

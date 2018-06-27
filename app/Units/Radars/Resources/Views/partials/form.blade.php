@@ -60,4 +60,11 @@
             {!! Form::text('canal_b', null, ['class' => 'form-control', 'id' => 'canal_B']) !!}
         </div>
     </div>
+    <br>
+    <div class="row">
+        <div class="col-md-8">
+            {!! Form::label('observacoes', 'Observações', ['class' => 'control-label']) !!}
+            {!! Form::textArea('observacoes', null, ['class' => 'form-control', 'id' => 'observacoes']) !!}
+        </div>
+    </div>
 </div>
