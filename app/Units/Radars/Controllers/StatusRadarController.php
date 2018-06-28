@@ -21,6 +21,6 @@ class StatusRadarController extends Controller
             return response('ok', 200);
         }
 
-        return response('teste', 400);
+        return response('Erro', 400);
     }
 }

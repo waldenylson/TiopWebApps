@@ -106,7 +106,7 @@ class RadarTest extends TestCase
 
         $statusRadarcontroller = new StatusRadarController(new ApiRadarRepository());
 
-        $statusRadarcontroller->updateStatus($this->data['sic'], 123456, 1);
+        $statusRadarcontroller->updateStatus(3, 123456, 1);
         $statusRadarcontroller->updateStatus($this->data['sic'], 123457, 0);
 
         $this->assertDatabaseHas('status_radar', [
