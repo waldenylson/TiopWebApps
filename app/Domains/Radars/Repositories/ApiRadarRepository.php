@@ -26,6 +26,8 @@ class ApiRadarRepository extends AbstractCrudRepository implements ApiRadarRepos
 
         if(isset($sic))
         {
+            $teste_post = [$sic, $porta, $status];
+
             //$radar = DB::table('radares')->where('sic', $sic)->first();
             $radar = $this->radarModelClass::where('sic', 'teste')->first();
 
@@ -40,6 +42,6 @@ class ApiRadarRepository extends AbstractCrudRepository implements ApiRadarRepos
             }
         }
 
-        return !empty($result) ? $result: null;
+        return !empty($result) ? $result: $teste_post;
     }
 }

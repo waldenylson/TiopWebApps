@@ -16,9 +16,9 @@ class StatusRadarController extends Controller
     {
         $result = $this->statusRadarRepository->updateStatusRadar($sic, $porta, $status);
 
-        if ($result)
+        if (!empty($result))
         {
-            return response('ok', 200);
+            return response(json_encode($result), 200);
         }
 
         return response('Erro', 400);
