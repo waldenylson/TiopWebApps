@@ -21,6 +21,6 @@ class Api extends RouteFile
         });
         //})->middleware('auth:api');
 
-        $this->router->post('/{sic}/{porta}/{status}/statusupdate', ['as' => 'radars.statusupdate',  'uses' => 'StatusRadarController@updateStatus']);
+        $this->router->get('/{sic}/{porta}/{status}/statusupdate', ['as' => 'radars.statusupdate',  'uses' => 'StatusRadarController@updateStatus']);
     }
 }

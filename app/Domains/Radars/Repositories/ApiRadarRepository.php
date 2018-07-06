@@ -39,6 +39,7 @@ class ApiRadarRepository extends AbstractCrudRepository implements ApiRadarRepos
                 $result = ($radar->canal_a == $porta ?  $this->statusModelClass::findOrFail($radar->id)->update(['canal_a' => $status]) :
                                                         $this->statusModelClass::findOrFail($radar->id)->update(['canal_b' => $status]));
 
+                dd($result);
             }
         }
 
