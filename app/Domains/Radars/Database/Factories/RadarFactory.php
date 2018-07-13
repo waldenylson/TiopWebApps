@@ -16,10 +16,10 @@ class RadarFactory extends ModelFactory
             'equipamento' => $this->faker->sentence(10),
             'canalizacao' => $this->faker->sentence(15),
             'protocolo'   => $this->faker->sentence(10),
-            'sic'         => $this->faker->sentence(5),
+            'sic'         => $this->faker->sentence(2),
             'tipo'        => $this->faker->sentence(10),
             'latitude'    => $this->faker->randomFloat(),
-            'longitude'   => $this->faker->randomFloat()
+            'longitude'   => $this->faker->randomFloat(),
         ];
     }
 
