@@ -12,18 +12,18 @@ volumes:
 
 services:
   # MySQL (5.7)
-  #mysql:
-  #  image: ambientum/mysql:5.7
-  #  container_name: laravel-mysql
-  #  volumes:
-  #    - laravel-mysql-data:/var/lib/mysql
-  #  ports:
-  #    - "3306:3306"
-  #  environment:
-  #    - MYSQL_ROOT_PASSWORD=laravel
-  #    - MYSQL_DATABASE=laravel
-  #    - MYSQL_USER=laravel
-  #    - MYSQL_PASSWORD=laravel
+  mysql:
+    image: ambientum/mysql:5.7
+    container_name: laravel-mysql
+    volumes:
+      - laravel-mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=laravel
+      - MYSQL_DATABASE=laravel
+      - MYSQL_USER=laravel
+      - MYSQL_PASSWORD=laravel
 
   # Redis
   cache:
