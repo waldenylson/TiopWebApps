@@ -10,8 +10,10 @@ class RadarFactory extends ModelFactory
 
     public function fields()
     {
+        $nome = $this->faker->name;
+
         return [
-            'nome'        => $this->faker->sentence(15),
+            'nome'        => $nome,
             'localidade'  => $this->faker->sentence(10),
             'equipamento' => $this->faker->sentence(10),
             'canalizacao' => $this->faker->sentence(15),

@@ -2,8 +2,10 @@
 
 use Codecasts\Support\Domain\ServiceProvider;
 use TIOp\Domains\Radars\Contracts;
-use TIOp\Domains\Radars\Database\Factories\RadarFactory;
 use TIOp\Domains\Radars\Repositories;
+use TIOp\Domains\Radars\Database\Factories\RadarFactory;
+use TIOp\Domains\Radars\Database\Seeders\RadarsSeeder;
+
 /**
  * Class DomainServiceProvider.
  */
@@ -27,7 +29,7 @@ class DomainServiceProvider extends ServiceProvider
     ];
 
     protected $seeders = [
-
+        RadarsSeeder::class,
     ];
 
     protected $factories = [
