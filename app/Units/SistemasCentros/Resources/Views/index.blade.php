@@ -25,13 +25,18 @@
             </tr>
             </thead>
             <tbody>
-            {{ dd($sc) }}
+            {{--{{ dd($sc) }}--}}
             @foreach($sc as $sistemaCentro)
                 <tr>
                     <td>{!! isset($sistemaCentro->centro)  ? $sistemaCentro->centro->nome       : '' !!}</td>
                     <td>{!! isset($sistemaCentro->centro)  ? $sistemaCentro->centro->acronimo   : '' !!}</td>
                     <td>{!! isset($sistemaCentro->centro)  ? $sistemaCentro->centro->localidade : '' !!}</td>
-                    <td>{!! isset($sistemaCentro->sistema) ? $sistemaCentro->sistema->nome      : '' !!}</td>
+                    <td>
+                        {!!
+                            isset($sistemaCentro->sistema) ? $sistemaCentro->sistema->nome . " " .
+                                                              $sistemaCentro->sistema->versao    : ''
+                        !!}
+                    </td>
                     <td>
                         {!!
                             isset($sistemaCentro->centro)  ? $sistemaCentro->producao == 1 ? 'SIM' : 'NÃO' : ''
@@ -56,12 +61,4 @@
     @endif
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/app.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-    <script src="/js/app.js"></script>
-    @include('support::partials.alerts')
-@stop
+@include('support::partials.assets')

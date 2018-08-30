@@ -46,12 +46,4 @@
     @endif
 @stop
 
-@section('css')
-    <link rel="stylesheet" href="/css/app.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-    <script src="/js/app.js"></script>
-    @include('support::partials.alerts')
-@stop
+@include('support::partials.assets')

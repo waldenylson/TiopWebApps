@@ -42,7 +42,4 @@ $(document).ready(function()
     {
         parent.$.fancybox.close();
     });
-
-    CKEDITOR.config.height = 150;
-    CKEDITOR.replaceAll();
 });

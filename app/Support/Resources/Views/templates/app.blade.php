@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <title>TIOp - Seção de Informática Operacional</title>
-    <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/tiop.css') !!}">
     <style>body{margin-top: 80px;}</style>
 </head>
 <body class="container">
@@ -51,6 +51,8 @@
         </div><!--/.nav-collapse -->
     </div>
 @yield('content')
-    <script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
+    <script src="{!! asset('js/manifest.js') !!}" type="text/javascript"></script>
+    <script src="{!! asset('js/vendor.js') !!}" type="text/javascript"></script>
+    <script src="{!! asset('js/tiop.js') !!}" type="text/javascript"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ require('laravel-elixir-vue');
 
 elixir(function (mix) {
 
-    mix.browserify('/../../../app/Support/Resources/Views/js/main.js', 'app/Support/Resources/Views/js/VueComponents/main.js');
+    mix.browserify('/../../../app/Support/Resources/Views/js/VueComponents/App.vue', 'app/Support/Resources/Views/js/VueComponents/main.vue');
 
     mix.scripts([
         '/../../../node_modules/jquery/dist/jquery.min.js',
@@ -24,9 +24,8 @@ elixir(function (mix) {
         '/../../../node_modules/sweetalert/dist/sweetalert.min.js',
         '/../../../node_modules/datatables/media/js/jquery.dataTables.min.js',
         '/../../../node_modules/moment/min/moment.min.js',
-        '/../../../app/Support/Resources/Views/js/ .js',
         '/../../../app/Support/Resources/Views/js/momentjs.pt-br.js',
-        '/../../../app/Support/Resources/Views/js/VueComponents/main.js',
+        '/../../../app/Support/Resources/Views/js/VueComponents/main.vue',
         '/../../../node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
         '/../../../node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
         '/../../../app/Support/Resources/Views/js/generic.js',

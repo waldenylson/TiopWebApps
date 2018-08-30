@@ -20,5 +20,8 @@ class Api extends RouteFile
           return 'Dashboard API Router';
         });
         //})->middleware('auth:api');
+
+        $this->router->get('/getRStatus',  ['as' => 'dashboard.getRStatus', 'uses' => 'SinopticoController@getRadarsStatus']);
+        $this->router->get('/getEfetivo',  ['as' => 'dashboard.getEfetivo', 'uses' => 'SinopticoController@getEfetivoTiop']);
     }
 }

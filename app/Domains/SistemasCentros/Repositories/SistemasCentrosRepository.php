@@ -1,6 +1,7 @@
 <?php namespace TIOp\Domains\SistemasCentros\Repositories;
 
 use Artesaos\Warehouse\Traits\ImplementsFractal;
+use Illuminate\Support\Facades\DB;
 use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository as SistemasCentrosRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\SistemasCentros\SistemasCentros;
@@ -15,6 +16,13 @@ class SistemasCentrosRepository extends AbstractCrudRepository implements Sistem
     public function listSistemasCentros()
     {
         return $this->modelClass::all()->load('sistema', 'centro');
+        $data = DB::select(
+            'select s.nome as "Sistema", s.versao as "Versão",c.nome as "Centro", c.acronimo as "Sigla"
+             from sistemas s
+             inner join sistemas_centros sc on (s.id = sc.sistema_id)
+             inner join centros c on (c.id = sc.centro_id)');
+
+        return $data;
     }
 
     public function store(StoreSistemasCentrosPostRequest $request)

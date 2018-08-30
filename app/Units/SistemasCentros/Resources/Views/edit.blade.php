@@ -3,7 +3,7 @@
 @section('content')
     <h2>
         <i class="fa fa-compress"></i>
-        Cadastrar Centros
+        Editar Cadastro Sistema/Centro
     </h2>
     <hr />
 

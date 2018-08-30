@@ -3,7 +3,7 @@
 @section('content')
     <h2>
         <i class="fa fa-plus"></i>
-        Associar Sistemas/Centros
+        Associar Sistema/Centro
     </h2>
     <hr />
 
