@@ -190,6 +190,23 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'BDS',
+            'icon'    => 'database',
+            'submenu' => [
+                [
+                    'text' => 'Listar Todos',
+                    'url'  => '/bds',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => '/bds/novo',
+                    'icon' => 'plus-circle',
+                    'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
+                ],
+            ],
+        ],
 
         'ACCOUNT SETTINGS',
         [

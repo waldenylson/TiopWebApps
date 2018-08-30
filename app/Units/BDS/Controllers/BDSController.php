@@ -1,7 +1,7 @@
 <?php namespace TIOp\Units\BDS\Controllers;
 
 use Codecasts\Support\Http\Controller;
-use TIOp\Domains\BDS\Contracts\bdsRepository;
+use TIOp\Domains\BDS\Contracts\BDSRepository;
 use TIOp\Units\BDS\Requests\StoreBDSPostRequest;
 
 class BDSController extends Controller

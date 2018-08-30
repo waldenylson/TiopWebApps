@@ -1,6 +1,6 @@
 <?php namespace TIOp\Domains\BDS\Repositories;
 
-use Artesaos\Warehouse\Traits\ImplementsFractal;
+use Artesaos\Warehouse\Traits\ImplementsFractal;///
 use TIOp\Domains\BDS\Contracts\BDSRepository as BDSRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\BDS\BDS;
