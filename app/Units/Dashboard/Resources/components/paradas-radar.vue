@@ -43,7 +43,7 @@
         float: left;
         padding-left: 5px;
         width: 100%;
-        margin-bottom: -20px;
+        margin-bottom: -10px;
     }
 
     .paradas-radar-height {

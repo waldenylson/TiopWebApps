@@ -43,7 +43,7 @@
         float: left;
         padding-left: 5px;
         width: 100%;
-        margin-bottom: -10px;
+        margin-bottom: -20px;
     }
 
     .mnt-programadas-height {

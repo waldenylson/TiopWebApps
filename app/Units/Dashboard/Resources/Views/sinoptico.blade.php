@@ -15,9 +15,9 @@
 
             <status-radares></status-radares>
 
-            <tiop-mnt></tiop-mnt>
-
             <tiop-paradas></tiop-paradas>
+
+            <tiop-mnt></tiop-mnt>
 
         </div>
         <tiop-sistemas></tiop-sistemas>

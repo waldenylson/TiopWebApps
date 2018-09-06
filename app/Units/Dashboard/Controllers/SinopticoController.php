@@ -39,7 +39,7 @@ class SinopticoController extends Controller
         ["nome" => "3S REHILSON",      "motivo" => "HARF",       "retorno" => "31/12/2018"],
         ["nome" => "3S RODRIGO SOUZA", "motivo" => "MISSÃO",     "retorno" => "25/05/2018"],
         ["nome" => "3S VAREJÃO",       "motivo" => "SERVIÇO",    "retorno" => "15/04/2018"],
-        ["nome" => "3S JÉSSICA",       "motivo" => "EUDES MANDOU FICAR EM CASA",   "retorno" => "22/06/2018"],
+//        ["nome" => "3S JÉSSICA",       "motivo" => "EUDES MANDOU FICAR EM CASA",   "retorno" => "22/06/2018"],
     ];
 
     public function index()
