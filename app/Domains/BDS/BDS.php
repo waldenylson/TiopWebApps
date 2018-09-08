@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use TIOp\Domains\SistemasCentros\SistemasCentros;
 use TIOp\Support\Carbon\Traits\Eloquent\HasDateFieldsTrait;
 
 class BDS extends Model
@@ -18,7 +19,7 @@ class BDS extends Model
      *  @param $value
      *  @return Carbon object
      */
-    public function getLastUpdateAttribute($value)
+    public function getDataAtualizacaoAttribute($value)
     {
         if(!is_null($value)) return Carbon::parse($this->valueToCarbonObject($value))->format('d/m/Y');
     }
@@ -29,14 +30,13 @@ class BDS extends Model
      *  @param $value
      *  @return Carbon object
      */
-    public function setLastUpdateAttribute($value)
+    public function setDataAtualizacaoAttribute($value)
     {
-        if(!is_null($value)) $this->attributes['last_update'] = $this->valueToCarbonObject($value);
+        if(!is_null($value)) $this->attributes['data_atualizacao'] = $this->valueToCarbonObject($value);
     }
 
-    public function sistemaCentro()
+    public function sistema_centro()
     {
-        return $this->belongsToMany(SistemasCentros::class, 'sistema_id');
+        return $this->hasOne(SistemasCentros::class, 'id');
     }
-
 }

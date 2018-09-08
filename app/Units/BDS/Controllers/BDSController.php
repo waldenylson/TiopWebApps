@@ -3,44 +3,34 @@
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\BDS\Contracts\BDSRepository;
 use TIOp\Units\BDS\Requests\StoreBDSPostRequest;
+use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
 
 class BDSController extends Controller
 {
-    /**
-     * @var RadarRepository
-     */
     protected $bdsRepository;
+    protected $sistemasCentrosRepository;
 
-    /**
-     * Create a new controller instance.
-     *
-     * @param RadarRepository $repository
-     */
-    public function __construct(BDSRepository $repository)
+    public function __construct(BDSRepository             $repository,
+                                  SistemasCentrosRepository $sistemasCentrosRepository)
     {
-        $this->bdsRepository = $repository;
+        $this->bdsRepository             = $repository;
+        $this->sistemasCentrosRepository = $sistemasCentrosRepository;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $bds = $this->bdsRepository->listBDS();
 
+        //dd($bds);
+
         return view('bds::index')->with(compact('bds'));
     }
 
-    /**
-     *  Carrega o formulário de cadastro de radar
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function create()
     {
-        return view('bds::create');
+        $sistemasAssociados = $this->sistemasCentrosRepository->getAllSistemasCentrosForSelect();
+
+        return view('bds::create')->with(compact('sistemasAssociados'));
     }
 
     /**
@@ -70,9 +60,10 @@ class BDSController extends Controller
      */
     public function edit($id)
     {
-        $centro = $this->bdsRepository->edit($id);
+        $bds = $this->bdsRepository->edit($id);
+        $sistemasAssociados = $this->sistemasCentrosRepository->getAllSistemasCentrosForSelect();
 
-        return view('bds::edit')->with(compact('centro'));
+        return view('bds::edit')->with(compact('bds'))->with(compact('sistemasAssociados'));
     }
 
 

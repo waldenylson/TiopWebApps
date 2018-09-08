@@ -19,26 +19,27 @@
                 <th>SIS/CENTRO</th>
                 <th>VERSÃO</th>
                 <th>ULT.ATUALIZAÇÃO</th>
+                <th>AÇÕES</th>
             </tr>
             </thead>
             <tbody>
-            {{--@foreach($bds as $bdsdata)--}}
-                {{--<tr>--}}
-                    {{--<td>{!! $bdsdata->nome               !!}</td>--}}
-                    {{--<td>{!! $bdsdata->versao             !!}</td>--}}
-                    {{--<td>{!! $bdsdata->data_atualizacao   !!}</td>--}}
+            @foreach($bds as $bdsdata)
+                <tr>
+                    <td>{!! $bdsdata->SNome . ' v' . $bdsdata->SVersao !!}</td>
+                    <td>{!! $bdsdata->BDSVer !!}</td>
+                    <td>{!! \Carbon\Carbon::parse($bdsdata->BDSUpdateDate)->format('d/m/Y') !!}</td>
 
-                    {{--<td width="1%" nowrap>--}}
-                        {{--<a href="{!! route('bds.edit', $bdsdata->id) !!}" class="btn btn-primary btn-xs fancybox">--}}
-                            {{--<i class="fa fa-pencil"></i> editar--}}
-                        {{--</a>--}}
+                    <td width="1%" nowrap>
+                        <a href="{!! route('bds.edit', $bdsdata->id) !!}" class="btn btn-primary btn-xs fancybox">
+                            <i class="fa fa-pencil"></i> editar
+                        </a>
 
-                        {{--<a href="{!! route('bds.destroy', $bdsdata->id) !!}" class="btn btn-danger btn-xs btn-remover">--}}
-                            {{--<i class="fa fa-remove"></i> remover--}}
-                        {{--</a>--}}
-                    {{--</td>--}}
-                {{--</tr>--}}
-            {{--@endforeach--}}
+                        <a href="{!! route('bds.destroy', $bdsdata->id) !!}" class="btn btn-danger btn-xs btn-remover">
+                            <i class="fa fa-remove"></i> remover
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
     @else

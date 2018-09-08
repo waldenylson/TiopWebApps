@@ -19,7 +19,7 @@
             !!}
         </div>
         <div class="col-md-2">
-            {!! Form::label('sistema_id', 'Centro', ['class' => 'control-label']) !!}
+            {!! Form::label('centro_id', 'Centro', ['class' => 'control-label']) !!}
             {!! !empty($sistemaCentro) ? Form::select('centro_id', $centros, $sistemaCentro->centro_id,
                                             ['class' => 'form-control', 'id' => 'centro_id'])
                                     : Form::select('centro_id', $centros, null,

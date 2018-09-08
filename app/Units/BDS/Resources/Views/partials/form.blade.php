@@ -10,31 +10,36 @@
 
 <div class="form-group well">
     <div class="row">
-        <div class="col-md-2">
-            {!! Form::label('sistema_centro_id', 'Nome', ['class' => 'control-label']) !!}
-            {!! Form::text('nome', null, ['class' => 'form-control', 'id' => 'nome', 'autofocus' => '']) !!}
-        </div>
+        <div class="col-md-3">
+            {!! Form::label('sistema_centro_id', 'Sistema/Centro Referência', ['class' => 'control-label']) !!}
 
-        <div class="col-md-2">
-            {!! Form::label('natureza_missao_id', 'Natureza Missão', ['class' => 'control-label']) !!}
-            {!! !empty($requisicao) ? Form::select('natureza_missao_id', $naturezas, $requisicao->natureza_missao_id,
-                                            ['class' => 'form-control', 'id' => 'natureza_missao_id'])
-                                    : Form::select('natureza_missao_id', $naturezas, null,
-                                            ['class' => 'form-control', 'id' => 'natureza_missao_id'])
+            {{--{{ dd($sistemasAssociados) }}--}}
+
+            {!! !empty($bds) ? Form::select('sistema_centro_id', $sistemasAssociados, $bds->sistema_centro_id,
+                                            ['class' => 'form-control', 'id' => 'sistema_centro_id'])
+                                    : Form::select('sistema_centro_id', $sistemasAssociados, null,
+                                            ['class' => 'form-control', 'id' => 'sistema_centro_id'])
             !!}
         </div>
 
         <div class="col-md-2">
-            {!! Form::label('acronimo', 'Acrônimo', ['class' => 'control-label']) !!}
-            {!! Form::text('acronimo', null, ['class' => 'form-control', 'id' => 'acronimo']) !!}
+            {!! Form::label('versao', 'Versão', ['class' => 'control-label']) !!}
+            {!! Form::text('versao', null, ['class' => 'form-control', 'id' => 'versao']) !!}
         </div>
         <div class="col-md-2">
-            {!! Form::label('localidade', 'Localidade', ['class' => 'control-label']) !!}
-            {!! Form::text('localidade', null, ['class' => 'form-control', 'id' => 'localidade']) !!}
+            <div class="form-group">
+                {!! Form::label('data_atualizacao', 'Data Atualização', ['class' => 'control-label']) !!}
+                <div class="input-group date datepicker">
+                    {!! Form::text('data_atualizacao', null, ['class' => 'form-control masked-date-input', 'id' => 'data_atualizacao']) !!}
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
         </div>
     </div><br>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
             {!! Form::label('descricao', 'Descrição', ['class' => 'control-label']) !!}
             {!! Form::textArea('descricao', null, ['class' => 'form-control', 'id' => 'descricao']) !!}
         </div>

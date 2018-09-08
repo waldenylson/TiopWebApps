@@ -13,5 +13,5 @@ interface RadarRepository extends CrudRepository
     public function edit($id);
     public function persistUpdate(StoreRadarsPostRequest $request, $id);
     public function destroy($id);
-
+    public function getAllRadaresForSelect();
 }

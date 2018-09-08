@@ -46,4 +46,17 @@ class RadarRepository extends AbstractCrudRepository implements RadarRepositoryC
 
         return $radar->delete();
     }
+
+    public function getAllRadaresForSelect()
+    {
+        $baseArray = $this->modelClass::all();
+        $radares = array();
+
+        foreach($baseArray as $value)
+        {
+            $radares[$value->id] = $value->nome;
+        }
+
+        return $radares;
+    }
 }

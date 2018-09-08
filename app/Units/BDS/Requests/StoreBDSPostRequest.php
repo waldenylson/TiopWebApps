@@ -22,8 +22,8 @@ class StoreBDSPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'versao'      	=> 'required|min:3',
-            'last_update'      => 'required|min:5',
+            'versao'      	    => 'required|min:3',
+            'data_atualizacao'  => 'required',
         ];
     }
 
@@ -32,7 +32,7 @@ class StoreBDSPostRequest extends FormRequest
         return [
             'versao.required'     	=> 'Campo Versão é Obrigatório!',
             'versao.min'          	=> 'O campo versão deve ter pelo menos :min caracteres!',
-            'last_update.required'  => 'Campo Acrônimo é Obrigatório!',
+            'data_atualizacao.required'  => 'Campo Data de Atualização é Obrigatório!',
         ];
     }
 }

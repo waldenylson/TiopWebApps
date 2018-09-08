@@ -6,7 +6,7 @@ use Codecasts\Support\Http\Controller;
 class SinopticoController extends Controller
 {
     private $radares = [
-        ['nome' => 'CAG', 'status' => 'ope'],
+        ['nome' => 'CAG', 'status' => 'ino'],
         ['nome' => 'CNF', 'status' => 'ope'],
         ['nome' => 'COU', 'status' => 'ope'],
         ['nome' => 'FLT', 'status' => 'ope'],

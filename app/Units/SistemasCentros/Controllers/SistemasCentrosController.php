@@ -17,8 +17,8 @@ class SistemasCentrosController extends Controller
 
 
     public function __construct(SistemasCentrosRepository $repository,
-                                CentrosRepository $centrosRepository,
-                                SistemasRepository $sistemasRepository)
+                                  CentrosRepository         $centrosRepository,
+                                  SistemasRepository        $sistemasRepository)
     {
         $this->sistemasCentrosRepository = $repository;
         $this->centrosRepository         = $centrosRepository;

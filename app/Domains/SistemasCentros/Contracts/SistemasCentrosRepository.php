@@ -13,5 +13,7 @@ interface SistemasCentrosRepository extends CrudRepository
     public function edit($id);
     public function persistUpdate(StoreSistemasCentrosPostRequest $request, $id);
     public function destroy($id);
-
+    public function getAllSistemasCentrosForSelect();
+    public function getSistemasCentrosRelacionados($id);
+    public function getSistemasCentrosRelacionadosBDS($id);
 }

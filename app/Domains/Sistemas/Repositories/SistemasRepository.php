@@ -52,7 +52,7 @@ class SistemasRepository extends AbstractCrudRepository implements SistemasRepos
 
         foreach($baseArray as $value)
         {
-            $sistemas[$value->id] = $value->nome;
+            $sistemas[$value->id] = $value->nome . " v" . $value->versao;
         }
 
         return $sistemas;
