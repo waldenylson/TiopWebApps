@@ -37,18 +37,18 @@
                 if(hora <=9 ){ hora = "0"+hora; };
                 
                 switch(mes){
-                    case 0: mestxt = "Janeiro"; break;
-                    case 1: mestxt = "Fevereiro"; break;
-                    case 2: mestxt = "Março"; break;
-                    case 3: mestxt = "Abril"; break;
-                    case 4: mestxt = "Maio"; break;
-                    case 5: mestxt = "Junho"; break;
-                    case 6: mestxt = "Julho"; break;
-                    case 7: mestxt = "Agosto"; break;
-                    case 8: mestxt = "Setembro"; break;
-                    case 9: mestxt = "Outubro"; break;
-                    case 10: mestxt = "Novembro"; break;
-                    case 11: mestxt = "Dezembro"; break;
+                    case 0: mestxt = "JAN"; break;
+                    case 1: mestxt = "FEV"; break;
+                    case 2: mestxt = "MAR"; break;
+                    case 3: mestxt = "ABR"; break;
+                    case 4: mestxt = "MAI"; break;
+                    case 5: mestxt = "JUN"; break;
+                    case 6: mestxt = "JUL"; break;
+                    case 7: mestxt = "AGO"; break;
+                    case 8: mestxt = "SET"; break;
+                    case 9: mestxt = "OUT"; break;
+                    case 10: mestxt = "NOV"; break;
+                    case 11: mestxt = "DEZ"; break;
                 }
                 
                 $("#hora").html(hora +":"+ minuto +":"+ segundo)
@@ -69,14 +69,35 @@
 <style scoped>
     .bottom-container {
         position:relative;
-        bottom:0;
-        margin-right: 0;
+        padding-left: 4px;
+        padding-top: 5px;
         width:19%;
+        text-align: center;
     }
 
     .bottom-container-decoration {
+        position:relative;
         border: 1px solid #0d6aad;
-        border-radius:7px;
-        height: 60px;
+        border-radius:3px;
+        height: 55px;
+        padding-right: 80px;
+    }
+
+    #hora {
+        position:relative;
+        margin-bottom: 2px;
+        height: 35px;
+    }
+
+    #data {
+        position:relative;
+        width: 100%;
+        margin-right: 800px;
+    }
+
+    .relogio {
+        position:relative;
+        width: 50%;
+        text-align: center;
     }
 </style>
