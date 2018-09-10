@@ -9,7 +9,7 @@
                 </h3>
             </div>
             <div class="panel-body">
-                <div class="box box-bg-color-efetivo box-efetivo">
+                <div class="box box-bg-color-efetivo box-efetivo box-efetivo-height">
                     <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
                         <thead>
                         <tr class="table-title">
@@ -85,6 +85,11 @@
         font-size: larger;
         padding-left: 5px;
     }
+
+    .box-efetivo-height {
+        height: 579px;
+    }
+
     .table-title {
         font-size: 25px;
     }

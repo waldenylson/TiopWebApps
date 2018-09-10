@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="csrf-token" content="{!! csrf_token() !!}">
-	<title>TIOp - Seção de Informática Operacional</title>
+	<title>  @yield('title') </title>
     <link rel="stylesheet" href="{!! asset('css/tiop.css') !!}">
 	<style>
 		.container {

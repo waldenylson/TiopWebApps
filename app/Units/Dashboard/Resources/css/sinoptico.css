@@ -3,7 +3,7 @@
     padding: 0;
     width: 99%;
     margin: 5px 5px 5px 5px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .titulo {
