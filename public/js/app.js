@@ -1922,6 +1922,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // </script>
 //
 // <style scoped>
+//     .panel-body {
+//         padding: 5px;
+//     }
+//
 //     .afastamentos {
 //         overflow: hidden;
 //         height: 100%;
@@ -1931,19 +1935,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //         background-color: royalblue;
 //         height: 50%;
 //         width: 99.5%;
-//         left: 20%;
-//         top: 20%;
 //         text-align: left;
-//         padding-top: 1px;
-//         margin-left: 1px;
-//         margin-bottom: 1px;
-//         margin-top: 1px;
 //         font-size: larger;
-//         padding-left: 5px;
 //     }
 //
 //     .box-efetivo-height {
-//         height: 579px;
+//         height: 599px;
 //     }
 //
 //     .table-title {
@@ -4972,7 +4969,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.afastamentos[_v-37df71a0] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-efetivo[_v-37df71a0] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    left: 20%;\n    top: 20%;\n    text-align: left;\n    padding-top: 1px;\n    margin-left: 1px;\n    margin-bottom: 1px;\n    margin-top: 1px;\n    font-size: larger;\n    padding-left: 5px;\n}\n\n.box-efetivo-height[_v-37df71a0] {\n    height: 579px;\n}\n\n.table-title[_v-37df71a0] {\n    font-size: 25px;\n}\n\n.table-afastamentos-retorno[_v-37df71a0] {\n    text-align: center;\n}\n\n.box-bg-color-efetivo[_v-37df71a0] {\n    background-color: snow;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.panel-body[_v-37df71a0] {\n    padding: 5px;\n}\n\n.afastamentos[_v-37df71a0] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-efetivo[_v-37df71a0] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: left;\n    font-size: larger;\n}\n\n.box-efetivo-height[_v-37df71a0] {\n    height: 599px;\n}\n\n.table-title[_v-37df71a0] {\n    font-size: 25px;\n}\n\n.table-afastamentos-retorno[_v-37df71a0] {\n    text-align: center;\n}\n\n.box-bg-color-efetivo[_v-37df71a0] {\n    background-color: snow;\n}\n", ""]);
 
 // exports
 

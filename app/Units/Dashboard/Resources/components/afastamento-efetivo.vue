@@ -66,6 +66,10 @@
 </script>
 
 <style scoped>
+    .panel-body {
+        padding: 5px;
+    }
+
     .afastamentos {
         overflow: hidden;
         height: 100%;
@@ -75,19 +79,12 @@
         background-color: royalblue;
         height: 50%;
         width: 99.5%;
-        left: 20%;
-        top: 20%;
         text-align: left;
-        padding-top: 1px;
-        margin-left: 1px;
-        margin-bottom: 1px;
-        margin-top: 1px;
         font-size: larger;
-        padding-left: 5px;
     }
 
     .box-efetivo-height {
-        height: 579px;
+        height: 599px;
     }
 
     .table-title {
