@@ -1862,7 +1862,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //                 </h3>
 //             </div>
 //             <div class="panel-body">
-//                 <div class="box box-bg-color-efetivo box-efetivo">
+//                 <div class="box box-bg-color-efetivo box-efetivo box-efetivo-height">
 //                     <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
 //                         <thead>
 //                         <tr class="table-title">
@@ -1922,6 +1922,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // </script>
 //
 // <style scoped>
+//     .panel-body {
+//         padding: 5px;
+//     }
+//
 //     .afastamentos {
 //         overflow: hidden;
 //         height: 100%;
@@ -1931,16 +1935,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //         background-color: royalblue;
 //         height: 50%;
 //         width: 99.5%;
-//         left: 20%;
-//         top: 20%;
 //         text-align: left;
-//         padding-top: 1px;
-//         margin-left: 1px;
-//         margin-bottom: 1px;
-//         margin-top: 1px;
 //         font-size: larger;
-//         padding-left: 5px;
 //     }
+//
+//     .box-efetivo-height {
+//         height: 599px;
+//     }
+//
 //     .table-title {
 //         font-size: 25px;
 //     }
@@ -2082,7 +2084,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //     }
 //
 //     .mnt-programadas-height {
-//         height: 252px;
+//         height: 570px;
 //     }
 // </style>
 
@@ -4967,7 +4969,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.afastamentos[_v-37df71a0] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-efetivo[_v-37df71a0] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    left: 20%;\n    top: 20%;\n    text-align: left;\n    padding-top: 1px;\n    margin-left: 1px;\n    margin-bottom: 1px;\n    margin-top: 1px;\n    font-size: larger;\n    padding-left: 5px;\n}\n.table-title[_v-37df71a0] {\n    font-size: 25px;\n}\n\n.table-afastamentos-retorno[_v-37df71a0] {\n    text-align: center;\n}\n\n.box-bg-color-efetivo[_v-37df71a0] {\n    background-color: snow;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.panel-body[_v-37df71a0] {\n    padding: 5px;\n}\n\n.afastamentos[_v-37df71a0] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-efetivo[_v-37df71a0] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: left;\n    font-size: larger;\n}\n\n.box-efetivo-height[_v-37df71a0] {\n    height: 599px;\n}\n\n.table-title[_v-37df71a0] {\n    font-size: 25px;\n}\n\n.table-afastamentos-retorno[_v-37df71a0] {\n    text-align: center;\n}\n\n.box-bg-color-efetivo[_v-37df71a0] {\n    background-color: snow;\n}\n", ""]);
 
 // exports
 
@@ -4982,7 +4984,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mnt-programadas[_v-3e638a46] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n\n.mnt-programadas-height[_v-3e638a46] {\n    height: 252px;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mnt-programadas[_v-3e638a46] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n\n.mnt-programadas-height[_v-3e638a46] {\n    height: 570px;\n}\n", ""]);
 
 // exports
 
@@ -22281,7 +22283,7 @@ function isSlowBuffer (obj) {
 /***/ "./node_modules/vue-html-loader/index.js!./node_modules/vue-loader/lib/template-rewriter.js?id=_v-37df71a0!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./app/Units/Dashboard/Resources/components/afastamento-efetivo.vue":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"afastamentos\" _v-37df71a0=\"\">\n    <div class=\"panel panel-primary\" _v-37df71a0=\"\">\n        <div class=\"panel-heading\" _v-37df71a0=\"\">\n            <h3 class=\"panel-title\" _v-37df71a0=\"\">\n                <i class=\"fa fa-group titulo\" _v-37df71a0=\"\">\n                    <b _v-37df71a0=\"\">&nbsp;AFASTAMENTOS EFETIVO</b>\n                </i>\n            </h3>\n        </div>\n        <div class=\"panel-body\" _v-37df71a0=\"\">\n            <div class=\"box box-bg-color-efetivo box-efetivo\" _v-37df71a0=\"\">\n                <table class=\"table table-bordered table-hover table-striped datatableimplements\" cellspacing=\"0\" _v-37df71a0=\"\">\n                    <thead _v-37df71a0=\"\">\n                    <tr class=\"table-title\" _v-37df71a0=\"\">\n                        <th _v-37df71a0=\"\"><i class=\"fa fa-user\" _v-37df71a0=\"\">&nbsp;<b _v-37df71a0=\"\">NOME</b></i></th>\n                        <th _v-37df71a0=\"\"><i class=\"fa fa-question-circle\" _v-37df71a0=\"\">&nbsp;<b _v-37df71a0=\"\">MOTIVO</b></i></th>\n                        <th class=\"table-afastamentos-retorno\" _v-37df71a0=\"\"><i class=\"fa fa-calendar\" _v-37df71a0=\"\">&nbsp;<b _v-37df71a0=\"\">RETORNO</b></i></th>\n                    </tr>\n                    </thead>\n                    <tbody _v-37df71a0=\"\">\n                    <!-- @foreach($efetivoTiop as $efetivo) -->\n                        <tr v-for=\"efetivo in efetivoTiop\" :key=\"efetivo.id\" _v-37df71a0=\"\">\n                            <td _v-37df71a0=\"\"><b _v-37df71a0=\"\">{{ efetivo.nome }}</b></td>\n                            <td _v-37df71a0=\"\"><b _v-37df71a0=\"\">{{ efetivo.motivo }}</b></td>\n                            <td class=\"table-afastamentos-retorno\" _v-37df71a0=\"\">\n                                <b _v-37df71a0=\"\">{{ efetivo.retorno }}</b>\n                            </td>\n                        </tr>\n                    <!-- @endforeach -->\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</div>\n";
+module.exports = "\n<div class=\"afastamentos\" _v-37df71a0=\"\">\n    <div class=\"panel panel-primary\" _v-37df71a0=\"\">\n        <div class=\"panel-heading\" _v-37df71a0=\"\">\n            <h3 class=\"panel-title\" _v-37df71a0=\"\">\n                <i class=\"fa fa-group titulo\" _v-37df71a0=\"\">\n                    <b _v-37df71a0=\"\">&nbsp;AFASTAMENTOS EFETIVO</b>\n                </i>\n            </h3>\n        </div>\n        <div class=\"panel-body\" _v-37df71a0=\"\">\n            <div class=\"box box-bg-color-efetivo box-efetivo box-efetivo-height\" _v-37df71a0=\"\">\n                <table class=\"table table-bordered table-hover table-striped datatableimplements\" cellspacing=\"0\" _v-37df71a0=\"\">\n                    <thead _v-37df71a0=\"\">\n                    <tr class=\"table-title\" _v-37df71a0=\"\">\n                        <th _v-37df71a0=\"\"><i class=\"fa fa-user\" _v-37df71a0=\"\">&nbsp;<b _v-37df71a0=\"\">NOME</b></i></th>\n                        <th _v-37df71a0=\"\"><i class=\"fa fa-question-circle\" _v-37df71a0=\"\">&nbsp;<b _v-37df71a0=\"\">MOTIVO</b></i></th>\n                        <th class=\"table-afastamentos-retorno\" _v-37df71a0=\"\"><i class=\"fa fa-calendar\" _v-37df71a0=\"\">&nbsp;<b _v-37df71a0=\"\">RETORNO</b></i></th>\n                    </tr>\n                    </thead>\n                    <tbody _v-37df71a0=\"\">\n                    <!-- @foreach($efetivoTiop as $efetivo) -->\n                        <tr v-for=\"efetivo in efetivoTiop\" :key=\"efetivo.id\" _v-37df71a0=\"\">\n                            <td _v-37df71a0=\"\"><b _v-37df71a0=\"\">{{ efetivo.nome }}</b></td>\n                            <td _v-37df71a0=\"\"><b _v-37df71a0=\"\">{{ efetivo.motivo }}</b></td>\n                            <td class=\"table-afastamentos-retorno\" _v-37df71a0=\"\">\n                                <b _v-37df71a0=\"\">{{ efetivo.retorno }}</b>\n                            </td>\n                        </tr>\n                    <!-- @endforeach -->\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ }),
 

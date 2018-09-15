@@ -9,7 +9,7 @@
                 </h3>
             </div>
             <div class="panel-body">
-                <div class="box box-bg-color-efetivo box-efetivo">
+                <div class="box box-bg-color-efetivo box-efetivo box-efetivo-height">
                     <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
                         <thead>
                         <tr class="table-title">
@@ -66,6 +66,10 @@
 </script>
 
 <style scoped>
+    .panel-body {
+        padding: 5px;
+    }
+
     .afastamentos {
         overflow: hidden;
         height: 100%;
@@ -75,16 +79,14 @@
         background-color: royalblue;
         height: 50%;
         width: 99.5%;
-        left: 20%;
-        top: 20%;
         text-align: left;
-        padding-top: 1px;
-        margin-left: 1px;
-        margin-bottom: 1px;
-        margin-top: 1px;
         font-size: larger;
-        padding-left: 5px;
     }
+
+    .box-efetivo-height {
+        height: 599px;
+    }
+
     .table-title {
         font-size: 25px;
     }
