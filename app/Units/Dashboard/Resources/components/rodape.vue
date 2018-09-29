@@ -68,36 +68,22 @@
 
 <style scoped>
     .bottom-container {
-        position:relative;
         padding-left: 4px;
         padding-top: 5px;
-        width:19%;
+        width: 100%;
         text-align: center;
     }
 
     .bottom-container-decoration {
-        position:relative;
         border: 1px solid #0d6aad;
         border-radius:3px;
         height: 55px;
-        padding-right: 80px;
+        text-align: center;
     }
 
     #hora {
-        position:relative;
         margin-bottom: 2px;
         height: 35px;
-    }
-
-    #data {
-        position:relative;
-        width: 100%;
-        margin-right: 800px;
-    }
-
-    .relogio {
-        position:relative;
-        width: 50%;
         text-align: center;
     }
 </style>

@@ -12,7 +12,7 @@
             <div class="box box-title">ACC-RE</div>
             <div class="box box-bg-color">
                 <i class="fa fa-code">&nbsp;STM: <b><i>SAGITARIO</i></b></i><br />
-                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10</b></i><br />
+                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10.11_MST</b></i><br />
                 <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>ACCRE50</b></i><br />
                 <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>29/03/2018</b></i>
             </div>
@@ -55,10 +55,8 @@
 
 <style scoped>
     .inf-sistemas {
-        float: left;
-        width: 19%;
         padding-left: 5px;
         padding-top: 20px;
-        margin-bottom: -24px;
+        margin-bottom: -20px;
     }
 </style>

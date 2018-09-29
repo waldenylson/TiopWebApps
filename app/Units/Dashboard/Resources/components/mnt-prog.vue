@@ -47,6 +47,6 @@
     }
 
     .mnt-programadas-height {
-        height: 570px;
+        height: 538px;
     }
 </style>

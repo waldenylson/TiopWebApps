@@ -11,14 +11,16 @@
             <tiop-rpl></tiop-rpl>
 
         </div>
-        <div class="sub-container-right">
+        <div class="sub-container-center">
 
             <status-radares></status-radares>
 
             <tiop-mnt></tiop-mnt>
 
         </div>
-        <tiop-sistemas></tiop-sistemas>
-        <tiop-rodape></tiop-rodape>
+        <div class="sub-container-right">
+            <tiop-sistemas></tiop-sistemas>
+            <tiop-rodape></tiop-rodape>
+        </div>
     </div>
 @stop

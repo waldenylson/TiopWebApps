@@ -179,7 +179,6 @@
     }
 
     .sinoptico {
-        float: left;
         padding-left: 5px;
         padding-top: 20px;
         margin-bottom: -10px;
