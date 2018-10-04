@@ -10,7 +10,7 @@
 
 <div class="form-group well">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
             {!! Form::label('sistema_centro_id', 'Sistema/Centro Referência', ['class' => 'control-label']) !!}
 
             {{--{{ dd($sistemasAssociados) }}--}}
@@ -39,7 +39,7 @@
         </div>
     </div><br>
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-8">
             {!! Form::label('descricao', 'Descrição', ['class' => 'control-label']) !!}
             {!! Form::textArea('descricao', null, ['class' => 'form-control', 'id' => 'descricao']) !!}
         </div>

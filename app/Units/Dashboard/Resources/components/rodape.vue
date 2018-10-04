@@ -70,8 +70,8 @@
     .bottom-container {
         padding-left: 4px;
         padding-top: 5px;
-        width: 100%;
         text-align: center;
+        width: 450px;
     }
 
     .bottom-container-decoration {

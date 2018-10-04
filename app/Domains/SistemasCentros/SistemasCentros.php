@@ -12,12 +12,12 @@ class SistemasCentros extends Model
 
     public function sistema()
     {
-        return $this->hasOne(Sistemas::class, 'id');
+        return $this->hasOne(Sistemas::class, 'id', 'sistema_id');
     }
 
     public function centro()
     {
-        return $this->hasOne(Centros::class, 'id');
+        return $this->hasOne(Centros::class, 'id', 'centro_id');
     }
 
 }

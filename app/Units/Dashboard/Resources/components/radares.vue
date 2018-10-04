@@ -111,7 +111,7 @@
     }
     .project_sort ul.project_list li{
         padding:12px;
-        width:130px;
+        width:120px;
         height:60px;
         position:relative;
         border:solid 1px #c4c4c4;

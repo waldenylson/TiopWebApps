@@ -2587,7 +2587,7 @@
     width: 100%;
     height: 100%;
     margin: 5px 5px 5px 5px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .titulo {
@@ -2603,12 +2603,12 @@
 
 .sub-container-center {
     float: left;
-    width: 49%;
+    width: 880px;
 }
 
 .sub-container-right{
     float: left;
-    width: 21%;
+    width: 22%;
 }
 
 .center {
@@ -2647,5 +2647,5 @@
 }
 
 body {
-    overflow: auto;
+    overflow: hidden;
 }

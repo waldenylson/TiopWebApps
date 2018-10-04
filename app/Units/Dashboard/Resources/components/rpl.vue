@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
     .box-rpl {
-        height: 50%;
+        height: 142px;
         width: 99.5%;
         left: 20%;
         top: 20%;

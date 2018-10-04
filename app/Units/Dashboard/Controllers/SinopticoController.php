@@ -1,6 +1,7 @@
 <?php namespace TIOp\Units\Dashboard\Controllers;
 
 use Codecasts\Support\Http\Controller;
+use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
 
 
 class SinopticoController extends Controller
@@ -46,6 +47,13 @@ class SinopticoController extends Controller
         ["nome" => "3S VAREJÃO",       "motivo" => "SERVIÇO",    "retorno" => "15/04/2018"],
     ];
 
+    protected $scRepository;
+
+    public function __construct(SistemasCentrosRepository $scRepository)
+    {
+        $this->scRepository = $scRepository;
+    }
+
     public function index()
     {
         $radares     = $this->radares;
@@ -62,5 +70,10 @@ class SinopticoController extends Controller
     public function getEfetivoTiop()
     {
         return json_encode($this->efetivoTiop);
+    }
+
+    public function getInfSistemasData()
+    {
+        return json_encode($this->scRepository->listSistemasCentros());
     }
 }
