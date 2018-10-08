@@ -28,7 +28,7 @@
                 <tr>
                     <td>{!! $bdsdata->SNome . ' v' . $bdsdata->SVersao . '  =>  ' . $bdsdata->cSigla !!}</td>
                     <td>{!! $bdsdata->BDSVer !!}</td>
-                    <td>{!! \Carbon\Carbon::parse($bdsdata->BDSUpdateDate)->format('d/m/Y') !!}</td>
+                    <td>{!! $bdsdata->BDSUpdateDate !!}</td>
 
                     <td width="1%" nowrap>
                         <a href="{!! route('bds.edit', $bdsdata->id) !!}" class="btn btn-primary btn-xs fancybox">

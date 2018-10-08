@@ -7,6 +7,7 @@
         </ul>
     </div>
 @endif
+{{--{{ dd($bds) }}--}}
 
 <div class="form-group well">
     <div class="row">

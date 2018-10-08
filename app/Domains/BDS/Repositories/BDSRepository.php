@@ -18,7 +18,7 @@ class BDSRepository extends AbstractCrudRepository implements BDSRepositoryContr
     {
         //return $this->modelClass::all()->load('sistema_centro');
 
-        $data = DB::select("select b.id as 'id', b.versao as 'BDSVer', b.data_atualizacao as 'BDSUpdateDate', s.nome as 'SNome', s.versao as 'SVersao', c.acronimo as 'cSigla' from bds b
+        $data = DB::select("select b.id as 'id', b.versao as 'BDSVer', DATE_FORMAT( b.data_atualizacao , '%d/%m/%Y' ) as 'BDSUpdateDate', s.nome as 'SNome', s.versao as 'SVersao', c.acronimo as 'cSigla' from bds b
                     inner join sistemas_centros sc on (b.sistema_centro_id = sc.id)
                     inner join sistemas s on (sc.sistema_id = s.id)
                     inner join centros c on (c.id = sc.centro_id)");
