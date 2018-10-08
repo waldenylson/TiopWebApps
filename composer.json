@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "ext-json": "^1.6",
         "artesaos/migrator": "^1.3",
         "codecasts/support": "^1.0",
         "fideloper/proxy": "~3.3",

@@ -1,6 +1,7 @@
 <?php namespace TIOp\Units\Dashboard\Controllers;
 
 use Codecasts\Support\Http\Controller;
+use function MongoDB\BSON\toJSON;
 use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
 
 
@@ -74,6 +75,6 @@ class SinopticoController extends Controller
 
     public function getInfSistemasData()
     {
-        return json_encode($this->scRepository->listSistemasCentros());
+        return json_encode($this->scRepository->infSistemas(), JSON_UNESCAPED_UNICODE);
     }
 }

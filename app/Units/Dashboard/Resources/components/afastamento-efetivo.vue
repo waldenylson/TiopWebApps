@@ -19,7 +19,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <!-- @foreach($efetivoTiop as $efetivo) -->
                             <tr v-for="efetivo in efetivoTiop" 
                                 :key="efetivo.id"
                             >
@@ -29,7 +28,6 @@
                                     <b>{{ efetivo.retorno }}</b>
                                 </td>
                             </tr>
-                        <!-- @endforeach -->
                         </tbody>
                     </table>
                 </div>
@@ -53,7 +51,6 @@
         methods: {
             getEfetivo: function() {
                 axios.get('/api/getEfetivo').then(response => (this.efetivoTiop = response.data))
-                //setTimeout(this.getRadares, 10000)
             }
         },
 
@@ -61,7 +58,6 @@
             window.console.log('componente efetivo carregado')
             this.getEfetivo()
         }
-
     }
 </script>
 

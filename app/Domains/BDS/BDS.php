@@ -37,6 +37,6 @@ class BDS extends Model
 
     public function sistema_centro()
     {
-        return $this->hasOne(SistemasCentros::class, 'id');
+        return $this->hasOne(SistemasCentros::class, 'id', 'sistema_centro_id');
     }
 }

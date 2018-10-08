@@ -41,6 +41,7 @@
         "laravel-elixir-vueify-2.0": "^1.0.3",
         "laravel-elixir-webpack": "^1.0.1",
         "momentjs": "^2.0.0",
+        "vue-moment": "^4.0.0",
         "vue-template-compiler": "^2.5.17",
         "yarn": "^1.7.0"
     }

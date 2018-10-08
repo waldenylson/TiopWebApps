@@ -13,17 +13,23 @@ class SistemasCentrosRepository extends AbstractCrudRepository implements Sistem
 
     protected $modelClass       = SistemasCentros::class;
 
+    private $infSistemas = [];
+
     public function listSistemasCentros()
     {
         return $this->modelClass::all()->load('sistema', 'centro');
+    }
 
-//        $data = DB::select(
-//            'select s.nome as "Sistema", s.versao as "Versão",c.nome as "Centro", c.acronimo as "Sigla"
-//             from sistemas s
-//             inner join sistemas_centros sc on (s.id = sc.sistema_id)
-//             inner join centros c on (c.id = sc.centro_id)');
-//
-//        return $data;
+    public function infSistemas()
+    {
+        $data = DB::select(
+           'select s.nome as "sistema", s.versao as "versao",c.nome as "centro", c.acronimo as "sigla", bds.versao as "v-bds", bds.data_atualizacao as "dt-atualiza"
+            from sistemas s
+            inner join sistemas_centros sc on (s.id = sc.sistema_id)
+            inner join centros c on (c.id = sc.centro_id)
+            inner join bds on (bds.sistema_centro_id = sc.id)');
+
+       return $data;
     }
 
     public function store(StoreSistemasCentrosPostRequest $request)

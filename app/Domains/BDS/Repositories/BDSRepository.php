@@ -16,11 +16,12 @@ class BDSRepository extends AbstractCrudRepository implements BDSRepositoryContr
 
     public function listBDS()
     {
-        return $this->modelClass::all()->load('sistema_centro');
+        //return $this->modelClass::all()->load('sistema_centro');
 
-        $data = DB::select("select b.id as 'id', b.versao as 'BDSVer', b.data_atualizacao as 'BDSUpdateDate', s.nome as 'SNome', s.versao as 'SVersao' from bds b
+        $data = DB::select("select b.id as 'id', b.versao as 'BDSVer', b.data_atualizacao as 'BDSUpdateDate', s.nome as 'SNome', s.versao as 'SVersao', c.acronimo as 'cSigla' from bds b
                     inner join sistemas_centros sc on (b.sistema_centro_id = sc.id)
-                    inner join sistemas s on (sc.sistema_id = s.id)");
+                    inner join sistemas s on (sc.sistema_id = s.id)
+                    inner join centros c on (c.id = sc.centro_id)");
 
         return $data;
     }

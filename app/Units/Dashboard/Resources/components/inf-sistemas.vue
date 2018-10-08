@@ -1,5 +1,5 @@
 <template>
-    <div class="inf-sistemas">
+    <div class="inf-sistemas" >
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">
@@ -8,47 +8,43 @@
                     </i>
                 </h3>
             </div>
-            <!-- ###################### INICIA AQUI AS BOXES ######################### -->
-            <div id="sistemas" v-for="infsistemas in dadosInfSistemas" :key="infsistemas.id">
-                <div id="acc-re" v-if="">
-                    <div class="box box-title">ACC-RE</div>
-                    <div class="box box-bg-color">
-                        <i class="fa fa-code">&nbsp;STM: <b><i>SAGITARIO</i></b></i><br />
-                        <!--<i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10.11_MST</b></i><br />-->
-                        <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b></b></i><br />
-                        <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>ACCRE50</b></i><br />
-                        <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>29/03/2018</b></i>
-                    </div>
-                </div>
-                <div class="box box-title">ACC-AO</div>
-                <div class="box box-bg-color">
-                    <i class="fa fa-code">&nbsp;STM: <b><i>SAGITARIO</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.20</b></i><br />
-                    <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>ACCAO14</b></i><br />
-                    <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>15/03/2018</b></i>
-                </div>
-                <div class="box box-title">APP-RF</div>
-                <div class="box box-bg-color">
-                    <i class="fa fa-code">&nbsp;STM: <b><i>SAGITARIO</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10</b></i><br />
-                    <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>APPRF24</b></i><br />
-                    <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>13/02/2018</b></i>
-                </div>
-                <div class="box box-title">COPM3</div>
-                <div class="box box-bg-color">
-                    <i class="fa fa-code"> STM: <b><i>DACOM</i></b></i><br />
-                    <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>4.6.6</b></i><br />
-                    <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>COPM3_1</b></i><br />
-                    <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>03/03/2018</b></i>
-                </div>
+            <div class="box box-title">ACC-RE</div>
+            <div class="box box-bg-color" v-for="infSis in dadosInfSistemas" v-if="(infSis['sigla'] === 'ACC-RE') ">
+                <i class="fa fa-code">&nbsp;STM: <b><i>{{ infSis['sistema'] }}</i></b></i><br />
+                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>{{ infSis['versao'] }}</b></i><br />
+                <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>{{ infSis['v-bds'] }}</b></i><br />
+                <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>{{ infSis['dt-atualiza'] | moment("DD/MM/YYYY") }}</b></i>
             </div>
-            <!-- #################### TERMINA AQUI AS BOXES ######################### -->
-
+            <div class="box box-title">ACC-AO</div>
+            <div class="box box-bg-color" v-for="infSis in dadosInfSistemas" v-if="(infSis['sigla'] === 'ACC-AO') ">
+                <i class="fa fa-code">&nbsp;STM: <b><i>{{ infSis['sistema'] }}</i></b></i><br />
+                <!--<i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10.11_MST</b></i><br />-->
+                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>{{ infSis['versao'] }}</b></i><br />
+                <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>{{ infSis['v-bds'] }}</b></i><br />
+                <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>{{ infSis['dt-atualiza'] | moment("DD/MM/YYYY") }}</b></i>
+            </div>
+            <div class="box box-title">APP-RF</div>
+            <div class="box box-bg-color" v-for="infSis in dadosInfSistemas" v-if="(infSis['sigla'] === 'APP-RF') ">
+                <i class="fa fa-code">&nbsp;STM: <b><i>{{ infSis['sistema'] }}</i></b></i><br />
+                <!--<i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10.11_MST</b></i><br />-->
+                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>{{ infSis['versao'] }}</b></i><br />
+                <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>{{ infSis['v-bds'] }}</b></i><br />
+                <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>{{ infSis['dt-atualiza'] | moment("DD/MM/YYYY") }}</b></i>
+            </div>
+            <div class="box box-title">COPM3</div>
+            <div class="box box-bg-color" v-for="infSis in dadosInfSistemas" v-if="(infSis['sigla'] === 'COPM') ">
+                <i class="fa fa-code">&nbsp;STM: <b><i>{{ infSis['sistema'] }}</i></b></i><br />
+                <!--<i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>2.2.9.10.11_MST</b></i><br />-->
+                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>{{ infSis['versao'] }}</b></i><br />
+                <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>{{ infSis['v-bds'] }}</b></i><br />
+                <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>{{ infSis['dt-atualiza'] | moment("DD/MM/YYYY") }}</b></i>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+    Vue.use(require('vue-moment'));
     export default {
         name: 'tiop-sistemas',
 
@@ -63,20 +59,16 @@
 
         methods:
         {
-            getInfSis: function()
+            getInfSis: function ()
             {
                 axios.get('/api/getInfSis').then(response => (this.dadosInfSistemas = response.data))
             }
-        },
-
-        created()
-        {
-            this.getInfSis()
         },
         
         mounted()
         {
             window.console.log('Componente INF-Sistemas Carregado')
+            this.getInfSis()
         }
     }
 </script>

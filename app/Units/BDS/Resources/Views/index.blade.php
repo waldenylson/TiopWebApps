@@ -23,9 +23,10 @@
             </tr>
             </thead>
             <tbody>
+            {{--{{ dd($bds) }}--}}
             @foreach($bds as $bdsdata)
                 <tr>
-                    <td>{!! $bdsdata->SNome . ' v' . $bdsdata->SVersao !!}</td>
+                    <td>{!! $bdsdata->SNome . ' v' . $bdsdata->SVersao . '  =>  ' . $bdsdata->cSigla !!}</td>
                     <td>{!! $bdsdata->BDSVer !!}</td>
                     <td>{!! \Carbon\Carbon::parse($bdsdata->BDSUpdateDate)->format('d/m/Y') !!}</td>
 
