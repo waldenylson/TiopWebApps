@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.3.9-MariaDB, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.16  Distrib 10.2.11-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: mydb
 -- ------------------------------------------------------
--- Server version	10.3.9-MariaDB-1:10.3.9+maria~bionic
+-- Server version	10.2.11-MariaDB-10.2.11+maria~jessie
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -57,7 +57,7 @@ CREATE TABLE `bds` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sistema_centro_id` int(11) NOT NULL,
   `versao` varchar(45) NOT NULL,
-  `data_atualizacao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `data_atualizacao` date NOT NULL,
   `descricao` text DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE `bds` (
 
 LOCK TABLES `bds` WRITE;
 /*!40000 ALTER TABLE `bds` DISABLE KEYS */;
-INSERT INTO `bds` VALUES (1,1,'ACCRE50','2018-09-29 00:00:00',NULL,'2018-10-07 17:18:32','2018-10-07 17:18:32',NULL),(2,2,'ACCAO14','2018-03-15 00:00:00',NULL,'2018-10-07 18:16:01','2018-10-07 18:16:01',NULL),(3,3,'APPRF24','2018-09-02 00:00:00',NULL,'2018-10-07 18:16:57','2018-10-07 18:16:57',NULL),(4,4,'COPM3_1','2018-03-03 00:00:00',NULL,'2018-10-07 18:17:23','2018-10-07 18:17:23',NULL);
+INSERT INTO `bds` VALUES (1,1,'ACCRE50','2018-09-29',NULL,'2018-10-07 17:18:32','2018-10-08 16:41:11',NULL),(2,2,'ACCAO14','2018-03-15',NULL,'2018-10-07 18:16:01','2018-10-07 18:16:01',NULL),(3,3,'APPRF24','2018-09-02',NULL,'2018-10-07 18:16:57','2018-10-07 18:16:57',NULL),(4,4,'COPM3_1','2018-03-03',NULL,'2018-10-07 18:17:23','2018-10-07 18:17:23',NULL);
 /*!40000 ALTER TABLE `bds` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -474,4 +474,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-08 10:24:10
+-- Dump completed on 2018-10-09 19:13:51
