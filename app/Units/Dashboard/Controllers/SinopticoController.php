@@ -39,7 +39,7 @@ class SinopticoController extends Controller
         ["nome" => "SO FABIO",         "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
         ["nome" => "SO KLEBER",        "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
         ["nome" => "1S MUNIZ",         "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
-        ["nome" => "1S ENRIQUE",       "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
+        ["nome" => "1S HENRIQUE",       "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
         ["nome" => "2S MELO",          "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
         ["nome" => "3S EUDES",         "motivo" => "DISPENSADO", "retorno" => "30/05/2018"],
         ["nome" => "3S WALDENYLSON",   "motivo" => "FÉRIAS",     "retorno" => "25/06/2018"],

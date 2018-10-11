@@ -11,9 +11,9 @@
             <div class="panel-body">
                 <div>
                     <div class="box-rpl">
-                        <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>RPL042</i></b></i><br />
-                        <i class="fa fa-calendar">&nbsp;ATLIZ: <b>25/04/2018</b></i>
-                        <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>04/05/2018</b></i>
+                        <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>RPL060</i></b></i><br />
+                        <i class="fa fa-calendar">&nbsp;ATLIZ: <b>10/10/2018</b></i>
+                        <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>19/10/2018</b></i>
                     </div>
                 </div>
             </div>
