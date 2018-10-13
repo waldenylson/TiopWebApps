@@ -1,7 +1,7 @@
 <?php namespace TIOp\Units\Dashboard\Controllers;
 
-use Codecasts\Support\Http\Controller;
-use function MongoDB\BSON\toJSON;
+use Codecasts\Support\Http\Controller;;
+use TIOp\Domains\RPL\Contracts\RPLRepository;
 use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
 
 
@@ -49,10 +49,12 @@ class SinopticoController extends Controller
     ];
 
     protected $scRepository;
+    protected $rplRepository;
 
-    public function __construct(SistemasCentrosRepository $scRepository)
+    public function __construct(SistemasCentrosRepository $scRepository, RPLRepository $rplRepository)
     {
-        $this->scRepository = $scRepository;
+        $this->scRepository  = $scRepository;
+        $this->rplRepository = $rplRepository;
     }
 
     public function index()
@@ -76,5 +78,10 @@ class SinopticoController extends Controller
     public function getInfSistemasData()
     {
         return json_encode($this->scRepository->infSistemas(), JSON_UNESCAPED_UNICODE);
+    }
+
+    public function getRPLInfo()
+    {
+        return json_encode($this->rplRepository->listRPL(), JSON_UNESCAPED_UNICODE);
     }
 }

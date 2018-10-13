@@ -207,6 +207,23 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'RPL',
+            'icon'    => 'plane',
+            'submenu' => [
+                [
+                    'text' => 'Listar Todos',
+                    'url'  => '/rpl',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => '/rpl/novo',
+                    'icon' => 'plus-circle',
+                    'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
+                ],
+            ],
+        ],
 
         'ACCOUNT SETTINGS',
         [

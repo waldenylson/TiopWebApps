@@ -6,7 +6,7 @@ use TIOp\Units\RPL\Requests\StoreRPLPostRequest;
 /**
  *  RPL Interface Contracts
  */
-interface BDSRepository extends CrudRepository
+interface RPLRepository extends CrudRepository
 {
     public function listRPL();
     public function store(StoreRPLPostRequest $request);

@@ -13,5 +13,5 @@ interface BDSRepository extends CrudRepository
     public function edit($id);
     public function persistUpdate(StoreBDSPostRequest $request, $id);
     public function destroy($id);
-
+    public function getBDSForSelect();
 }

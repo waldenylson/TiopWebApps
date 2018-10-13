@@ -10,10 +10,10 @@
             </div>
             <div class="panel-body">
                 <div>
-                    <div class="box-rpl">
-                        <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>RPL060</i></b></i><br />
-                        <i class="fa fa-calendar">&nbsp;ATLIZ: <b>10/10/2018</b></i>
-                        <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>19/10/2018</b></i>
+                    <div class="box-rpl" v-for="rplInfo in dadosRPLInfo">
+                        <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>{{ rplInfo['numero'] }}</i></b></i><br />
+                        <i class="fa fa-calendar">&nbsp;ATLIZ: <b>{{ rplInfo['dtCarga'] | moment("DD/MM/YYYY") }}</b></i>
+                        <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>{{ rplInfo['validade'] | moment("DD/MM/YYYY") }}</b></i>
                     </div>
                 </div>
             </div>
@@ -22,13 +22,29 @@
 </template>
 
 <script>
+Vue.use(require('vue-moment'));
 export default {
     name: 'tiop-rpl',
 
+    data: function () {
+        return {
+            dadosRPLInfo: []
+        }
+    },
+
+    methods:
+    {
+        getRPLInfo: function () {
+            axios.get('/api/getRPLInfo').then(response => (this.dadosRPLInfo = response.data))
+        }
+    },
+
     mounted() {
         window.console.log('componente RPL carregado')
+        this.getRPLInfo()
     }
-    }
+}
+
 </script>
 
 <style scoped>

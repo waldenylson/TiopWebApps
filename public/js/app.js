@@ -2102,9 +2102,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 Vue.use(__webpack_require__("./node_modules/vue-moment/dist/vue-moment.js"));
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2417,11 +2414,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+Vue.use(__webpack_require__("./node_modules/vue-moment/dist/vue-moment.js"));
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'tiop-rpl',
 
+    data: function data() {
+        return {
+            dadosRPLInfo: []
+        };
+    },
+
+    methods: {
+        getRPLInfo: function getRPLInfo() {
+            var _this = this;
+
+            axios.get('/api/getRPLInfo').then(function (response) {
+                return _this.dadosRPLInfo = response.data;
+            });
+        }
+    },
+
     mounted: function mounted() {
         window.console.log('componente RPL carregado');
+        this.getRPLInfo();
     }
 });
 
@@ -22308,43 +22323,54 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "rpl" }, [
+    _c("div", { staticClass: "panel panel-primary" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel-body" }, [
+        _c(
+          "div",
+          _vm._l(_vm.dadosRPLInfo, function(rplInfo) {
+            return _c("div", { staticClass: "box-rpl" }, [
+              _c("i", { staticClass: "fa fa-check-circle" }, [
+                _vm._v(" ATUAL: "),
+                _c("b", [_c("i", [_vm._v(_vm._s(rplInfo["numero"]))])])
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _c("i", { staticClass: "fa fa-calendar" }, [
+                _vm._v(" ATLIZ: "),
+                _c("b", [
+                  _vm._v(
+                    _vm._s(_vm._f("moment")(rplInfo["dtCarga"], "DD/MM/YYYY"))
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("i", { staticClass: "fa fa-exclamation-circle" }, [
+                _vm._v(" VALID: "),
+                _c("b", [
+                  _vm._v(
+                    _vm._s(_vm._f("moment")(rplInfo["validade"], "DD/MM/YYYY"))
+                  )
+                ])
+              ])
+            ])
+          })
+        )
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "rpl" }, [
-      _c("div", { staticClass: "panel panel-primary" }, [
-        _c("div", { staticClass: "panel-heading" }, [
-          _c("h3", { staticClass: "panel-title" }, [
-            _c("i", { staticClass: "fa fa-plane titulo" }, [
-              _c("b", [_vm._v(" RPL")])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "panel-body" }, [
-          _c("div", [
-            _c("div", { staticClass: "box-rpl" }, [
-              _c("i", { staticClass: "fa fa-check-circle" }, [
-                _vm._v(" ATUAL: "),
-                _c("b", [_c("i", [_vm._v("RPL060")])])
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("i", { staticClass: "fa fa-calendar" }, [
-                _vm._v(" ATLIZ: "),
-                _c("b", [_vm._v("10/10/2018")])
-              ]),
-              _vm._v(" "),
-              _c("i", { staticClass: "fa fa-exclamation-circle" }, [
-                _vm._v(" VALID: "),
-                _c("b", [_vm._v("19/10/2018")])
-              ])
-            ])
-          ])
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h3", { staticClass: "panel-title" }, [
+        _c("i", { staticClass: "fa fa-plane titulo" }, [
+          _c("b", [_vm._v(" RPL")])
         ])
       ])
     ])

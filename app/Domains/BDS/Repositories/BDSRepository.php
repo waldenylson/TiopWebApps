@@ -53,4 +53,17 @@ class BDSRepository extends AbstractCrudRepository implements BDSRepositoryContr
 
         return $bds->delete();
     }
+
+    public function getBDSForSelect()
+    {
+        $baseArray = $this->listBDS();
+        $bdsSelect = array();
+
+        foreach($baseArray as $value)
+        {
+            $bdsSelect[$value->id] = $value->cSigla . ' |' . ' BDS ==> ' . $value->BDSVer;
+        }
+
+        return $bdsSelect;
+    }
 }

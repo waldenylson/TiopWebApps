@@ -3,32 +3,34 @@
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\RPL\Contracts\RPLRepository;
 use TIOp\Units\RPL\Requests\StoreRPLPostRequest;
+use TIOp\Domains\BDS\Contracts\BDSRepository;
 
 class RPLController extends Controller
 {
     protected $rplRepository;
-    protected $sistemasCentrosRepository;
+    protected $bdsRepository;
 
-    public function __construct(RPLRepository  $repository
-                                )
+    public function __construct(RPLRepository  $repository,
+                                BDSRepository $bdsRepository)
     {
-        $this->RPLRepository             = $repository;
+        $this->rplRepository = $repository;
+        $this->bdsRepository = $bdsRepository;
     }
 
     public function index()
     {
-        $RPL = $this->RPLRepository->listRPL();
+        $rpl = $this->rplRepository->listRPL();
 
-        //dd($RPL);
+        //dd($rpl);
 
-        return view('RPL::index')->with(compact('RPL'));
+        return view('rpl::index')->with(compact('rpl'));
     }
 
     public function create()
     {
-        $sistemasAssociados = $this->sistemasCentrosRepository->getAllSistemasCentrosForSelect();
+        $bdsCadastradas = $this->bdsRepository->getBDSForSelect();
 
-        return view('RPL::create')->with(compact('sistemasAssociados'));
+        return view('rpl::create')->with(compact('bdsCadastradas'));
     }
 
     /**
@@ -39,7 +41,7 @@ class RPLController extends Controller
      */
     public function store(StoreRPLPostRequest $request)
     {
-        $result = $this->RPLRepository->store($request);
+        $result = $this->rplRepository->store($request);
 
         if ($result)
         {
@@ -58,10 +60,10 @@ class RPLController extends Controller
      */
     public function edit($id)
     {
-        $RPL = $this->RPLRepository->edit($id);
-        $sistemasAssociados = $this->sistemasCentrosRepository->getAllSistemasCentrosForSelect();
+        $rpl = $this->rplRepository->edit($id);
+        $bdsCadastradas = $this->bdsRepository->getBDSForSelect();
 
-        return view('RPL::edit')->with(compact('RPL'))->with(compact('sistemasAssociados'));
+        return view('rpl::edit')->with(compact('rpl'))->with(compact('bdsCadastradas'));
     }
 
 
@@ -73,7 +75,7 @@ class RPLController extends Controller
      */
     public function update(StoreRPLPostRequest $request, $id)
     {
-        $result = $this->RPLRepository->persistUpdate($request, $id);
+        $result = $this->rplRepository->persistUpdate($request, $id);
 
         if ($result)
         {
@@ -92,7 +94,7 @@ class RPLController extends Controller
      */
     public function destroy($id)
     {
-        $result = $this->RPLRepository->destroy($id);
+        $result = $this->rplRepository->destroy($id);
 
         if ($result) {
             return redirect()->back()->with('message', 'Registro Removido com Sucesso!');
