@@ -1,36 +1,31 @@
-<?php namespace TIOp\Units\RPL\Controllers;
+<?php namespace TIOp\Units\Users\Controllers;
 
 use Codecasts\Support\Http\Controller;
-use TIOp\Domains\RPL\Contracts\RPLRepository;
-use TIOp\Units\RPL\Requests\StoreUsersPostRequest;
-use TIOp\Domains\BDS\Contracts\BDSRepository;
+use TIOp\Domains\Users\Contracts\UsersRepository;
+use TIOp\Units\Users\Requests\StoreUsersPostRequest;
 
-class RPLController extends Controller
+class UsersController extends Controller
 {
-    protected $rplRepository;
+    protected $UsersRepository;
     protected $bdsRepository;
 
-    public function __construct(RPLRepository  $repository,
-                                BDSRepository $bdsRepository)
+    public function __construct(UsersRepository  $repository)
     {
-        $this->rplRepository = $repository;
-        $this->bdsRepository = $bdsRepository;
+        $this->UsersRepository = $repository;
     }
 
     public function index()
     {
-        $rpl = $this->rplRepository->listRPL();
+        $users = $this->UsersRepository->listUsers();
 
-        //dd($rpl);
+        //dd($Users);
 
-        return view('rpl::index')->with(compact('rpl'));
+        return view('Users::index')->with(compact('users'));
     }
 
     public function create()
     {
-        $bdsCadastradas = $this->bdsRepository->getBDSForSelect();
-
-        return view('rpl::create')->with(compact('bdsCadastradas'));
+        return view('users::create');
     }
 
     /**
@@ -41,7 +36,7 @@ class RPLController extends Controller
      */
     public function store(StoreUsersPostRequest $request)
     {
-        $result = $this->rplRepository->store($request);
+        $result = $this->UsersRepository->store($request);
 
         if ($result)
         {
@@ -60,10 +55,10 @@ class RPLController extends Controller
      */
     public function edit($id)
     {
-        $rpl = $this->rplRepository->edit($id);
+        $Users = $this->UsersRepository->edit($id);
         $bdsCadastradas = $this->bdsRepository->getBDSForSelect();
 
-        return view('rpl::edit')->with(compact('rpl'))->with(compact('bdsCadastradas'));
+        return view('Users::edit')->with(compact('Users'))->with(compact('bdsCadastradas'));
     }
 
 
@@ -75,7 +70,7 @@ class RPLController extends Controller
      */
     public function update(StoreUsersPostRequest $request, $id)
     {
-        $result = $this->rplRepository->persistUpdate($request, $id);
+        $result = $this->UsersRepository->persistUpdate($request, $id);
 
         if ($result)
         {
@@ -94,7 +89,7 @@ class RPLController extends Controller
      */
     public function destroy($id)
     {
-        $result = $this->rplRepository->destroy($id);
+        $result = $this->UsersRepository->destroy($id);
 
         if ($result) {
             return redirect()->back()->with('message', 'Registro Removido com Sucesso!');

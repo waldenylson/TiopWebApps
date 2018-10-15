@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\DB;
 use TIOp\Domains\RPL\Contracts\RPLRepository as RPLRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\RPL\RPL;
-use TIOp\Units\RPL\Requests\StoreRPLPostRequest;
+use TIOp\Units\RPL\Requests\StoreUsersPostRequest;
 
 class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContract
 {
@@ -23,7 +23,7 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
         return $rpl;
     }
 
-    public function store(StoreRPLPostRequest $request)
+    public function store(StoreUsersPostRequest $request)
     {
         $rpl = $this->modelClass::create($request->all());
 
@@ -37,7 +37,7 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
         return $rpl;
     }
 
-    public function persistUpdate(StoreRPLPostRequest $request, $id)
+    public function persistUpdate(StoreUsersPostRequest $request, $id)
     {
         $rpl = $this->modelClass::findOrFail($id)->update($request->all());
 

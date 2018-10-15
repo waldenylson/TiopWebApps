@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11b3cd1ebd33d450bc24aeb8dccf4c6f",
+    "content-hash": "b56b511758ba6f1e751ee09aba29f760",
     "packages": [
         {
             "name": "artesaos/migrator",
@@ -941,6 +941,46 @@
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "https://laravelcollective.com",
             "time": "2018-03-24T00:39:21+00:00"
+        },
+        {
+            "name": "laravellegends/pt-br-validator",
+            "version": "5.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelLegends/pt-br-validator.git",
+                "reference": "652039d964d6ba18f445e47e637cf8e2de00fbeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelLegends/pt-br-validator/zipball/652039d964d6ba18f445e47e637cf8e2de00fbeb",
+                "reference": "652039d964d6ba18f445e47e637cf8e2de00fbeb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.0.* || 5.1.* || 5.2.* || 5.3.* || 5.4.* || 5.5.*"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.1.*",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LaravelLegends\\PtBrValidator\\": "src/pt-br-validator"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wallace de Souza Vizerra",
+                    "email": "wallacemaxters@gmail.com"
+                }
+            ],
+            "description": "Uma biblioteca contendo validações de formatos Brasileiros, para o Laravel 5",
+            "time": "2018-05-07T18:05:16+00:00"
         },
         {
             "name": "league/flysystem",

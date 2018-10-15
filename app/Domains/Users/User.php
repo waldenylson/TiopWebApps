@@ -1,6 +1,4 @@
-<?php
-
-namespace TIOp\Domains\Users;
+<?php namespace TIOp\Domains\Users;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
