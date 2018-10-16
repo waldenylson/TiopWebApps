@@ -2,7 +2,7 @@
 
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\RPL\Contracts\RPLRepository;
-use TIOp\Units\RPL\Requests\StoreUsersPostRequest;
+use TIOp\Units\RPL\Requests\StoreRPLPostRequest;
 use TIOp\Domains\BDS\Contracts\BDSRepository;
 
 class RPLController extends Controller
@@ -39,7 +39,7 @@ class RPLController extends Controller
      * @param StoreUsersPostRequest $request
      * @return Response
      */
-    public function store(StoreUsersPostRequest $request)
+    public function store(StoreRPLPostRequest $request)
     {
         $result = $this->rplRepository->store($request);
 
@@ -73,7 +73,7 @@ class RPLController extends Controller
      * @param StoreRadarsPostRequest $request
      * @return Response
      */
-    public function update(StoreUsersPostRequest $request, $id)
+    public function update(StoreRPLPostRequest $request, $id)
     {
         $result = $this->rplRepository->persistUpdate($request, $id);
 
