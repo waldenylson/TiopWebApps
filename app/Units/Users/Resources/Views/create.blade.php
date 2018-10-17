@@ -1,14 +1,16 @@
 @extends('support::templates.fancyboxContent')
 
+@section('title', 'SisGATO - Manutenção Cadastro Usuários')
+
 @section('content')
     <h2>
-        <i class="fa fa-plane"></i>
-        Cadastrar RPL
+        <i class="fa fa-user"></i>
+        Cadastrar Usuário
     </h2>
     <hr />
 
-    {!! Form::open(['route' => 'rpl.store']) !!}
-    @include('rpl::partials.form')
+    {!! Form::open(['route' => 'users.store']) !!}
+    @include('users::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar
     </button>

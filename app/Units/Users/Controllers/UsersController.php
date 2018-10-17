@@ -1,26 +1,19 @@
 <?php namespace TIOp\Units\Users\Controllers;
 
 use Codecasts\Support\Http\Controller;
-use TIOp\Domains\Users\Contracts\UsersRepository;
 use TIOp\Units\Users\Requests\StoreUsersPostRequest;
 
 class UsersController extends Controller
 {
-    protected $UsersRepository;
-    protected $bdsRepository;
 
-    public function __construct(UsersRepository  $repository)
-    {
-        $this->UsersRepository = $repository;
-    }
 
     public function index()
     {
-        $users = $this->UsersRepository->listUsers();
+        $usuarios =  [];
 
         //dd($Users);
 
-        return view('Users::index')->with(compact('users'));
+        return view('users::index')->with(compact('usuarios'));
     }
 
     public function create()
