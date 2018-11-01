@@ -5,8 +5,6 @@ use TIOp\Units\Users\Requests\StoreUsersPostRequest;
 
 class UsersController extends Controller
 {
-
-
     public function index()
     {
         $usuarios =  [];

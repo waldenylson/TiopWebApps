@@ -29,12 +29,16 @@
             {!! Form::label('identidade', 'Identidade', ['class' => 'control-label']) !!}
             {!! Form::text('identidade', null, ['class' => 'form-control', 'id' => 'identidade', 'placeholder' => 'Identidade']) !!}
         </div>
-        <div class="col-md-2">
+        <div class="col-md-1">
+            {!! Form::label('posto_gradu', 'Posto/Grad.', ['class' => 'control-label']) !!}
+            {!! Form::text('posto_gradu', null, ['class' => 'form-control', 'id' => 'posto_gradu', 'placeholder' => 'Posto/Grad.']) !!}
+        </div>
+        <div class="col-md-1">
             {!! Form::label('quadro', 'Quadro', ['class' => 'control-label']) !!}
             {!! Form::text('quadro', null, ['class' => 'form-control', 'id' => 'quadro', 'placeholder' => 'Quadro']) !!}
         </div>
-        <div class="col-md-2">
-            {!! Form::label('especialidade', 'Especialidade', ['class' => 'control-label']) !!}
+        <div class="col-md-1">
+            {!! Form::label('especialidade', 'Especiali.', ['class' => 'control-label']) !!}
             {!! Form::text('especialidade', null, ['class' => 'form-control', 'id' => 'especialidade', 'placeholder' => 'Especialidade']) !!}
         </div>
         <div class="col-md-1">
@@ -49,7 +53,7 @@
     <div class="row">
         <div class="col-md-2">
             {!! Form::label('cpf', 'CPF', ['class' => 'control-label']) !!}
-            {!! Form::text('cpf', null, ['class' => 'form-control', 'id' => 'cpf', 'placeholder' => 'CPF']) !!}
+            {!! Form::text('cpf', null, ['class' => 'form-control masked-', 'id' => 'cpf', 'placeholder' => 'CPF']) !!}
         </div>
         <div class="col-md-4">
             {!! Form::label('email', 'E-Mail', ['class' => 'control-label']) !!}

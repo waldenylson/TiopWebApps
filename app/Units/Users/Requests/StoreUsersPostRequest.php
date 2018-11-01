@@ -21,6 +21,8 @@ class StoreUsersPostRequest extends FormRequest
      */
     public function rules()
     {
+
+
         return [
             'nome_completo'  => 'required|min:10',
             'posto_gradu'    => 'required|min:2',
