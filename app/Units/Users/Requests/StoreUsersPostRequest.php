@@ -30,8 +30,10 @@ class StoreUsersPostRequest extends FormRequest
             'quadro' => 'required',
             'especialidade' => 'required',
             'agenda' => 'required',
-            'celular' => 'requires|celular_com_ddd',
-            'cpf' => 'required|cpf'
+            'celular' => 'required|celular_com_ddd',
+            'cpf' => 'required|cpf',
+            'email' => 'required|email',
+            'data_mascimento' => 'required',
         ];
     }
 
@@ -54,6 +56,9 @@ class StoreUsersPostRequest extends FormRequest
             'celular.celular_com_ddd'  => 'Celular é deve ser estar no seguinte formato: (81) 99999-9999',
             'cpf.required'  => 'CPF é Obrigatório!',
             'cpf.cpf'  => 'Número de CPF Inválido!',
+            'email.required'  => 'E-Mail é Obrigatório!',
+            'email.email'  => 'Endereço de E-Mail Inválido!',
+            'data_mascimento.required' => 'Data de Nascimento é Obrigatório!',
         ];
     }
 }

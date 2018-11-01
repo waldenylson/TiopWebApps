@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="{!! asset('css/tiop.css') !!}">
 	<style>
 		.container {
-			padding: 10px 10px 10px 10px;
+			padding: 0;
+			padding: 0;
+			width: 97%;
+			height: 100%;
+			margin: 5px 5px 5px 5px;
 		}
 	</style>
 </head>

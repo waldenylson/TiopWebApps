@@ -27,8 +27,11 @@ mix.js('resources/assets/js/app.js', 'public/js')
         'app/Support/Resources/Views/css/relogio.css',
         'node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
         'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic',
-        'app/Units/Dashboard/Resources/css/sinoptico.css'
     ], 'public/css/tiop.css')
+
+    .styles([
+        'app/Units/Dashboard/Resources/css/sinoptico.css'
+    ], 'public/css/sinoptico.css')
 
     .copy('node_modules/font-awesome/fonts', 'public/fonts')
     .copy('node_modules/bootstrap/fonts', 'public/fonts')

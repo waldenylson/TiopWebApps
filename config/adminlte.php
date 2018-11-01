@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'purple',
 
     /*
     |--------------------------------------------------------------------------
@@ -225,16 +225,18 @@ return [
             ],
         ],
 
-        'ACCOUNT SETTINGS',
+        'CONSTAS USUÁRIO',
         [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
+            'text' => 'Cadastrar',
+            'url'  => 'users/novo',
             'icon' => 'user',
+            'linkClass' => 'fancybox',
         ],
         [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
+            'text' => 'Alterar Senha',
+            'url'  => 'users/senha',
+            'icon' => 'key',
+            'linkClass' => 'fancybox',
         ],
         [
             'text'    => 'Multilevel',

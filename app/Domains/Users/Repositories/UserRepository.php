@@ -3,14 +3,14 @@
 use Artesaos\Warehouse\Traits\ImplementsFractal;
 use TIOp\Domains\Users\Contracts\UserRepository as UserRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
-use TIOp\Domains\Users\User;
+use TIOp\Domains\Users\EfetivoTiop;
 use TIOp\Units\Users\Requests\StoreUsersPostRequest;
 
 class UserRepository extends AbstractCrudRepository implements UserRepositoryContract
 {
     use ImplementsFractal;
 
-    protected $modelClass = User::class;
+    protected $modelClass = EfetivoTiop::class;
 
     public function listUsers()
     {

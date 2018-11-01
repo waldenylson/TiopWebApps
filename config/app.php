@@ -175,6 +175,7 @@ return [
         Migrator\MigrationServiceProvider::class,
         Artesaos\Warehouse\WarehouseServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        LaravelLegends\PtBrValidator\ValidatorProvider::class,
 
         /**
          * Support Service Providers...

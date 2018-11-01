@@ -1,6 +1,6 @@
 @extends('support::templates.fancyboxContent')
 
-@section('title', 'SisGATO - Manutenção Cadastro Usuários')
+@section('title', 'SMTP - Manutenção Cadastro Usuários')
 
 @section('content')
     <h2>
