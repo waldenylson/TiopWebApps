@@ -22,6 +22,10 @@ class StoreUsersPostRequest extends FormRequest
     public function rules()
     {
 
+        $input = $this->all();
+        $input['cpf'] = $this->sanitizeValues($input['cpf']);
+        $input['saram'] = $this->sanitizeValues($input['saram']);
+        $this->replace($input);
 
         return [
             'nome_completo'  => 'required|min:10',
@@ -35,7 +39,7 @@ class StoreUsersPostRequest extends FormRequest
             'celular' => 'required|celular_com_ddd',
             'cpf' => 'required|cpf',
             'email' => 'required|email',
-            'data_mascimento' => 'required',
+            'data_nascimento' => 'required',
         ];
     }
 
@@ -60,7 +64,16 @@ class StoreUsersPostRequest extends FormRequest
             'cpf.cpf'  => 'Número de CPF Inválido!',
             'email.required'  => 'E-Mail é Obrigatório!',
             'email.email'  => 'Endereço de E-Mail Inválido!',
-            'data_mascimento.required' => 'Data de Nascimento é Obrigatório!',
+            'data_nascimento.required' => 'Data de Nascimento é Obrigatório!',
         ];
+    }
+
+    private function sanitizeValues($value){
+        $value = trim($value);
+        $value = str_replace(".", "", $value);
+        $value = str_replace(",", "", $value);
+        $value = str_replace("-", "", $value);
+
+        return $value;
     }
 }

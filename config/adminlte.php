@@ -225,71 +225,84 @@ return [
             ],
         ],
 
-        'CONSTAS USUÁRIO',
+        'PARAMETRIZAÇÃO',
         [
-            'text' => 'Cadastrar',
-            'url'  => 'users/novo',
-            'icon' => 'user',
-            'linkClass' => 'fancybox',
-        ],
-        [
-            'text' => 'Alterar Senha',
-            'url'  => 'users/senha',
-            'icon' => 'key',
-            'linkClass' => 'fancybox',
-        ],
-        [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
+            'text' => 'CONTAS USUÁRIO',
+            'icon'    => 'users',
             'submenu' => [
                 [
-                    'text' => 'Level One',
-                    'url'  => '#',
+                    'text' => 'Listar Todos',
+                    'url'  => '/users',
+                    'icon' => 'list',
                 ],
                 [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'text' => 'Cadastrar',
+                    'url'  => 'users/novo',
+                    'icon' => 'user',
+                    'linkClass' => 'fancybox',
                 ],
                 [
-                    'text' => 'Level One',
-                    'url'  => '#',
+                    'text' => 'Alterar Senha',
+                    'url'  => 'users/senha',
+                    'icon' => 'key',
+                    'linkClass' => 'fancybox',
                 ],
-            ],
+            ]
         ],
+
+
+//        [
+//            'text'    => 'Multilevel',
+//            'icon'    => 'share',
+//            'submenu' => [
+//                [
+//                    'text' => 'Level One',
+//                    'url'  => '#',
+//                ],
+//                [
+//                    'text'    => 'Level One',
+//                    'url'     => '#',
+//                    'submenu' => [
+//                        [
+//                            'text' => 'Level Two',
+//                            'url'  => '#',
+//                        ],
+//                        [
+//                            'text'    => 'Level Two',
+//                            'url'     => '#',
+//                            'submenu' => [
+//                                [
+//                                    'text' => 'Level Three',
+//                                    'url'  => '#',
+//                                ],
+//                                [
+//                                    'text' => 'Level Three',
+//                                    'url'  => '#',
+//                                ],
+//                            ],
+//                        ],
+//                    ],
+//                ],
+//                [
+//                    'text' => 'Level One',
+//                    'url'  => '#',
+//                ],
+//            ],
+//        ],
         'LABELS',
-        [
-            'text'       => 'Important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'Warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'Information',
-            'icon_color' => 'aqua',
-            'url'        => '/radares/novo '
-        ],
+//        [
+//            'text'       => 'Important',
+//            'icon_color' => 'red',
+//        ],
+//        [
+//            'text'       => 'Warning',
+//            'icon_color' => 'yellow',
+//        ],
+//        [
+//            'text'       => 'Information',
+//            'icon_color' => 'aqua',
+//            'url'        => '/radares/novo '
+//        ],
     ],
 
     /*

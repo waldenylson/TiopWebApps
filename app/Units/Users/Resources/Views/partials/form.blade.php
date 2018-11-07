@@ -7,7 +7,6 @@
         </ul>
     </div>
 @endif
-{{--{{ dd($bds) }}--}}
 
 <div class="form-group well">
     <div class="row">
@@ -19,9 +18,9 @@
             {!! Form::label('nome_guerra', 'Nome Guerra', ['class' => 'control-label']) !!}
             {!! Form::text('nome_guerra', null, ['class' => 'form-control', 'id' => 'nome_guerra', 'placeholder' => 'Nome Guerra']) !!}
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             {!! Form::label('saram', 'Saram', ['class' => 'control-label']) !!}
-            {!! Form::text('saram', null, ['class' => 'form-control', 'id' => 'saram', 'placeholder' => 'Saram']) !!}
+            {!! Form::text('saram', null, ['class' => 'form-control masked-saram', 'id' => 'saram', 'placeholder' => 'Saram']) !!}
         </div>
     </div><br>
     <div class="row">
@@ -53,13 +52,13 @@
     <div class="row">
         <div class="col-md-2">
             {!! Form::label('cpf', 'CPF', ['class' => 'control-label']) !!}
-            {!! Form::text('cpf', null, ['class' => 'form-control masked-', 'id' => 'cpf', 'placeholder' => 'CPF']) !!}
+            {!! Form::text('cpf', null, ['class' => 'form-control masked-cpf', 'id' => 'cpf', 'placeholder' => 'CPF']) !!}
         </div>
         <div class="col-md-4">
             {!! Form::label('email', 'E-Mail', ['class' => 'control-label']) !!}
             {!! Form::text('email', null, ['class' => 'form-control', 'id' => 'email', 'placeholder' => 'E-Mail']) !!}
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <div class="form-group">
                 {!! Form::label('data_nascimento', 'Data Nascimento', ['class' => 'control-label']) !!}
                 <div class="input-group date datepicker">

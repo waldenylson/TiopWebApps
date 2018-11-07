@@ -22,6 +22,7 @@ $(document).ready(function()
     $('.masked-time-input').mask('00:00', {placeholder: 'HH:MM'});
     $('.masked-cel-phone').mask('(00)00000-0000', {placeholder: '(99)99999-9999'});
     $('.masked-cpf').mask('000.000.000-00', {placeholder: '999.999.999-99'});
+    $('.masked-saram').mask('000000-0', {placeholder: '999999-9'});
 
     $("a.btn-remover").click(function(e)
     {

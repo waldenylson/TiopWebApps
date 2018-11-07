@@ -8,8 +8,8 @@
         Editar Cadastro Usuário
     </h2>
     <hr />
-
-    {!! Form::model($usuario, ['route' => ['users.update', $usuario->id]]) !!}
+{{--    {{ dd($user) }}--}}
+    {!! Form::model($user, ['route' => ['users.update', $user->id]]) !!}
     @include('users::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar

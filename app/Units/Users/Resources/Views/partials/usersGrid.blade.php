@@ -18,11 +18,11 @@
                 <td>{!! $usuario->agenda      !!} </td>
 
                 <td width="1%" nowrap>
-                    <a href="{!! route('rpl.edit', $usuario->id) !!}" class="btn btn-primary btn-xs fancybox">
+                    <a href="{!! route('users.edit', $usuario->id) !!}" class="btn btn-primary btn-xs fancybox">
                         <i class="fa fa-pencil"></i> editar
                     </a>
 
-                    <a href="{!! route('rpl.destroy', $usuario->id) !!}" class="btn btn-danger btn-xs btn-remover">
+                    <a href="{!! route('users.destroy', $usuario->id) !!}" class="btn btn-danger btn-xs btn-remover">
                         <i class="fa fa-remove"></i> remover
                     </a>
                 </td>

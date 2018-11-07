@@ -1,10 +1,6 @@
 <?php namespace TIOp\Domains\Users\Providers;
 
 use Codecasts\Support\Domain\ServiceProvider;
-use TIOp\Domains\Users\Database\Factories\UserFactory;
-use TIOp\Domains\Users\Database\Migrations\CreateUsersTable;
-use TIOp\Domains\Users\Database\Migrations\CreatePasswordResetsTable;
-use TIOp\Domains\Users\Database\Seeders\UsersSeeder;
 use TIOp\Domains\Users\Contracts;
 use TIOp\Domains\Users\Repositories;
 
@@ -25,16 +21,9 @@ class DomainServiceProvider extends ServiceProvider
         Contracts\UserRepository::class => Repositories\UserRepository::class,
     ];
 
-    protected $migrations = [
-        CreateUsersTable::class,
-        CreatePasswordResetsTable::class,
-    ];
+    protected $migrations = [];
 
-    protected $seeders = [
-        UsersSeeder::class,
-    ];
+    protected $seeders = [];
 
-    protected $factories = [
-        UserFactory::class,
-    ];
+    protected $factories = [];
 }

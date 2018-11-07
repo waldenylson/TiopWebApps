@@ -1,13 +1,21 @@
 <?php namespace TIOp\Units\Users\Controllers;
 
 use Codecasts\Support\Http\Controller;
+use TIOp\Domains\Users\Contracts\UserRepository;
 use TIOp\Units\Users\Requests\StoreUsersPostRequest;
 
 class UsersController extends Controller
 {
+    protected $usersRepository;
+
+    public function __construct(UserRepository $repository)
+    {
+        $this->usersRepository = $repository;
+    }
+
     public function index()
     {
-        $usuarios =  [];
+        $usuarios = $this->usersRepository->listUsers();
 
         //dd($Users);
 
@@ -27,7 +35,7 @@ class UsersController extends Controller
      */
     public function store(StoreUsersPostRequest $request)
     {
-        $result = $this->UsersRepository->store($request);
+        $result = $this->usersRepository->store($request);
 
         if ($result)
         {
@@ -46,10 +54,9 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $Users = $this->UsersRepository->edit($id);
-        $bdsCadastradas = $this->bdsRepository->getBDSForSelect();
+        $user = $this->usersRepository->edit($id);
 
-        return view('Users::edit')->with(compact('Users'))->with(compact('bdsCadastradas'));
+        return view('users::edit')->with(compact('user'));
     }
 
 
@@ -61,7 +68,7 @@ class UsersController extends Controller
      */
     public function update(StoreUsersPostRequest $request, $id)
     {
-        $result = $this->UsersRepository->persistUpdate($request, $id);
+        $result = $this->usersRepository->persistUpdate($request, $id);
 
         if ($result)
         {
@@ -80,7 +87,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $result = $this->UsersRepository->destroy($id);
+        $result = $this->usersRepository->destroy($id);
 
         if ($result) {
             return redirect()->back()->with('message', 'Registro Removido com Sucesso!');

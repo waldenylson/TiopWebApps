@@ -14,26 +14,36 @@ class UserRepository extends AbstractCrudRepository implements UserRepositoryCon
 
     public function listUsers()
     {
-        // TODO: Implement listUsers() method.
+        $user = $this->modelClass::all();
+
+        return $user;
     }
 
     public function store(StoreUsersPostRequest $request)
     {
-        // TODO: Implement store() method.
+        $user = $this->modelClass::create($request->all());
+
+        return $user;
     }
 
     public function edit($id)
     {
-        // TODO: Implement edit() method.
+        $user = $this->modelClass::findOrFail($id);
+
+        return $user;
     }
 
     public function persistUpdate(StoreUsersPostRequest $request, $id)
     {
-        // TODO: Implement persistUpdate() method.
+        $user = $this->modelClass::findOrFail($id)->update($request->all());
+
+        return $user;
     }
 
     public function destroy($id)
     {
-        // TODO: Implement destroy() method.
+        $user = $this->modelClass::findOrFail($id);
+
+        return $user->delete();
     }
 }
