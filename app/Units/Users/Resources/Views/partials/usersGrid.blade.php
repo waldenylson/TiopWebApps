@@ -25,6 +25,10 @@
                     <a href="{!! route('users.destroy', $usuario->id) !!}" class="btn btn-danger btn-xs btn-remover">
                         <i class="fa fa-remove"></i> remover
                     </a>
+
+                    <a href="{!! route('users.index', $usuario->id) !!}" class="btn btn-success btn-xs">
+                        <i class="fa fa-key"></i> Criar Login
+                    </a>
                 </td>
             </tr>
         @endforeach
