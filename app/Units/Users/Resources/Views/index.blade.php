@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SisGATO - Manutenção Cadastro Usuários')
+@section('title', 'SisTIOp - Manutenção Cadastro Usuários')
 
 @section('content_header')
     <div class="icon">
