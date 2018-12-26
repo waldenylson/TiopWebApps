@@ -1,24 +1,24 @@
-<?php namespace TIOp\Units\Centros\Controllers;
+<?php namespace TIOp\Units\MntProgramadas\Controllers;
 
 use Codecasts\Support\Http\Controller;
-use TIOp\Domains\Centros\Contracts\CentrosRepository;
-use TIOp\Units\Centros\Requests\StoreMntProgramadasPostRequest;
+use TIOp\Domains\MntProgramadas\Contracts\MntProgramadasRepository;
+use TIOp\Units\MntProgramadas\Requests\StoreMntProgramadasPostRequest;
 
-class CentrosController extends Controller
+class MntProgramadasController extends Controller
 {
     /**
      * @var RadarRepository
      */
-    protected $centrosRepository;
+    protected $mntProgramadasRepository;
 
     /**
      * Create a new controller instance.
      *
      * @param RadarRepository $repository
      */
-    public function __construct(CentrosRepository $repository)
+    public function __construct(MntProgramadasRepository $repository)
     {
-        $this->centrosRepository = $repository;
+        $this->mntProgramadasRepository = $repository;
     }
 
     /**
@@ -28,19 +28,19 @@ class CentrosController extends Controller
      */
     public function index()
     {
-        $centros = $this->centrosRepository->listCentros();
+        $mntProgramadas = $this->mntProgramadasRepository->listMntProgramadas();
 
-        return view('centros::index')->with(compact('centros'));
+        return view('mntProgramadas::index')->with(compact('mntProgramadas'));
     }
 
     /**
-     *  Carrega o formulário de cadastro de radar
+     *  Carrega o formulário de cadastro
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        return view('centros::create');
+        return view('mntProgramadas::create');
     }
 
     /**
@@ -51,7 +51,7 @@ class CentrosController extends Controller
      */
     public function store(StoreMntProgramadasPostRequest $request)
     {
-        $result = $this->centrosRepository->store($request);
+        $result = $this->mntProgramadasRepository->store($request);
 
         if ($result)
         {
@@ -70,9 +70,9 @@ class CentrosController extends Controller
      */
     public function edit($id)
     {
-        $centro = $this->centrosRepository->edit($id);
+        $mntProg = $this->mntProgramadasRepository->edit($id);
 
-        return view('centros::edit')->with(compact('centro'));
+        return view('mntProgramadas::edit')->with(compact('mntProg'));
     }
 
 
@@ -84,7 +84,7 @@ class CentrosController extends Controller
      */
     public function update(StoreMntProgramadasPostRequest $request, $id)
     {
-        $result = $this->centrosRepository->persistUpdate($request, $id);
+        $result = $this->mntProgramadasRepository->persistUpdate($request, $id);
 
         if ($result)
         {
@@ -103,7 +103,7 @@ class CentrosController extends Controller
      */
     public function destroy($id)
     {
-        $result = $this->centrosRepository->destroy($id);
+        $result = $this->mntProgramadasRepository->destroy($id);
 
         if ($result) {
             return redirect()->back()->with('message', 'Registro Removido com Sucesso!');

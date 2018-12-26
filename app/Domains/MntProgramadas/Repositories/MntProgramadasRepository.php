@@ -1,18 +1,18 @@
-<?php namespace TIOp\Domains\Centros\Repositories;
+<?php namespace TIOp\Domains\MntProgramadas\Repositories;
 
 use Artesaos\Warehouse\Traits\ImplementsFractal;
-use TIOp\Domains\Centros\Contracts\CentrosRepository as CentrosRepositoryContract;
+use TIOp\Domains\MntProgramadas\Contracts\MntProgramadasRepository as MntProgramadasRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
-use TIOp\Domains\Centros\Centros;
-use TIOp\Units\Centros\Requests\StoreMntProgramadasPostRequest;
+use TIOp\Domains\MntProgramadas\MntProgramadas;
+use TIOp\Units\MntProgramadas\Requests\StoreMntProgramadasPostRequest;
 
-class CentrosRepository extends AbstractCrudRepository implements CentrosRepositoryContract
+class MntProgramadasRepository extends AbstractCrudRepository implements MntProgramadasRepositoryContract
 {
     use ImplementsFractal;
 
-    protected $modelClass       = Centros::class;
+    protected $modelClass       = MntProgramadas::class;
 
-    public function listCentros()
+    public function listMntProgramadas()
     {
         return $this->modelClass::all();
     }
@@ -43,18 +43,5 @@ class CentrosRepository extends AbstractCrudRepository implements CentrosReposit
         $centro = $this->modelClass::findOrFail($id);
 
         return $centro->delete();
-    }
-
-    public function getAllCentrosForSelect()
-    {
-        $baseArray = $this->modelClass::all();
-        $centros = array();
-
-        foreach($baseArray as $value)
-        {
-            $centros[$value->id] = $value->acronimo;
-        }
-
-        return $centros;
     }
 }

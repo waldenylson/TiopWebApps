@@ -5,7 +5,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 use TIOp\Domains\Centros\Repositories\CentrosRepository;
 use TIOp\Units\Centros\Controllers\CentrosController;
-use TIOp\Units\Centros\Requests\StoreCentrosPostRequest;
+use TIOp\Units\Centros\Requests\StoreMntProgramadasPostRequest;
 
 class CentrosTest extends TestCase
 {
@@ -24,7 +24,7 @@ class CentrosTest extends TestCase
     {
         $this->beginDatabaseTransaction();
 
-        $request = new StoreCentrosPostRequest($this->data);
+        $request = new StoreMntProgramadasPostRequest($this->data);
 
         $controller = new CentrosController(new CentrosRepository());
 
@@ -42,7 +42,7 @@ class CentrosTest extends TestCase
         $this->data['id'] = 1;
         $this->data['nome'] = 'TesteCentroUpdateController';
 
-        $request = new StoreCentrosPostRequest($this->data);
+        $request = new StoreMntProgramadasPostRequest($this->data);
 
         $controller = new CentrosController(new CentrosRepository());
 
@@ -63,7 +63,7 @@ class CentrosTest extends TestCase
         $this->data['id'] = 1;
         $this->data['nome'] = 'TesteCentroDestroyController';
 
-        $request = new StoreCentrosPostRequest($this->data);
+        $request = new StoreMntProgramadasPostRequest($this->data);
 
         $controller = new CentrosController(new CentrosRepository());
 

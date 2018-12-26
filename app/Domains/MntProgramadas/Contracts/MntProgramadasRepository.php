@@ -1,17 +1,16 @@
-<?php namespace TIOp\Domains\Centros\Contracts;
+<?php namespace TIOp\Domains\MntProgramadas\Contracts;
 
 use Artesaos\Warehouse\Contracts\Segregated\CrudRepository;
-use TIOp\Units\Centros\Requests\StoreMntProgramadasPostRequest;
+use TIOp\Units\MntProgramadas\Requests\StoreMntProgramadasPostRequest;
 
 /**
  *  User Interface Contracts
  */
-interface CentrosRepository extends CrudRepository
+interface MntProgramadasRepository extends CrudRepository
 {
-    public function listCentros();
+    public function listMntProgramadas();
     public function store(StoreMntProgramadasPostRequest $request);
     public function edit($id);
     public function persistUpdate(StoreMntProgramadasPostRequest $request, $id);
     public function destroy($id);
-    public function getAllCentrosForSelect();
 }
