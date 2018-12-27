@@ -9,16 +9,26 @@
 @endif
 
 <div class="form-group well">
+    {!! Form::hidden('efetivo_id', null, ['class' => 'form-control', 'id' => 'efetivo_id', 'placeholder' => 'Lançado por']) !!}
     <div class="row">
         <div class="col-md-2">
             {!! Form::label('radar_id', 'RADAR', ['class' => 'control-label']) !!}
-            {!! Form::text('radar_id', null, ['class' => 'form-control', 'id' => 'radar_id', 'placeholder' => 'RADAR']) !!}
+            {!! !empty($mntProg) ? Form::select('radar_id', $radares, $mntProg->radar_id,
+                                            ['class' => 'form-control', 'id' => 'radar_id'])
+                                    : Form::select('radar_id', $radares, null,
+                                            ['class' => 'form-control', 'id' => 'radar_id'])
+            !!}
         </div>
-        {!! Form::hidden('efetivo_id', null, ['class' => 'form-control', 'id' => 'efetivo_id', 'placeholder' => 'Lançado por']) !!}
         <div class="col-md-2">
             {!! Form::label('localidade', 'Localidade', ['class' => 'control-label']) !!}
             {!! Form::text('localidade', null, ['class' => 'form-control', 'id' => 'localidade', 'placeholder' => 'Localidade']) !!}
         </div>
+        <div class="col-md-4">
+            {!! Form::label('motivo', 'MOTIVO', ['class' => 'control-label']) !!}
+            {!! Form::text('motivo', null, ['class' => 'form-control', 'id' => 'motivo', 'placeholder' => 'Motivo']) !!}
+        </div>
+    </div><br>
+    <div class="row">
         <div class="col-md-2">
             <div class="form-group">
                 {!! Form::label('data_ini', 'Data Início', ['class' => 'control-label']) !!}
@@ -65,7 +75,7 @@
         </div>
     </div><br>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             {!! Form::label('observacoes', 'Observações', ['class' => 'control-label']) !!}
             {!! Form::textArea('observacoes', null, ['class' => 'form-control', 'id' => 'observacoes']) !!}
         </div>

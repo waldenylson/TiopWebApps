@@ -13,4 +13,5 @@ interface UserRepository extends CrudRepository
     public function edit($id);
     public function persistUpdate(StoreUsersPostRequest $request, $id);
     public function destroy($id);
+    public function getAllUsersForSelect();
 }

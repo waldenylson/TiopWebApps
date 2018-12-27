@@ -2,6 +2,8 @@
 
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\MntProgramadas\Contracts\MntProgramadasRepository;
+use TIOp\Domains\Radars\Contracts\RadarRepository;
+use TIOp\Domains\Users\Contracts\UserRepository;
 use TIOp\Units\MntProgramadas\Requests\StoreMntProgramadasPostRequest;
 
 class MntProgramadasController extends Controller
@@ -11,14 +13,21 @@ class MntProgramadasController extends Controller
      */
     protected $mntProgramadasRepository;
 
+    protected $radarRepository;
+    protected $userRepository;
+
     /**
      * Create a new controller instance.
      *
      * @param RadarRepository $repository
      */
-    public function __construct(MntProgramadasRepository $repository)
+    public function __construct(MntProgramadasRepository $repository,
+                                 RadarRepository $radarRepository,
+                                 UserRepository $userRepository)
     {
         $this->mntProgramadasRepository = $repository;
+        $this->radarRepository = $radarRepository;
+        $this->userRepository = $userRepository;
     }
 
     /**
@@ -40,7 +49,9 @@ class MntProgramadasController extends Controller
      */
     public function create()
     {
-        return view('mntProgramadas::create');
+        $radares = $this->radarRepository->getAllRadaresForSelect();
+
+        return view('mntProgramadas::create')->with(compact('radares'));
     }
 
     /**

@@ -46,4 +46,17 @@ class UserRepository extends AbstractCrudRepository implements UserRepositoryCon
 
         return $user->delete();
     }
+
+    public function getAllUsersForSelect()
+    {
+        $baseArray = $this->modelClass::all();
+        $users = array();
+
+        foreach($baseArray as $value)
+        {
+            $users[$value->id] = $value->posto_gradu . $value->nome_guerra;
+        }
+
+        return $users;
+    }
 }
