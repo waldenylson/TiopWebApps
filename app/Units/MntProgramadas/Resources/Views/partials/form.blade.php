@@ -9,7 +9,7 @@
 @endif
 
 <div class="form-group well">
-    {!! Form::hidden('efetivo_id', null, ['class' => 'form-control', 'id' => 'efetivo_id', 'placeholder' => 'Lançado por']) !!}
+    {!! Form::hidden('efetivo_id', 1, ['id' => 'efetivo_id']) !!}
     <div class="row">
         <div class="col-md-2">
             {!! Form::label('radar_id', 'RADAR', ['class' => 'control-label']) !!}
@@ -23,6 +23,7 @@
             {!! Form::label('localidade', 'Localidade', ['class' => 'control-label']) !!}
             {!! Form::text('localidade', null, ['class' => 'form-control', 'id' => 'localidade', 'placeholder' => 'Localidade']) !!}
         </div>
+
         <div class="col-md-4">
             {!! Form::label('motivo', 'MOTIVO', ['class' => 'control-label']) !!}
             {!! Form::text('motivo', null, ['class' => 'form-control', 'id' => 'motivo', 'placeholder' => 'Motivo']) !!}

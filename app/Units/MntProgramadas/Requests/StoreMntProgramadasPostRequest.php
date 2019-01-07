@@ -22,21 +22,27 @@ class StoreMntProgramadasPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome'      	=> 'required|min:3',
-            'acronimo'      => 'required|min:5',
-            'localidade'  	=> 'required|min:6'
+            'radar_id'    => 'required',
+            'efetivo_id'  => 'required',
+            'motivo'      => 'required|min:10',
+            'data_ini'    => 'required|',
+            'data_fim'    => 'required|',
+            'hora_ini'    => 'required|',
+            'hora_fim'    => 'required|',
         ];
     }
 
     public function messages()
     {
         return [
-            'nome.required'     	=> 'Campo Nome é Obrigatório!',
-            'nome.min'          	=> 'O campo Nome deve ter pelo menos :min caracteres!',
-            'acronomo.required'     => 'Campo Acrônimo é Obrigatório!',
-            'acronomo.min'          => 'O campo Acrônimo deve ter pelo menos :min caracteres!',
-            'localidade.required'   => 'Campo Localidade é Obrigatório!',
-            'localidade.min'        => 'O campo Localidade deve ter pelo menos :min caracteres!',
+            'radar_id.required'     => 'Campo Radar é Obrigatório!',
+            'efetivo_id'          	=> 'Dados de controle faltando, acione suporte técnico!',
+            'motivo.required'       => 'Campo Motivo é Obrigatório!',
+            'motivo.min'            => 'Campo Motivo deve ter pelo menos :min caracteres!',
+            'data_ini.required'     => 'Campo Data Início é Obrigatório!',
+            'data_fim.required'     => 'Campo Data Final é Obrigatório!',
+            'hora_ini.required'     => 'Campo Hora Início é Obrigatório!',
+            'hora_fim.required'     => 'Campo Hora Final é Obrigatório!',
         ];
     }
 }
