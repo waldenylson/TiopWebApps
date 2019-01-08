@@ -4942,7 +4942,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.inf-sistemas[data-v-4c281925] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -20px;\n    width: 450px;\n}\n", ""]);
+exports.push([module.i, "\n.inf-sistemas[data-v-4c281925] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -20px;\n    width: 450px;\n}\n.less-font[data-v-4c281925] {\n    font-size: 24px;\n}\n", ""]);
 
 // exports
 
@@ -22575,7 +22575,11 @@ var render = function() {
                 _vm._v(" "),
                 _c("i", { staticClass: "fa fa-info-circle" }, [
                   _vm._v("  VER: "),
-                  _c("b", [_vm._v(_vm._s(infSis["versao"]))])
+                  _c("b", [
+                    _c("span", { staticClass: "less-font" }, [
+                      _vm._v(_vm._s(infSis["versao"]))
+                    ])
+                  ])
                 ]),
                 _c("br"),
                 _vm._v(" "),

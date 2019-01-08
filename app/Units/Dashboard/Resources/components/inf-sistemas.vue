@@ -11,7 +11,7 @@
             <div class="box box-title">ACC-RE</div>
             <div class="box box-bg-color" v-for="infSis in dadosInfSistemas" v-if="(infSis['sigla'] === 'ACC-RE') ">
                 <i class="fa fa-code">&nbsp;STM: <b><i>{{ infSis['sistema'] }}</i></b></i><br />
-                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b>{{ infSis['versao'] }}</b></i><br />
+                <i class="fa fa-info-circle">&nbsp;&nbsp;VER: <b><span class="less-font">{{ infSis['versao'] }}</span></b></i><br />
                 <i class="fa fa-database">&nbsp;&nbsp;BDS: <b>{{ infSis['v-bds'] }}</b></i><br />
                 <i class="fa fa-calendar">&nbsp;&nbsp;ATL: <b>{{ infSis['dt-atualiza'] | moment("DD/MM/YYYY") }}</b></i>
             </div>
@@ -76,5 +76,9 @@
         padding-top: 20px;
         margin-bottom: -20px;
         width: 450px;
+    }
+
+    .less-font {
+        font-size: 24px;
     }
 </style>
