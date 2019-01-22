@@ -10,7 +10,7 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
 {
     use ImplementsFractal;
 
-    protected $modelClass       = MntProgramadas::class;
+    protected $modelClass = MntProgramadas::class;
 
     public function listMntProgramadas()
     {

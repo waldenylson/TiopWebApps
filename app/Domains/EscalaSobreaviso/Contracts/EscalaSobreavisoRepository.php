@@ -1,4 +1,4 @@
-<?php namespace TIOp\Domains\EscalaSobraviso\Contracts;
+<?php namespace TIOp\Domains\EscalaSobreaviso\Contracts;
 
 use Artesaos\Warehouse\Contracts\Segregated\CrudRepository;
 use TIOp\Units\EscalaSobraviso\Requests\StoreEscalaSobravisoPostRequest;
@@ -6,7 +6,7 @@ use TIOp\Units\EscalaSobraviso\Requests\StoreEscalaSobravisoPostRequest;
 /**
  *  User Interface Contracts
  */
-interface EscalaSobravisoRepository extends CrudRepository
+interface EscalaSobreavisoRepository extends CrudRepository
 {
     public function listEscalaSobraviso();
     public function store(StoreEscalaSobravisoPostRequest $request);
