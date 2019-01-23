@@ -9,6 +9,7 @@ use TIOp\Units\Users\Requests\StoreUsersPostRequest;
 interface UserRepository extends CrudRepository
 {
     public function listUsers();
+    public function findSingleUser($id);
     public function store(StoreUsersPostRequest $request);
     public function edit($id);
     public function persistUpdate(StoreUsersPostRequest $request, $id);

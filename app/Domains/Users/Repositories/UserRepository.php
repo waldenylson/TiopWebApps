@@ -19,6 +19,11 @@ class UserRepository extends AbstractCrudRepository implements UserRepositoryCon
         return $user;
     }
 
+    public function findSingleUser($id)
+    {
+        return $this->modelClass::findOrFail($id);
+    }
+
     public function store(StoreUsersPostRequest $request)
     {
         $user = $this->modelClass::create($request->all());

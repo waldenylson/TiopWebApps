@@ -2,23 +2,42 @@
 
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\EscalaSobreaviso\Contracts\EscalaSobreavisoRepository;
+use TIOp\Domains\Users\Contracts\UserRepository;
 use TIOp\Units\EscalaSobreaviso\Requests\StoreEscalaSobreavisoPostRequest;
 
 class EscalaSobreavisoController extends Controller
 {
+
+    private $meses = [
+        ['1'  => 'Janeiro'],
+        ['2'  => 'Fevereiro'],
+        ['3'  => 'Março'],
+        ['4'  => 'Abril'],
+        ['5'  => 'Maio'],
+        ['6'  => 'Junho'],
+        ['7'  => 'Julho'],
+        ['8'  => 'Agosto'],
+        ['9'  => 'Setembro'],
+        ['10' => 'Outubro'],
+        ['11' => 'Novembro'],
+        ['12' => 'Dezembro'],
+    ];
+
+
     /**
      * @var RadarRepository
      */
-    protected $EscalaSobreavisoRepository;
+    protected $escalaSobreavisoRepository, $usersRepository;
 
     /**
      * Create a new controller instance.
      *
      * @param RadarRepository $repository
      */
-    public function __construct(EscalaSobreavisoRepository $repository)
+    public function __construct(EscalaSobreavisoRepository $repository, UserRepository $userRepository)
     {
-        $this->EscalaSobreavisoRepository = $repository;
+        $this->escalaSobreavisoRepository = $repository;
+        $this->usersRepository = $userRepository;
     }
 
     /**
@@ -28,9 +47,9 @@ class EscalaSobreavisoController extends Controller
      */
     public function index()
     {
-        $EscalaSobreaviso = $this->EscalaSobreavisoRepository->listEscalaSobreaviso();
+        return $escalaSobreaviso = $this->escalaSobreavisoRepository->listEscalaSobreaviso();
 
-        return view('EscalaSobreaviso::index')->with(compact('EscalaSobreaviso'));
+        //return view('sobreaviso::index')->with(compact('escalaSobreaviso'));
     }
 
     /**
@@ -38,9 +57,12 @@ class EscalaSobreavisoController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function create()
+    public function create($id)
     {
-        return view('EscalaSobreaviso::create');
+        $user  = $this->usersRepository->findSingleUser($id);
+        $meses = $this->meses;
+
+        return view('sobreaviso::create')->with(compact('user'))->with(compact('meses'));
     }
 
     /**
@@ -51,7 +73,7 @@ class EscalaSobreavisoController extends Controller
      */
     public function store(StoreEscalaSobreavisoPostRequest $request)
     {
-        $result = $this->EscalaSobreavisoRepository->store($request);
+        $result = $this->escalaSobreavisoRepository->store($request);
 
         if ($result)
         {
@@ -70,9 +92,9 @@ class EscalaSobreavisoController extends Controller
      */
     public function edit($id)
     {
-        $centro = $this->EscalaSobreavisoRepository->edit($id);
+        $centro = $this->escalaSobreavisoRepository->edit($id);
 
-        return view('EscalaSobreaviso::edit')->with(compact('centro'));
+        return view('sobreaviso::edit')->with(compact('centro'));
     }
 
 
@@ -84,7 +106,7 @@ class EscalaSobreavisoController extends Controller
      */
     public function update(StoreEscalaSobreavisoPostRequest $request, $id)
     {
-        $result = $this->EscalaSobreavisoRepository->persistUpdate($request, $id);
+        $result = $this->escalaSobreavisoRepository->persistUpdate($request, $id);
 
         if ($result)
         {
@@ -103,7 +125,7 @@ class EscalaSobreavisoController extends Controller
      */
     public function destroy($id)
     {
-        $result = $this->EscalaSobreavisoRepository->destroy($id);
+        $result = $this->escalaSobreavisoRepository->destroy($id);
 
         if ($result) {
             return redirect()->back()->with('message', 'Registro Removido com Sucesso!');
