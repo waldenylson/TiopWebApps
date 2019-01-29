@@ -25,5 +25,6 @@ class Api extends RouteFile
         $this->router->get('/getEfetivo',  ['as' => 'dashboard.getEfetivo', 'uses' => 'SinopticoController@getEfetivoTiop']);
         $this->router->get('/getInfSis',   ['as' => 'dashboard.getInfSis',  'uses' => 'SinopticoController@getInfSistemasData']);
         $this->router->get('/getRPLInfo',  ['as' => 'dashboard.getRPLInfo', 'uses' => 'SinopticoController@getRPLInfo']);
+        $this->router->get('/getSobreaviso',  ['as' => 'dashboard.getSobreaviso', 'uses' => 'SinopticoController@getSobreaviso']);
     }
 }

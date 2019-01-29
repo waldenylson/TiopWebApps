@@ -9,6 +9,7 @@ use TIOp\Units\EscalaSobreaviso\Requests\StoreEscalaSobreavisoPostRequest;
 interface EscalaSobreavisoRepository extends CrudRepository
 {
     public function listEscalaSobreaviso();
+    public function getSobreavisoDia();
     public function store(StoreEscalaSobreavisoPostRequest $request);
     public function edit($id);
     public function persistUpdate(StoreEscalaSobreavisoPostRequest $request, $id);

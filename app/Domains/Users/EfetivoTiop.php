@@ -3,6 +3,7 @@
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Carbon\Carbon;
+use TIOp\Domains\EscalaSobreaviso\EscalaSobreaviso;
 use TIOp\Support\Carbon\Traits\Eloquent\HasDateFieldsTrait;
 
 class EfetivoTiop extends Authenticatable
@@ -37,6 +38,11 @@ class EfetivoTiop extends Authenticatable
 
     public function users()
     {
-        return $this->belongsTo(Users::class, 'efetivo_tiop_id', 'id');
+        return $this->hasMany(Users::class, 'efetivo_tiop_id', 'id');
+    }
+
+    public function efetivoTiop()
+    {
+        return $this->hasMany(EscalaSobreaviso::class, 'efetivo_id', 'id');
     }
 }

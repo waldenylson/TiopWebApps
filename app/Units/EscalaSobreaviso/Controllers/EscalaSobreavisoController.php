@@ -2,6 +2,7 @@
 
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\EscalaSobreaviso\Contracts\EscalaSobreavisoRepository;
+use TIOp\Domains\EscalaSobreaviso\EscalaSobreaviso;
 use TIOp\Domains\Users\Contracts\UserRepository;
 use TIOp\Units\EscalaSobreaviso\Requests\StoreEscalaSobreavisoPostRequest;
 
@@ -9,18 +10,18 @@ class EscalaSobreavisoController extends Controller
 {
 
     private $meses = [
-        ['1'  => 'Janeiro'],
-        ['2'  => 'Fevereiro'],
-        ['3'  => 'Março'],
-        ['4'  => 'Abril'],
-        ['5'  => 'Maio'],
-        ['6'  => 'Junho'],
-        ['7'  => 'Julho'],
-        ['8'  => 'Agosto'],
-        ['9'  => 'Setembro'],
-        ['10' => 'Outubro'],
-        ['11' => 'Novembro'],
-        ['12' => 'Dezembro'],
+        '1'  => 'Janeiro',
+        '2'  => 'Fevereiro',
+        '3'  => 'Março',
+        '4'  => 'Abril',
+        '5'  => 'Maio',
+        '6'  => 'Junho',
+        '7'  => 'Julho',
+        '8'  => 'Agosto',
+        '9'  => 'Setembro',
+        '10' => 'Outubro',
+        '11' => 'Novembro',
+        '12' => 'Dezembro',
     ];
 
 
@@ -47,9 +48,10 @@ class EscalaSobreavisoController extends Controller
      */
     public function index()
     {
-        return $escalaSobreaviso = $this->escalaSobreavisoRepository->listEscalaSobreaviso();
+        $escalaSobreaviso = $this->escalaSobreavisoRepository->listEscalaSobreaviso();
 
-        //return view('sobreaviso::index')->with(compact('escalaSobreaviso'));
+
+        return view('sobreaviso::index')->with(compact('escalaSobreaviso'));
     }
 
     /**
@@ -75,12 +77,13 @@ class EscalaSobreavisoController extends Controller
     {
         $result = $this->escalaSobreavisoRepository->store($request);
 
-        if ($result)
-        {
-            return redirect()->back()->with('message', 'Registro Inserido com Sucesso!');
-        }
+
+        return ($result == 0) ? redirect()->back()->with('error', 'Já existe uma Escala Cadastrada para este Mês!') :
+                         redirect()->back()->with('message', 'Registro Inserido com Sucesso!');
+
 
         return redirect()->back()->with('error', 'Erro ao Tentar Inserir o Registro!');
+
     }
 
 
@@ -92,9 +95,14 @@ class EscalaSobreavisoController extends Controller
      */
     public function edit($id)
     {
-        $centro = $this->escalaSobreavisoRepository->edit($id);
+        $sobreaviso = $this->escalaSobreavisoRepository->edit($id);
 
-        return view('sobreaviso::edit')->with(compact('centro'));
+        $user  = $this->usersRepository->findSingleUser($id);
+        $meses = $this->meses;
+
+        return view('sobreaviso::edit')->with(compact('sobreaviso'))
+                                             ->with(compact('user'))
+                                             ->with(compact('meses'));
     }
 
 

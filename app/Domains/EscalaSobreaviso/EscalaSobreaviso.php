@@ -1,9 +1,9 @@
-<?php namespace TIOp\Domains\EscalaSobraviso;
+<?php namespace TIOp\Domains\EscalaSobreaviso;
 
 use Illuminate\Database\Eloquent\Model;
 use TIOp\Domains\Users\EfetivoTiop;
 
-class EscalaSobraviso extends Model
+class EscalaSobreaviso extends Model
 {
     protected $table = 'escala_sobreaviso';
 
@@ -11,6 +11,6 @@ class EscalaSobraviso extends Model
 
     public function efetivoTiop()
     {
-        return $this->hasOne(EfetivoTiop::class, 'id', 'efetivo_id');
+        return $this->belongsTo(EfetivoTiop::class, 'efetivo_id', 'id');
     }
 }

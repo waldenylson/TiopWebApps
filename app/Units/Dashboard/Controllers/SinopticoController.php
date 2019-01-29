@@ -1,6 +1,8 @@
 <?php namespace TIOp\Units\Dashboard\Controllers;
 
 use Codecasts\Support\Http\Controller;;
+
+use TIOp\Domains\EscalaSobreaviso\Contracts\EscalaSobreavisoRepository;
 use TIOp\Domains\RPL\Contracts\RPLRepository;
 use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
 
@@ -50,11 +52,16 @@ class SinopticoController extends Controller
 
     protected $scRepository;
     protected $rplRepository;
+    protected $sobreavisoRepository;
 
-    public function __construct(SistemasCentrosRepository $scRepository, RPLRepository $rplRepository)
+    public function __construct(SistemasCentrosRepository $scRepository,
+                                RPLRepository $rplRepository,
+                                EscalaSobreavisoRepository $sobreavisoRepository)
     {
         $this->scRepository  = $scRepository;
         $this->rplRepository = $rplRepository;
+
+        $this->sobreavisoRepository = $sobreavisoRepository;
     }
 
     public function index()
@@ -83,5 +90,10 @@ class SinopticoController extends Controller
     public function getRPLInfo()
     {
         return json_encode($this->rplRepository->listRPL(), JSON_UNESCAPED_UNICODE);
+    }
+
+    public function getSobreaviso()
+    {
+        return json_encode($this->sobreavisoRepository->getSobreavisoDia(), JSON_UNESCAPED_UNICODE);
     }
 }

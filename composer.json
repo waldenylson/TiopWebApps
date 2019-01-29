@@ -16,7 +16,8 @@
         "laravelcollective/html": "^5.5",
         "laravellegends/pt-br-validator": "5.1.*",
         "league/fractal": "^0.17.0",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "symfony/polyfill-iconv": "^1.10"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",

@@ -22,14 +22,21 @@ class StoreEscalaSobreavisoPostRequest extends FormRequest
     public function rules()
     {
         return [
-            'radar_id'    => 'required',
+            'efetivo_id'    => 'required',
+            'mes'    => 'required',
+            'ano'    => 'required|min:4',
+            'dias'   => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'radar_id.required'     => 'Campo Radar é Obrigatório!',
+            'efetivo_id.required'     => 'Código Militar é Obrigatório!',
+            'mes.required'  => 'Campo Mês é Obrigatório!',
+            'ano.required'  => 'Campo Ano é Obrigatório!',
+            'ano.min'       => 'Ano deve conter :min dígitos',
+            'dias.required' => 'Campo dias de Serviço é Obrigatório!',
         ];
     }
 }

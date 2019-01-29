@@ -12,10 +12,10 @@
         <tbody>
         @foreach($usuarios as $usuario)
             <tr>
-                <td>{!! $usuario->posto_gradu !!} </td>
-                <td>{!! $usuario->nome_guerra !!} </td>
-                <td>{!! $usuario->email       !!} </td>
-                <td>{!! $usuario->agenda      !!} </td>
+                <td>{!! strtoupper($usuario->posto_gradu) !!} </td>
+                <td>{!! strtoupper($usuario->nome_guerra) !!} </td>
+                <td>{!! $usuario->email                   !!} </td>
+                <td>{!! strtoupper($usuario->agenda)      !!} </td>
 
                 <td width="1%" nowrap>
                     <a href="{!! route('users.edit', $usuario->id) !!}" class="btn btn-primary btn-xs fancybox">
@@ -26,8 +26,12 @@
                         <i class="fa fa-remove"></i> remover
                     </a>
 
-                    <a href="{!! route('users.index', $usuario->id) !!}" class="btn btn-success btn-xs">
-                        <i class="fa fa-key"></i> Criar Login
+                    {{--<a href="{!! route('users.index', $usuario->id) !!}" class="btn btn-success btn-xs">--}}
+                        {{--<i class="fa fa-key"></i> Criar Login--}}
+                    {{--</a>--}}
+
+                    <a href="{!! route('sobreaviso.create', $usuario->id) !!}" class="btn btn-info btn-xs fancybox">
+                        <i class="fa fa-clock-o"></i> SV Sobreaviso
                     </a>
                 </td>
             </tr>

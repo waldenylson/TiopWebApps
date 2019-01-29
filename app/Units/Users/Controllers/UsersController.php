@@ -17,8 +17,6 @@ class UsersController extends Controller
     {
         $usuarios = $this->usersRepository->listUsers();
 
-        //dd($Users);
-
         return view('users::index')->with(compact('usuarios'));
     }
 
