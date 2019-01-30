@@ -65,14 +65,34 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
 
     public function getSobreavisoDia()
     {
-//        $data = DB::table('escala_sobreaviso')->where('mes', date('m'))
-//                                               ->where('ano', date('Y'))->get();
+        $hora = date('G') -3;
 
-        $data = DB::select('');
+        $sobreaviso = [];
 
-        dd($data);
+        if( ($hora >= 0) and ($hora < 8) )
+        {
+            $dia = date('d') - 1;
 
+            $sobreaviso = DB::table('escala_sobreaviso')
+                ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')
+                ->where('dias', 'like', '%'.$dia)
+                ->where('mes', date('n'))
+                ->where('ano', date('Y'))
+                ->get();
+        }
+        else
+        {
 
+            $dia = date('d');
 
+            $sobreaviso = DB::table('escala_sobreaviso')
+                ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')
+                ->where('dias', 'like', '%'.$dia)
+                ->where('mes', date('n'))
+                ->where('ano', date('Y'))
+                ->get();
+        }
+
+        return $sobreaviso;
     }
 }

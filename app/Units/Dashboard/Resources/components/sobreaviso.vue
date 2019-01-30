@@ -8,8 +8,15 @@
                     </i>
                 </h3>
             </div>
-            <div class="panel-body center">
-                <b>3S BET SOBREAVISO ESCALADO</b>
+            <div class="panel-body center" v-for="sobreavisoInfo in dadosSobreaviso">
+                <b>
+                    {{
+                        sobreavisoInfo['posto_gradu'] + '&nbsp;' +
+                        sobreavisoInfo['especialidade'] + '&nbsp;' +
+                        sobreavisoInfo['nome_guerra'] + '&nbsp;' + ' - '+ '&nbsp;' +
+                        sobreavisoInfo['agenda']
+                    }}
+                </b>
             </div>
         </div>
     </div>
@@ -19,8 +26,24 @@
     export default {
         name: "tiop-sobreaviso",
 
+        data: function ()
+        {
+            return {
+                dadosSobreaviso: []
+            }
+        },
+
+        methods:
+        {
+            getSobreaviso: function ()
+            {
+                axios.get('/api/getSobreaviso').then(response => (this.dadosSobreaviso = response.data))
+            }
+        },
+
         mounted() {
             console.log('componente sobreaviso carregado...')
+            this.getSobreaviso()
         }
     }
 </script>

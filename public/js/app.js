@@ -2464,12 +2464,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "tiop-sobreaviso",
 
+    data: function data() {
+        return {
+            dadosSobreaviso: []
+        };
+    },
+
+    methods: {
+        getSobreaviso: function getSobreaviso() {
+            var _this = this;
+
+            axios.get('/api/getSobreaviso').then(function (response) {
+                return _this.dadosSobreaviso = response.data;
+            });
+        }
+    },
+
     mounted: function mounted() {
         console.log('componente sobreaviso carregado...');
+        this.getSobreaviso();
     }
 });
 
@@ -22394,25 +22418,48 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "sobreaviso" }, [
+    _c(
+      "div",
+      { staticClass: "panel panel-primary" },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._l(_vm.dadosSobreaviso, function(sobreavisoInfo) {
+          return _c("div", { staticClass: "panel-body center" }, [
+            _c("b", [
+              _vm._v(
+                "\n                " +
+                  _vm._s(
+                    sobreavisoInfo["posto_gradu"] +
+                      " " +
+                      sobreavisoInfo["especialidade"] +
+                      " " +
+                      sobreavisoInfo["nome_guerra"] +
+                      " " +
+                      " - " +
+                      " " +
+                      sobreavisoInfo["agenda"]
+                  ) +
+                  "\n            "
+              )
+            ])
+          ])
+        })
+      ],
+      2
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "sobreaviso" }, [
-      _c("div", { staticClass: "panel panel-primary" }, [
-        _c("div", { staticClass: "panel-heading" }, [
-          _c("h3", { staticClass: "panel-title" }, [
-            _c("i", { staticClass: "fa fa-bell titulo" }, [
-              _c("b", [_vm._v(" SOBREAVISO TÉCNICO")])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "panel-body center" }, [
-          _c("b", [_vm._v("3S BET SOBREAVISO ESCALADO")])
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h3", { staticClass: "panel-title" }, [
+        _c("i", { staticClass: "fa fa-bell titulo" }, [
+          _c("b", [_vm._v(" SOBREAVISO TÉCNICO")])
         ])
       ])
     ])

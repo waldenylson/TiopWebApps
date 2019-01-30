@@ -225,6 +225,25 @@ return [
             ],
         ],
 
+        'TIOP',
+        [
+            'text' => 'SOBREAVISO',
+            'icon'    => 'users',
+            'submenu' => [
+                [
+                    'text' => 'Listar Todos',
+                    'url'  => '/sobreaviso',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => 'users',
+                    'icon' => 'clock-o',
+                    'linkClass' => 'fancybox',
+                ],
+            ]
+        ],
+
         'PARAMETRIZAÇÃO',
         [
             'text' => 'CONTAS USUÁRIO',
