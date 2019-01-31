@@ -75,7 +75,7 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
 
             $sobreaviso = DB::table('escala_sobreaviso')
                 ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')
-                ->where('dias', 'like', '%'.$dia)
+                ->where('dias', 'like', '%'.$dia.'%')
                 ->where('mes', date('n'))
                 ->where('ano', date('Y'))
                 ->get();
@@ -87,7 +87,7 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
 
             $sobreaviso = DB::table('escala_sobreaviso')
                 ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')
-                ->where('dias', 'like', '%'.$dia)
+                ->where('dias', 'like', '%'.$dia.'%')
                 ->where('mes', date('n'))
                 ->where('ano', date('Y'))
                 ->get();

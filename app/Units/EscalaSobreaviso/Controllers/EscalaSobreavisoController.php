@@ -98,7 +98,7 @@ class EscalaSobreavisoController extends Controller
     {
         $sobreaviso = $this->escalaSobreavisoRepository->edit($id);
 
-        $user  = $this->usersRepository->findSingleUser($id);
+        $user  = $this->usersRepository->findSingleUser($sobreaviso->efetivo_id);
         $meses = $this->meses;
 
         return view('sobreaviso::edit')->with(compact('sobreaviso'))

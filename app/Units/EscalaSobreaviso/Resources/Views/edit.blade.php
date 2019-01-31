@@ -2,13 +2,13 @@
 
 @section('content')
     <h2>
-        <i class="fa fa-compress"></i>
-        Cadastrar Centros
+        <i class="fa fa-clock-o"></i>
+        Editar Escala Sobreaviso Militar
     </h2>
     <hr />
 
-    {!! Form::model($centro, ['route' => ['centros.update', $centro->id]]) !!}
-    @include('centros::partials.form')
+    {!! Form::model($sobreaviso, ['route' => ['sobreaviso.update', $sobreaviso->id]]) !!}
+    @include('sobreaviso::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar
     </button>

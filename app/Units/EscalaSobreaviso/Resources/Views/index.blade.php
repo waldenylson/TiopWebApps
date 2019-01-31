@@ -5,8 +5,8 @@
 @section('content_header')
     <div class="icon">
         <h1>
-            <i class="fa fa-compress"></i>
-            Centros Cadastrados
+            <i class="fa fa-clock-o"></i>
+            Escala Sobreaviso - Mês Atual
         </h1>
     </div>
 @stop
@@ -26,20 +26,22 @@
             <tbody>
             @foreach($escalaSobreaviso as $escala)
                 <tr>
-                    <td>{!! strtoupper($escala->efetivoTiop->posto_gradu) !!} </td>
-                    <td>{!! strtoupper($escala->efetivoTiop->nome_guerra) !!} </td>
-                    <td>{!! $escala->dias                   !!} </td>
-                    <td>{!! strtoupper($escala->efetivoTiop->agenda)      !!} </td>
+                    @if($escala->mes == date('n'))
+                        <td>{!! strtoupper($escala->efetivoTiop->posto_gradu) !!} </td>
+                        <td>{!! strtoupper($escala->efetivoTiop->nome_guerra) !!} </td>
+                        <td>{!! $escala->dias                   !!} </td>
+                        <td>{!! strtoupper($escala->efetivoTiop->agenda)      !!} </td>
 
-                    <td width="1%" nowrap>
-                        <a href="{!! route('sobreaviso.edit', $escala->id) !!}" class="btn btn-primary btn-xs fancybox">
-                            <i class="fa fa-pencil"></i> editar
-                        </a>
+                        <td width="1%" nowrap>
+                            <a href="{!! route('sobreaviso.edit', $escala->id) !!}" class="btn btn-primary btn-xs fancybox">
+                                <i class="fa fa-pencil"></i> editar
+                            </a>
 
-                        <a href="{!! route('sobreaviso.destroy', $escala->id) !!}" class="btn btn-danger btn-xs btn-remover">
-                            <i class="fa fa-remove"></i> remover
-                        </a>
-                    </td>
+                            <a href="{!! route('sobreaviso.destroy', $escala->id) !!}" class="btn btn-danger btn-xs btn-remover">
+                                <i class="fa fa-remove"></i> remover
+                            </a>
+                        </td>
+                    @endif
                 </tr>
             @endforeach
             </tbody>

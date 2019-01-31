@@ -228,7 +228,7 @@ return [
         'TIOP',
         [
             'text' => 'SOBREAVISO',
-            'icon'    => 'users',
+            'icon'    => 'clock-o',
             'submenu' => [
                 [
                     'text' => 'Listar Todos',
@@ -237,9 +237,8 @@ return [
                 ],
                 [
                     'text' => 'Cadastrar',
-                    'url'  => 'users',
+                    'url'  => '/users',
                     'icon' => 'clock-o',
-                    'linkClass' => 'fancybox',
                 ],
             ]
         ],
