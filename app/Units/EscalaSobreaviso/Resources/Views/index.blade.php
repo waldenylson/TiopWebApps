@@ -29,7 +29,14 @@
                     @if($escala->mes == date('n'))
                         <td>{!! strtoupper($escala->efetivoTiop->posto_gradu) !!} </td>
                         <td>{!! strtoupper($escala->efetivoTiop->nome_guerra) !!} </td>
-                        <td>{!! $escala->dias                   !!} </td>
+                        <td>
+                            {!! $arrayDias = explode(",", $escala->dias) !!}
+
+                            {!! dd($arrayDias) !!}
+                            @foreach($arrayDias as $dia)
+                                <div class="teste">{!! $dia !!}</div>
+                            @endforeach
+                        </td>
                         <td>{!! strtoupper($escala->efetivoTiop->agenda)      !!} </td>
 
                         <td width="1%" nowrap>

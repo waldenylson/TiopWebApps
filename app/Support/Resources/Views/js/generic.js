@@ -25,6 +25,17 @@ $(document).ready(function()
     $('.masked-cpf').mask('000.000.000-00', {placeholder: '999.999.999-99'});
     $('.masked-saram').mask('000000-0', {placeholder: '999999-9'});
 
+    $('#dias').selectize({
+        delimiter: ',',
+        persist: false,
+        create: function(input) {
+            return {
+                value: input,
+                text: input
+            }
+        }
+    });
+
     $("a.btn-remover").click(function(e)
     {
         e.preventDefault();

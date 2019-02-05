@@ -22435,7 +22435,7 @@ var render = function() {
                       " " +
                       sobreavisoInfo["especialidade"] +
                       " " +
-                      sobreavisoInfo["nome_guerra"] +
+                      sobreavisoInfo["nome_guerra"].toUpperCase() +
                       " " +
                       " - " +
                       " " +

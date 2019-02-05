@@ -16,17 +16,19 @@ mix.js('resources/assets/js/app.js', 'public/js')
         'app/Support/Resources/Views/js/momentjs.pt-br.js',
         'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
         'node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
-        'app/Support/Resources/Views/js/generic.js'
+        'node_modules/selectize/dist/js/standalone/selectize.min.js',
+        'app/Support/Resources/Views/js/generic.js',
     ], 'public/js/tiop.js')
 
     .styles([
         'node_modules/bootstrap/dist/css/bootstrap.min.css',
         'node_modules/fancybox/dist/css/jquery.fancybox.css',
         'node_modules/font-awesome/css/font-awesome.css',
-        'app/Support/Resources/Views/css/generic.css',
         'app/Support/Resources/Views/css/relogio.css',
         'node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
         'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic',
+        'node_modules/selectize/dist/css/selectize.bootstrap3.css',
+        'app/Support/Resources/Views/css/generic.css',
     ], 'public/css/tiop.css')
 
     .styles([

@@ -13,7 +13,7 @@
                     {{
                         sobreavisoInfo['posto_gradu'] + '&nbsp;' +
                         sobreavisoInfo['especialidade'] + '&nbsp;' +
-                        sobreavisoInfo['nome_guerra'] + '&nbsp;' + ' - '+ '&nbsp;' +
+                        sobreavisoInfo['nome_guerra'].toUpperCase() + '&nbsp;' + ' - '+ '&nbsp;' +
                         sobreavisoInfo['agenda']
                     }}
                 </b>

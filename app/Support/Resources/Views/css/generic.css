@@ -1,0 +1,17 @@
+.selectize-control.multi .selectize-input > div {
+    cursor: pointer;
+    margin: 0 3px 3px 0;
+    padding: 1px 3px;
+    background: #cecece;
+    color: #333333;
+    border: 0 solid rgba(0, 0, 0, 0);
+}
+
+.teste {
+    cursor: pointer;
+    margin: 0 3px 3px 0;
+    padding: 1px 3px;
+    background: #cecece;
+    color: #333333;
+    border: 0 solid rgba(0, 0, 0, 0);
+}

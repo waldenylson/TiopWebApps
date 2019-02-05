@@ -56,16 +56,20 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
 
     private function checkEscalaCadastrada($efetivo_id, $mes, $ano)
     {
-        $result = DB::table('escala_sobreaviso')->where('efetivo_id', $efetivo_id)
-                                                ->where('mes', $mes)
-                                                ->where('ano', $ano)->get();
+        $result = DB::table('escala_sobreaviso')
+            ->where('efetivo_id', $efetivo_id)
+            ->where('mes', $mes)
+            ->where('ano', $ano)
+        ->get();
 
         return count($result);
     }
 
     public function getSobreavisoDia()
     {
-        $hora = date('G') -3;
+        date_default_timezone_set('America/Recife');
+
+        $hora = date('H');
 
         $sobreaviso = [];
 
@@ -73,16 +77,17 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
         {
             $dia = date('d') - 1;
 
+            if ( ($dia >=1) && ($dia <=9) ) $dia = ('0'.$dia);
+
             $sobreaviso = DB::table('escala_sobreaviso')
                 ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')
                 ->where('dias', 'like', '%'.$dia.'%')
                 ->where('mes', date('n'))
                 ->where('ano', date('Y'))
-                ->get();
+            ->get();
         }
         else
         {
-
             $dia = date('d');
 
             $sobreaviso = DB::table('escala_sobreaviso')
@@ -90,7 +95,7 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
                 ->where('dias', 'like', '%'.$dia.'%')
                 ->where('mes', date('n'))
                 ->where('ano', date('Y'))
-                ->get();
+            ->get();
         }
 
         return $sobreaviso;
