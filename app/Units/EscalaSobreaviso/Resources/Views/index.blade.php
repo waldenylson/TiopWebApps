@@ -30,11 +30,9 @@
                         <td>{!! strtoupper($escala->efetivoTiop->posto_gradu) !!} </td>
                         <td>{!! strtoupper($escala->efetivoTiop->nome_guerra) !!} </td>
                         <td>
-                            {!! $arrayDias = explode(",", $escala->dias) !!}
-
-                            {!! dd($arrayDias) !!}
+                            <?php $arrayDias = explode(',', $escala->dias); ?>
                             @foreach($arrayDias as $dia)
-                                <div class="teste">{!! $dia !!}</div>
+                                <span class="list-dias-sobreaviso">{!! $dia !!}</span>
                             @endforeach
                         </td>
                         <td>{!! strtoupper($escala->efetivoTiop->agenda)      !!} </td>

@@ -50,8 +50,6 @@ class EscalaSobreavisoController extends Controller
     {
         $escalaSobreaviso = $this->escalaSobreavisoRepository->listEscalaSobreaviso();
 
-        //dd($escalaSobreaviso);
-
         return view('sobreaviso::index')->with(compact('escalaSobreaviso'));
     }
 
