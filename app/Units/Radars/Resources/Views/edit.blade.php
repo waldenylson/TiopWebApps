@@ -7,7 +7,7 @@
     </h2>
     <hr />
 
-    {!! Form::model($centro, ['route' => ['radars.update', $radar->id]]) !!}
+    {!! Form::model($radar, ['route' => ['radars.update', $radar->id]]) !!}
     @include('radars::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar

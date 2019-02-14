@@ -25,7 +25,7 @@
 	<script src="{!! asset('js/tiop.js') !!}" type="text/javascript"></script>
 	<script src="{!! asset('ckeditor/ckeditor.js') !!}" type="text/javascript"></script>
 	<script type="text/javascript">
-        CKEDITOR.config.height = 150;
+        CKEDITOR.config.height = 100;
         CKEDITOR.replaceAll();
     </script>
 	@include('support::partials.alerts')

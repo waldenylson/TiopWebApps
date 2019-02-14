@@ -24,7 +24,7 @@ class StoreRadarsPostRequest extends FormRequest
         return [
             'nome'      	=> 'required|min:3',
             'localidade'   	=> 'required|min:5',
-            'equipamento'  	=> 'required|min:5',
+            'equipamento'  	=> 'required|min:4',
             'canalizacao'  	=> 'required',
             'protocolo'   	=> 'required|min:5',
             'sic'       	=> 'required',

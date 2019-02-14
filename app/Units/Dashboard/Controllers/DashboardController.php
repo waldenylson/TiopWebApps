@@ -1,18 +1,23 @@
 <?php namespace TIOp\Units\Dashboard\Controllers;
 
 use Codecasts\Support\Http\Controller;
+use TIOp\Domains\Radars\Contracts\RadarRepository;
 
 /**
  * Class DashboardController.
  */
 class DashboardController extends Controller
 {
+    private $radarRepository;
+
     /**
      * Create a new controller instance.
      */
-    public function __construct()
+    public function __construct(RadarRepository $radarRepository)
     {
         //$this->middleware('auth');
+
+        $this->radarRepository = $radarRepository;
     }
 
     /**
@@ -22,6 +27,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard::index');
+        $radares = $this->radarRepository->listRadars()->count();
+
+        return view('dashboard::index')->with(compact('radares'));
     }
 }
