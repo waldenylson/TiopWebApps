@@ -14,9 +14,7 @@
                         <div class="project_sort">
                             <div id="panel">
                                 <ul class="project_list">                                    
-                                    <li v-for="radar in dadosRadares"
-                                        :key="radar.id"
-                                    >
+                                    <li v-for="radar in dadosRadares" :key="radar.id">
                                         <span class="project_badge" :class="[ radar.status ]"></span>
                                         <a class="project_title"><b>{{ radar.nome }}</b></a><br>
                                     </li>                                    

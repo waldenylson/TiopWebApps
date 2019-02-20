@@ -1,31 +1,32 @@
 <template>
     <div class="mnt-programadas">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <i class="fa fa-cogs titulo">
-                                <b>&nbsp;MANUTENÇÕES PROGRAMADAS</b>
-                            </i>
-                        </h3>
-                    </div>
-                    <div class="panel-body mnt-programadas-height">
-                        <!-- {{--<table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">--}}
-                            {{--<thead>--}}
-                            {{--<tr class="table-title">--}}
-                                {{--<th></th>--}}
-                            {{--</tr>--}}
-                            {{--</thead>--}}
-                            {{--<tbody>--}}
-                            {{--@foreach($efetivoTiop as $efetivo)--}}
-                                {{--<tr>--}}
-                                    {{--<td></td>--}}
-                                {{--</tr>--}}
-                            {{--@endforeach--}}
-                            {{--</tbody>--}}
-                        {{--</table>--}} -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <i class="fa fa-cogs titulo">
+                        <b>&nbsp;MANUTENÇÕES PROGRAMADAS</b>
+                    </i>
+                </h3>
+            </div>
+            <div class="panel-body mnt-programadas-height">
+                <div class="col-lg-3 col-xs-6">
+                    <div class="small-box bg-green">
+                        <div class="inner">
+                            <h3>TESTE</h3>
+                            <p>MNT PROGRAMADA</p>
+                        </div>
+                        <div class="icon">
+                            <i class="ion ion-radio-waves"></i>
+                        </div>
+                        <a href="#" class="small-box-footer">
+                            Mais detalhes <i class="fa fa-arrow-circle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
 </template>
 
 <script>
