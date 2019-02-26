@@ -14,7 +14,7 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
 
     public function listMntProgramadas()
     {
-        return $this->modelClass::all();
+        return $this->modelClass::all()->load('radar')->load('efetivo');
     }
 
     public function store(StoreMntProgramadasPostRequest $request)

@@ -39,7 +39,7 @@ class MntProgramadasController extends Controller
     {
         $mntProgramadas = $this->mntProgramadasRepository->listMntProgramadas();
 
-        //dd($mntProgramadas);
+        dd($mntProgramadas);
 
         return view('mntProgramadas::index')->with(compact('mntProgramadas'));
     }

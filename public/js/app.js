@@ -2169,12 +2169,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'tiop-mnt',
 
+    data: function data() {
+        return {
+            dadosMntProg: []
+        };
+    },
+
+    methods: {
+        getMntProg: function getMntProg() {
+            var _this = this;
+
+            axios.get('/api/getMntProg').then(function (response) {
+                return _this.dadosMntProg = response.data;
+            });
+        }
+    },
+
     mounted: function mounted() {
         window.console.log('Componente MNT-Prog Carregado');
+        this.getMntProg;
     }
 });
 
@@ -22482,46 +22508,40 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "mnt-programadas" }, [
+    _c("div", { staticClass: "panel panel-primary" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "panel-body mnt-programadas-height" }, [
+        _c("div", { staticClass: "col-lg-3 col-xs-6" }, [
+          _c(
+            "ul",
+            { staticClass: "project_list" },
+            _vm._l(_vm.dadosMntProg, function(mntProg) {
+              return _c("li", { key: mntProg.id }, [
+                _c("h3", [_vm._v(_vm._s(mntProg.radar["nome"]))]),
+                _vm._v(" "),
+                _c("a", { staticClass: "project_title" }, [
+                  _c("b", [_vm._v(_vm._s(_vm.radar.nome))])
+                ]),
+                _c("br")
+              ])
+            })
+          )
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mnt-programadas" }, [
-      _c("div", { staticClass: "panel panel-primary" }, [
-        _c("div", { staticClass: "panel-heading" }, [
-          _c("h3", { staticClass: "panel-title" }, [
-            _c("i", { staticClass: "fa fa-cogs titulo" }, [
-              _c("b", [_vm._v(" MANUTENÇÕES PROGRAMADAS")])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "panel-body mnt-programadas-height" }, [
-          _c("div", { staticClass: "col-lg-3 col-xs-6" }, [
-            _c("div", { staticClass: "small-box bg-green" }, [
-              _c("div", { staticClass: "inner" }, [
-                _c("h3", [_vm._v("TESTE")]),
-                _vm._v(" "),
-                _c("p", [_vm._v("MNT PROG")])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "icon" }, [
-                _c("i", { staticClass: "ion ion-radio-waves" })
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                { staticClass: "small-box-footer", attrs: { href: "#" } },
-                [
-                  _vm._v("\n                        Mais detalhes "),
-                  _c("i", { staticClass: "fa fa-arrow-circle-right" })
-                ]
-              )
-            ])
-          ])
+    return _c("div", { staticClass: "panel-heading" }, [
+      _c("h3", { staticClass: "panel-title" }, [
+        _c("i", { staticClass: "fa fa-cogs titulo" }, [
+          _c("b", [_vm._v(" MANUTENÇÕES PROGRAMADAS")])
         ])
       ])
     ])

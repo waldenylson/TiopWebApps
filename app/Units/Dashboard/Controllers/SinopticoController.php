@@ -3,6 +3,7 @@
 use Codecasts\Support\Http\Controller;;
 
 use TIOp\Domains\EscalaSobreaviso\Contracts\EscalaSobreavisoRepository;
+use TIOp\Domains\MntProgramadas\Contracts\MntProgramadasRepository;
 use TIOp\Domains\RPL\Contracts\RPLRepository;
 use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
 
@@ -53,15 +54,19 @@ class SinopticoController extends Controller
     protected $scRepository;
     protected $rplRepository;
     protected $sobreavisoRepository;
+    protected $mntProgRepository;
 
     public function __construct(SistemasCentrosRepository $scRepository,
                                 RPLRepository $rplRepository,
-                                EscalaSobreavisoRepository $sobreavisoRepository)
+                                EscalaSobreavisoRepository $sobreavisoRepository,
+                                MntProgramadasRepository $mntProgRepository)
     {
         $this->scRepository  = $scRepository;
         $this->rplRepository = $rplRepository;
 
         $this->sobreavisoRepository = $sobreavisoRepository;
+        $this->mntProgRepository    = $mntProgRepository;
+
     }
 
     public function index()
@@ -95,5 +100,10 @@ class SinopticoController extends Controller
     public function getSobreaviso()
     {
         return json_encode($this->sobreavisoRepository->getSobreavisoDia(), JSON_UNESCAPED_UNICODE);
+    }
+
+    public function getMntProg()
+    {
+        return json_encode($this->mntProgRepository->listMntProgramadas(), JSON_UNESCAPED_UNICODE);
     }
 }
