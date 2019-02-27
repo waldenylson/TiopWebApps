@@ -1,6 +1,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+Vue.use(require('vue-moment'));
 
 Vue.component('tiop-efetivo', require('../../../app/Units/Dashboard/Resources/components/afastamento-efetivo'));
 Vue.component('tiop-sobreaviso', require('../../../app/Units/Dashboard/Resources/components/sobreaviso'));

@@ -9,30 +9,25 @@
                 </h3>
             </div>
             <div class="panel-body mnt-programadas-height">
-                <div class="col-lg-3 col-xs-6">
-                    <!--<div class="small-box bg-green">-->
-                        <!--<div class="inner">-->
-                            <!--<h3>TESTE</h3>-->
-                            <!--<p>MNT PROGRAMADA</p>-->
-                        <!--</div>-->
-                        <!--<div class="icon">-->
-                            <!--<i class="ion ion-radio-waves"></i>-->
-                        <!--</div>-->
-                        <!--<a href="#" class="small-box-footer">-->
-                            <!--Mais detalhes <i class="fa fa-arrow-circle-right"></i>-->
-                        <!--</a>-->
-                    <!--</div>-->
-
-
-                    <ul class="project_list">
-                        <li v-for="mntProg in dadosMntProg" :key="mntProg.id">
-                            <h3>{{ mntProg.radar['nome'] }}</h3>
-                            <a class="project_title"><b>{{ radar.nome }}</b></a><br>
-                        </li>
-                    </ul>
-
+                <div class="float-right">
+                    <div>
+                        <div class="project_sort">
+                            <div id="panel">
+                                <ul class="project_list">
+                                    <li v-for="mntProg in dadosMntProg" :key="mntProg.id">
+                                        <span class="project_badge ino"></span>
+                                        <a class="project_title"><b>{{ mntProg.radar.nome }}</b></a><br>
+                                        <span>{{ mntProg.motivo }}</span><br>
+                                        <b><span>{{ mntProg.data_ini | moment("DD/MM/YYYY")}}&nbsp;{{ mntProg.hora_ini | moment("h:mm")}}</span><br></b>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 
@@ -56,7 +51,7 @@
 
         mounted() {
             window.console.log('Componente MNT-Prog Carregado')
-            this.getMntProg
+            this.getMntProg()
         }
     }
 </script>
@@ -72,4 +67,55 @@
     .mnt-programadas-height {
         height: 575px;
     }
+
+    .project_sort ul.project_list li{
+        padding:12px;
+        width:750px;
+        height:130px;
+        position:relative;
+        border:solid 1px #c4c4c4;
+        border-radius:3px;
+        list-style:none;
+        display:inline-block;
+        margin-right:16px;
+        margin-bottom:10px;
+        background-color: #ededed;
+        text-align: center;
+    }
+
+
+    .project_sort ul.project_list a.project_title{
+        font-size:30px;
+        text-align: center;
+        color:#5c5c5c;
+        text-shadow: 0px 1px 0px  #fff;
+        display:inline-block;
+        line-height:18px;
+        font-family:  Helvetica, Arial, sans-serif;;
+        text-decoration:none;
+        padding-top: 5px;
+    }
+
+    .project_sort ul.project_list .project_badge{
+        width:36px;
+        height:36px;
+        position:absolute;
+        right:-1px;
+        top:-1px;
+        background:url("/img/project_badge.png") no-repeat center;
+        color:#fff;
+        font-size:15px;
+        text-align:right;
+        line-height:17px;
+    }
+    .project_sort ul.project_list .project_badge.ino{
+        background-position:-148px 0px;
+    }
+    .project_sort ul.project_list .project_badge.ope{
+        background-position:-299px 0px;
+    }
+    .project_sort ul.project_list .project_badge.deg{
+        background-position:-1px 0px;
+    }
+
 </style>

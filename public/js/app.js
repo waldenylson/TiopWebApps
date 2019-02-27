@@ -2173,11 +2173,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'tiop-mnt',
@@ -2200,7 +2195,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     mounted: function mounted() {
         window.console.log('Componente MNT-Prog Carregado');
-        this.getMntProg;
+        this.getMntProg();
     }
 });
 
@@ -4946,7 +4941,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 575px;\n}\n", ""]);
+exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 575px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:12px;\n    width:750px;\n    height:130px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:16px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: center;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:30px;\n    text-align: center;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n\n", ""]);
 
 // exports
 
@@ -22513,21 +22508,43 @@ var render = function() {
       _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "panel-body mnt-programadas-height" }, [
-        _c("div", { staticClass: "col-lg-3 col-xs-6" }, [
-          _c(
-            "ul",
-            { staticClass: "project_list" },
-            _vm._l(_vm.dadosMntProg, function(mntProg) {
-              return _c("li", { key: mntProg.id }, [
-                _c("h3", [_vm._v(_vm._s(mntProg.radar["nome"]))]),
-                _vm._v(" "),
-                _c("a", { staticClass: "project_title" }, [
-                  _c("b", [_vm._v(_vm._s(_vm.radar.nome))])
-                ]),
-                _c("br")
+        _c("div", { staticClass: "float-right" }, [
+          _c("div", [
+            _c("div", { staticClass: "project_sort" }, [
+              _c("div", { attrs: { id: "panel" } }, [
+                _c(
+                  "ul",
+                  { staticClass: "project_list" },
+                  _vm._l(_vm.dadosMntProg, function(mntProg) {
+                    return _c("li", { key: mntProg.id }, [
+                      _c("span", { staticClass: "project_badge ino" }),
+                      _vm._v(" "),
+                      _c("a", { staticClass: "project_title" }, [
+                        _c("b", [_vm._v(_vm._s(mntProg.radar.nome))])
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(mntProg.motivo))]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("b", [
+                        _c("span", [
+                          _vm._v(
+                            _vm._s(
+                              _vm._f("moment")(mntProg.data_ini, "DD/MM/YYYY")
+                            ) +
+                              " " +
+                              _vm._s(_vm._f("moment")(mntProg.hora_ini, "h:mm"))
+                          )
+                        ]),
+                        _c("br")
+                      ])
+                    ])
+                  })
+                )
               ])
-            })
-          )
+            ])
+          ])
         ])
       ])
     ])
@@ -28224,11 +28241,13 @@ module.exports = function(module) {
 /***/ }),
 
 /***/ "./resources/assets/js/app.js":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 __webpack_require__("./resources/assets/js/bootstrap.js");
 
 window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
+Vue.use(__webpack_require__("./node_modules/vue-moment/dist/vue-moment.js"));
 
 Vue.component('tiop-efetivo', __webpack_require__("./app/Units/Dashboard/Resources/components/afastamento-efetivo.vue"));
 Vue.component('tiop-sobreaviso', __webpack_require__("./app/Units/Dashboard/Resources/components/sobreaviso.vue"));
