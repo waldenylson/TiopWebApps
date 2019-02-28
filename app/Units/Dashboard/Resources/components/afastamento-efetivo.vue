@@ -76,15 +76,15 @@
         height: 50%;
         width: 99.5%;
         text-align: left;
-        font-size: larger;
+        font-size: 12px;
     }
 
     .box-efetivo-height {
-        height: 599px;
+        height: 420px;
     }
 
     .table-title {
-        font-size: 25px;
+        font-size: 18px;
     }
 
     .table-afastamentos-retorno {

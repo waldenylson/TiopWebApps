@@ -16,9 +16,12 @@
                                 <ul class="project_list">
                                     <li v-for="mntProg in dadosMntProg" :key="mntProg.id">
                                         <span class="project_badge ino"></span>
-                                        <a class="project_title"><b>{{ mntProg.radar.nome }}</b></a><br>
+                                        <a class="project_title alinha-esquerda"><b>{{ mntProg.radar.nome }}</b></a><br>
+                                        <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_ini | moment("DD/MM/YYYY")}}</b></a></span>
+                                        <span class="data"><a><b>&nbsp;{{ mntProg.hora_ini }}</b></a></span>
+                                        <span class="data"><a><b>&nbsp;{{ mntProg.data_fim | moment("DD/MM/YYYY")}}</b></a></span>
+                                        <span class="data"><a><b>&nbsp;{{ mntProg.hora_fim }}</b></a></span><br>
                                         <span>{{ mntProg.motivo }}</span><br>
-                                        <b><span>{{ mntProg.data_ini | moment("DD/MM/YYYY")}}&nbsp;{{ mntProg.hora_ini | moment("h:mm")}}</span><br></b>
                                     </li>
                                 </ul>
                             </div>
@@ -70,8 +73,8 @@
 
     .project_sort ul.project_list li{
         padding:12px;
-        width:750px;
-        height:130px;
+        width:450px;
+        height:120px;
         position:relative;
         border:solid 1px #c4c4c4;
         border-radius:3px;
@@ -80,13 +83,13 @@
         margin-right:16px;
         margin-bottom:10px;
         background-color: #ededed;
-        text-align: center;
+        text-align: left;
     }
 
 
     .project_sort ul.project_list a.project_title{
         font-size:30px;
-        text-align: center;
+        text-align: left;
         color:#5c5c5c;
         text-shadow: 0px 1px 0px  #fff;
         display:inline-block;
@@ -116,6 +119,11 @@
     }
     .project_sort ul.project_list .project_badge.deg{
         background-position:-1px 0px;
+    }
+
+    .data {
+        text-align: left;
+        font-size: 20px;
     }
 
 </style>

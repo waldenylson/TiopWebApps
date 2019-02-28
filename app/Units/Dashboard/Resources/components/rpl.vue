@@ -48,16 +48,20 @@ export default {
 </script>
 
 <style scoped>
+    .rpl {
+        width: 275px;
+        margin-left: 5px;
+        margin-top: 25px;
+    }
+
     .box-rpl {
-        height: 142px;
-        width: 99.5%;
-        left: 20%;
-        top: 20%;
-        padding-top: 1px;
-        margin-left: 1px;
+        height: 100px;
+        width: 270px;
+        padding-top: 5px;
+        margin-left: 4px;
         margin-bottom: 1px;
         margin-top: 1px;
-        font-size: xx-large;
+        font-size: large;
         padding-left: 5px;
     }
 </style>

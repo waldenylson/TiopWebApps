@@ -38,6 +38,7 @@
             getSobreaviso: function ()
             {
                 axios.get('/api/getSobreaviso').then(response => (this.dadosSobreaviso = response.data))
+                setTimeout(this.getSobreaviso, 300000)
             }
         },
 

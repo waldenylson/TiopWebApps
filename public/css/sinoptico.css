@@ -19,12 +19,12 @@
 
 .sub-container-center {
     float: left;
-    width: 880px;
+    width: 1050px;
 }
 
 .sub-container-right{
     float: left;
-    width: 22%;
+    width: 110px;
 }
 
 .center {
@@ -40,14 +40,14 @@
 .box {
     background-color: royalblue;
     height: 50%;
-    left: 20%;
+    left: 25%;
     top: 20%;
     text-align: left;
     padding-top: 1px;
     margin-left: 1px;
     margin-bottom: 1px;
     margin-top: 1px;
-    font-size: xx-large;
+    font-size: medium;
     padding-left: 5px;
 }
 

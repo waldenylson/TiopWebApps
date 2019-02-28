@@ -75,10 +75,10 @@
         padding-left: 5px;
         padding-top: 20px;
         margin-bottom: -20px;
-        width: 450px;
+        width: 280px;
     }
 
     .less-font {
-        font-size: 24px;
+        /*font-size: 24px;*/
     }
 </style>

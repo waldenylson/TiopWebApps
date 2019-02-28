@@ -71,7 +71,7 @@
         padding-left: 4px;
         padding-top: 5px;
         text-align: center;
-        width: 450px;
+        width: 280px;
     }
 
     .bottom-container-decoration {

@@ -8,7 +8,7 @@
 
             <tiop-efetivo></tiop-efetivo>
 
-            <tiop-rpl></tiop-rpl>
+            {{--<tiop-rpl></tiop-rpl>--}}
 
         </div>
         <div class="sub-container-center">
@@ -20,6 +20,7 @@
         </div>
         <div class="sub-container-right">
             <tiop-sistemas></tiop-sistemas>
+            <tiop-rpl></tiop-rpl>
             <tiop-rodape></tiop-rodape>
         </div>
     </div>

@@ -2173,6 +2173,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'tiop-mnt',
@@ -2508,6 +2511,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.get('/api/getSobreaviso').then(function (response) {
                 return _this.dadosSobreaviso = response.data;
             });
+            setTimeout(this.getSobreaviso, 300000);
         }
     },
 
@@ -4911,7 +4915,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.box-rpl[data-v-1ffd3976] {\n    height: 142px;\n    width: 99.5%;\n    left: 20%;\n    top: 20%;\n    padding-top: 1px;\n    margin-left: 1px;\n    margin-bottom: 1px;\n    margin-top: 1px;\n    font-size: xx-large;\n    padding-left: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.rpl[data-v-1ffd3976] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: 25px;\n}\n.box-rpl[data-v-1ffd3976] {\n    height: 100px;\n    width: 270px;\n    padding-top: 5px;\n    margin-left: 4px;\n    margin-bottom: 1px;\n    margin-top: 1px;\n    font-size: large;\n    padding-left: 5px;\n}\n", ""]);
 
 // exports
 
@@ -4941,7 +4945,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 575px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:12px;\n    width:750px;\n    height:130px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:16px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: center;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:30px;\n    text-align: center;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n\n", ""]);
+exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 575px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:12px;\n    width:450px;\n    height:120px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:16px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: left;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:30px;\n    text-align: left;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n.data[data-v-2a58989c] {\n    text-align: left;\n    font-size: 20px;\n}\n\n", ""]);
 
 // exports
 
@@ -4971,7 +4975,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 450px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n#hora[data-v-485c0017] {\n    margin-bottom: 2px;\n    height: 35px;\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 280px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n#hora[data-v-485c0017] {\n    margin-bottom: 2px;\n    height: 35px;\n    text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -4986,7 +4990,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.inf-sistemas[data-v-4c281925] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -20px;\n    width: 450px;\n}\n.less-font[data-v-4c281925] {\n    font-size: 24px;\n}\n", ""]);
+exports.push([module.i, "\n.inf-sistemas[data-v-4c281925] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -20px;\n    width: 280px;\n}\n.less-font[data-v-4c281925] {\n    /*font-size: 24px;*/\n}\n", ""]);
 
 // exports
 
@@ -5001,7 +5005,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*PROJECT SORT*/\nul.filter_project[data-v-56d02a88]{\n    margin-left: 0px;\n    background:#d3d3d3;\n    border-top:solid 1px #f6f6f6;\n}\nul.filter_project li[data-v-56d02a88]{\n    font-size: 14px;\n    padding:8px 15px;\n    display:inline-block;\n    list-style:none;\n}\nul.filter_project li a[data-v-56d02a88]{\n    color:#6c6c6c;\n\n    font-weight:bold;\n    text-shadow: 0px 1px 0px  #fff;\n}\nul.filter_project li span.count a[data-v-56d02a88]{\n    line-height:100%;\n    color:#fff;\n    text-shadow: 0px 1px 0px  #353535;\n    padding:2px 2px 2px;\n    background:#707070;\n    border-radius:2px;\n    margin-left:8px;\n    min-width:16px;\n    text-align:center;\n    display:inline-block;\n    box-shadow:0px 1px 0px 0px #ffffff;\n    -webkit-box-shadow:0px 1px 0px 0px #ffffff;\n}\nul.filter_project li.selected[data-v-56d02a88]{\n    background:#ffffff;\n    box-shadow:inset 0px 10px 8px #eaeaea;\n    -webkit-box-shadow:inset 0px 10px 8px #eaeaea;\n    border:solid 1px #fff;\n    border-width:0px 1px;\n}\nul.filter_project li.selected a[data-v-56d02a88]{\n    color:#4a4a4a;\n}\nul.filter_project li.selected span.count[data-v-56d02a88]{\n    background:#4a4a4a;\n}\n.project_sort ul.project_list[data-v-56d02a88]{\n    margin:0px;\n    padding:18px 0px 0px 18px;\n}\n.project_sort ul.project_list li[data-v-56d02a88]{\n    padding:12px;\n    width:120px;\n    height:60px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:10px;\n    list-style:none;\n    display:inline-block;\n    margin-right:16px;\n    margin-bottom:16px;\n    background-color: #ededed;\n}\n.project_sort ul.project_list .project_badge[data-v-56d02a88]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-56d02a88]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-56d02a88]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-56d02a88]{\n    background-position:-1px 0px;\n}\n.project_sort ul.project_list a.project_title[data-v-56d02a88]{\n    font-size:30px;\n    text-align: center;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.project_body[data-v-56d02a88]{\n    font-size:11.5px;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:40px;\n    font-family:  cursive;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.assigned_user[data-v-56d02a88]{\n    font-size:12px;\n    color:#6c6c6c;\n    text-shadow: 0px 1px 0px  #fff;\n    position:absolute;\n    bottom:11px;\n    left:10px;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.assigned_user span[data-v-56d02a88]{\n    font-size:19px;\n    float:left;\n    margin-top:-7px;\n    margin-right:2px;\n}\n.sinoptico[data-v-56d02a88] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -10px;\n    width: 100%;\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*PROJECT SORT*/\nul.filter_project[data-v-56d02a88]{\n    margin-left: 0px;\n    background:#d3d3d3;\n    border-top:solid 1px #f6f6f6;\n}\nul.filter_project li[data-v-56d02a88]{\n    font-size: 14px;\n    padding:8px 15px;\n    display:inline-block;\n    list-style:none;\n}\nul.filter_project li a[data-v-56d02a88]{\n    color:#6c6c6c;\n\n    font-weight:bold;\n    text-shadow: 0px 1px 0px  #fff;\n}\nul.filter_project li span.count a[data-v-56d02a88]{\n    line-height:100%;\n    color:#fff;\n    text-shadow: 0px 1px 0px  #353535;\n    padding:2px 2px 2px;\n    background:#707070;\n    border-radius:2px;\n    margin-left:8px;\n    min-width:16px;\n    text-align:center;\n    display:inline-block;\n    box-shadow:0px 1px 0px 0px #ffffff;\n    -webkit-box-shadow:0px 1px 0px 0px #ffffff;\n}\nul.filter_project li.selected[data-v-56d02a88]{\n    background:#ffffff;\n    box-shadow:inset 0px 10px 8px #eaeaea;\n    -webkit-box-shadow:inset 0px 10px 8px #eaeaea;\n    border:solid 1px #fff;\n    border-width:0px 1px;\n}\nul.filter_project li.selected a[data-v-56d02a88]{\n    color:#4a4a4a;\n}\nul.filter_project li.selected span.count[data-v-56d02a88]{\n    background:#4a4a4a;\n}\n.project_sort ul.project_list[data-v-56d02a88]{\n    margin:0px;\n    padding:18px 0px 0px 18px;\n}\n.project_sort ul.project_list li[data-v-56d02a88]{\n    padding:12px;\n    width:149px;\n    height:70px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:10px;\n    list-style:none;\n    display:inline-block;\n    margin-right:16px;\n    margin-bottom:16px;\n    background-color: #ededed;\n}\n.project_sort ul.project_list .project_badge[data-v-56d02a88]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-56d02a88]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-56d02a88]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-56d02a88]{\n    background-position:-1px 0px;\n}\n.project_sort ul.project_list a.project_title[data-v-56d02a88]{\n    font-size:30px;\n    text-align: center;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.project_body[data-v-56d02a88]{\n    font-size:11.5px;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:40px;\n    font-family:  cursive;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.assigned_user[data-v-56d02a88]{\n    font-size:12px;\n    color:#6c6c6c;\n    text-shadow: 0px 1px 0px  #fff;\n    position:absolute;\n    bottom:11px;\n    left:10px;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.assigned_user span[data-v-56d02a88]{\n    font-size:19px;\n    float:left;\n    margin-top:-7px;\n    margin-right:2px;\n}\n.sinoptico[data-v-56d02a88] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -10px;\n    width: 100%;\n}\n\n", ""]);
 
 // exports
 
@@ -5016,7 +5020,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.panel-body[data-v-ac97f1cc] {\n    padding: 5px;\n}\n.afastamentos[data-v-ac97f1cc] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-efetivo[data-v-ac97f1cc] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: left;\n    font-size: larger;\n}\n.box-efetivo-height[data-v-ac97f1cc] {\n    height: 599px;\n}\n.table-title[data-v-ac97f1cc] {\n    font-size: 25px;\n}\n.table-afastamentos-retorno[data-v-ac97f1cc] {\n    text-align: center;\n}\n.box-bg-color-efetivo[data-v-ac97f1cc] {\n    background-color: snow;\n}\n", ""]);
+exports.push([module.i, "\n.panel-body[data-v-ac97f1cc] {\n    padding: 5px;\n}\n.afastamentos[data-v-ac97f1cc] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-efetivo[data-v-ac97f1cc] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: left;\n    font-size: 12px;\n}\n.box-efetivo-height[data-v-ac97f1cc] {\n    height: 420px;\n}\n.table-title[data-v-ac97f1cc] {\n    font-size: 18px;\n}\n.table-afastamentos-retorno[data-v-ac97f1cc] {\n    text-align: center;\n}\n.box-bg-color-efetivo[data-v-ac97f1cc] {\n    background-color: snow;\n}\n", ""]);
 
 // exports
 
@@ -22519,26 +22523,60 @@ var render = function() {
                     return _c("li", { key: mntProg.id }, [
                       _c("span", { staticClass: "project_badge ino" }),
                       _vm._v(" "),
-                      _c("a", { staticClass: "project_title" }, [
-                        _c("b", [_vm._v(_vm._s(mntProg.radar.nome))])
+                      _c(
+                        "a",
+                        { staticClass: "project_title alinha-esquerda" },
+                        [_c("b", [_vm._v(_vm._s(mntProg.radar.nome))])]
+                      ),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "fa fa-calendar data" }, [
+                        _c("a", [
+                          _c("b", [
+                            _vm._v(
+                              " " +
+                                _vm._s(
+                                  _vm._f("moment")(
+                                    mntProg.data_ini,
+                                    "DD/MM/YYYY"
+                                  )
+                                )
+                            )
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "data" }, [
+                        _c("a", [
+                          _c("b", [_vm._v(" " + _vm._s(mntProg.hora_ini))])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "data" }, [
+                        _c("a", [
+                          _c("b", [
+                            _vm._v(
+                              " " +
+                                _vm._s(
+                                  _vm._f("moment")(
+                                    mntProg.data_fim,
+                                    "DD/MM/YYYY"
+                                  )
+                                )
+                            )
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "data" }, [
+                        _c("a", [
+                          _c("b", [_vm._v(" " + _vm._s(mntProg.hora_fim))])
+                        ])
                       ]),
                       _c("br"),
                       _vm._v(" "),
                       _c("span", [_vm._v(_vm._s(mntProg.motivo))]),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("b", [
-                        _c("span", [
-                          _vm._v(
-                            _vm._s(
-                              _vm._f("moment")(mntProg.data_ini, "DD/MM/YYYY")
-                            ) +
-                              " " +
-                              _vm._s(_vm._f("moment")(mntProg.hora_ini, "h:mm"))
-                          )
-                        ]),
-                        _c("br")
-                      ])
+                      _c("br")
                     ])
                   })
                 )
@@ -28241,9 +28279,8 @@ module.exports = function(module) {
 /***/ }),
 
 /***/ "./resources/assets/js/app.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
 __webpack_require__("./resources/assets/js/bootstrap.js");
 
 window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
