@@ -23,7 +23,7 @@ class SistemasCentrosRepository extends AbstractCrudRepository implements Sistem
     public function infSistemas()
     {
         $data = DB::select(
-           'select s.nome as "sistema", s.versao as "versao",c.nome as "centro", c.acronimo as "sigla", bds.versao as "v-bds", bds.data_atualizacao as "dt-atualiza"
+           'select s.nome as "sistema", s.versao as "versao", s.data_atualizacao as "dt-sistema", c.nome as "centro", c.acronimo as "sigla", bds.versao as "v-bds", bds.data_atualizacao as "dt-bds"
             from sistemas s
             inner join sistemas_centros sc on (s.id = sc.sistema_id)
             inner join centros c on (c.id = sc.centro_id)

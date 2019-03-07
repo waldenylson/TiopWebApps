@@ -81,6 +81,10 @@
         text-align: center;
     }
 
+    #data {
+        margin-left: 16px;
+    }
+
     #hora {
         margin-bottom: 2px;
         height: 35px;

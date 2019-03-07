@@ -2102,6 +2102,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 Vue.use(__webpack_require__("./node_modules/vue-moment/dist/vue-moment.js"));
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4945,7 +4949,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 575px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:12px;\n    width:450px;\n    height:120px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:16px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: left;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:30px;\n    text-align: left;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n.data[data-v-2a58989c] {\n    text-align: left;\n    font-size: 20px;\n}\n\n", ""]);
+exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n.motivo[data-v-2a58989c] {\n    font-size: 18px;\n}\n.panel-body[data-v-2a58989c] {\n    margin-left: -25px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 530px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:15px;\n    width:490px;\n    height:155px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:5px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: left;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:35px;\n    text-align: left;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n.data[data-v-2a58989c] {\n    text-align: left;\n    font-size: 25px;\n}\n\n", ""]);
 
 // exports
 
@@ -4975,7 +4979,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 280px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n#hora[data-v-485c0017] {\n    margin-bottom: 2px;\n    height: 35px;\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 280px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n#data[data-v-485c0017] {\n    margin-left: 16px;\n}\n#hora[data-v-485c0017] {\n    margin-bottom: 2px;\n    height: 35px;\n    text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -22532,50 +22536,39 @@ var render = function() {
                       _vm._v(" "),
                       _c("span", { staticClass: "fa fa-calendar data" }, [
                         _c("a", [
-                          _c("b", [
-                            _vm._v(
-                              " " +
-                                _vm._s(
-                                  _vm._f("moment")(
-                                    mntProg.data_ini,
-                                    "DD/MM/YYYY"
-                                  )
-                                )
-                            )
+                          _c("b", [_vm._v(" " + _vm._s(mntProg.data_ini))])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "data" }, [
+                        _c("a", [
+                          _vm._v("  "),
+                          _c("b", { staticClass: "fa fa-clock-o" }, [
+                            _vm._v(" " + _vm._s(mntProg.hora_ini + "Z"))
                           ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "data" }, [
-                        _c("a", [
-                          _c("b", [_vm._v(" " + _vm._s(mntProg.hora_ini))])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "data" }, [
-                        _c("a", [
-                          _c("b", [
-                            _vm._v(
-                              " " +
-                                _vm._s(
-                                  _vm._f("moment")(
-                                    mntProg.data_fim,
-                                    "DD/MM/YYYY"
-                                  )
-                                )
-                            )
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "data" }, [
-                        _c("a", [
-                          _c("b", [_vm._v(" " + _vm._s(mntProg.hora_fim))])
                         ])
                       ]),
                       _c("br"),
                       _vm._v(" "),
-                      _c("span", [_vm._v(_vm._s(mntProg.motivo))]),
+                      _c("span", { staticClass: "fa fa-calendar data" }, [
+                        _c("a", [
+                          _c("b", [_vm._v(" " + _vm._s(mntProg.data_fim))])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "data" }, [
+                        _c("a", [
+                          _vm._v("  "),
+                          _c("b", { staticClass: "fa fa-clock-o" }, [
+                            _vm._v(" " + _vm._s(mntProg.hora_fim + "Z"))
+                          ])
+                        ])
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "motivo" }, [
+                        _vm._v(_vm._s(mntProg.motivo))
+                      ]),
                       _c("br")
                     ])
                   })
@@ -22727,6 +22720,17 @@ var render = function() {
                 ]),
                 _c("br"),
                 _vm._v(" "),
+                _c("i", { staticClass: "fa fa-calendar" }, [
+                  _vm._v("  ATL: "),
+                  _c("b", [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
                   _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
@@ -22737,9 +22741,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(
-                        _vm._f("moment")(infSis["dt-atualiza"], "DD/MM/YYYY")
-                      )
+                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])
@@ -22764,6 +22766,17 @@ var render = function() {
                 ]),
                 _c("br"),
                 _vm._v(" "),
+                _c("i", { staticClass: "fa fa-calendar" }, [
+                  _vm._v("  ATL: "),
+                  _c("b", [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
                   _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
@@ -22774,9 +22787,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(
-                        _vm._f("moment")(infSis["dt-atualiza"], "DD/MM/YYYY")
-                      )
+                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])
@@ -22801,6 +22812,17 @@ var render = function() {
                 ]),
                 _c("br"),
                 _vm._v(" "),
+                _c("i", { staticClass: "fa fa-calendar" }, [
+                  _vm._v("  ATL: "),
+                  _c("b", [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
                   _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
@@ -22811,9 +22833,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(
-                        _vm._f("moment")(infSis["dt-atualiza"], "DD/MM/YYYY")
-                      )
+                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])
@@ -22838,6 +22858,17 @@ var render = function() {
                 ]),
                 _c("br"),
                 _vm._v(" "),
+                _c("i", { staticClass: "fa fa-calendar" }, [
+                  _vm._v("  ATL: "),
+                  _c("b", [
+                    _vm._v(
+                      _vm._s(
+                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                      )
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
                   _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
@@ -22848,9 +22879,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(
-                        _vm._f("moment")(infSis["dt-atualiza"], "DD/MM/YYYY")
-                      )
+                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])

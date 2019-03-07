@@ -17,11 +17,11 @@
                                     <li v-for="mntProg in dadosMntProg" :key="mntProg.id">
                                         <span class="project_badge ino"></span>
                                         <a class="project_title alinha-esquerda"><b>{{ mntProg.radar.nome }}</b></a><br>
-                                        <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_ini | moment("DD/MM/YYYY")}}</b></a></span>
-                                        <span class="data"><a><b>&nbsp;{{ mntProg.hora_ini }}</b></a></span>
-                                        <span class="data"><a><b>&nbsp;{{ mntProg.data_fim | moment("DD/MM/YYYY")}}</b></a></span>
-                                        <span class="data"><a><b>&nbsp;{{ mntProg.hora_fim }}</b></a></span><br>
-                                        <span>{{ mntProg.motivo }}</span><br>
+                                        <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_ini }}</b></a></span>
+                                        <span class="data"><a>&nbsp;&nbsp;<b class="fa fa-clock-o">&nbsp;{{ mntProg.hora_ini + 'Z'}}</b></a></span><br>
+                                        <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_fim }}</b></a></span>
+                                        <span class="data"><a>&nbsp;&nbsp;<b class="fa fa-clock-o">&nbsp;{{ mntProg.hora_fim + 'Z'}}</b></a></span><br>
+                                        <span class="motivo">{{ mntProg.motivo }}</span><br>
                                     </li>
                                 </ul>
                             </div>
@@ -67,20 +67,28 @@
         margin-bottom: -20px;
     }
 
+    .motivo {
+        font-size: 18px;
+    }
+
+    .panel-body {
+        margin-left: -25px;
+    }
+
     .mnt-programadas-height {
-        height: 575px;
+        height: 530px;
     }
 
     .project_sort ul.project_list li{
-        padding:12px;
-        width:450px;
-        height:120px;
+        padding:15px;
+        width:490px;
+        height:155px;
         position:relative;
         border:solid 1px #c4c4c4;
         border-radius:3px;
         list-style:none;
         display:inline-block;
-        margin-right:16px;
+        margin-right:5px;
         margin-bottom:10px;
         background-color: #ededed;
         text-align: left;
@@ -88,7 +96,7 @@
 
 
     .project_sort ul.project_list a.project_title{
-        font-size:30px;
+        font-size:35px;
         text-align: left;
         color:#5c5c5c;
         text-shadow: 0px 1px 0px  #fff;
@@ -123,7 +131,7 @@
 
     .data {
         text-align: left;
-        font-size: 20px;
+        font-size: 25px;
     }
 
 </style>
