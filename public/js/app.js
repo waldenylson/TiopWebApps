@@ -2180,6 +2180,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'tiop-mnt',
@@ -22525,51 +22527,53 @@ var render = function() {
                   { staticClass: "project_list" },
                   _vm._l(_vm.dadosMntProg, function(mntProg) {
                     return _c("li", { key: mntProg.id }, [
-                      _c("span", { staticClass: "project_badge ino" }),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "project_title alinha-esquerda" },
-                        [_c("b", [_vm._v(_vm._s(mntProg.radar.nome))])]
-                      ),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "fa fa-calendar data" }, [
-                        _c("a", [
-                          _c("b", [_vm._v(" " + _vm._s(mntProg.data_ini))])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "data" }, [
-                        _c("a", [
-                          _vm._v("  "),
-                          _c("b", { staticClass: "fa fa-clock-o" }, [
-                            _vm._v(" " + _vm._s(mntProg.hora_ini + "Z"))
+                      _c("div", [
+                        _c("span", { staticClass: "project_badge ino" }),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "project_title alinha-esquerda" },
+                          [_c("b", [_vm._v(_vm._s(mntProg.radar.nome))])]
+                        ),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "fa fa-calendar data" }, [
+                          _c("a", [
+                            _c("b", [_vm._v(" " + _vm._s(mntProg.data_ini))])
                           ])
-                        ])
-                      ]),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "fa fa-calendar data" }, [
-                        _c("a", [
-                          _c("b", [_vm._v(" " + _vm._s(mntProg.data_fim))])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "data" }, [
-                        _c("a", [
-                          _vm._v("  "),
-                          _c("b", { staticClass: "fa fa-clock-o" }, [
-                            _vm._v(" " + _vm._s(mntProg.hora_fim + "Z"))
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "data" }, [
+                          _c("a", [
+                            _vm._v("  "),
+                            _c("b", { staticClass: "fa fa-clock-o" }, [
+                              _vm._v(" " + _vm._s(mntProg.hora_ini + "Z"))
+                            ])
                           ])
-                        ])
-                      ]),
-                      _c("br"),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "motivo" }, [
-                        _vm._v(_vm._s(mntProg.motivo))
-                      ]),
-                      _c("br")
+                        ]),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "fa fa-calendar data" }, [
+                          _c("a", [
+                            _c("b", [_vm._v(" " + _vm._s(mntProg.data_fim))])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "data" }, [
+                          _c("a", [
+                            _vm._v("  "),
+                            _c("b", { staticClass: "fa fa-clock-o" }, [
+                              _vm._v(" " + _vm._s(mntProg.hora_fim + "Z"))
+                            ])
+                          ])
+                        ]),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "motivo" }, [
+                          _vm._v(_vm._s(mntProg.motivo))
+                        ]),
+                        _c("br")
+                      ])
                     ])
                   })
                 )
