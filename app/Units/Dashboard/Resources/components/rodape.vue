@@ -3,8 +3,8 @@
         <div class="panel panel-default">
             <div class="panel-body bottom-container-decoration">
                 <div class="relogio">
-                    <div id="hora"></div><br />
-                    <div id="data"></div>
+                    <span id="hora"></span>
+                    <span id="data"></span>
                 </div>
             </div>
         </div>
@@ -82,12 +82,13 @@
     }
 
     #data {
-        margin-left: 16px;
+        /*margin-left: 10px;*/
     }
 
     #hora {
         margin-bottom: 2px;
         height: 35px;
+        width: 10px;
         text-align: center;
     }
 </style>

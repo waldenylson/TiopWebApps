@@ -4,6 +4,7 @@ window.Vue = require('vue');
 Vue.use(require('vue-moment'));
 
 Vue.component('tiop-efetivo', require('../../../app/Units/Dashboard/Resources/components/afastamento-efetivo'));
+Vue.component('tiop-notifications', require('../../../app/Units/Dashboard/Resources/components/notifications'));
 Vue.component('tiop-sobreaviso', require('../../../app/Units/Dashboard/Resources/components/sobreaviso'));
 Vue.component('status-radares', require('../../../app/Units/Dashboard/Resources/components/radares'));
 Vue.component('tiop-rpl', require('../../../app/Units/Dashboard/Resources/components/rpl'));

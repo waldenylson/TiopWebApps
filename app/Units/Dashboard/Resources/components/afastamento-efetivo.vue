@@ -1,5 +1,5 @@
 <template>
-    <div class="afastamentos">
+    <div class="notifications">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">
@@ -9,7 +9,7 @@
                 </h3>
             </div>
             <div class="panel-body">
-                <div class="box box-bg-color-efetivo box-efetivo box-efetivo-height">
+                <div class="box box-bg-color-notification box-notification box-notification-height">
                     <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
                         <thead>
                         <tr class="table-title">
@@ -66,12 +66,12 @@
         padding: 5px;
     }
 
-    .afastamentos {
+    .notifications {
         overflow: hidden;
         height: 100%;
         margin-bottom: -10px;
     }
-    .box-efetivo {
+    .box-notification {
         background-color: royalblue;
         height: 50%;
         width: 99.5%;
@@ -79,7 +79,7 @@
         font-size: 12px;
     }
 
-    .box-efetivo-height {
+    .box-notification-height {
         height: 420px;
     }
 
@@ -91,7 +91,7 @@
         text-align: center;
     }
 
-    .box-bg-color-efetivo {
+    .box-bg-color-notification {
         background-color: snow;
     }
 </style>

@@ -156,6 +156,58 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ "./app/Units/Dashboard/Resources/components/notifications.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28e84920\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/notifications.vue")
+}
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./app/Units/Dashboard/Resources/components/notifications.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-28e84920\",\"hasScoped\":true,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./app/Units/Dashboard/Resources/components/notifications.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-28e84920"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "app/Units/Dashboard/Resources/components/notifications.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-28e84920", Component.options)
+  } else {
+    hotAPI.reload("data-v-28e84920", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
 /***/ "./app/Units/Dashboard/Resources/components/paradas-radar.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2180,8 +2232,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'tiop-mnt',
@@ -2205,6 +2255,60 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         window.console.log('Componente MNT-Prog Carregado');
         this.getMntProg();
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./app/Units/Dashboard/Resources/components/notifications.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'tiop-notifications',
+
+    props: ['efetivotiop'],
+
+    data: function data() {
+        return {
+            efetivoTiop: []
+        };
+    },
+
+    methods: {
+        getEfetivo: function getEfetivo() {
+            var _this = this;
+
+            axios.get('/api/getEfetivo').then(function (response) {
+                return _this.efetivoTiop = response.data;
+            });
+        }
+    },
+
+    mounted: function mounted() {
+        window.console.log('componente notifications carregado');
+        //this.getEfetivo()
     }
 });
 
@@ -2310,7 +2414,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.get('/api/getRStatus').then(function (response) {
                 return _this.dadosRadares = response.data;
             });
-            setTimeout(this.getRadares, 10000);
+            //setTimeout(this.getRadares, 10000)
         }
     },
 
@@ -4921,7 +5025,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.rpl[data-v-1ffd3976] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: 25px;\n}\n.box-rpl[data-v-1ffd3976] {\n    height: 100px;\n    width: 270px;\n    padding-top: 5px;\n    margin-left: 4px;\n    margin-bottom: 1px;\n    margin-top: 1px;\n    font-size: large;\n    padding-left: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.rpl[data-v-1ffd3976] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: 25px;\n}\n.box-rpl[data-v-1ffd3976] {\n    height: 100px;\n    width: 270px;\n    padding-top: 5px;\n    margin-left: 4px;\n    margin-bottom: 1px;\n    margin-top: 1px;\n    font-size: large;\n    padding-left: 5px;\n}\n.box-rpl-titulo-color-red[data-v-1ffd3976] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n\n", ""]);
 
 // exports
 
@@ -4937,6 +5041,21 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 // module
 exports.push([module.i, "\n.sobreaviso[data-v-25ee6abf] {\n    padding-top: 10px;\n    font-size: xx-large;\n    margin-bottom: -10px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28e84920\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/notifications.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.panel-body[data-v-28e84920] {\n    padding: 5px;\n}\n.notifications[data-v-28e84920] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-notification[data-v-28e84920] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: left;\n    font-size: 12px;\n}\n.box-notification-height[data-v-28e84920] {\n    height: 337px;\n}\n.box-bg-color-notification[data-v-28e84920] {\n    background-color: snow;\n}\n", ""]);
 
 // exports
 
@@ -4981,7 +5100,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 280px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n#data[data-v-485c0017] {\n    margin-left: 16px;\n}\n#hora[data-v-485c0017] {\n    margin-bottom: 2px;\n    height: 35px;\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 280px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n#data[data-v-485c0017] {\n    /*margin-left: 10px;*/\n}\n#hora[data-v-485c0017] {\n    margin-bottom: 2px;\n    height: 35px;\n    width: 10px;\n    text-align: center;\n}\n", ""]);
 
 // exports
 
@@ -5026,7 +5145,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.panel-body[data-v-ac97f1cc] {\n    padding: 5px;\n}\n.afastamentos[data-v-ac97f1cc] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-efetivo[data-v-ac97f1cc] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: left;\n    font-size: 12px;\n}\n.box-efetivo-height[data-v-ac97f1cc] {\n    height: 420px;\n}\n.table-title[data-v-ac97f1cc] {\n    font-size: 18px;\n}\n.table-afastamentos-retorno[data-v-ac97f1cc] {\n    text-align: center;\n}\n.box-bg-color-efetivo[data-v-ac97f1cc] {\n    background-color: snow;\n}\n", ""]);
+exports.push([module.i, "\n.panel-body[data-v-ac97f1cc] {\n    padding: 5px;\n}\n.notifications[data-v-ac97f1cc] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-notification[data-v-ac97f1cc] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: left;\n    font-size: 12px;\n}\n.box-notification-height[data-v-ac97f1cc] {\n    height: 420px;\n}\n.table-title[data-v-ac97f1cc] {\n    font-size: 18px;\n}\n.table-afastamentos-retorno[data-v-ac97f1cc] {\n    text-align: center;\n}\n.box-bg-color-notification[data-v-ac97f1cc] {\n    background-color: snow;\n}\n", ""]);
 
 // exports
 
@@ -22394,20 +22513,12 @@ var render = function() {
               _vm._v(" "),
               _c("i", { staticClass: "fa fa-calendar" }, [
                 _vm._v(" ATLIZ: "),
-                _c("b", [
-                  _vm._v(
-                    _vm._s(_vm._f("moment")(rplInfo["dtCarga"], "DD/MM/YYYY"))
-                  )
-                ])
+                _c("b", [_vm._v(_vm._s(rplInfo["dtCarga"]))])
               ]),
               _vm._v(" "),
               _c("i", { staticClass: "fa fa-exclamation-circle" }, [
                 _vm._v(" VALID: "),
-                _c("b", [
-                  _vm._v(
-                    _vm._s(_vm._f("moment")(rplInfo["validade"], "DD/MM/YYYY"))
-                  )
-                ])
+                _c("b", [_vm._v(_vm._s(rplInfo["validade"]))])
               ])
             ])
           })
@@ -22421,13 +22532,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel-heading" }, [
-      _c("h3", { staticClass: "panel-title" }, [
-        _c("i", { staticClass: "fa fa-plane titulo" }, [
-          _c("b", [_vm._v(" RPL")])
+    return _c(
+      "div",
+      { staticClass: "panel-heading box-rpl-titulo-color-red" },
+      [
+        _c("h3", { staticClass: "panel-title" }, [
+          _c("i", { staticClass: "fa fa-plane titulo" }, [
+            _c("b", [_vm._v(" RPL")])
+          ])
         ])
-      ])
-    ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -22506,6 +22621,51 @@ if (false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-28e84920\",\"hasScoped\":true,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./app/Units/Dashboard/Resources/components/notifications.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "notifications" }, [
+      _c("div", { staticClass: "panel panel-primary" }, [
+        _c("div", { staticClass: "panel-heading" }, [
+          _c("h3", { staticClass: "panel-title" }, [
+            _c("i", { staticClass: "fa fa-info titulo" }, [
+              _c("b", [_vm._v(" NOTIFICAÇÕES SISTEMA")])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel-body" }, [
+          _c("div", {
+            staticClass:
+              "box box-bg-color-notification box-notification box-notification-height"
+          })
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-28e84920", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-2a58989c\",\"hasScoped\":true,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./app/Units/Dashboard/Resources/components/mnt-prog.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22527,53 +22687,51 @@ var render = function() {
                   { staticClass: "project_list" },
                   _vm._l(_vm.dadosMntProg, function(mntProg) {
                     return _c("li", { key: mntProg.id }, [
-                      _c("div", [
-                        _c("span", { staticClass: "project_badge ino" }),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          { staticClass: "project_title alinha-esquerda" },
-                          [_c("b", [_vm._v(_vm._s(mntProg.radar.nome))])]
-                        ),
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "fa fa-calendar data" }, [
-                          _c("a", [
-                            _c("b", [_vm._v(" " + _vm._s(mntProg.data_ini))])
+                      _c("span", { staticClass: "project_badge ino" }),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "project_title alinha-esquerda" },
+                        [_c("b", [_vm._v(_vm._s(mntProg.radar.nome))])]
+                      ),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "fa fa-calendar data" }, [
+                        _c("a", [
+                          _c("b", [_vm._v(" " + _vm._s(mntProg.data_ini))])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "data" }, [
+                        _c("a", [
+                          _vm._v("  "),
+                          _c("b", { staticClass: "fa fa-clock-o" }, [
+                            _vm._v(" " + _vm._s(mntProg.hora_ini + "Z"))
                           ])
-                        ]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "data" }, [
-                          _c("a", [
-                            _vm._v("  "),
-                            _c("b", { staticClass: "fa fa-clock-o" }, [
-                              _vm._v(" " + _vm._s(mntProg.hora_ini + "Z"))
-                            ])
+                        ])
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "fa fa-calendar data" }, [
+                        _c("a", [
+                          _c("b", [_vm._v(" " + _vm._s(mntProg.data_fim))])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "data" }, [
+                        _c("a", [
+                          _vm._v("  "),
+                          _c("b", { staticClass: "fa fa-clock-o" }, [
+                            _vm._v(" " + _vm._s(mntProg.hora_fim + "Z"))
                           ])
-                        ]),
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "fa fa-calendar data" }, [
-                          _c("a", [
-                            _c("b", [_vm._v(" " + _vm._s(mntProg.data_fim))])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "data" }, [
-                          _c("a", [
-                            _vm._v("  "),
-                            _c("b", { staticClass: "fa fa-clock-o" }, [
-                              _vm._v(" " + _vm._s(mntProg.hora_fim + "Z"))
-                            ])
-                          ])
-                        ]),
-                        _c("br"),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "motivo" }, [
-                          _vm._v(_vm._s(mntProg.motivo))
-                        ]),
-                        _c("br")
-                      ])
+                        ])
+                      ]),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "motivo" }, [
+                        _vm._v(_vm._s(mntProg.motivo))
+                      ]),
+                      _c("br")
                     ])
                   })
                 )
@@ -22668,10 +22826,9 @@ var staticRenderFns = [
       _c("div", { staticClass: "panel panel-default" }, [
         _c("div", { staticClass: "panel-body bottom-container-decoration" }, [
           _c("div", { staticClass: "relogio" }, [
-            _c("div", { attrs: { id: "hora" } }),
-            _c("br"),
+            _c("span", { attrs: { id: "hora" } }),
             _vm._v(" "),
-            _c("div", { attrs: { id: "data" } })
+            _c("span", { attrs: { id: "data" } })
           ])
         ])
       ])
@@ -22993,7 +23150,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "afastamentos" }, [
+  return _c("div", { staticClass: "notifications" }, [
     _c("div", { staticClass: "panel panel-primary" }, [
       _vm._m(0),
       _vm._v(" "),
@@ -23002,7 +23159,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "box box-bg-color-efetivo box-efetivo box-efetivo-height"
+              "box box-bg-color-notification box-notification box-notification-height"
           },
           [
             _c(
@@ -27857,6 +28014,33 @@ if(false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28e84920\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/notifications.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28e84920\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/notifications.vue");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js")("0deea2c8", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28e84920\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./notifications.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28e84920\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./notifications.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2a58989c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/mnt-prog.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28320,6 +28504,7 @@ window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 Vue.use(__webpack_require__("./node_modules/vue-moment/dist/vue-moment.js"));
 
 Vue.component('tiop-efetivo', __webpack_require__("./app/Units/Dashboard/Resources/components/afastamento-efetivo.vue"));
+Vue.component('tiop-notifications', __webpack_require__("./app/Units/Dashboard/Resources/components/notifications.vue"));
 Vue.component('tiop-sobreaviso', __webpack_require__("./app/Units/Dashboard/Resources/components/sobreaviso.vue"));
 Vue.component('status-radares', __webpack_require__("./app/Units/Dashboard/Resources/components/radares.vue"));
 Vue.component('tiop-rpl', __webpack_require__("./app/Units/Dashboard/Resources/components/rpl.vue"));

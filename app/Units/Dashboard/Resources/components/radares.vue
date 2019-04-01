@@ -43,7 +43,7 @@
         methods: {
             getRadares: function() {
                 axios.get('/api/getRStatus').then(response => (this.dadosRadares = response.data))
-                setTimeout(this.getRadares, 10000)
+                //setTimeout(this.getRadares, 10000)
             }
         },
 

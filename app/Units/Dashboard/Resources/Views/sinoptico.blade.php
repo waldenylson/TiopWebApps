@@ -8,7 +8,7 @@
 
             <tiop-efetivo></tiop-efetivo>
 
-            {{--<tiop-rpl></tiop-rpl>--}}
+            <tiop-notifications></tiop-notifications>
 
         </div>
         <div class="sub-container-center">

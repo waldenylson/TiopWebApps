@@ -1,7 +1,7 @@
 <template>
     <div class="rpl">
         <div class="panel panel-primary">
-            <div class="panel-heading">
+            <div class="panel-heading box-rpl-titulo-color-red">
                 <h3 class="panel-title">
                     <i class="fa fa-plane titulo">
                         <b>&nbsp;RPL</b>
@@ -12,8 +12,8 @@
                 <div>
                     <div class="box-rpl" v-for="rplInfo in dadosRPLInfo">
                         <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>{{ rplInfo['numero'] }}</i></b></i><br />
-                        <i class="fa fa-calendar">&nbsp;ATLIZ: <b>{{ rplInfo['dtCarga'] | moment("DD/MM/YYYY") }}</b></i>
-                        <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>{{ rplInfo['validade'] | moment("DD/MM/YYYY") }}</b></i>
+                        <i class="fa fa-calendar">&nbsp;ATLIZ: <b>{{ rplInfo['dtCarga'] }}</b></i>
+                        <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>{{ rplInfo['validade'] }}</b></i>
                     </div>
                 </div>
             </div>
@@ -64,4 +64,11 @@ export default {
         font-size: large;
         padding-left: 5px;
     }
+
+    .box-rpl-titulo-color-red {
+        color: #fff;
+        background-color: #ff0000;
+        border-color: #ff0000;
+    }
+
 </style>
