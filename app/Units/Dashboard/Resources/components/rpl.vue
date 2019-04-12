@@ -1,7 +1,7 @@
 <template>
     <div class="rpl">
-        <div class="panel panel-primary">
-            <div class="panel-heading box-rpl-titulo-color-red">
+        <div class="panel panel-primary" v-for="rplInfo in dadosRPLInfo">
+            <div class="panel-heading"  v-bind:class="{  }">
                 <h3 class="panel-title">
                     <i class="fa fa-plane titulo">
                         <b>&nbsp;RPL</b>
@@ -10,7 +10,7 @@
             </div>
             <div class="panel-body">
                 <div>
-                    <div class="box-rpl" v-for="rplInfo in dadosRPLInfo">
+                    <div class="box-rpl">
                         <i class="fa fa-check-circle">&nbsp;ATUAL: <b><i>{{ rplInfo['numero'] }}</i></b></i><br />
                         <i class="fa fa-calendar">&nbsp;ATLIZ: <b>{{ rplInfo['dtCarga'] }}</b></i>
                         <i class="fa fa-exclamation-circle">&nbsp;VALID: <b>{{ rplInfo['validade'] }}</b></i>
@@ -22,25 +22,32 @@
 </template>
 
 <script>
-Vue.use(require('vue-moment'));
+
 export default {
+
+
     name: 'tiop-rpl',
 
-    data: function () {
-        return {
-            dadosRPLInfo: []
-        }
-    },
+    data: () => ({
+
+        dadosRPLInfo: {},
+
+    }),
 
     methods:
     {
-        getRPLInfo: function () {
-            axios.get('/api/getRPLInfo').then(response => (this.dadosRPLInfo = response.data))
+        getRPLInfo: function ()
+        {
+            axios.get('/api/getRPLInfo').then(response => (this.dadosRPLInfo = response.data));
+
+            console.log(this.dadosRPLInfo)
+
+
         }
     },
 
     mounted() {
-        window.console.log('componente RPL carregado')
+        window.console.log('componente RPL carregado');
         this.getRPLInfo()
     }
 }

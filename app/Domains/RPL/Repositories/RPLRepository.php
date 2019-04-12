@@ -16,9 +16,11 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
     public function listRPL()
     {
         $rpl = DB::select("select r.id, r.numero, DATE_FORMAT(r.data_carga, '%d/%m/%Y') as 'dtCarga' ,
-                                                  DATE_FORMAT(r.validade, '%d/%m/%Y') as 'validade', 
-                                  b.versao as 'BDSVer' from rpl r
-                           inner join bds b on (r.bds_id = b.id)");
+                                                  DATE_FORMAT(r.validade, '%d/%m/%Y')   as 'validade', 
+                                                                               b.versao as 'BDSVer' 
+                            from rpl r
+                            inner join bds b 
+                            on (r.bds_id = b.id)");
 
         return $rpl;
     }

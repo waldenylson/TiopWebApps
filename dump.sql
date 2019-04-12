@@ -1,8 +1,8 @@
 -- MySQL dump 10.17  Distrib 10.3.13-MariaDB, for Linux (x86_64)
 --
--- Host: 10.80.11.60    Database: mydb
+-- Host: 10.80.33.59    Database: sistiop
 -- ------------------------------------------------------
--- Server version	10.2.11-MariaDB-10.2.11+maria~jessie
+-- Server version	5.7.23
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -58,7 +58,7 @@ CREATE TABLE `bds` (
   `sistema_centro_id` int(11) NOT NULL,
   `versao` varchar(45) NOT NULL,
   `data_atualizacao` date NOT NULL,
-  `descricao` text DEFAULT NULL,
+  `descricao` text,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE `centros` (
   `nome` varchar(100) NOT NULL,
   `acronimo` varchar(45) NOT NULL,
   `localidade` varchar(45) NOT NULL,
-  `descricao` text DEFAULT NULL,
+  `descricao` text,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -191,14 +191,14 @@ CREATE TABLE `escala_sobreaviso` (
   `efetivo_id` int(11) NOT NULL,
   `mes` int(11) NOT NULL,
   `ano` int(11) NOT NULL,
-  `dias` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `dias` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_escala_sobreaviso_efetivo_tiop1_idx` (`efetivo_id`),
   CONSTRAINT `fk_escala_sobreaviso_efetivo_tiop1` FOREIGN KEY (`efetivo_id`) REFERENCES `efetivo_tiop` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,7 +207,7 @@ CREATE TABLE `escala_sobreaviso` (
 
 LOCK TABLES `escala_sobreaviso` WRITE;
 /*!40000 ALTER TABLE `escala_sobreaviso` DISABLE KEYS */;
-INSERT INTO `escala_sobreaviso` VALUES (4,1,2,2019,'01,09,17,11,20,28','2019-01-29 17:55:37','2019-01-29 17:55:37',NULL),(13,4,2,2019,'04,13,25,08,16,23','2019-01-29 20:04:40','2019-01-29 20:04:40',NULL),(21,7,2,2019,'02,06','2019-01-29 21:54:00','2019-01-29 21:54:00',NULL),(22,11,1,2019,'29,31','2019-01-29 21:56:22','2019-01-29 21:56:22',NULL),(23,7,1,2019,'30','2019-01-29 21:56:35','2019-01-29 21:56:35',NULL),(24,12,2,2019,'22,24,15,14,18,21,27','2019-01-30 13:30:22','2019-02-12 13:53:45',NULL),(25,11,2,2019,'03,10,12,05,07,19,26','2019-01-30 13:31:06','2019-02-12 13:54:04',NULL),(27,4,3,2019,'07,22,27,30,03','2019-02-07 12:09:25','2019-02-07 12:09:25',NULL),(28,1,3,2019,'05,21,26,29,24','2019-02-07 12:10:05','2019-02-07 12:10:05',NULL),(29,12,3,2019,'01,10,23,12,15,18,28,04','2019-02-07 12:11:01','2019-02-07 12:11:01',NULL),(30,7,3,2019,'06,11,14,19,25,09,17,31','2019-02-07 12:12:09','2019-02-07 12:12:09',NULL),(31,11,3,2019,'08,13,20,16,02','2019-02-07 12:12:49','2019-02-07 12:12:49',NULL);
+INSERT INTO `escala_sobreaviso` VALUES (4,1,2,2019,'01,09,17,11,20,28','2019-01-29 17:55:37','2019-01-29 17:55:37',NULL),(13,4,2,2019,'04,13,25,08,16,23','2019-01-29 20:04:40','2019-01-29 20:04:40',NULL),(21,7,2,2019,'02,06','2019-01-29 21:54:00','2019-01-29 21:54:00',NULL),(22,11,1,2019,'29,31','2019-01-29 21:56:22','2019-01-29 21:56:22',NULL),(23,7,1,2019,'30','2019-01-29 21:56:35','2019-01-29 21:56:35',NULL),(24,12,2,2019,'22,24,15,14,18,21,27','2019-01-30 13:30:22','2019-02-12 13:53:45',NULL),(25,11,2,2019,'03,10,12,05,07,19,26','2019-01-30 13:31:06','2019-02-12 13:54:04',NULL),(27,4,3,2019,'07,22,27,30,03','2019-02-07 12:09:25','2019-02-07 12:09:25',NULL),(28,1,3,2019,'05,21,26,29,24','2019-02-07 12:10:05','2019-02-07 12:10:05',NULL),(29,12,3,2019,'01,10,23,12,15,18,28,04','2019-02-07 12:11:01','2019-02-07 12:11:01',NULL),(30,7,3,2019,'06,11,14,19,25,09,17,31','2019-02-07 12:12:09','2019-02-07 12:12:09',NULL),(31,11,3,2019,'08,13,20,16,02','2019-02-07 12:12:49','2019-02-07 12:12:49',NULL),(32,1,4,2019,'01,11,23,27,30','2019-04-09 21:13:15','2019-04-09 21:13:15',NULL),(33,4,4,2019,'02,04,07,12,20,23,29','2019-04-09 21:14:38','2019-04-09 21:14:38',NULL),(34,7,4,2019,'03,06,09,16,19,25','2019-04-09 21:15:32','2019-04-09 21:15:32',NULL),(35,11,4,2019,'10,13,15,18,24,28','2019-04-09 21:16:12','2019-04-09 21:16:12',NULL),(36,12,4,2019,'05,08,14,17,21,26','2019-04-09 21:16:52','2019-04-09 21:16:52',NULL);
 /*!40000 ALTER TABLE `escala_sobreaviso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -250,8 +250,8 @@ CREATE TABLE `mnt_programadas` (
   `data_fim` date NOT NULL,
   `hora_ini` time NOT NULL,
   `hora_fim` time NOT NULL,
-  `observacoes` text DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `observacoes` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`,`radar_id`,`efetivo_id`),
   KEY `fk_mnt_programadas_radares1_idx` (`radar_id`),
@@ -291,7 +291,7 @@ CREATE TABLE `radares` (
   `canal_b` int(11) NOT NULL,
   `lat` float NOT NULL,
   `long` float NOT NULL,
-  `observacoes` text DEFAULT NULL,
+  `observacoes` text,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
@@ -321,7 +321,7 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ALLOW_INVALID_DATES,ERROR_FOR_DIVISION_BY_ZERO,TRADITIONAL,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER `mydb`.`radares_AFTER_INSERT` AFTER INSERT ON `radares` FOR EACH ROW
+/*!50003 CREATE*/ /*!50017 DEFINER=`sistiop`@`%`*/ /*!50003 TRIGGER `sistiop`.`radares_AFTER_INSERT` AFTER INSERT ON `radares` FOR EACH ROW
 BEGIN
 	INSERT INTO status_radar values(NEW.id,'ope','ope',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
 END */;;
@@ -375,7 +375,7 @@ CREATE TABLE `sistemas` (
   `nome` varchar(45) NOT NULL,
   `versao` varchar(45) NOT NULL,
   `data_atualizacao` date NOT NULL,
-  `descricao` text DEFAULT NULL,
+  `descricao` text,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -490,4 +490,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-07 17:27:20
+-- Dump completed on 2019-04-09 15:23:00

@@ -39,17 +39,18 @@ class SinopticoController extends Controller
     ];
 
     private $efetivoTiop = [
-        ["nome" => "SO R1 EDUARDO",    "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
-        ["nome" => "SO FABIO",         "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
-        ["nome" => "SO KLEBER",        "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
-        ["nome" => "1S MUNIZ",         "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
-        ["nome" => "SO HENRIQUE",       "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
-        ["nome" => "1S MELO",          "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
-        ["nome" => "2S EUDES",         "motivo" => "DISPENSADO", "retorno" => "30/05/2018"],
-        ["nome" => "2S WALDENYLSON",   "motivo" => "FÉRIAS",     "retorno" => "25/06/2018"],
-        ["nome" => "2S REHILSON",      "motivo" => "HARF",       "retorno" => "31/12/2018"],
-        ["nome" => "2S RODRIGO SOUZA", "motivo" => "MISSÃO",     "retorno" => "25/05/2018"],
-        ["nome" => "3S VAREJÃO MUITO NOVO",       "motivo" => "SERVIÇO",    "retorno" => "15/04/2018"],
+//        ["nome" => "SO R1 EDUARDO",    "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
+//        ["nome" => "SO JOTA",          "motivo" => "TESTE SISTEMA",      "retorno" => "22/07/2018"],
+//        ["nome" => "SO FABIO",         "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
+//        ["nome" => "SO KLEBER",        "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
+//        ["nome" => "1S MUNIZ",         "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
+//        ["nome" => "SO HENRIQUE",      "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
+//        ["nome" => "1S MELO",          "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
+//        ["nome" => "2S EUDES",         "motivo" => "TESTE SISTEMA",      "retorno" => "30/05/2018"],
+//        ["nome" => "2S WALDENYLSON",   "motivo" => "TESTE SISTEMA",      "retorno" => "25/06/2018"],
+//        ["nome" => "2S REHILSON",      "motivo" => "TESTE SISTEMA",      "retorno" => "31/12/2018"],
+//        ["nome" => "2S RODRIGO SOUZA", "motivo" => "TESTE SISTEMA",      "retorno" => "25/05/2018"],
+//        ["nome" => "3S VAREJÃO",       "motivo" => "TESTE SISTEMA",      "retorno" => "15/04/2018"],
     ];
 
     protected $scRepository;

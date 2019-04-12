@@ -2547,13 +2547,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-Vue.use(__webpack_require__("./node_modules/vue-moment/dist/vue-moment.js"));
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+
     name: 'tiop-rpl',
 
     data: function data() {
         return {
-            dadosRPLInfo: []
+
+            dadosRPLInfo: {}
+
         };
     },
 
@@ -2564,6 +2567,8 @@ Vue.use(__webpack_require__("./node_modules/vue-moment/dist/vue-moment.js"));
             axios.get('/api/getRPLInfo').then(function (response) {
                 return _this.dadosRPLInfo = response.data;
             });
+
+            console.log(this.dadosRPLInfo);
         }
     },
 
@@ -22496,15 +22501,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "rpl" }, [
-    _c("div", { staticClass: "panel panel-primary" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "panel-body" }, [
-        _c(
-          "div",
-          _vm._l(_vm.dadosRPLInfo, function(rplInfo) {
-            return _c("div", { staticClass: "box-rpl" }, [
+  return _c(
+    "div",
+    { staticClass: "rpl" },
+    _vm._l(_vm.dadosRPLInfo, function(rplInfo) {
+      return _c("div", { staticClass: "panel panel-primary" }, [
+        _c("div", { staticClass: "panel-heading", class: {} }, [
+          _vm._m(0, true)
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel-body" }, [
+          _c("div", [
+            _c("div", { staticClass: "box-rpl" }, [
               _c("i", { staticClass: "fa fa-check-circle" }, [
                 _vm._v(" ATUAL: "),
                 _c("b", [_c("i", [_vm._v(_vm._s(rplInfo["numero"]))])])
@@ -22521,28 +22529,22 @@ var render = function() {
                 _c("b", [_vm._v(_vm._s(rplInfo["validade"]))])
               ])
             ])
-          })
-        )
+          ])
+        ])
       ])
-    ])
-  ])
+    })
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "panel-heading box-rpl-titulo-color-red" },
-      [
-        _c("h3", { staticClass: "panel-title" }, [
-          _c("i", { staticClass: "fa fa-plane titulo" }, [
-            _c("b", [_vm._v(" RPL")])
-          ])
-        ])
-      ]
-    )
+    return _c("h3", { staticClass: "panel-title" }, [
+      _c("i", { staticClass: "fa fa-plane titulo" }, [
+        _c("b", [_vm._v(" RPL")])
+      ])
+    ])
   }
 ]
 render._withStripped = true
