@@ -96,7 +96,7 @@ class SinopticoController extends Controller
 
     public function getRPLInfo()
     {
-        return json_encode($this->rplRepository->listRPL(), JSON_UNESCAPED_UNICODE);
+        return json_encode($this->rplRepository->getRPL(), JSON_UNESCAPED_UNICODE);
     }
 
     public function getSobreaviso()

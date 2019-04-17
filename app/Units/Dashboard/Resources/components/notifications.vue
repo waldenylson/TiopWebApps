@@ -4,13 +4,15 @@
             <div class="panel-heading">
                 <h3 class="panel-title">
                     <i class="fa fa-info titulo">
-                        <b>&nbsp;NOTIFICAÇÕES SISTEMA</b>
+                        <b>&nbspNOTIFICAÇÕES SISTEMA</b>
                     </i>
                 </h3>
             </div>
             <div class="panel-body">
                 <div class="box box-bg-color-notification box-notification box-notification-height">
+                    <span class="blink">
 
+                    </span>
                 </div>
             </div>
         </div>
@@ -18,10 +20,9 @@
 </template>
 
 <script>
+
     export default {
         name: 'tiop-notifications',
-
-        props: ['efetivotiop'],
 
         data: function (){
             return {
@@ -32,7 +33,9 @@
         methods: {
             getEfetivo: function() {
                 axios.get('/api/getEfetivo').then(response => (this.efetivoTiop = response.data))
-            }
+            },
+
+
         },
 
         mounted() {
@@ -56,8 +59,9 @@
         background-color: royalblue;
         height: 50%;
         width: 99.5%;
-        text-align: left;
-        font-size: 12px;
+        text-align: center;
+        /*font-size: 100px;*/
+        color: red;
     }
 
     .box-notification-height {
@@ -66,5 +70,26 @@
 
     .box-bg-color-notification {
         background-color: snow;
+    }
+
+    .blink{
+        width:200px;
+        height: 50px;
+        color: red;
+        padding: 15px;
+        text-align: center;
+        line-height: 50px;
+    }
+    span{
+        font-size: 25px;
+        font-family: Verdana;
+        font-weight: bold;
+        color: white;
+        animation: blink 1.3s linear infinite;
+    }
+    @keyframes blink{
+        /*0%{opacity: 0;}*/
+        50%{opacity: .0;}
+        100%{opacity: 5;}
     }
 </style>
