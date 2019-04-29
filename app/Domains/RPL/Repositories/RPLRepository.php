@@ -6,7 +6,7 @@ use TIOp\Domains\RPL\Contracts\RPLRepository as RPLRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\RPL\RPL;
 use TIOp\Units\RPL\Requests\StoreRPLPostRequest;
-use Illuminate\Support\Carbon;
+
 
 class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContract
 {

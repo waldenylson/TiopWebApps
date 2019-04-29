@@ -5,6 +5,7 @@ use TIOp\Domains\MntProgramadas\Contracts\MntProgramadasRepository as MntProgram
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\MntProgramadas\MntProgramadas;
 use TIOp\Units\MntProgramadas\Requests\StoreMntProgramadasPostRequest;
+use Illuminate\Support\Carbon;
 
 class MntProgramadasRepository extends AbstractCrudRepository implements MntProgramadasRepositoryContract
 {
@@ -14,34 +15,54 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
 
     public function listMntProgramadas()
     {
-        return $this->modelClass::all()->load('radar')->load('efetivo');
+        date_default_timezone_set('UTC');
+
+        $dados = [];
+
+        $resultQuery = $this->modelClass::all()->load('radar')->load('efetivo');
+
+        foreach($resultQuery as $data)
+        {
+            $dataFim = explode('/', $data['data_fim']);
+            $horaFim = explode(':', $data['hora_fim']);
+            $hoje    = Carbon::now();
+
+            $fullDateTime = Carbon::create($dataFim[2], $dataFim[1], $dataFim[0], $horaFim[0], $horaFim[1], 00);
+
+            if( $fullDateTime->gte($hoje) )
+            {
+                $dados[] = $data;
+            }
+        }
+
+        return $dados;
     }
 
     public function store(StoreMntProgramadasPostRequest $request)
     {
-        $centro = $this->modelClass::create($request->all());
+        $mntProg = $this->modelClass::create($request->all());
 
-        return $centro;
+        return $mntProg;
     }
 
     public function edit($id)
     {
-        $centro = $this->modelClass::findOrFail($id);
+        $mntProg = $this->modelClass::findOrFail($id);
 
-        return $centro;
+        return $mntProg;
     }
 
     public function persistUpdate(StoreMntProgramadasPostRequest $request, $id)
     {
-        $centro = $this->modelClass::findOrFail($id)->update($request->all());
+        $mntProg = $this->modelClass::findOrFail($id)->update($request->all());
 
-        return $centro;
+        return $mntProg;
     }
 
     public function destroy($id)
     {
-        $centro = $this->modelClass::findOrFail($id);
+        $mntProg = $this->modelClass::findOrFail($id);
 
-        return $centro->delete();
+        return $mntProg->delete();
     }
 }

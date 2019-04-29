@@ -77,11 +77,11 @@
         height: 50px;
         color: red;
         padding: 15px;
-        text-align: center;
+        text-align: justify;
         line-height: 50px;
     }
     span{
-        font-size: 25px;
+        font-size: 35px;
         font-family: Verdana;
         font-weight: bold;
         color: white;

@@ -105,27 +105,9 @@ class SinopticoController extends Controller
     }
 
     public function getMntProg()
-    {   
-        date_default_timezone_set('UTC');
+    {
+        $dados = $this->mntProgRepository->listMntProgramadas();
 
-        $dados = [];
-
-        $resultQuery = $this->mntProgRepository->listMntProgramadas();
-    
-        foreach($resultQuery as $data)
-        {
-            $dataFim = explode('/', $data['data_fim']);
-            $horaFim = explode(':', $data['hora_fim']);            
-            $hoje    = Carbon::now();
-
-            $fullDateTime = Carbon::create($dataFim[2], $dataFim[1], $dataFim[0], $horaFim[0], $horaFim[1], 00);
-
-            if( $fullDateTime->gte($hoje) )
-            {
-                $dados[] = $data;
-            }
-        }
-        
         return json_encode($dados, JSON_UNESCAPED_UNICODE);
     }
 }
