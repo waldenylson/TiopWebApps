@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SisTIOp')
+@section('title', 'SISTIOp - Controle Escala de Sobreaviso')
 
 @section('content_header')
     <div class="icon">

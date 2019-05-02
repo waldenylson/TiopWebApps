@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'purple',
+    'skin' => 'blue',
 
     /*
     |--------------------------------------------------------------------------
@@ -219,6 +219,23 @@ return [
                 [
                     'text' => 'Cadastrar',
                     'url'  => '/rpl/novo',
+                    'icon' => 'plus-circle',
+                    'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
+                ],
+            ],
+        ],
+        [
+            'text'    => 'MNT Programadas',
+            'icon'    => 'clock-o',
+            'submenu' => [
+                [
+                    'text' => 'Listar Todos',
+                    'url'  => '/mnt',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Cadastrar',
+                    'url'  => '/mnt/novo',
                     'icon' => 'plus-circle',
                     'linkClass' => 'fancybox', // Adicionar esta linha para que funcione corretamente @if (isset($item['linkClass'])) class="{{ $item['linkClass'] }}" @endif
                 ],

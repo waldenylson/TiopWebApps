@@ -39,7 +39,7 @@ class MntProgramadasController extends Controller
     {
         $mntProgramadas = $this->mntProgramadasRepository->listMntProgramadas();
 
-        dd($mntProgramadas);
+        //dd($mntProgramadas);
 
         return view('mntProgramadas::index')->with(compact('mntProgramadas'));
     }
@@ -84,8 +84,9 @@ class MntProgramadasController extends Controller
     public function edit($id)
     {
         $mntProg = $this->mntProgramadasRepository->edit($id);
+        $radares = $this->radarRepository->getAllRadaresForSelect();
 
-        return view('mntProgramadas::edit')->with(compact('mntProg'));
+        return view('mntProgramadas::edit')->with(compact('mntProg'))->with(compact('radares'));
     }
 
 

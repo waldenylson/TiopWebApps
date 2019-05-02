@@ -208,58 +208,6 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ "./app/Units/Dashboard/Resources/components/paradas-radar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45596537\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue")
-}
-var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
-/* script */
-var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue")
-/* template */
-var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-45596537\",\"hasScoped\":true,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue")
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-45596537"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "app/Units/Dashboard/Resources/components/paradas-radar.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-45596537", Component.options)
-  } else {
-    hotAPI.reload("data-v-45596537", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
 /***/ "./app/Units/Dashboard/Resources/components/radares.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2311,52 +2259,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         window.console.log('componente notifications carregado');
         //this.getEfetivo()
-    }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'tiop-paradas',
-
-    mounted: function mounted() {
-        window.console.log('Componente Paradas-Radar Carregado');
     }
 });
 
@@ -5292,21 +5194,6 @@ exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45596537\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.paradas-radar[data-v-45596537] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -10px;\n}\n.paradas-radar-height[data-v-45596537] {\n    height: 250px;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-485c0017\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/rodape.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5315,7 +5202,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 280px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n#data[data-v-485c0017] {\n    /*margin-left: 10px;*/\n}\n#hora[data-v-485c0017] {\n    margin-bottom: 2px;\n    height: 35px;\n    width: 10px;\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.bottom-container[data-v-485c0017] {\n    padding-left: 4px;\n    padding-top: 5px;\n    text-align: center;\n    width: 280px;\n}\n.bottom-container-decoration[data-v-485c0017] {\n    border: 1px solid #0d6aad;\n    border-radius:3px;\n    height: 55px;\n    text-align: center;\n}\n.relogio[data-v-485c0017]{\n    text-align:center;\n    font-family: 'Source Sans Pro', sans-serif;\n    color: #868686;\n    margin-left: 15%;\n    margin-top: -12px;\n}\n#data[data-v-485c0017] {\n    color:#999; font-weight:normal;\n    font-size:11px;\n    margin-top: -20px;\n    margin-left: -20px;\n}\n#hora[data-v-485c0017] {\n    color: #00a3da;\n    font-weight:bold;\n    font-size:30px;\n    height: 35px;\n    width: 10px;\n    text-align: center;\n    position: relative;\n    float: bottom;\n    margin-left: 9%;\n}\n", ""]);
 
 // exports
 
@@ -22986,46 +22873,6 @@ if (false) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-45596537\",\"hasScoped\":true,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "paradas-radar" }, [
-      _c("div", { staticClass: "panel panel-primary" }, [
-        _c("div", { staticClass: "panel-heading" }, [
-          _c("h3", { staticClass: "panel-title" }, [
-            _c("i", { staticClass: "fa fa-history titulo" }, [
-              _c("b", [_vm._v(" PARADAS RADAR")])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "panel-body paradas-radar-height" })
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-45596537", module.exports)
-  }
-}
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-485c0017\",\"hasScoped\":true,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./app/Units/Dashboard/Resources/components/rodape.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23044,9 +22891,10 @@ var staticRenderFns = [
       _c("div", { staticClass: "panel panel-default" }, [
         _c("div", { staticClass: "panel-body bottom-container-decoration" }, [
           _c("div", { staticClass: "relogio" }, [
-            _c("span", { attrs: { id: "hora" } }),
+            _c("div", { attrs: { id: "hora" } }),
+            _c("br"),
             _vm._v(" "),
-            _c("span", { attrs: { id: "data" } })
+            _c("div", { attrs: { id: "data" } })
           ])
         ])
       ])
@@ -28288,33 +28136,6 @@ if(false) {
 
 /***/ }),
 
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45596537\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45596537\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/paradas-radar.vue");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js")("f60aedf0", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45596537\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paradas-radar.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-45596537\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./paradas-radar.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
 /***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-485c0017\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./app/Units/Dashboard/Resources/components/rodape.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28729,7 +28550,6 @@ Vue.component('tiop-sobreaviso', __webpack_require__("./app/Units/Dashboard/Reso
 Vue.component('status-radares', __webpack_require__("./app/Units/Dashboard/Resources/components/radares.vue"));
 Vue.component('tiop-rpl', __webpack_require__("./app/Units/Dashboard/Resources/components/rpl.vue"));
 Vue.component('tiop-mnt', __webpack_require__("./app/Units/Dashboard/Resources/components/mnt-prog.vue"));
-Vue.component('tiop-paradas', __webpack_require__("./app/Units/Dashboard/Resources/components/paradas-radar.vue"));
 Vue.component('tiop-sistemas', __webpack_require__("./app/Units/Dashboard/Resources/components/inf-sistemas.vue"));
 Vue.component('tiop-rodape', __webpack_require__("./app/Units/Dashboard/Resources/components/rodape.vue"));
 

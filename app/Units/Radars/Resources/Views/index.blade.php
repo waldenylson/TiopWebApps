@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Radares')
+@section('title', 'SISTIOp - Controle Cadastro de Radares')
 
 @section('content_header')
     <div class="icon">

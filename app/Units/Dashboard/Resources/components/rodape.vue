@@ -3,8 +3,8 @@
         <div class="panel panel-default">
             <div class="panel-body bottom-container-decoration">
                 <div class="relogio">
-                    <span id="hora"></span>
-                    <span id="data"></span>
+                    <div id="hora"></div><br>
+                    <div id="data"></div>
                 </div>
             </div>
         </div>
@@ -81,14 +81,30 @@
         text-align: center;
     }
 
+    .relogio{
+        text-align:center;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #868686;
+        margin-left: 15%;
+        margin-top: -12px;
+    }
+
     #data {
-        /*margin-left: 10px;*/
+        color:#999; font-weight:normal;
+        font-size:11px;
+        margin-top: -20px;
+        margin-left: -20px;
     }
 
     #hora {
-        margin-bottom: 2px;
+        color: #00a3da;
+        font-weight:bold;
+        font-size:30px;
         height: 35px;
         width: 10px;
         text-align: center;
+        position: relative;
+        float: bottom;
+        margin-left: 9%;
     }
 </style>

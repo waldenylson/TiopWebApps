@@ -2,8 +2,8 @@
 
 @section('content')
     <h2>
-        <i class="fa fa-compress"></i>
-        Alterar Manutenção
+        <i class="fa fa-clock-o"></i>
+        Alterar Manutenção Cadastrada
     </h2>
     <hr />
 

@@ -1,40 +1,52 @@
 @extends('adminlte::page')
 
-@section('title', 'centros')
+@section('title', 'SISTIOp - Controle de MNT Programadas')
 
 @section('content_header')
     <div class="icon">
         <h1>
-            <i class="fa fa-compress"></i>
-            Centros Cadastrados
+            <i class="fa fa-clock-o"></i>
+            Manutenções Programadas
         </h1>
     </div>
 @stop
 
 @section('content')
-    @if(count($centros) > 0)
+    @if(count($mntProgramadas) > 0)
         <table class="table table-bordered table-hover table-striped datatableimplements" cellspacing="0">
             <thead>
             <tr>
-                <th>NOME</th>
-                <th>ACRÔNIMO</th>
-                <th>LOCALIDADE</th>
+                <th>RADAR</th>
+                <th>DATA/HORA INICIAL</th>
+                <th>DATA/HORA FINAL</th>
+                <th>MOTIVO</th>
                 <th>AÇÕES</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($centros as $centro)
+            @foreach($mntProgramadas as $mntProgramada)
                 <tr>
-                    <td>{!! $centro->nome               !!}</td>
-                    <td>{!! $centro->acronimo             !!}</td>
-                    <td>{!! $centro->localidade   !!}</td>
+                    <td>{!! $mntProgramada->radar->nome  !!}</td>
+                    <td>
+                        {!!
+                            $mntProgramada->data_ini . " "    .
+                            $mntProgramada->hora_ini
+                        !!}
+                    </td>
+                    <td>
+                        {!!
+                            $mntProgramada->data_fim . " "    .
+                            $mntProgramada->hora_fim
+                        !!}
+                    </td>
+                    <td>{!! $mntProgramada->motivo   !!}</td>
 
                     <td width="1%" nowrap>
-                        <a href="{!! route('centros.edit', $centro->id) !!}" class="btn btn-primary btn-xs fancybox">
+                        <a href="{!! route('mntProg.edit', $mntProgramada->id) !!}" class="btn btn-primary btn-xs fancybox">
                             <i class="fa fa-pencil"></i> editar
                         </a>
 
-                        <a href="{!! route('centros.destroy', $centro->id) !!}" class="btn btn-danger btn-xs btn-remover">
+                        <a href="{!! route('mntProg.destroy', $mntProgramada->id) !!}" class="btn btn-danger btn-xs btn-remover">
                             <i class="fa fa-remove"></i> remover
                         </a>
                     </td>
@@ -43,7 +55,7 @@
             </tbody>
         </table>
     @else
-        <h5 class="well">Nenhum Centro Cadastrado ainda!</h5>
+        <h5 class="well">Nenhuma Manutenção Cadastrada/Vigente!</h5>
     @endif
 @stop
 

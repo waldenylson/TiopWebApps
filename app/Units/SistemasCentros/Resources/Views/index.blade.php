@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'centros')
+@section('title', 'SISTIOp - Controle de Associação Sistemas/Centros')
 
 @section('content_header')
     <div class="icon">

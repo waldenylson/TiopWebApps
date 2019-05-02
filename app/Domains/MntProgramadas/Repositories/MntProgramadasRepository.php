@@ -19,7 +19,7 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
 
         $dados = [];
 
-        $resultQuery = $this->modelClass::all()->load('radar')->load('efetivo');
+        $resultQuery = $this->modelClass::all()->sortBy('data_fim')->sortBy('hora_fim')->load('radar')->load('efetivo');
 
         foreach($resultQuery as $data)
         {

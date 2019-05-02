@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'SisGATO - Manutenção Cadastro RPL')
+@section('title', 'SISTIOp - Controle Cadastro de RPL')
 
 @section('content_header')
     <div class="icon">
