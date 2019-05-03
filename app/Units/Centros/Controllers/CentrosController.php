@@ -2,7 +2,7 @@
 
 use Codecasts\Support\Http\Controller;
 use TIOp\Domains\Centros\Contracts\CentrosRepository;
-use TIOp\Units\Centros\Requests\StoreMntProgramadasPostRequest;
+use TIOp\Units\Centros\Requests\StoreCentrosPostRequest;
 
 class CentrosController extends Controller
 {
@@ -49,7 +49,7 @@ class CentrosController extends Controller
      * @param StoreMntProgramadasPostRequest $request
      * @return Response
      */
-    public function store(StoreMntProgramadasPostRequest $request)
+    public function store(StoreCentrosPostRequest $request)
     {
         $result = $this->centrosRepository->store($request);
 
@@ -82,7 +82,7 @@ class CentrosController extends Controller
      * @param StoreRadarsPostRequest $request
      * @return Response
      */
-    public function update(StoreMntProgramadasPostRequest $request, $id)
+    public function update(StoreCentrosPostRequest $request, $id)
     {
         $result = $this->centrosRepository->persistUpdate($request, $id);
 

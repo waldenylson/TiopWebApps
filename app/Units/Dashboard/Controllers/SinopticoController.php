@@ -38,6 +38,7 @@ class SinopticoController extends Controller
         ['nome' => 'VIT', 'status' => 'deg'],
     ];
 
+
     private $efetivoTiop = [
 //        ["nome" => "SO R1 EDUARDO",    "motivo" => "TESTE SISTEMA",      "retorno" => "20/07/2018"],
 //        ["nome" => "SO JOTA",          "motivo" => "TESTE SISTEMA",      "retorno" => "22/07/2018"],
@@ -81,12 +82,12 @@ class SinopticoController extends Controller
 
     public function getRadarsStatus()
     {
-        return json_encode($this->radares);
+        return json_encode($this->radares, JSON_UNESCAPED_UNICODE);
     }
 
     public function getEfetivoTiop()
     {
-        return json_encode($this->efetivoTiop);
+        return json_encode($this->efetivoTiop, JSON_UNESCAPED_UNICODE);
     }
 
     public function getInfSistemasData()

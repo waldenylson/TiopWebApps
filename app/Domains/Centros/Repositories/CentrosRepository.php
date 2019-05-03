@@ -4,7 +4,7 @@ use Artesaos\Warehouse\Traits\ImplementsFractal;
 use TIOp\Domains\Centros\Contracts\CentrosRepository as CentrosRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\Centros\Centros;
-use TIOp\Units\Centros\Requests\StoreMntProgramadasPostRequest;
+use TIOp\Units\Centros\Requests\StoreCentrosPostRequest;
 
 class CentrosRepository extends AbstractCrudRepository implements CentrosRepositoryContract
 {
@@ -17,7 +17,7 @@ class CentrosRepository extends AbstractCrudRepository implements CentrosReposit
         return $this->modelClass::all();
     }
 
-    public function store(StoreMntProgramadasPostRequest $request)
+    public function store(StoreCentrosPostRequest $request)
     {
         $centro = $this->modelClass::create($request->all());
 
@@ -31,7 +31,7 @@ class CentrosRepository extends AbstractCrudRepository implements CentrosReposit
         return $centro;
     }
 
-    public function persistUpdate(StoreMntProgramadasPostRequest $request, $id)
+    public function persistUpdate(StoreCentrosPostRequest $request, $id)
     {
         $centro = $this->modelClass::findOrFail($id)->update($request->all());
 

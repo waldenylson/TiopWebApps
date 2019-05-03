@@ -7,7 +7,7 @@
     </h2>
     <hr />
 
-    {!! Form::model($mntProg, ['route' => ['mntProg.store', $mntProg->id]]) !!}
+    {!! Form::model($mntProg, ['route' => ['mntProg.update', $mntProg->id]]) !!}
     @include('mntProgramadas::partials.form')
     <button class="btn btn-primary" type="submit">
         <i class="fa fa-save"></i>&nbsp;&nbsp;Salvar
