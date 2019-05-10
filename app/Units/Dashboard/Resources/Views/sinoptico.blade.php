@@ -6,7 +6,7 @@
 
             <tiop-sobreaviso></tiop-sobreaviso>
 
-            <tiop-efetivo></tiop-efetivo>
+            {{--<tiop-efetivo></tiop-efetivo>--}}
 
             <tiop-notifications></tiop-notifications>
 

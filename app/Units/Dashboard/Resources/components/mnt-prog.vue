@@ -14,7 +14,7 @@
                         <div class="project_sort">
                             <div id="panel">
                                 <ul class="project_list">
-                                    <li v-for="mntProg in dadosMntProg" :key="mntProg.id">
+                                    <li v-for="(mntProg, index) in dadosMntProg" :key="mntProg.id" :id="index">
                                         <span class="project_badge ino"></span>
                                         <a class="project_title alinha-esquerda"><b>{{ mntProg.radar.nome }}</b></a><br>
                                         <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_ini }}</b></a></span>
@@ -28,27 +28,33 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
-
 </template>
 
 <script>
+
     export default {
         name: 'tiop-mnt',
 
         data: function (){
             return {
-                dadosMntProg: []
+                dadosMntProg: [],
+                mntCount: 0,
             }
         },
 
+
         methods: {
-            getMntProg: function() {
-                axios.get('/api/getMntProg').then(response => (this.dadosMntProg = response.data))
+            getMntProg: function()
+            {
+                axios.get('/api/getMntProg').then(response =>
+                {
+                    this.dadosMntProg = response.data
+                    this.mntCount = this.dadosMntProg.length
+                    console.log(this.mntCount)
+                })
             }
         },
 

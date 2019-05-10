@@ -42,8 +42,6 @@ export default {
                 this.dadosRPLInfo = dadosResposta[0];
                 this.rplAlert     = dadosResposta[1];
 
-                console.log(this.rplAlert.rplAlert)
-
                 if (this.rplAlert.rplAlert === true)
                 {
                     $('.blink').append('RPL VENCENDO OU VENCIDO!');

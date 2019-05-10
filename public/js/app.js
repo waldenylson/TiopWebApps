@@ -2177,16 +2177,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'tiop-mnt',
 
     data: function data() {
         return {
-            dadosMntProg: []
+            dadosMntProg: [],
+            mntCount: 0
         };
     },
 
@@ -2195,7 +2194,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             axios.get('/api/getMntProg').then(function (response) {
-                return _this.dadosMntProg = response.data;
+                _this.dadosMntProg = response.data;
+                _this.mntCount = _this.dadosMntProg.length;
+                console.log(_this.mntCount);
             });
         }
     },
@@ -2471,8 +2472,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 _this.dadosRPLInfo = dadosResposta[0];
                 _this.rplAlert = dadosResposta[1];
-
-                console.log(_this.rplAlert.rplAlert);
 
                 if (_this.rplAlert.rplAlert === true) {
                     $('.blink').append('RPL VENCENDO OU VENCIDO!');
@@ -22789,8 +22788,8 @@ var render = function() {
                 _c(
                   "ul",
                   { staticClass: "project_list" },
-                  _vm._l(_vm.dadosMntProg, function(mntProg) {
-                    return _c("li", { key: mntProg.id }, [
+                  _vm._l(_vm.dadosMntProg, function(mntProg, index) {
+                    return _c("li", { key: mntProg.id, attrs: { id: index } }, [
                       _c("span", { staticClass: "project_badge ino" }),
                       _vm._v(" "),
                       _c(
