@@ -10,8 +10,6 @@
     <title>  @yield('title') </title>
     <link rel="stylesheet" href="{!! asset('css/tiop.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/sinoptico.css') !!}">
-    <link rel="stylesheet" href="{!! asset('owl-carousel/dist/assets/owl.carousel.css') !!}">
-    <link rel="stylesheet" href="{!! asset('owl-carousel/dist/assets/owl.theme.default.css') !!}">
 </head>
 <body>
 <div id="app">@yield('content')</div>
@@ -20,7 +18,6 @@
 <script src="{!! asset('js/vendor.js') !!}" type="text/javascript"></script>
 <script src="{!! asset('js/app.js') !!}" type="text/javascript"></script>
 <script src="{!! asset('js/tiop.js') !!}" type="text/javascript"></script>
-<script src="{!! asset('owl-carousel/dist/owl.carousel.js') !!}" type="text/javascript"></script>
 
 </body>
 </html>
