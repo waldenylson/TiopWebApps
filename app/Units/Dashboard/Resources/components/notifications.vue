@@ -69,7 +69,7 @@
     }
 
     .box-bg-color-notification {
-        background-color: snow;
+        background-color: #ffffff;
     }
 
     .blink{

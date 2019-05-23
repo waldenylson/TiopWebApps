@@ -1,4 +1,4 @@
-<template>
+  <template>
     <div class="mnt-programadas">
         <div class="panel panel-primary">
             <div class="panel-heading">

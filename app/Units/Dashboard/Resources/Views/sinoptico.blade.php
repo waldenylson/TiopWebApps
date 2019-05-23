@@ -6,14 +6,12 @@
 
             <tiop-sobreaviso></tiop-sobreaviso>
 
-            {{--<tiop-efetivo></tiop-efetivo>--}}
-
             <tiop-notifications></tiop-notifications>
 
         </div>
         <div class="sub-container-center">
 
-            <status-radares></status-radares>
+            <status-sitc></status-sitc>
 
             <tiop-mnt></tiop-mnt>
 
