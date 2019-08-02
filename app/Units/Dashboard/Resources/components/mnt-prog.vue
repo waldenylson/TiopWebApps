@@ -16,7 +16,7 @@
                                 <ul class="project_list">
                                     <li v-for="(mntProg, index) in dadosMntProg" :key="mntProg.id" :id="index">
                                         <span class="project_badge ino"></span>
-                                        <a class="project_title alinha-esquerda"><b>{{ mntProg.radar.nome }}</b></a><br>
+                                        <a class="project_title alinha-esquerda"><b>{{ mntProg.radarNome }}</b></a><br>
                                         <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_ini }}</b></a></span>
                                         <span class="data"><a>&nbsp;&nbsp;<b class="fa fa-clock-o">&nbsp;{{ mntProg.hora_ini + 'Z'}}</b></a></span><br>
                                         <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_fim }}</b></a></span>
@@ -52,7 +52,8 @@
                 axios.get('/api/getMntProg').then(response =>
                 {
                     this.dadosMntProg = response.data
-                    this.mntCount = this.dadosMntProg.length
+                    this.mntCount     = Object.keys(this.dadosMntProg).length
+
                     console.log(this.mntCount)
                 })
             }
@@ -63,6 +64,7 @@
             this.getMntProg()
         }
     }
+
 </script>
 
 <style scoped>
@@ -71,6 +73,7 @@
         padding-left: 5px;
         width: 100%;
         margin-bottom: -20px;
+        padding-top: 20px;
     }
 
     .motivo {
@@ -82,7 +85,7 @@
     }
 
     .mnt-programadas-height {
-        height: 530px;
+        height: 900px;
     }
 
     .project_sort ul.project_list li{

@@ -111,4 +111,11 @@ class SinopticoController extends Controller
 
         return json_encode($dados, JSON_UNESCAPED_UNICODE);
     }
+
+    public function getMntProgTeste()
+    {
+        $dados = $this->mntProgRepository->listMntProgramadasTeste();
+
+        return json_encode($dados, JSON_UNESCAPED_UNICODE);
+    }
 }

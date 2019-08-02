@@ -2573,7 +2573,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/api/getMntProg').then(function (response) {
         _this.dadosMntProg = response.data;
-        _this.mntCount = _this.dadosMntProg.length;
+        _this.mntCount = Object.keys(_this.dadosMntProg).length;
         console.log(_this.mntCount);
       });
     }
@@ -5576,7 +5576,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n}\n.motivo[data-v-2a58989c] {\n    font-size: 18px;\n}\n.panel-body[data-v-2a58989c] {\n    margin-left: -25px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 530px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:15px;\n    width:490px;\n    height:155px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:5px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: left;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:35px;\n    text-align: left;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n.data[data-v-2a58989c] {\n    text-align: left;\n    font-size: 25px;\n}\n\n", ""]);
+exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n    padding-top: 20px;\n}\n.motivo[data-v-2a58989c] {\n    font-size: 18px;\n}\n.panel-body[data-v-2a58989c] {\n    margin-left: -25px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 900px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:15px;\n    width:490px;\n    height:155px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:5px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: left;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:35px;\n    text-align: left;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n.data[data-v-2a58989c] {\n    text-align: left;\n    font-size: 25px;\n}\n\n", ""]);
 
 // exports
 
@@ -24502,7 +24502,7 @@ var render = function() {
                       _c(
                         "a",
                         { staticClass: "project_title alinha-esquerda" },
-                        [_c("b", [_vm._v(_vm._s(mntProg.radar.nome))])]
+                        [_c("b", [_vm._v(_vm._s(mntProg.radarNome))])]
                       ),
                       _c("br"),
                       _vm._v(" "),

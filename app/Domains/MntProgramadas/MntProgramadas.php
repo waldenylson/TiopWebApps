@@ -14,7 +14,6 @@ class MntProgramadas extends Model
 
     protected $guarded = ['_token'];
 
-
     /**
      *  Mutator para salvar o objeto Carbon válido
      *  no banco de dados com o formato correto

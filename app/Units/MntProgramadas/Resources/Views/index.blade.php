@@ -26,7 +26,7 @@
             <tbody>
             @foreach($mntProgramadas as $mntProgramada)
                 <tr>
-                    <td>{!! $mntProgramada->radar->nome  !!}</td>
+                    <td>{!! $mntProgramada->radarNome  !!}</td>
                     <td>
                         {!!
                             $mntProgramada->data_ini . " "    .

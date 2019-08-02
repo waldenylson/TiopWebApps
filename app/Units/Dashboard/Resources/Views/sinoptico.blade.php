@@ -11,7 +11,7 @@
         </div>
         <div class="sub-container-center">
 
-            <status-sitc></status-sitc>
+{{--            <status-sitc></status-sitc>--}}
 
             <tiop-mnt></tiop-mnt>
 
