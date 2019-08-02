@@ -9,6 +9,7 @@ use TIOp\Units\MntProgramadas\Requests\StoreMntProgramadasPostRequest;
 interface MntProgramadasRepository extends CrudRepository
 {
     public function listMntProgramadas();
+    public function listAllMntProgramadas();
     public function store(StoreMntProgramadasPostRequest $request);
     public function edit($id);
     public function persistUpdate(StoreMntProgramadasPostRequest $request, $id);

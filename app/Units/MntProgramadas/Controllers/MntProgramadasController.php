@@ -37,7 +37,7 @@ class MntProgramadasController extends Controller
      */
     public function index()
     {
-        $mntProgramadas = $this->mntProgramadasRepository->listMntProgramadas();
+        $mntProgramadas = $this->mntProgramadasRepository->listAllMntProgramadas();
 
         //dd($mntProgramadas);
 
