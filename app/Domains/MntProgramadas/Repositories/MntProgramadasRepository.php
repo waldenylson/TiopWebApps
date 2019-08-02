@@ -43,9 +43,8 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
             ->orderByRaw('hora_fim')
             ->join('efetivo_tiop', 'mnt_programadas.efetivo_id', 'efetivo_tiop.id')
             ->join('radares', 'mnt_programadas.radar_id', 'radares.id')
+            ->take(10)
         ->get();
-
-        //dd($baseResult);
 
         foreach ($baseResult as $key => $data)
         {
@@ -56,7 +55,6 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
             $dados[$key]->hora_ini = $this->parseHoraToBRMin($data->hora_ini);
             $dados[$key]->hora_fim = $this->parseHoraToBRMin($data->hora_fim);
         }
-
 
         return $dados;
     }
