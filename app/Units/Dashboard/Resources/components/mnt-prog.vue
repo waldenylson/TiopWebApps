@@ -15,7 +15,7 @@
                             <div id="panel">
                                 <ul class="project_list">
                                     <li v-for="(mntProg, index) in dadosMntProg" :key="mntProg.id" :id="index">
-                                        <span class="project_badge ino"></span>
+                                        <span class="project_badge" :class="status"></span>
                                         <a class="project_title alinha-esquerda"><b>{{ mntProg.radarNome }}</b></a><br>
                                         <span class="fa fa-calendar data"><a><b>&nbsp;{{ mntProg.data_ini }}</b></a></span>
                                         <span class="data"><a>&nbsp;&nbsp;<b class="fa fa-clock-o">&nbsp;{{ mntProg.hora_ini + 'Z'}}</b></a></span><br>
@@ -42,6 +42,7 @@
             return {
                 dadosMntProg: [],
                 mntCount: 0,
+                status: 'ope'
             }
         },
 

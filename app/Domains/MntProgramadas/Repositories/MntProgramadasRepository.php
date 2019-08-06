@@ -17,7 +17,7 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
 
     protected $modelClass = MntProgramadas::class;
 
-    private function pardeDateToBR($value)
+    private function parseDateToBR($value)
     {
         if(!is_null($value)) return Carbon::parse($this->valueToCarbonObject($value))->format('d/m/Y');
     }
@@ -50,8 +50,8 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
         {
            $dados[] = $data;
 
-            $dados[$key]->data_ini = $this->pardeDateToBR($data->data_ini);
-            $dados[$key]->data_fim = $this->pardeDateToBR($data->data_fim);
+            $dados[$key]->data_ini = $this->parseDateToBR($data->data_ini);
+            $dados[$key]->data_fim = $this->parseDateToBR($data->data_fim);
             $dados[$key]->hora_ini = $this->parseHoraToBRMin($data->hora_ini);
             $dados[$key]->hora_fim = $this->parseHoraToBRMin($data->hora_fim);
         }
@@ -81,8 +81,8 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
         {
             $dados[] = $data;
 
-            $dados[$key]->data_ini = $this->pardeDateToBR($data->data_ini);
-            $dados[$key]->data_fim = $this->pardeDateToBR($data->data_fim);
+            $dados[$key]->data_ini = $this->parseDateToBR($data->data_ini);
+            $dados[$key]->data_fim = $this->parseDateToBR($data->data_fim);
             $dados[$key]->hora_ini = $this->parseHoraToBRMin($data->hora_ini);
             $dados[$key]->hora_fim = $this->parseHoraToBRMin($data->hora_fim);
         }

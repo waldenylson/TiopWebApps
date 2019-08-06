@@ -2564,7 +2564,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       dadosMntProg: [],
-      mntCount: 0
+      mntCount: 0,
+      status: 'ope'
     };
   },
   methods: {
@@ -24497,7 +24498,10 @@ var render = function() {
                   { staticClass: "project_list" },
                   _vm._l(_vm.dadosMntProg, function(mntProg, index) {
                     return _c("li", { key: mntProg.id, attrs: { id: index } }, [
-                      _c("span", { staticClass: "project_badge ino" }),
+                      _c("span", {
+                        staticClass: "project_badge",
+                        class: _vm.status
+                      }),
                       _vm._v(" "),
                       _c(
                         "a",
