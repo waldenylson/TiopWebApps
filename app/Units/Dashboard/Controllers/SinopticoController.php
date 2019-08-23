@@ -6,7 +6,7 @@ use TIOp\Domains\EscalaSobreaviso\Contracts\EscalaSobreavisoRepository;
 use TIOp\Domains\MntProgramadas\Contracts\MntProgramadasRepository;
 use TIOp\Domains\RPL\Contracts\RPLRepository;
 use TIOp\Domains\SistemasCentros\Contracts\SistemasCentrosRepository;
-use Carbon\Carbon;
+use TIOp\Domains\StatusDACOMData\Contracts\StatusDACOMDataRepository;
 
 
 class SinopticoController extends Controller
@@ -58,17 +58,21 @@ class SinopticoController extends Controller
     protected $rplRepository;
     protected $sobreavisoRepository;
     protected $mntProgRepository;
+    protected $statusDACOMDataRepository;
 
     public function __construct(SistemasCentrosRepository $scRepository,
                                 RPLRepository $rplRepository,
                                 EscalaSobreavisoRepository $sobreavisoRepository,
-                                MntProgramadasRepository $mntProgRepository)
+                                MntProgramadasRepository $mntProgRepository,
+                                StatusDACOMDataRepository $statusDACOMDataRepository)
     {
         $this->scRepository  = $scRepository;
         $this->rplRepository = $rplRepository;
 
         $this->sobreavisoRepository = $sobreavisoRepository;
         $this->mntProgRepository    = $mntProgRepository;
+
+        $this->statusDACOMDataRepository = $statusDACOMDataRepository;
 
     }
 
@@ -115,6 +119,13 @@ class SinopticoController extends Controller
     public function getMntProgTeste()
     {
         $dados = $this->mntProgRepository->listMntProgramadasTeste();
+
+        return json_encode($dados, JSON_UNESCAPED_UNICODE);
+    }
+
+    public function getStatusDACOM()
+    {
+        $dados = $this->statusDACOMDataRepository->getStatus();
 
         return json_encode($dados, JSON_UNESCAPED_UNICODE);
     }

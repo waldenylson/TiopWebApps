@@ -194,6 +194,7 @@ return [
         TIOp\Domains\RPL\Providers\DomainServiceProvider::class,
         TIOp\Domains\MntProgramadas\Providers\DomainServiceProvider::class,
         TIOp\Domains\EscalaSobreaviso\Providers\DomainServiceProvider::class,
+        TIOp\Domains\StatusDACOMData\Providers\DomainServiceProvider::class,
 
         /*
          * Units Service Providers...
@@ -215,6 +216,7 @@ return [
         TIOp\Units\RPL\Providers\UnitServiceProvider::class,
         TIOp\Units\MntProgramadas\Providers\UnitServiceProvider::class,
         TIOp\Units\EscalaSobreaviso\Providers\UnitServiceProvider::class,
+        TIOp\Units\StatusDACOMData\Providers\UnitServiceProvider::class,
 
 
         TIOp\Units\Users\Providers\UnitServiceProvider::class,

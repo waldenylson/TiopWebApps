@@ -86,7 +86,7 @@
     }
 
     .mnt-programadas-height {
-        height: 900px;
+        height: 962px;
     }
 
     .project_sort ul.project_list li{

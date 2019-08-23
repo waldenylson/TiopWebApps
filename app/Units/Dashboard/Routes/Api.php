@@ -27,5 +27,6 @@ class Api extends RouteFile
         $this->router->get('/getRPLInfo',  ['as' => 'dashboard.getRPLInfo', 'uses' => 'SinopticoController@getRPLInfo']);
         $this->router->get('/getSobreaviso',  ['as' => 'dashboard.getSobreaviso', 'uses' => 'SinopticoController@getSobreaviso']);
         $this->router->get('/getMntProg',  ['as' => 'dashboard.getMntProg', 'uses' => 'SinopticoController@getMntProg']);
+        $this->router->get('/getStatusDACOM',  ['as' => 'dashboard.getStatusDACOM', 'uses' => 'SinopticoController@getStatusDACOM']);
     }
 }
