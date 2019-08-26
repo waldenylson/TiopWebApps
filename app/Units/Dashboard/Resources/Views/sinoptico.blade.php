@@ -19,6 +19,7 @@
         <div class="sub-container-right">
             <tiop-sistemas></tiop-sistemas>
             <tiop-rpl></tiop-rpl>
+            <tiop-dacom></tiop-dacom>
             <tiop-rodape></tiop-rodape>
         </div>
     </div>

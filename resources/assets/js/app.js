@@ -11,6 +11,7 @@ Vue.component('tiop-sobreaviso', require('../../../app/Units/Dashboard/Resources
 // Vue.component('status-radares', require('../../../app/Units/Dashboard/Resources/components/radares').default);
 Vue.component('status-sitc', require('../../../app/Units/Dashboard/Resources/components/sitc').default);
 Vue.component('tiop-rpl', require('../../../app/Units/Dashboard/Resources/components/rpl').default);
+Vue.component('tiop-dacom', require('../../../app/Units/Dashboard/Resources/components/dacom').default);
 Vue.component('tiop-mnt', require('../../../app/Units/Dashboard/Resources/components/mnt-prog').default);
 Vue.component('tiop-sistemas', require('../../../app/Units/Dashboard/Resources/components/inf-sistemas').default);
 Vue.component('tiop-rodape', require('../../../app/Units/Dashboard/Resources/components/rodape').default);

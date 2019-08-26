@@ -65,7 +65,7 @@
     }
 
     .box-notification-height {
-        height: 337px;
+        height: 250px;
     }
 
     .box-bg-color-notification {

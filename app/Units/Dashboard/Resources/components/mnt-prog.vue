@@ -46,23 +46,20 @@
             }
         },
 
-
         methods: {
             getMntProg: function()
             {
                 axios.get('/api/getMntProg').then(response =>
                 {
-                    this.dadosMntProg = response.data
-                    this.mntCount     = Object.keys(this.dadosMntProg).length
-
-                    console.log(this.mntCount)
+                    this.dadosMntProg = response.data;
+                    this.mntCount     = Object.keys(this.dadosMntProg).length;
                 })
             }
         },
 
         mounted() {
-            window.console.log('Componente MNT-Prog Carregado')
-            this.getMntProg()
+            window.console.log('Componente MNT-Prog Carregado');
+            this.getMntProg();
         }
     }
 

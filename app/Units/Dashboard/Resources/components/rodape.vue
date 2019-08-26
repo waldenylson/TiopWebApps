@@ -72,12 +72,13 @@
         padding-top: 5px;
         text-align: center;
         width: 280px;
+        margin-top: -15px;
     }
 
     .bottom-container-decoration {
         border: 1px solid #0d6aad;
         border-radius:3px;
-        height: 55px;
+        height: 56px;
         text-align: center;
     }
 

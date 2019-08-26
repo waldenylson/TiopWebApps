@@ -42,7 +42,7 @@ export default {
                 this.dadosRPLInfo = dadosResposta[0];
                 this.rplAlert     = dadosResposta[1];
 
-                if (this.rplAlert.rplAlert === true) $('.blink').append('RPL VENCENDO OU VENCIDO!');
+                if (this.rplAlert.rplAlert === true) $('.blink').append('RPL VENCENDO OU VENCIDO!\n');
             });
         }
     },
@@ -63,14 +63,14 @@ export default {
     }
 
     .box-rpl {
-        height: 222px;
+        height: 150px;
         width: 270px;
         padding-top: 5px;
-        margin-left: 4px;
-        margin-bottom: 1px;
+        margin-left: 1px;
+        margin-bottom: -37px;
         margin-top: 1px;
-        font-size: large;
-        padding-left: 5px;
+        font-size: 20px;
+        padding-left: 1px;
     }
 
     .box-rpl-titulo-color-red {
