@@ -1,7 +1,6 @@
 <?php namespace TIOp\Domains\StatusDACOMData\Repositories;
 
 use Artesaos\Warehouse\Traits\ImplementsFractal;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use TIOp\Domains\StatusDACOMData\Contracts\StatusDACOMDataRepository as StatusDACOMDataRepositoryContract;
 use Artesaos\Warehouse\AbstractCrudRepository;
