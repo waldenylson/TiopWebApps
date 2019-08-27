@@ -64,9 +64,8 @@ class SinopticoController extends Controller
     public function index()
     {
         $radares     = $this->radares;
-        $efetivoTiop = $this->efetivoTiop;
 
-        return view('dashboard::sinoptico')->with(compact('radares'))->with(compact('efetivoTiop'));
+        return view('dashboard::sinoptico')->with(compact('radares'));
     }
 
     public function getRadarsStatus()
