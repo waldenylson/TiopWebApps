@@ -12,10 +12,15 @@ class StatusDACOMDataController extends Controller
         $this->statusDACOMDataRepository = $repository;
     }
 
-    public function updateStatus($value)
+    /**
+     * @param $server Integer Servidor que primário ou secundária
+     * @param $value Integer Status da cópia dos dados pelo servidor | 2 => OK
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     */
+    public function updateStatus($server, $value)
     {
-        $result = ($value == 2) ? $this->statusDACOMDataRepository->updateStatus(1) :
-                                  $this->statusDACOMDataRepository->updateStatus(0);
+        $result = ($value == 2) ? $this->statusDACOMDataRepository->updateStatus($server, 1) :
+                                  $this->statusDACOMDataRepository->updateStatus($server, 0);
 
         if($result) return response('Sucesso', 200);
 

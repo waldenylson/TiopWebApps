@@ -37,7 +37,7 @@ export default {
             {
                 this.dacomAlert = (response.data[0].status === 1);
 
-                console.log(this.dacomAlert);
+                console.log(response.data[1])
 
                 if (this.dacomAlert !== true) $('.blink').append("<br/>").append('FALHA CÓPIA DADOS DACOM!');
             });

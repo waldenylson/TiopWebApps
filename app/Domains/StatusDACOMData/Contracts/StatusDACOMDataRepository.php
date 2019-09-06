@@ -8,5 +8,5 @@ use Artesaos\Warehouse\Contracts\Segregated\CrudRepository;
 interface StatusDACOMDataRepository extends CrudRepository
 {
     public function getStatus();
-    public function updateStatus($value);
+    public function updateStatus($server, $value);
 }

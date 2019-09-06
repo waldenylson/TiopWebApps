@@ -22,7 +22,7 @@ class Api extends RouteFile
         //})->middleware('auth:api');
 
         $this->router->get(
-            '/{value}/updateStatusDACOM',  ['as' => 'dashboard.updateStatusDACOM',
+            '/{server}/{value}/updateStatusDACOM',  ['as' => 'dashboard.updateStatusDACOM',
             'uses' => 'StatusDACOMDataController@updateStatus'
         ]);
     }
