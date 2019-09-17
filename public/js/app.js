@@ -2552,11 +2552,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'tiop-dacom',
   data: function data() {
     return {
-      dacomAlert: false
+      dacomAlert1: false,
+      dacomAlert2: false
     };
   },
   methods: {
@@ -2564,9 +2574,10 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get('/api/getStatusDACOM').then(function (response) {
-        _this.dacomAlert = response.data[0].status === 1;
-        console.log(_this.dacomAlert);
-        if (_this.dacomAlert !== true) $('.blink').append("<br/>").append('FALHA CÓPIA DADOS DACOM!');
+        _this.dacomAlert1 = response.data[0].status === 1;
+        _this.dacomAlert2 = response.data[1].status === 1;
+        if (_this.dacomAlert1 !== true) $('.blink').append("<br/>").append('FALHA CÓPIA DADOS DACOM!');
+        if (_this.dacomAlert2 !== true) $('.blink').append("<br/>").append('FALHA CÓPIA DADOS DACOM!');
       });
     }
   },
@@ -3001,21 +3012,36 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "status-sitc",
+  name: 'tiop-sitc',
   data: function data() {
     return {
-      dadosSITC: []
+      efetivoTiop: []
     };
   },
   methods: {
-    getRadares: function getRadares() {//axios.get('/api/getRStatus').then(response => (this.dadosRadares = response.data))
-      //setTimeout(this.getRadares, 10000)
+    getEfetivo: function getEfetivo() {
+      var _this = this;
+
+      axios.get('/api/getEfetivo').then(function (response) {
+        return _this.efetivoTiop = response.data;
+      });
     }
   },
   mounted: function mounted() {
-    console.log('componente SITC carregado...');
-    this.getRadares();
+    window.console.log('componente sitc carregado'); //this.getEfetivo()
   }
 });
 
@@ -5701,7 +5727,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.dacom[data-v-75d9206c] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: -12px;\n}\n.box-dacom[data-v-75d9206c] {\n    height: 40px;\n    width: 270px;\n    margin-left: 4px;\n    font-size: xx-large;\n    color: green;\n    padding-left: 5px;\n    padding-bottom: 5px;\n}\n.box-dacom-titulo-color-red[data-v-75d9206c] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n.titulo[data-v-75d9206c] {\n    font-size: 20px;\n    padding-bottom: -20px;\n}\n.error[data-v-75d9206c] {\n    color: red;\n}\n\n", ""]);
+exports.push([module.i, "\n.dacom[data-v-75d9206c] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: -12px;\n}\n.box-dacom[data-v-75d9206c] {\n    height: 60px;\n    width: 270px;\n    margin-left: 4px;\n    font-size: x-large;\n    color: green;\n    padding-left: 5px;\n    padding-bottom: 5px;\n}\n.box-dacom-titulo-color-red[data-v-75d9206c] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n.box-dacom-titulo-color-yellow[data-v-75d9206c] {\n    color: #fff;\n    background-color: #ffe623;\n    border-color: #ffe623;\n}\n.titulo[data-v-75d9206c] {\n    font-size: 20px;\n    padding-bottom: -20px;\n}\n.error[data-v-75d9206c] {\n    color: red;\n}\n\n", ""]);
 
 // exports
 
@@ -5796,7 +5822,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.rpl[data-v-1ffd3976] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: 25px;\n}\n.box-rpl[data-v-1ffd3976] {\n    height: 150px;\n    width: 270px;\n    padding-top: 5px;\n    margin-left: 1px;\n    margin-bottom: -37px;\n    margin-top: 1px;\n    font-size: 20px;\n    padding-left: 1px;\n}\n.box-rpl-titulo-color-red[data-v-1ffd3976] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n\n", ""]);
+exports.push([module.i, "\n.rpl[data-v-1ffd3976] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: 25px;\n}\n.box-rpl[data-v-1ffd3976] {\n    height: 130px;\n    width: 270px;\n    padding-top: 5px;\n    margin-left: 1px;\n    margin-bottom: -37px;\n    margin-top: 1px;\n    font-size: 20px;\n    padding-left: 1px;\n}\n.box-rpl-titulo-color-red[data-v-1ffd3976] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n\n", ""]);
 
 // exports
 
@@ -5815,7 +5841,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*PROJECT SORT*/\nul.filter_project[data-v-349f1d26]{\n    margin-left: 0px;\n    background:#d3d3d3;\n    border-top:solid 1px #f6f6f6;\n}\nul.filter_project li[data-v-349f1d26]{\n    font-size: 14px;\n    padding:8px 15px;\n    display:inline-block;\n    list-style:none;\n}\nul.filter_project li a[data-v-349f1d26]{\n    color:#6c6c6c;\n\n    font-weight:bold;\n    text-shadow: 0px 1px 0px  #fff;\n}\nul.filter_project li span.count a[data-v-349f1d26]{\n    line-height:100%;\n    color:#fff;\n    text-shadow: 0px 1px 0px  #353535;\n    padding:2px 2px 2px;\n    background:#707070;\n    border-radius:2px;\n    margin-left:8px;\n    min-width:16px;\n    text-align:center;\n    display:inline-block;\n    box-shadow:0px 1px 0px 0px #ffffff;\n    -webkit-box-shadow:0px 1px 0px 0px #ffffff;\n}\nul.filter_project li.selected[data-v-349f1d26]{\n    background:#ffffff;\n    box-shadow:inset 0px 10px 8px #eaeaea;\n    -webkit-box-shadow:inset 0px 10px 8px #eaeaea;\n    border:solid 1px #fff;\n    border-width:0px 1px;\n}\nul.filter_project li.selected a[data-v-349f1d26]{\n    color:#4a4a4a;\n}\nul.filter_project li.selected span.count[data-v-349f1d26]{\n    background:#4a4a4a;\n}\n.project_sort ul.project_list[data-v-349f1d26]{\n    margin:0px;\n    padding:18px 0px 0px 18px;\n}\n.project_sort ul.project_list li[data-v-349f1d26]{\n    padding:12px;\n    width:149px;\n    height:70px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:10px;\n    list-style:none;\n    display:inline-block;\n    margin-right:16px;\n    margin-bottom:16px;\n    background-color: #ededed;\n}\n.project_sort ul.project_list .project_badge[data-v-349f1d26]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-349f1d26]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-349f1d26]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-349f1d26]{\n    background-position:-1px 0px;\n}\n.project_sort ul.project_list a.project_title[data-v-349f1d26]{\n    font-size:30px;\n    text-align: center;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.project_body[data-v-349f1d26]{\n    font-size:11.5px;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:40px;\n    font-family:  cursive;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.assigned_user[data-v-349f1d26]{\n    font-size:12px;\n    color:#6c6c6c;\n    text-shadow: 0px 1px 0px  #fff;\n    position:absolute;\n    bottom:11px;\n    left:10px;\n    text-decoration:none;\n}\n.project_sort ul.project_list a.assigned_user span[data-v-349f1d26]{\n    font-size:19px;\n    float:left;\n    margin-top:-7px;\n    margin-right:2px;\n}\n.sinoptico[data-v-349f1d26] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -10px;\n    width: 100%;\n}\n\n", ""]);
+exports.push([module.i, "\n.panel-body[data-v-349f1d26] {\n    padding: 5px;\n}\n.sitc[data-v-349f1d26] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-sitc[data-v-349f1d26] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: center;\n}\n.box-sitc-height[data-v-349f1d26] {\n    height: 480px;\n}\n.box-bg-color-sitc[data-v-349f1d26] {\n    background-color: #fff;\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    align-items: center;\n    justify-content: center;\n}\n.teste[data-v-349f1d26] {\n    font-size: 170px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n}\n.texto[data-v-349f1d26] {\n    font-size: 30px;\n    font-weight: bold;\n    color:green;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n}\n.texto-red[data-v-349f1d26] {\n    color:red;\n}\n.texto-yellow[data-v-349f1d26] {\n    color: #ffc919;\n}\n\n", ""]);
 
 // exports
 
@@ -24448,7 +24474,10 @@ var render = function() {
         "div",
         {
           staticClass: "panel-heading",
-          class: { "box-dacom-titulo-color-red": !_vm.dacomAlert }
+          class: {
+            "box-dacom-titulo-color-yellow": _vm.dacomAlert1 ^ _vm.dacomAlert2,
+            "box-dacom-titulo-color-red": !(_vm.dacomAlert1 && _vm.dacomAlert2)
+          }
         },
         [_vm._m(0)]
       ),
@@ -24456,11 +24485,23 @@ var render = function() {
       _c("div", { staticClass: "panel-body" }, [
         _c("div", [
           _c("div", { staticClass: "box-dacom" }, [
-            _vm.dacomAlert
-              ? _c("i", { staticClass: "fa fa-check-circle" }, [_vm._v("  OK")])
-              : !_vm.dacomAlert
+            _vm.dacomAlert1
+              ? _c("i", { staticClass: "fa fa-check-circle" }, [
+                  _vm._v(" SVR Primário  ")
+                ])
+              : !_vm.dacomAlert1
               ? _c("i", { staticClass: "fa fa-exclamation-triangle error" }, [
-                  _vm._v("  FALHA!")
+                  _vm._v(" SVR Primário")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.dacomAlert2
+              ? _c("i", { staticClass: "fa fa-check-circle" }, [
+                  _vm._v(" SVR Secundário")
+                ])
+              : !_vm.dacomAlert2
+              ? _c("i", { staticClass: "fa fa-exclamation-triangle error" }, [
+                  _vm._v(" SVR Secundário")
                 ])
               : _vm._e()
           ])
@@ -25007,50 +25048,65 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "sinoptico" }, [
-    _c("div", { staticClass: "panel panel-primary" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "panel-body" }, [
-        _c("div", { staticClass: "float-right" }, [
-          _c("div", [
-            _c("div", { staticClass: "project_sort" }, [
-              _c("div", { attrs: { id: "panel" } }, [
-                _c(
-                  "ul",
-                  { staticClass: "project_list" },
-                  _vm._l(_vm.dadosSITC, function(radar) {
-                    return _c("li", { key: radar.id }, [
-                      _c("span", {
-                        staticClass: "project_badge",
-                        class: [radar.status]
-                      }),
-                      _vm._v(" "),
-                      _c("a", { staticClass: "project_title" }, [
-                        _c("b", [_vm._v(_vm._s(radar.nome))])
-                      ]),
-                      _c("br")
-                    ])
-                  }),
-                  0
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel-heading" }, [
-      _c("h3", { staticClass: "panel-title" }, [
-        _c("i", { staticClass: "fa fa-podcast titulo" }, [
-          _c("b", [_vm._v(" SINÓPTICO STATUS SITC")])
+    return _c("div", { staticClass: "sitc" }, [
+      _c("div", { staticClass: "panel panel-primary" }, [
+        _c("div", { staticClass: "panel-heading" }, [
+          _c("h3", { staticClass: "panel-title" }, [
+            _c("i", { staticClass: "fa fa-podcast titulo" }, [
+              _c("b", [_vm._v(" STATUS SITC")])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel-body" }, [
+          _c(
+            "div",
+            { staticClass: "box box-bg-color-sitc box-sitc box-sitc-height" },
+            [
+              _c("div", { staticClass: "teste" }, [
+                _c("span", { staticClass: "fa fa-server" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "texto" }, [_vm._v("SITC-RF")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "teste" }, [
+                _c("span", { staticClass: "fa fa-server" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "texto" }, [_vm._v("SITC-NT")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "teste" }, [
+                _c("span", { staticClass: "fa fa-server" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "texto" }, [_vm._v("TATIC-SV")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "teste" }, [
+                _c("span", { staticClass: "fa fa-server" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "texto" }, [_vm._v("SITC-FZ")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "teste" }, [
+                _c("span", { staticClass: "fa fa-server" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "texto" }, [_vm._v("SITC-PS")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "teste" }, [
+                _c("span", { staticClass: "fa fa-server" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "texto" }, [_vm._v("TATIC-MO")])
+              ])
+            ]
+          )
         ])
       ])
     ])

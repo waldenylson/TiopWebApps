@@ -63,7 +63,7 @@ export default {
     }
 
     .box-rpl {
-        height: 150px;
+        height: 130px;
         width: 270px;
         padding-top: 5px;
         margin-left: 1px;
