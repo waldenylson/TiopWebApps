@@ -5727,7 +5727,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.dacom[data-v-75d9206c] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: -12px;\n}\n.box-dacom[data-v-75d9206c] {\n    height: 60px;\n    width: 270px;\n    margin-left: 4px;\n    font-size: x-large;\n    color: green;\n    padding-left: 5px;\n    padding-bottom: 5px;\n}\n.box-dacom-titulo-color-red[data-v-75d9206c] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n.box-dacom-titulo-color-yellow[data-v-75d9206c] {\n    color: #fff;\n    background-color: #ffe623;\n    border-color: #ffe623;\n}\n.titulo[data-v-75d9206c] {\n    font-size: 20px;\n    padding-bottom: -20px;\n}\n.error[data-v-75d9206c] {\n    color: red;\n}\n\n", ""]);
+exports.push([module.i, "\n.dacom[data-v-75d9206c] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: -10px;\n}\n.box-dacom[data-v-75d9206c] {\n    height: 80px;\n    width: 270px;\n    margin-left: 4px;\n    font-size: x-large;\n    color: green;\n    padding-left: 5px;\n    padding-bottom: 5px;\n}\n.box-dacom-titulo-color-red[data-v-75d9206c] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n.box-dacom-titulo-color-yellow[data-v-75d9206c] {\n    color: #fff;\n    background-color: #ffe623;\n    border-color: #ffe623;\n}\n.titulo[data-v-75d9206c] {\n    font-size: 20px;\n    padding-bottom: -20px;\n}\n.error[data-v-75d9206c] {\n    color: red;\n}\n\n", ""]);
 
 // exports
 
@@ -5746,7 +5746,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.inf-sistemas[data-v-4c281925] {\n    padding-left: 5px;\n    padding-top: 20px;\n    margin-bottom: -20px;\n    width: 280px;\n}\n.less-font[data-v-4c281925] {\n    /*font-size: 24px;*/\n}\n", ""]);
+exports.push([module.i, "\n.inf-sistemas[data-v-4c281925] {\n    padding-left: 5px;\n    padding-top: 10px;\n    margin-bottom: -20px;\n    width: 280px;\n}\n.less-font[data-v-4c281925] {\n    /*font-size: 24px;*/\n}\n", ""]);
 
 // exports
 
@@ -5765,7 +5765,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n    padding-top: 20px;\n}\n.motivo[data-v-2a58989c] {\n    font-size: 18px;\n}\n.panel-body[data-v-2a58989c] {\n    margin-left: -25px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 962px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:15px;\n    width:490px;\n    height:155px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:5px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: left;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:35px;\n    text-align: left;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n.data[data-v-2a58989c] {\n    text-align: left;\n    font-size: 25px;\n}\n\n", ""]);
+exports.push([module.i, "\n.mnt-programadas[data-v-2a58989c] {\n    float: left;\n    padding-left: 5px;\n    width: 100%;\n    margin-bottom: -20px;\n    padding-top: 10px;\n}\n.motivo[data-v-2a58989c] {\n    font-size: 18px;\n}\n.panel-body[data-v-2a58989c] {\n    margin-left: -25px;\n}\n.mnt-programadas-height[data-v-2a58989c] {\n    height: 1003px;\n}\n.project_sort ul.project_list li[data-v-2a58989c]{\n    padding:15px;\n    width:490px;\n    height:155px;\n    position:relative;\n    border:solid 1px #c4c4c4;\n    border-radius:3px;\n    list-style:none;\n    display:inline-block;\n    margin-right:5px;\n    margin-bottom:10px;\n    background-color: #ededed;\n    text-align: left;\n}\n.project_sort ul.project_list a.project_title[data-v-2a58989c]{\n    font-size:35px;\n    text-align: left;\n    color:#5c5c5c;\n    text-shadow: 0px 1px 0px  #fff;\n    display:inline-block;\n    line-height:18px;\n    font-family:  Helvetica, Arial, sans-serif;;\n    text-decoration:none;\n    padding-top: 5px;\n}\n.project_sort ul.project_list .project_badge[data-v-2a58989c]{\n    width:36px;\n    height:36px;\n    position:absolute;\n    right:-1px;\n    top:-1px;\n    background:url(\"/img/project_badge.png\") no-repeat center;\n    color:#fff;\n    font-size:15px;\n    text-align:right;\n    line-height:17px;\n}\n.project_sort ul.project_list .project_badge.ino[data-v-2a58989c]{\n    background-position:-148px 0px;\n}\n.project_sort ul.project_list .project_badge.ope[data-v-2a58989c]{\n    background-position:-299px 0px;\n}\n.project_sort ul.project_list .project_badge.deg[data-v-2a58989c]{\n    background-position:-1px 0px;\n}\n.data[data-v-2a58989c] {\n    text-align: left;\n    font-size: 25px;\n}\n\n", ""]);
 
 // exports
 
@@ -5784,7 +5784,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.panel-body[data-v-28e84920] {\n    padding: 5px;\n}\n.notifications[data-v-28e84920] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-notification[data-v-28e84920] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: center;\n    /*font-size: 100px;*/\n    color: red;\n}\n.box-notification-height[data-v-28e84920] {\n    height: 250px;\n}\n.box-bg-color-notification[data-v-28e84920] {\n    background-color: #ffffff;\n}\n.blink[data-v-28e84920]{\n    width:200px;\n    height: 50px;\n    color: red;\n    padding: 15px;\n    text-align: justify;\n    line-height: 50px;\n}\nspan[data-v-28e84920]{\n    font-size: 35px;\n    font-family: Verdana;\n    font-weight: bold;\n    color: white;\n    animation: blink-data-v-28e84920 1.3s linear infinite;\n}\n@keyframes blink-data-v-28e84920{\n    /*0%{opacity: 0;}*/\n50%{opacity: .0;}\n100%{opacity: 5;}\n}\n", ""]);
+exports.push([module.i, "\n.panel-body[data-v-28e84920] {\n    padding: 4px;\n}\n.notifications[data-v-28e84920] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-notification[data-v-28e84920] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: center;\n    /*font-size: 100px;*/\n    color: red;\n}\n.box-notification-height[data-v-28e84920] {\n    height: 293px;\n}\n.box-bg-color-notification[data-v-28e84920] {\n    background-color: #ffffff;\n}\n.blink[data-v-28e84920]{\n    width:200px;\n    height: 50px;\n    color: red;\n    padding: 15px;\n    text-align: justify;\n    line-height: 50px;\n}\nspan[data-v-28e84920]{\n    font-size: 35px;\n    font-family: Verdana;\n    font-weight: bold;\n    color: white;\n    animation: blink-data-v-28e84920 1.3s linear infinite;\n}\n@keyframes blink-data-v-28e84920{\n    /*0%{opacity: 0;}*/\n50%{opacity: .0;}\n100%{opacity: 5;}\n}\n", ""]);
 
 // exports
 
@@ -5822,7 +5822,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.rpl[data-v-1ffd3976] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: 25px;\n}\n.box-rpl[data-v-1ffd3976] {\n    height: 130px;\n    width: 270px;\n    padding-top: 5px;\n    margin-left: 1px;\n    margin-bottom: -37px;\n    margin-top: 1px;\n    font-size: 20px;\n    padding-left: 1px;\n}\n.box-rpl-titulo-color-red[data-v-1ffd3976] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n\n", ""]);
+exports.push([module.i, "\n.rpl[data-v-1ffd3976] {\n    width: 275px;\n    margin-left: 5px;\n    margin-top: 25px;\n}\n.box-rpl[data-v-1ffd3976] {\n    height: 150px;\n    width: 270px;\n    padding-top: 5px;\n    margin-left: 1px;\n    margin-bottom: -37px;\n    margin-top: 1px;\n    font-size: 20px;\n    padding-left: 1px;\n}\n.box-rpl-titulo-color-red[data-v-1ffd3976] {\n    color: #fff;\n    background-color: #ff0000;\n    border-color: #ff0000;\n}\n\n", ""]);
 
 // exports
 
@@ -5860,7 +5860,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.sobreaviso[data-v-25ee6abf] {\n    padding-top: 10px;\n    font-size: xx-large;\n    margin-bottom: -10px;\n}\n", ""]);
+exports.push([module.i, "\n.sobreaviso[data-v-25ee6abf] {\n    font-size: xx-large;\n    margin-bottom: -10px;\n}\n", ""]);
 
 // exports
 

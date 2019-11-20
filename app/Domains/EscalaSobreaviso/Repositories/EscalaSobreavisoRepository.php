@@ -73,11 +73,11 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
 
         $sobreaviso = [];
 
-        if( ($hora >= 0) and ($hora < 8) )
+        if( ( (int)$hora >= 0) and ( (int)$hora < 8) )
         {
-            $dia = date('d') - 1;
+            $dia = ( (date('d') - 1) == 0 ) ? '01' : (date('d') - 1);
 
-            if ( ($dia >=1) && ($dia <=9) ) $dia = ('0'.$dia);
+            if ( ((int)$dia >= 1) && ((int)$dia <= 9) ) $dia = ('0' . $dia);
 
             $sobreaviso = DB::table('escala_sobreaviso')
                 ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')

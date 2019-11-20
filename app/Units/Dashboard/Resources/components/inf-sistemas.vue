@@ -77,7 +77,7 @@
 <style scoped>
     .inf-sistemas {
         padding-left: 5px;
-        padding-top: 20px;
+        padding-top: 10px;
         margin-bottom: -20px;
         width: 280px;
     }

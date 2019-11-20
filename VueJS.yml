@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  # Web server - For live reload and development
+  # This environment can be used to run npm and node
+  # commands as well
+  dev:
+    image: ambientum/node:11
+    container_name: sandbox-vue-dev
+    command: npm run dev
+    volumes:
+      - .:/var/www/app
+    ports:
+      - 8080:8080
+
+  # Testing dist on a "real" web server
+  production-server:
+    image: nginx:stable-alpine
+    container_name: sandbox-preview-server
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    ports:
+      - 9090:80

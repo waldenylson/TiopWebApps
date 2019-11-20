@@ -51,7 +51,6 @@
 
 <style scoped>
     .sobreaviso {
-        padding-top: 10px;
         font-size: xx-large;
         margin-bottom: -10px;
     }

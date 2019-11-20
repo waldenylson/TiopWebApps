@@ -66,11 +66,11 @@ export default {
     .dacom {
         width: 275px;
         margin-left: 5px;
-        margin-top: -12px;
+        margin-top: -10px;
     }
 
     .box-dacom {
-        height: 60px;
+        height: 80px;
         width: 270px;
         margin-left: 4px;
         font-size: x-large;

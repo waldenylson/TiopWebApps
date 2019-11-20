@@ -47,7 +47,7 @@
 
 <style scoped>
     .panel-body {
-        padding: 5px;
+        padding: 4px;
     }
 
     .notifications {
@@ -65,7 +65,7 @@
     }
 
     .box-notification-height {
-        height: 250px;
+        height: 293px;
     }
 
     .box-bg-color-notification {

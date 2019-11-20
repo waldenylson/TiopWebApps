@@ -1,0 +1,50 @@
+# Ambientum: Laravel standard template.
+
+# composer syntax version.
+version: "3.7"
+
+# volumes list.
+volumes:
+  mysql-data: # Persist MySQL data.
+  redis-data: # Persist Redis data.
+  persistent-cache: # intended for /home/ambientum directory, shared by PHP and/or Node.JS services.
+
+# services definition.
+services:
+  # mailhog: # MailHog - Fake SMTP server (optional).
+  #   image: mailhog/mailhog:latest
+  #   ports:
+  #     - "1025:1025" # Port 1025 => SMTP.
+  #     - "8025:8025" # Port 8025 => Web dashboard (http://127.0.0.1:8025).
+
+  # PHP (with Nginx)
+  app:
+    image: ambientum/php:7.3-nginx
+    container_name: sandbox-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8080:8080"
+      - "8083:8083"
+    # links:
+    # - postgres
+    # - mysql
+    # - cache
+  # mysql: # MySQL: You may use PostgreSQL instead, MongoDB or other instead.
+  #   image: mysql:5.7
+  #   volumes:
+  #     - "mysql-data:/var/lib/mysql" # persist "/var/lib/mysql" on volume "mysql-data".
+  #   ports:
+  #     - "3306:3306" # Port 3306 => MySQL TCP interface.
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=acme # password for user user root.
+  #     - MYSQL_DATABASE=acme # database name (to be created on first run).
+  #     - MYSQL_USER=acme # regular user name.
+  #     - MYSQL_PASSWORD=acme # regular user password.
+  # redis: # Redis: For Laravel caching, queue, session and others.
+  #   image: redis:5.0-alpine
+  #   command: "redis-server --requirepass acme" # authenticated with a password.
+  #   volumes:
+  #     - "redis-data:/data" # persist Redis data ("/data") on volume "redis-data".
+  #   ports:
+  #     - 6379:6379 # Port 6379 => Default Redis TCP port.

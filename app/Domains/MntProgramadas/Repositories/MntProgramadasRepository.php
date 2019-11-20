@@ -36,14 +36,14 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
         $baseResult = DB::table('mnt_programadas')
             ->selectRaw('mnt_programadas.id, radares.id as radarID, radares.nome as radarNome, 
                          data_ini, data_fim,hora_ini,hora_fim, motivo')
-            ->whereRaw('data_ini >= current_date')
+            ->whereRaw('data_fim >= current_date')
             ->orderByRaw('data_ini')
             ->orderByRaw('data_fim')
             ->orderByRaw('hora_ini')
             ->orderByRaw('hora_fim')
             ->join('efetivo_tiop', 'mnt_programadas.efetivo_id', 'efetivo_tiop.id')
             ->join('radares', 'mnt_programadas.radar_id', 'radares.id')
-            ->take(10)
+            ->take(12)
         ->get();
 
         foreach ($baseResult as $key => $data)
@@ -68,7 +68,7 @@ class MntProgramadasRepository extends AbstractCrudRepository implements MntProg
         $baseResult = DB::table('mnt_programadas')
             ->selectRaw('mnt_programadas.id, radares.id as radarID, radares.nome as radarNome, 
                          data_ini, data_fim,hora_ini,hora_fim, motivo')
-            ->whereRaw('data_ini >= current_date')
+            ->whereRaw('data_fim >= current_date')
             ->orderByRaw('data_ini')
             ->orderByRaw('data_fim')
             ->orderByRaw('hora_ini')

@@ -4,7 +4,7 @@
 ####
 
 # v2 syntax
-version: '2'
+version: "3"
 
 # Named volumes
 volumes:
@@ -17,41 +17,40 @@ volumes:
     driver: local
 services:
   # MySQL (5.7)
- mysql:
- #image: ambientum/mysql:5.7
-   image: mariadb
-   container_name: tiop-mariadb
-   volumes:
-     - tiop-mariadb-data:/var/lib/mysql
-   ports:
-     - "3306:3306"
-   environment:
-     - MYSQL_ROOT_PASSWORD=sandbox
-     - TZ=America/Recife
+  mysql:
+  #image: ambientum/mysql:5.7
+  image: mariadb
+  container_name: tiop-mariadb
+  volumes:
+    - tiop-mariadb-data:/var/lib/mysql
+  ports:
+    - "3306:3306"
+  environment:
+    - MYSQL_ROOT_PASSWORD=sandbox
+    - TZ=America/Recife
 
-  # # Redis
-  # cache:
-  #   image: redis:4.0
-  #   container_name: tiop-redis
-  #   command: --appendonly yes
-  #   volumes:
-  #     - tiop-redis-data:/data
-  #   ports:
-  #     - "6379:6379"
+  # Redis
+  cache:
+    image: redis:4.0
+    container_name: tiop-redis
+    command: --appendonly yes
+    volumes:
+      - tiop-redis-data:/data
+    ports:
+      - "6379:6379"
 
-  # PHP (with Nginx)
-  # you can change from nginx to apache, just change session 'image'
-#   app:
-#     image: ambientum/php:7.2-nginx
-#     container_name: tiop-app
-#     volumes:
-#       - .:/var/www/app
-#     ports:
-#       - "80:8080"
-#     links:
-# #      - mysql
-#       - cache
-
+  #PHP (with Nginx)
+  #you can change from nginx to apache, just change session 'image'
+  app:
+    image: ambientum/php:7.2-nginx
+    container_name: tiop-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "80:8080"
+    links:
+      - mysql
+      - cache
 #  # Laravel Queues
 #  queue:
 #    image: ambientum/php:7.2

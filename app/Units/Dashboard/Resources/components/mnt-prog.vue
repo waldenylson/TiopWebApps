@@ -71,7 +71,7 @@
         padding-left: 5px;
         width: 100%;
         margin-bottom: -20px;
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     .motivo {
@@ -83,7 +83,7 @@
     }
 
     .mnt-programadas-height {
-        height: 962px;
+        height: 1003px;
     }
 
     .project_sort ul.project_list li{
