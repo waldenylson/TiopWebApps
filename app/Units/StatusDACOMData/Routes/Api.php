@@ -25,5 +25,10 @@ class Api extends RouteFile
             '/{server}/{value}/updateStatusDACOM',  ['as' => 'dashboard.updateStatusDACOM',
             'uses' => 'StatusDACOMDataController@updateStatus'
         ]);
+
+        $this->router->get(
+            '/{server}/{value}/updateStatusRemoteCopy',  ['as' => 'dashboard.updateStatusRemoteCopy',
+            'uses' => 'StatusDACOMDataController@updateStatus'
+        ]);
     }
 }

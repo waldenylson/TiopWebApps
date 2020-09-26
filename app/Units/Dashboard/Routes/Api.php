@@ -21,12 +21,19 @@ class Api extends RouteFile
         });
         //})->middleware('auth:api');
 
-        $this->router->get('/getRStatus',  ['as' => 'dashboard.getRStatus', 'uses' => 'SinopticoController@getRadarsStatus']);
-        $this->router->get('/getEfetivo',  ['as' => 'dashboard.getEfetivo', 'uses' => 'SinopticoController@getEfetivoTiop']);
-        $this->router->get('/getInfSis',   ['as' => 'dashboard.getInfSis',  'uses' => 'SinopticoController@getInfSistemasData']);
-        $this->router->get('/getRPLInfo',  ['as' => 'dashboard.getRPLInfo', 'uses' => 'SinopticoController@getRPLInfo']);
-        $this->router->get('/getSobreaviso',  ['as' => 'dashboard.getSobreaviso', 'uses' => 'SinopticoController@getSobreaviso']);
-        $this->router->get('/getMntProg',  ['as' => 'dashboard.getMntProg', 'uses' => 'SinopticoController@getMntProg']);
-        $this->router->get('/getStatusDACOM',  ['as' => 'dashboard.getStatusDACOM', 'uses' => 'SinopticoController@getStatusDACOM']);
+        $this->router->get('/getRStatus',  ['as' => 'dashboard.getRStatus', 
+          'uses' => 'SinopticoController@getRadarsStatus']);
+        $this->router->get('/getEfetivo',  ['as' => 'dashboard.getEfetivo', 
+          'uses' => 'SinopticoController@getEfetivoTiop']);
+        $this->router->get('/getInfSis',   ['as' => 'dashboard.getInfSis',  
+          'uses' => 'SinopticoController@getInfSistemasData']);
+        $this->router->get('/getRPLInfo',  ['as' => 'dashboard.getRPLInfo', 
+          'uses' => 'SinopticoController@getRPLInfo']);
+        $this->router->get('/getSobreaviso',  ['as' => 'dashboard.getSobreaviso', 
+          'uses' => 'SinopticoController@getSobreaviso']);
+        $this->router->get('/getMntProg',  ['as' => 'dashboard.getMntProg', 
+          'uses' => 'SinopticoController@getMntProg']);
+        $this->router->get('/getStatusDACOM',  ['as' => 'dashboard.getStatusDACOM', 
+          'uses' => 'SinopticoController@getStatusDACOM']);
     }
 }

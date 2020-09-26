@@ -71,33 +71,35 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
 
         $hora = date('H');
 
-        $sobreaviso = [];
+        $arrContextOptions = 
+            array(
+                "ssl" => array(
+                    "verify_peer" => false,
+                    "verify_peer_name" => false,
+                ),
+                "http" => array(
+                    'method'=>"GET",
+                    "header" => array(
+                        "usuario: tiop",
+                        "token: 99412a25eba2743435565074d2a1b1461"
+                    )
+                )
+            );
 
-        if( ( (int)$hora >= 0) and ( (int)$hora < 8) )
-        {
-            $dia = ( (date('d') - 1) == 0 ) ? '01' : (date('d') - 1);
+        $url = "https://sistemas.cindacta3.intraer:8443/Escala/rest/escalado/escalaTIOP/516";
+        
+        $result = json_decode(file_get_contents($url, false, 
+            stream_context_create($arrContextOptions)));    
+            
+        $saram = substr($result[1]->escalado, -28, 7);
+        
+        if( ( (int)$hora >= 0) and ( (int)$hora < 8) )        
+            $saram = substr($result[0]->escalado, -28, 7);       
 
-            if ( ((int)$dia >= 1) && ((int)$dia <= 9) ) $dia = ('0' . $dia);
-
-            $sobreaviso = DB::table('escala_sobreaviso')
-                ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')
-                ->where('dias', 'like', '%'.$dia.'%')
-                ->where('mes', date('n'))
-                ->where('ano', date('Y'))
-            ->get();
-        }
-        else
-        {
-            $dia = date('d');
-
-            $sobreaviso = DB::table('escala_sobreaviso')
-                ->join('efetivo_tiop', 'escala_sobreaviso.efetivo_id', 'efetivo_tiop.id')
-                ->where('dias', 'like', '%'.$dia.'%')
-                ->where('mes', date('n'))
-                ->where('ano', date('Y'))
-            ->get();
-        }
-
-        return $sobreaviso;
+        return $escalado = DB::table('efetivo_tiop')
+            ->selectRaw('efetivo_tiop.agenda, efetivo_tiop.especialidade,
+                         efetivo_tiop.posto_gradu, efetivo_tiop.nome_guerra')
+            ->whereRaw("efetivo_tiop.saram = $saram")
+        ->get();
     }
 }

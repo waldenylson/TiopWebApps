@@ -20,7 +20,8 @@
             <tiop-sistemas></tiop-sistemas>
             <tiop-rpl></tiop-rpl>
             <tiop-dacom></tiop-dacom>
-            <tiop-rodape></tiop-rodape>
+            <tiop-dtceas></tiop-dtceas>
+            <!-- <tiop-rodape></tiop-rodape> -->
         </div>
     </div>
 @stop

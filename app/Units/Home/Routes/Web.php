@@ -20,5 +20,9 @@ class Web extends RouteFile
         $this->router->get('/', function(){
             return redirect('dashboard');
         });
+
+        $this->router->get('/login', function () {
+            return "Login Page!";
+        });
     }
 }

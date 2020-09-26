@@ -22,7 +22,9 @@ class StatusDACOMDataRepository extends AbstractCrudRepository implements Status
 
     public function updateStatus($server, $value)
     {
-        $result = DB::table('status_copia_dacom')->where('server', $server)->update(['status' => $value, 'updated_at' => DB::raw('now()')]);
+        $result = DB::table('status_copia_dacom')
+            ->where('server', $server)
+            ->update(['status' => $value, 'updated_at' => DB::raw('now()')]);
 
         return $result;
     }

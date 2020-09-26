@@ -16,7 +16,7 @@ class Web extends RouteFile
      */
     public function routes()
     {
-        $this->router->group(['prefix' => 'users'], function()
+        $this->router->group(['prefix' => 'users', 'middleware' => 'auth'], function()
         {
             $this->router->get('', ['as' => 'users.index', 'uses' => 'UsersController@index']);
 
@@ -28,6 +28,5 @@ class Web extends RouteFile
 
             $this->router->get('{id}/remover', ['as' => 'users.destroy', 'uses' => 'UsersController@destroy']);
         });
-
     }
 }

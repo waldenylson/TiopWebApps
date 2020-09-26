@@ -4,27 +4,24 @@
       <div
         class="panel-heading"
         :class="{
-                    'box-dacom-titulo-color-yellow': (dacomAlert1 ^ dacomAlert2),
-                    'box-dacom-titulo-color-red': !(dacomAlert1 && dacomAlert2)
+                    'box-dacom-titulo-color-yellow': (PSAlert ^ MOAlert),
+                    'box-dacom-titulo-color-red': !(PSAlert && MOAlert)
 
                  }"
       >
         <h3 class="panel-title">
           <i class="fa fa-cloud-upload titulo">
-            <b>&nbsp;COPM SGD Backup</b>
+            <b>&nbsp;DTCEAs SGD BKP</b>
           </i>
         </h3>
       </div>
       <div class="panel-body">
         <div>
           <div class="box-dacom">
-            <i v-if="dacomAlert1" class="fa fa-check-circle">&nbsp;SVR Primário&nbsp;&nbsp;</i>
-            <i v-else-if="!dacomAlert1" class="fa fa-exclamation-triangle error">&nbsp;SVR Primário</i>
-            <i v-if="dacomAlert2" class="fa fa-check-circle">&nbsp;SVR Secundário</i>
-            <i
-              v-else-if="!dacomAlert2"
-              class="fa fa-exclamation-triangle error"
-            >&nbsp;SVR Secundário</i>
+            <i v-if="PSAlert" class="fa fa-check-circle">&nbsp;SVR DTCEA-PS&nbsp;&nbsp;</i>
+            <i v-else-if="!PSAlert" class="fa fa-exclamation-triangle error">&nbsp;SVR DTCEA-PS</i>
+            <i v-if="MOAlert" class="fa fa-check-circle disabled">&nbsp;SVR DTCEA-MO</i>
+            <!-- <i v-else-if="!MOAlert" class="fa fa-exclamation-triangle error">&nbsp;SVR DTCEA-MO</i> -->
           </div>
         </div>
       </div>
@@ -34,27 +31,28 @@
 
 <script>
 export default {
-  name: "tiop-dacom",
+  name: "tiop-dtceas",
 
   data: () => ({
-    dacomAlert1: false,
-    dacomAlert2: false
+    PSAlert: false,
+    MOAlert: false
   }),
 
   methods: {
     getDACOMInfo: function() {
       axios.get("/api/getStatusDACOM").then(response => {
-        this.dacomAlert1 = response.data[0].status === 1;
-        this.dacomAlert2 = response.data[1].status === 1;
+        this.PSAlert = response.data[2].status;
+        this.MOAlert = 1; //response.data[3].status;
 
-        if (this.dacomAlert1 !== true)
+        if (!this.PSAlert)
           $(".blink")
             .append("<br/>")
-            .append("FALHA CÓPIA DACOM #1!");
-        if (this.dacomAlert2 !== true)
-          $(".blink")
-            .append("<br/>")
-            .append("FALHA CÓPIA DACOM #2!");
+            .append("FALHA CÓPIA DTCEA-PS!");
+
+        // if (!this.MOAlert)
+        //   $(".blink")
+        //     .append("<br/>")
+        //     .append("FALHA CÓPIA DADOS DTCEA-MO!");
       });
     }
   },
@@ -70,7 +68,7 @@ export default {
 .dacom {
   width: 275px;
   margin-left: 5px;
-  margin-top: -12px;
+  margin-top: -16px;
 }
 
 .box-dacom {
@@ -81,6 +79,10 @@ export default {
   color: green;
   padding-left: 5px;
   padding-bottom: 5px;
+}
+
+.disabled {
+  color: gray;
 }
 
 .box-dacom-titulo-color-red {

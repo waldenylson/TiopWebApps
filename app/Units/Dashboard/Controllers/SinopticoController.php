@@ -1,6 +1,8 @@
 <?php namespace TIOp\Units\Dashboard\Controllers;
 
-use Codecasts\Support\Http\Controller;;
+use Codecasts\Support\Http\Controller;
+
+use Illuminate\Support\Facades\DB;
 
 use TIOp\Domains\EscalaSobreaviso\Contracts\EscalaSobreavisoRepository;
 use TIOp\Domains\MntProgramadas\Contracts\MntProgramadasRepository;
@@ -44,12 +46,14 @@ class SinopticoController extends Controller
     protected $sobreavisoRepository;
     protected $mntProgRepository;
     protected $statusDACOMDataRepository;
+    protected $usersRepository;
 
     public function __construct(SistemasCentrosRepository $scRepository,
                                 RPLRepository $rplRepository,
                                 EscalaSobreavisoRepository $sobreavisoRepository,
                                 MntProgramadasRepository $mntProgRepository,
-                                StatusDACOMDataRepository $statusDACOMDataRepository)
+                                StatusDACOMDataRepository $statusDACOMDataRepository
+                                )
     {
         $this->scRepository  = $scRepository;
         $this->rplRepository = $rplRepository;
