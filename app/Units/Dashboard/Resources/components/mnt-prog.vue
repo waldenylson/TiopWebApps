@@ -61,28 +61,28 @@
 export default {
   name: "tiop-mnt",
 
-  data: function() {
+  data: function () {
     return {
       dadosMntProg: [],
       mntCount: 0,
-      status: "ope"
+      status: "ope",
     };
   },
 
   methods: {
-    getMntProg: function() {
-      axios.get("/api/getMntProg").then(response => {
+    getMntProg: function () {
+      axios.get("/api/getMntProg").then((response) => {
         this.dadosMntProg = response.data;
         this.mntCount = Object.keys(this.dadosMntProg).length;
         //setTimeout(this.getMntProg, 300000);
       });
-    }
+    },
   },
 
   mounted() {
     window.console.log("Componente MNT-Prog Carregado");
     this.getMntProg();
-  }
+  },
 };
 </script>
 

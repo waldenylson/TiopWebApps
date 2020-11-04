@@ -89,17 +89,19 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
         $url = "https://sistemas.cindacta3.intraer:8443/Escala/rest/escalado/escalaTIOP/516";
         
         $result = json_decode(file_get_contents($url, false, 
-            stream_context_create($arrContextOptions)));    
+            stream_context_create($arrContextOptions)));
             
-        $saram = substr($result[1]->escalado, -28, 7);
+        $saram = substr($result[1]->escalado, -30, 7);
+
         
         if( ( (int)$hora >= 0) and ( (int)$hora < 8) )        
-            $saram = substr($result[0]->escalado, -28, 7);       
+            $saram = substr($result[0]->escalado, -28, 7);   
 
         return $escalado = DB::table('efetivo_tiop')
             ->selectRaw('efetivo_tiop.agenda, efetivo_tiop.especialidade,
                          efetivo_tiop.posto_gradu, efetivo_tiop.nome_guerra')
             ->whereRaw("efetivo_tiop.saram = $saram")
         ->get();
+
     }
 }
