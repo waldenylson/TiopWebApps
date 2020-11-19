@@ -93,9 +93,8 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
             
         $saram = substr($result[1]->escalado, -30, 7);
 
-        
         if( ( (int)$hora >= 0) and ( (int)$hora < 8) )        
-            $saram = substr($result[0]->escalado, -28, 7);   
+            $saram = substr($result[0]->escalado, -30, 7);   
 
         return $escalado = DB::table('efetivo_tiop')
             ->selectRaw('efetivo_tiop.agenda, efetivo_tiop.especialidade,
