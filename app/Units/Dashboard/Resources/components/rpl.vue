@@ -51,7 +51,7 @@ export default {
         this.rplAlert = dadosResposta[1];
 
         if (this.rplAlert.rplAlert === true)
-          $(".blink").append("RPL VENCENDO OU VENCIDO!\n");
+          $(".blink").append("RPL VENCENDO OU VENCIDO!\nVerificar STATUS no SAGITARIO!");
       });
     }
   },

@@ -102,4 +102,20 @@ class RPLController extends Controller
 
         return redirect()->back()->with('error', 'Erro ao Tentar Remover o Registro!');
     }
+
+    public function manageStatusCGNA($value)
+    {
+        $result = $this->rplRepository->manageStatusCGNA($value);
+    }
+
+    public function tratamentoRPLIniciado()
+    {
+        $result = $this->rplRepository->tratamentoRPLIniciado();
+
+        if ($result) {
+            return redirect()->back()->with('message', 'Tratamento Iniciado com Sucesso!');
+        }
+
+        return redirect()->back()->with('error', 'Erro ao Tentar Remover o Registro!');
+    }
 }

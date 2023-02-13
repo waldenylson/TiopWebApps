@@ -24,7 +24,7 @@ class StoreMntProgramadasPostRequest extends FormRequest
         return [
             'radar_id'    => 'required',
             'efetivo_id'  => 'required',
-            'motivo'      => 'required|min:10|max:49',
+            'motivo'      => 'required|min:10|max:37',
             'data_ini'    => 'required|',
             'data_fim'    => 'required|',
             'hora_ini'    => 'required|',

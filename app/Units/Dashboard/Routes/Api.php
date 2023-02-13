@@ -16,24 +16,30 @@ class Api extends RouteFile
      */
     public function routes()
     {
-        $this->router->get('/dashboard', function () {
+	    $this->router->get('/dashboard', function () {
           return 'Dashboard API Router';
         });
         //})->middleware('auth:api');
 
-        $this->router->get('/getRStatus',  ['as' => 'dashboard.getRStatus', 
-          'uses' => 'SinopticoController@getRadarsStatus']);
-        $this->router->get('/getEfetivo',  ['as' => 'dashboard.getEfetivo', 
-          'uses' => 'SinopticoController@getEfetivoTiop']);
-        $this->router->get('/getInfSis',   ['as' => 'dashboard.getInfSis',  
-          'uses' => 'SinopticoController@getInfSistemasData']);
-        $this->router->get('/getRPLInfo',  ['as' => 'dashboard.getRPLInfo', 
-          'uses' => 'SinopticoController@getRPLInfo']);
-        $this->router->get('/getSobreaviso',  ['as' => 'dashboard.getSobreaviso', 
-          'uses' => 'SinopticoController@getSobreaviso']);
-        $this->router->get('/getMntProg',  ['as' => 'dashboard.getMntProg', 
-          'uses' => 'SinopticoController@getMntProg']);
-        $this->router->get('/getStatusDACOM',  ['as' => 'dashboard.getStatusDACOM', 
-          'uses' => 'SinopticoController@getStatusDACOM']);
+        $this->router->get('/getRStatus',  ['as' => 'dashboard.getRStatus',
+          'uses' => 'SinopticoController@getRadarsStatus'])->middleware('cors');
+
+        $this->router->get('/getEfetivo',  ['as' => 'dashboard.getEfetivo',
+          'uses' => 'SinopticoController@getEfetivoTiop'])->middleware('cors');
+
+        $this->router->get('/getInfSis',   ['as' => 'dashboard.getInfSis',
+          'uses' => 'SinopticoController@getInfSistemasData'])->middleware('cors');
+
+        $this->router->get('/getRPLInfo',  ['as' => 'dashboard.getRPLInfo',
+          'uses' => 'SinopticoController@getRPLInfo'])->middleware('cors');
+
+        $this->router->get('/getSobreaviso',  ['as' => 'dashboard.getSobreaviso',
+          'uses' => 'SinopticoController@getSobreaviso'])->middleware('cors');
+
+        $this->router->get('/getMntProg',  ['as' => 'dashboard.getMntProg',
+          'uses' => 'SinopticoController@getMntProg'])->middleware('cors');
+
+        $this->router->get('/getStatusDACOM',  ['as' => 'dashboard.getStatusDACOM',
+          'uses' => 'SinopticoController@getStatusDACOM'])->middleware('cors');
     }
 }

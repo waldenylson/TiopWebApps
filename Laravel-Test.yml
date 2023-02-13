@@ -1,7 +1,7 @@
 # Ambientum: Laravel standard template.
 
 # composer syntax version.
-version: "3.7"
+version: "3.3"
 
 # volumes list.
 volumes:
@@ -24,8 +24,8 @@ services:
     volumes:
       - .:/var/www/app
     ports:
-      - "8080:8080"
-      - "8083:8083"
+      - "8000:8080"
+    #  - "8083:8083"
     # links:
     # - postgres
     # - mysql

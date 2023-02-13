@@ -15,7 +15,8 @@
         :id="index"
       >
         <b>
-          {{
+          2S REHILSON - 6267  
+	{{
           sobreavisoInfo['posto_gradu'] + '&nbsp;' +
           sobreavisoInfo['especialidade'] + '&nbsp;' +
           sobreavisoInfo['nome_guerra'].toUpperCase() + '&nbsp;' + ' - '+ '&nbsp;' +

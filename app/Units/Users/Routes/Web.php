@@ -16,7 +16,7 @@ class Web extends RouteFile
      */
     public function routes()
     {
-        $this->router->group(['prefix' => 'users', 'middleware' => 'auth'], function()
+    $this->router->group(['prefix' => 'users', 'middleware' => 'auth'], function()
         {
             $this->router->get('', ['as' => 'users.index', 'uses' => 'UsersController@index']);
 

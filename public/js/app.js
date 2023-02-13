@@ -3158,7 +3158,7 @@ __webpack_require__.r(__webpack_exports__);
         var dadosResposta = response.data;
         _this.dadosRPLInfo = dadosResposta[0];
         _this.rplAlert = dadosResposta[1];
-        if (_this.rplAlert.rplAlert === true) $(".blink").append("RPL VENCENDO OU VENCIDO!\n");
+        if (_this.rplAlert.rplAlert === true) $(".blink").append("RPL VENCENDO OU VENCIDO!\nVerificar STATUS no SAGITARIO!");
       });
     }
   },
@@ -3253,14 +3253,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -6004,7 +5996,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.panel-body[data-v-28e84920] {\n    padding: 4px;\n}\n.notifications[data-v-28e84920] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-notification[data-v-28e84920] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: center;\n    /*font-size: 100px;*/\n    color: red;\n}\n.box-notification-height[data-v-28e84920] {\n    height: 293px;\n}\n.box-bg-color-notification[data-v-28e84920] {\n    background-color: #ffffff;\n}\n.blink[data-v-28e84920]{\n    width:200px;\n    height: 50px;\n    color: red;\n    padding: 15px;\n    text-align: justify;\n    line-height: 50px;\n}\nspan[data-v-28e84920]{\n    font-size: 35px;\n    font-family: Verdana;\n    font-weight: bold;\n    color: white;\n    animation: blink-data-v-28e84920 1.3s linear infinite;\n}\n@keyframes blink-data-v-28e84920{\n    /*0%{opacity: 0;}*/\n50%{opacity: .0;}\n100%{opacity: 5;}\n}\n", ""]);
+exports.push([module.i, "\n.panel-body[data-v-28e84920] {\n    padding: 4px;\n}\n.notifications[data-v-28e84920] {\n    overflow: hidden;\n    height: 100%;\n    margin-bottom: -10px;\n}\n.box-notification[data-v-28e84920] {\n    background-color: royalblue;\n    height: 50%;\n    width: 99.5%;\n    text-align: center;\n    /*font-size: 100px;*/\n    color: red;\n    cursor: none;\n}\n.box-notification-height[data-v-28e84920] {\n    height: 293px;\n}\n.box-bg-color-notification[data-v-28e84920] {\n    background-color: #ffffff;\n}\n.blink[data-v-28e84920]{\n    width:200px;\n    height: 50px;\n    color: red;\n    padding: 15px;\n    text-align: justify;\n    line-height: 50px;\n}\nspan[data-v-28e84920]{\n    font-size: 35px;\n    font-family: Verdana;\n    font-weight: bold;\n    color: white;\n    animation: blink-data-v-28e84920 1.3s linear infinite;\n}\n@keyframes blink-data-v-28e84920{\n    /*0%{opacity: 0;}*/\n50%{opacity: .0;}\n100%{opacity: 5;}\n}\n", ""]);
 
 // exports
 
@@ -24897,7 +24889,7 @@ var render = function() {
                   _c("b", [
                     _vm._v(
                       _vm._s(
-                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                        _vm._f("moment")(infSis["dt_sistema"], "DD/MM/YYYY")
                       )
                     )
                   ])
@@ -24905,7 +24897,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
-                  _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
+                  _c("b", [_vm._v(_vm._s(infSis["v_bds"]))])
                 ]),
                 _c("br"),
                 _vm._v(" "),
@@ -24913,7 +24905,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
+                      _vm._s(_vm._f("moment")(infSis["dt_bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])
@@ -24943,7 +24935,7 @@ var render = function() {
                   _c("b", [
                     _vm._v(
                       _vm._s(
-                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                        _vm._f("moment")(infSis["dt_sistema"], "DD/MM/YYYY")
                       )
                     )
                   ])
@@ -24951,7 +24943,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
-                  _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
+                  _c("b", [_vm._v(_vm._s(infSis["v_bds"]))])
                 ]),
                 _c("br"),
                 _vm._v(" "),
@@ -24959,7 +24951,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
+                      _vm._s(_vm._f("moment")(infSis["dt_bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])
@@ -24989,7 +24981,7 @@ var render = function() {
                   _c("b", [
                     _vm._v(
                       _vm._s(
-                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                        _vm._f("moment")(infSis["dt_sistema"], "DD/MM/YYYY")
                       )
                     )
                   ])
@@ -24997,7 +24989,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
-                  _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
+                  _c("b", [_vm._v(_vm._s(infSis["v_bds"]))])
                 ]),
                 _c("br"),
                 _vm._v(" "),
@@ -25005,7 +24997,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
+                      _vm._s(_vm._f("moment")(infSis["dt_bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])
@@ -25035,7 +25027,7 @@ var render = function() {
                   _c("b", [
                     _vm._v(
                       _vm._s(
-                        _vm._f("moment")(infSis["dt-sistema"], "DD/MM/YYYY")
+                        _vm._f("moment")(infSis["dt_sistema"], "DD/MM/YYYY")
                       )
                     )
                   ])
@@ -25043,7 +25035,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("i", { staticClass: "fa fa-database" }, [
                   _vm._v("  BDS: "),
-                  _c("b", [_vm._v(_vm._s(infSis["v-bds"]))])
+                  _c("b", [_vm._v(_vm._s(infSis["v_bds"]))])
                 ]),
                 _c("br"),
                 _vm._v(" "),
@@ -25051,7 +25043,7 @@ var render = function() {
                   _vm._v("  ATL: "),
                   _c("b", [
                     _vm._v(
-                      _vm._s(_vm._f("moment")(infSis["dt-bds"], "DD/MM/YYYY"))
+                      _vm._s(_vm._f("moment")(infSis["dt_bds"], "DD/MM/YYYY"))
                     )
                   ])
                 ])
@@ -25463,56 +25455,25 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "sobreaviso" }, [
-    _c(
-      "div",
-      { staticClass: "panel panel-primary" },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._l(_vm.dadosSobreaviso, function(sobreavisoInfo, index) {
-          return _c(
-            "div",
-            {
-              key: sobreavisoInfo.id,
-              staticClass: "panel-body center",
-              attrs: { id: index }
-            },
-            [
-              _c("b", [
-                _vm._v(
-                  "\n        " +
-                    _vm._s(
-                      sobreavisoInfo["posto_gradu"] +
-                        " " +
-                        sobreavisoInfo["especialidade"] +
-                        " " +
-                        sobreavisoInfo["nome_guerra"].toUpperCase() +
-                        " " +
-                        " - " +
-                        " " +
-                        sobreavisoInfo["agenda"]
-                    ) +
-                    "\n      "
-                )
-              ])
-            ]
-          )
-        })
-      ],
-      2
-    )
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "panel-heading" }, [
-      _c("h3", { staticClass: "panel-title" }, [
-        _c("i", { staticClass: "fa fa-bell titulo" }, [
-          _c("b", [_vm._v(" SOBREAVISO TÉCNICO")])
+    return _c("div", { staticClass: "sobreaviso" }, [
+      _c("div", { staticClass: "panel panel-primary" }, [
+        _c("div", { staticClass: "panel-heading" }, [
+          _c("h3", { staticClass: "panel-title" }, [
+            _c("i", { staticClass: "fa fa-bell titulo" }, [
+              _c("b", [_vm._v(" SOBREAVISO TÉCNICO")])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "panel-body center" }, [
+          _c("b", [_vm._v("\n\t SOBREAVISO DO DIA \n        ")])
         ])
       ])
     ])

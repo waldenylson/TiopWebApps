@@ -6,7 +6,7 @@
 
             <tiop-sobreaviso></tiop-sobreaviso>
 
-            <status-sitc></status-sitc>
+            <!-- <status-sitc></status-sitc> -->
 
             <tiop-notifications></tiop-notifications>
 

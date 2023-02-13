@@ -7,6 +7,7 @@ use TIOp\Domains\EscalaSobreaviso\Contracts\EscalaSobreavisoRepository as Escala
 use Artesaos\Warehouse\AbstractCrudRepository;
 use TIOp\Domains\EscalaSobreaviso\EscalaSobreaviso;
 use TIOp\Units\EscalaSobreaviso\Requests\StoreEscalaSobreavisoPostRequest;
+use function MongoDB\BSON\toJSON;
 
 class EscalaSobreavisoRepository extends AbstractCrudRepository implements EscalaSobreavisoRepositoryContract
 {
@@ -86,14 +87,17 @@ class EscalaSobreavisoRepository extends AbstractCrudRepository implements Escal
                 )
             );
 
-        $url = "https://sistemas.cindacta3.intraer:8443/Escala/rest/escalado/escalaTIOP/516";
-        
-        $result = json_decode(file_get_contents($url, false, 
+        $url = "https://risaer.decea.intraer/rest/escalado/escalaTecnica/cindacta%20iii";
+        // $url = "https://risaer-homolog.cindacta3.intraer/rest/escalado/escalaTecnica/cindacta%20iii";
+
+        $result = json_decode(file_get_contents("$url", false,
             stream_context_create($arrContextOptions)));
-            
+
+        return $result;
+
         $saram = substr($result[1]->escalado, -30, 7);
 
-        if( ( (int)$hora >= 0) and ( (int)$hora < 8) )        
+        if( ( (int)$hora >= 0) and ( (int)$hora < 8) )
             $saram = substr($result[0]->escalado, -30, 7);   
 
         return $escalado = DB::table('efetivo_tiop')

@@ -20,5 +20,9 @@ class Api extends RouteFile
           return 'RPL API Router';
         });
         //})->middleware('auth:api');
+        $this->router->get(
+            '/{value}/manageStatusCGNA',  ['as' => 'rpl.manageStatusCGNA',
+            'uses' => 'RPLController@manageStatusCGNA'
+        ]);
     }
 }

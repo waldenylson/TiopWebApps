@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{!! asset('css/sinoptico.css') !!}">
 </head>
 <body>
+@include('support::partials.alerts')
 <div id="app">@yield('content')</div>
 
 <script src="{!! asset('js/manifest.js') !!}" type="text/javascript"></script>

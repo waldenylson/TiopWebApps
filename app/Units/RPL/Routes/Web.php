@@ -20,6 +20,8 @@ class Web extends RouteFile
             $this->router->post('{id}/salvar', ['as' => 'rpl.update',  'uses' => 'RPLController@update']);
 
             $this->router->get('{id}/remover', ['as' => 'rpl.destroy', 'uses' => 'RPLController@destroy']);
+
+            $this->router->get('tratar', ['as' => 'rpl.tratamentoRPLIniciado', 'uses' => 'RPLController@tratamentoRPLIniciado']);
         });
     }
 }

@@ -62,6 +62,7 @@
         text-align: center;
         /*font-size: 100px;*/
         color: red;
+        cursor: none;
     }
 
     .box-notification-height {
