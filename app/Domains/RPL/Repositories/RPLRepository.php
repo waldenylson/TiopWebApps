@@ -85,9 +85,13 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
 
     public function manageStatusCGNA($value)
     {
+        // pega o valor atual da tabela ----------------------------------------
+        $tratamentoRPL = DB::select("select cgna_rpl from rpl"); 
+      
         if(!is_null($value)) {
             $validadeRPL = DB::select("select validade from rpl");
 
+            // Converte datas em objetos Carbon --------------------------------
             $arrayDataRPLAtual  = explode('-', $validadeRPL[0]->validade);
 
             $validadeRPLObj = Carbon::create(
@@ -107,8 +111,12 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
                 00,
                 00,
                 00);
+            // -----------------------------------------------------------------
 
-            if($rplCGNAObj->gt($validadeRPLObj)) {
+            // Novo RPL encontrado no portal CGNA ------------------------------
+            if($rplCGNAObj->gt($validadeRPLObj)) { 
+                // Tratamento iniciado - não altera nada -----------------------
+                $tratamentoRPL[0]->cgna_rpl == 2 ? exit : 
                 $result = DB::table('rpl')
                     ->update(['cgna_rpl' => 1, 'updated_at' => DB::raw('now()')]);
 
@@ -121,13 +129,11 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
             }
         }
     }
+
     public function tratamentoRPLIniciado() {
         $result = DB::table('rpl')
             ->update(['cgna_rpl' => 2, 'updated_at' => DB::raw('now()')]);
 
         return $result;
     }
-
-
-
 }
