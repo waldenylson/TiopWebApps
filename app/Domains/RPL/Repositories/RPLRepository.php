@@ -85,47 +85,54 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
 
     public function manageStatusCGNA($value)
     {
-        // pega o valor atual da tabela ----------------------------------------
-        $tratamentoRPL = DB::select("select cgna_rpl from rpl"); 
-      
-        if(!is_null($value)) {
-            $validadeRPL = DB::select("select validade from rpl");
+        date_default_timezone_set('America/Recife');
 
-            // Converte datas em objetos Carbon --------------------------------
-            $arrayDataRPLAtual  = explode('-', $validadeRPL[0]->validade);
+        $hora = date('H');
 
-            $validadeRPLObj = Carbon::create(
-                $arrayDataRPLAtual[0],
-                $arrayDataRPLAtual[1],
-                $arrayDataRPLAtual[2],
-                00,
-                00,
-                00);
+        if( ( (int)$hora >= 8) and ( (int)$hora <= 23) ) {
 
-            $arrayDataRPLCGNA  = explode('-', $value);
+            // pega o valor atual da tabela ----------------------------------------
+            $tratamentoRPL = DB::select("select cgna_rpl from rpl");
 
-            $rplCGNAObj = Carbon::create(
-                $arrayDataRPLCGNA[2],
-                $arrayDataRPLCGNA[1],
-                $arrayDataRPLCGNA[0],
-                00,
-                00,
-                00);
-            // -----------------------------------------------------------------
+            if (!is_null($value)) {
+                $validadeRPL = DB::select("select validade from rpl");
 
-            // Novo RPL encontrado no portal CGNA ------------------------------
-            if($rplCGNAObj->gt($validadeRPLObj)) { 
-                // Tratamento iniciado - não altera nada -----------------------
-                $tratamentoRPL[0]->cgna_rpl == 2 ? exit : 
-                $result = DB::table('rpl')
-                    ->update(['cgna_rpl' => 1, 'updated_at' => DB::raw('now()')]);
+                // Converte datas em objetos Carbon --------------------------------
+                $arrayDataRPLAtual = explode('-', $validadeRPL[0]->validade);
 
-                return $result;
-            } else {
-                $result = DB::table('rpl')
-                    ->update(['cgna_rpl' => 0, 'updated_at' => DB::raw('now()')]);
+                $validadeRPLObj = Carbon::create(
+                    $arrayDataRPLAtual[0],
+                    $arrayDataRPLAtual[1],
+                    $arrayDataRPLAtual[2],
+                    00,
+                    00,
+                    00);
 
-                return $result;
+                $arrayDataRPLCGNA = explode('-', $value);
+
+                $rplCGNAObj = Carbon::create(
+                    $arrayDataRPLCGNA[2],
+                    $arrayDataRPLCGNA[1],
+                    $arrayDataRPLCGNA[0],
+                    00,
+                    00,
+                    00);
+                // -----------------------------------------------------------------
+
+                // Novo RPL encontrado no portal CGNA ------------------------------
+                if ($rplCGNAObj->gt($validadeRPLObj)) {
+                    // Tratamento iniciado - não altera nada -----------------------
+                    $tratamentoRPL[0]->cgna_rpl == 2 ? exit :
+                        $result = DB::table('rpl')
+                            ->update(['cgna_rpl' => 1, 'updated_at' => DB::raw('now()')]);
+
+                    return $result;
+                } else {
+                    $result = DB::table('rpl')
+                        ->update(['cgna_rpl' => 0, 'updated_at' => DB::raw('now()')]);
+
+                    return $result;
+                }
             }
         }
     }
