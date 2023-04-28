@@ -143,4 +143,11 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
 
         return $result;
     }
+
+    public function respostaRPLCAIS() {
+        $result = DB::table('rpl')
+            ->update(['cgna_rpl' => 3   , 'updated_at' => DB::raw('now()')]);
+
+        return $result;
+    }
 }

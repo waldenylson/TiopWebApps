@@ -41,13 +41,17 @@
                             <i class="fa fa-remove"></i> remover
                         </a>
 
-                        @if($rpldata->cgna_rpl == 2)
+                        @if($rpldata->cgna_rpl == 3)
                             <a class="btn btn-info btn-xs">
-                                <b><i class="fa fa-check-circle"></i> RPL Futuro em Processamento</b>
+                                <b><i class="fa fa-check-circle"></i> RPL Agendado SAGITARIO</b>
                             </a>
                         @elseif($rpldata->cgna_rpl == 1)
                             <a href="{!! route('rpl.tratamentoRPLIniciado') !!}" class="btn btn-success  btn-xs">
                                 <i class="fa fa-check"></i> Tratamento RPL Futuro Iniciado
+                            </a>
+                        @elseif($rpldata->cgna_rpl == 2)
+                            <a href="{!! route('rpl.respostaRPLCAIS') !!}" class="btn btn-success  btn-xs">
+                                <i class="fa fa-check"></i> Finalizar Tratamento RPL Futuro
                             </a>
                         @endif
                     </td>
