@@ -122,7 +122,7 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
                 // Novo RPL encontrado no portal CGNA ------------------------------
                 if ($rplCGNAObj->gt($validadeRPLObj)) {
                     // Tratamento iniciado - não altera nada -----------------------
-                    $tratamentoRPL[0]->cgna_rpl == 2 ? exit :
+                    ($tratamentoRPL[0]->cgna_rpl == 2) || ($tratamentoRPL[0]->cgna_rpl == 3) ? exit :
                         $result = DB::table('rpl')
                             ->update(['cgna_rpl' => 1, 'updated_at' => DB::raw('now()')]);
 
