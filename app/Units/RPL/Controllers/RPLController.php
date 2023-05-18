@@ -129,4 +129,15 @@ class RPLController extends Controller
 
         return redirect()->back()->with('error', 'Erro ao Tentar Remover o Registro!');
     }
+
+    public function novoRPLAtivado()
+    {
+        $result = $this->rplRepository->novoRPLAtivado();
+
+        if ($result) {
+            return redirect()->back()->with('message', 'Novo RPL Ativado com Sucesso!');
+        }
+
+        return redirect()->back()->with('error', 'Ocorreu um Erro ao Processar a Solicitação!');
+    }
 }

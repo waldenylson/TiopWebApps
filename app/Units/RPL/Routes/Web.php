@@ -23,6 +23,7 @@ class Web extends RouteFile
 
             $this->router->get('tratar', ['as' => 'rpl.tratamentoRPLIniciado', 'uses' => 'RPLController@tratamentoRPLIniciado']);
             $this->router->get('tratado', ['as' => 'rpl.respostaRPLCAIS', 'uses' => 'RPLController@respostaRPLCAIS']);
+            $this->router->get('novo-rpl-ativado', ['as' => 'rpl.novoRPLAtivado', 'uses' => 'RPLController@novoRPLAtivado']);
         });
     }
 }

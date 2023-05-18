@@ -12,6 +12,7 @@ interface RPLRepository extends CrudRepository
     public function manageStatusCGNA($value);
     public function tratamentoRPLIniciado();
     public function respostaRPLCAIS();
+    public function novoRPLAtivado();
     public function listRPL();
     public function store(StoreRPLPostRequest $request);
     public function edit($id);

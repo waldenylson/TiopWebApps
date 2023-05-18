@@ -37,13 +37,13 @@
                             <i class="fa fa-pencil"></i> editar
                         </a>
 
-                        <a href="{!! route('rpl.destroy', $rpldata->id) !!}" class="btn btn-danger btn-xs btn-remover">
-                            <i class="fa fa-remove"></i> remover
-                        </a>
+{{--                        <a href="{!! route('rpl.destroy', $rpldata->id) !!}" class="btn btn-danger btn-xs btn-remover">--}}
+{{--                            <i class="fa fa-remove"></i> remover--}}
+{{--                        </a>--}}
 
                         @if($rpldata->cgna_rpl == 3)
-                            <a class="btn btn-info btn-xs">
-                                <b><i class="fa fa-check-circle"></i> RPL Agendado SAGITARIO</b>
+                            <a href="{!! route('rpl.novoRPLAtivado') !!}" class="btn btn-info btn-xs">
+                                <b><i class="fa fa-check-circle"></i> RPL Agendado SAGITARIO (Ativar Novo)</b>
                             </a>
                         @elseif($rpldata->cgna_rpl == 1)
                             <a href="{!! route('rpl.tratamentoRPLIniciado') !!}" class="btn btn-success  btn-xs">
