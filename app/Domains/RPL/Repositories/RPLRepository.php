@@ -35,7 +35,7 @@ class RPLRepository extends AbstractCrudRepository implements RPLRepositoryContr
 
         $dateObj = Carbon::create($arrayData[2], $arrayData[1], $arrayData[0], 00, 00, 00);
 
-        if($dateObj->lte($hoje)) $rplAlert['rplAlert'] = true;
+        if($dateObj->lte($hoje) && $rpl[0]->cgna_rpl <> 3) $rplAlert['rplAlert'] = true;
 
         array_push($rpl,  $rplAlert);
 
